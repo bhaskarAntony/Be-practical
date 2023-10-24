@@ -1,0 +1,19 @@
+.course-faq {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+}
+.course-faq-question{
+    padding: 10px;
+}
+.course-faq-question [class*="bi-"]{
+    background-color: #027b345c;
+    color: #055932;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    border-radius: 100px;
+    margin-right: 20px;
+}

@@ -1,0 +1,13 @@
+.elite-progarm{
+    background: var(--color-blue-7);
+    padding: 20px;
+    border-radius: 20px;
+}
+.elite-program-card{
+    margin-bottom: 20px;
+    background: linear-gradient(315deg, #a189ff , var(--color-purple-1)) !important;
+    padding: 10px;
+    background: #fff;
+    min-height: 150px;
+    border-radius: 10px;
+}

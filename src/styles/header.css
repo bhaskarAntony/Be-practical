@@ -1,0 +1,113 @@
+
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    font-weight: 500 !important;
+
+  }
+  .elite-link{
+      background:var(--gold) !important;
+      color: #fff !important;
+      border-radius: 100px;
+      padding: 5px 20px !important;
+  }
+  .navbar-nav .nav-link:active{
+    color: var(--green-light-color);
+  }
+  .navbar-brand img{
+    width: 180px;
+}
+  .bi-list{
+    color: var(--white-color) !important;
+    font-size: 1.4em;
+  }
+  .nav-apply-btn{
+    /* border: 1px solid var(--white-color) !important; */
+    border: none;
+    padding: 10px;
+    background: transparent;
+    border-radius: 5px;
+    color: var(--black-color);
+    font-weight: 600;
+  }
+  .navbar-nav .nav-link:hover{
+    color:#f1c21a;
+  }
+  .dropend .dropdown-toggle {
+    color:var(--dark-green);
+    margin: 0 !important;
+  }
+  .dropdown-item{
+    padding: 15px !important;
+  }
+  .dropdown-item:hover {
+    background-color: var(--yellow-color)!important;
+    color: #000000 !important;
+  }
+  .dropdown .dropdown-menu {
+    display: none;
+    padding: 0;
+    border: none;
+  }
+  .dropdown:hover > .dropdown-menu,
+  .dropend:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0.125em;
+    margin-left: 0.125em;
+  }
+  @media screen and (min-width: 769px) {
+    .dropend:hover > .dropdown-menu {
+      position: absolute;
+      top: 0;
+      left: 100%;
+    }
+    .dropend .dropdown-toggle {
+      margin-left: 0.5em;
+    }
+
+  }
+  nav{
+    /* background-color: var( --dark-green); */
+    background-color: var(--color-dark-1);
+    gap:30px !important;
+    border-bottom: 1px solid #d9b8ff;
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+
+  }
+  .nav-top{
+    background-color: var(--color-green-1);
+    text-align: center;
+    margin: 0;
+
+  }
+  header{
+    position: sticky !important;
+    top: 0 !important;
+    background-color: var(--color-dark-1);
+    z-index: 100;
+  }
+  .list-group-item{
+    padding: 0 !important;
+  }
+  @media(max-width:769px){
+    .navbar-brand img{
+      width: 150px;
+  }
+    nav{
+      padding: 10px !important;
+      z-index: 10;
+    }
+    .navbar-nav .nav-link{
+      color: #fff;
+    }
+    .navbar-nav .nav-link:hover{
+      color: #d4d3d3 !important;
+    }
+    .dropdown-toggle{
+      color: #fff !important;
+    }
+    nav button{
+      margin-bottom: 10px !important;
+    }
+  }

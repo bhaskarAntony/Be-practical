@@ -1,0 +1,45 @@
+
+.elite{
+    background-color: var(--color-dark-1) ;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    border-radius: 20px;
+}
+.elite-card {
+    text-align: center;
+    padding: 20px;
+    min-height: 180px;
+    background: var(--gold);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.elite-card [class*="bi-"]{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.elite-card h4{
+    font-weight: bolder;
+}
+.elite button{
+    width: fit-content;
+}
+.elite .register-btn:hover{
+    background: var(--gold) !important;
+    transition: 0.5s;
+}
+@media (max-width:600px){
+    .elite-card h4{
+        font-size: 1.1em;
+    }
+    .elite-card{
+        padding: 5px;
+        min-height: 120px;
+    }
+    .elite-card [class*="bi-"]{
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,15 @@
+.register-card{
+    background-color: var(--dark-green) !important;
+    color: #fff;
+}
+.register-card form .form-control{
+    background-color: transparent;
+}
+.register-card form .form-control:focus{
+    box-shadow: none;
+    border: 2px solid var(--green-light-color);
+}
+.register-card form label{
+    color: rgb(148, 148, 148);
+    background-color: transparent;
+}

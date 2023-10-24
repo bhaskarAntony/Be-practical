@@ -1,0 +1,39 @@
+
+.companies{
+    /* background: url('../images/low-poly-grid-haikei.svg') no-repeat center; */
+    background-size: cover;
+    background: var(--color-blue-7);
+    min-height: 200px;
+    padding: 50px;
+    color:#fff;
+    border-radius: 20px;
+}
+.main-company-container{
+    padding: 6% !important;
+}
+.companies-brands-container{
+    min-height: 100% !important;
+    background-color: transparent;
+    overflow: hidden;
+}
+.companies-brands-container img{
+    width: 100px;
+    height: 100px;
+}
+.all-company-card{
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.companies-brands-container .all-company-card:hover{
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+@media (max-width:768px){
+    .main-company-container{
+        padding: 10px !important;
+    }
+}

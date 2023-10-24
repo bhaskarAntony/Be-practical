@@ -1,0 +1,62 @@
+
+.hero{
+    padding: 10px;
+    min-height: 100vh;
+    background-color: var(--color-dark-1);
+    background: url(https://educrat-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbg.86c9aca0.png&w=1920&q=75) no-repeat center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 100px;
+
+}
+.hero .carousel-control-next, .hero .carousel-control-prev{
+    display: none;
+}
+.hero-text{
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+.hero-image{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-image img{
+    /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+    border-radius: 10px;
+    border: 5px solid var(--color-green-1);
+    padding: 5px;
+    min-height: 100%;
+}
+.register-container-home{
+    border-radius: 10px;
+    margin-bottom: -100px;
+    border: 1px solid var(--hero-dark-green);
+}
+
+@media (max-width:1100){
+    .hero-text{
+        padding: 10px !important;
+        text-align: center;
+    }
+}
+@media (max-width:768px){
+    .hero-text{
+        padding: 10px !important;
+        text-align: center;
+    }
+    .register-container-home .form-control{
+            margin-bottom: 10px !important;
+    }
+    .hero-image{
+        position: relative;
+        min-height: fit-content !important;
+    }
+    .hero-image img{
+        width: 300px;
+        height: 300px;
+    }
+}

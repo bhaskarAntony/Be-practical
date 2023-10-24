@@ -1,0 +1,136 @@
+
+.footer_container{
+    min-height: 80vh;
+    padding: 20px;
+    color: #ffffff;
+    overflow: hidden;
+    background: url(https://html.ditsolution.net/techno/assets/images/call-bg.png) no-repeat center;
+    background-size: cover;
+    background-color:var(--color-dark-1);
+
+}
+*{
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    text-align:justify;
+    gap: 10px;
+    padding: 10px;
+    font-size: 1em;
+}
+.m1 ul{
+    padding: 15px;
+    /* list-style-image: url(../images/arrow.png); */
+    list-style-type: none;
+}
+.m1 ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-size: 1em;
+
+}
+.m1 ul li a:hover{
+    text-decoration:underline;
+    color:var(--main-color);
+
+}
+.m1 ul li{
+   margin: 10px;
+  
+
+}
+.m1 ul li a:hover li{
+   border-bottom: 1px solid var(--main-color);
+   width: fit-content;
+
+}
+.right{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+}
+.left img{
+    width: 200px;
+    
+}
+
+.m1 h2{
+    text-align: left;
+    position: relative;
+    width: fit-content;
+}
+
+ .m1 h2::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 4px;
+    background-color:var(--main-color);
+    left: 0;
+    bottom: -20px;
+}
+.right h2{
+    text-align: left;
+    position: relative;
+    width: fit-content;
+}
+
+ .right h2::before{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 4px;
+    background-color:var(--main-color);
+    left: 0;
+    bottom: -20px;
+}
+.right ul li:nth-child(1) {
+    /* list-style-image: url(../images/gmail.png); */
+    padding: 0;
+}
+.right ul li:nth-child(2) {
+    /* list-style-image: url(../images/phone-call.png); */
+    padding: 0;
+    margin: 10px;
+}
+.right ul li:nth-child(3) {
+    /* list-style-image: url(../images/placeholder.png); */
+    padding: 0;
+}
+.right ul li a i{
+    margin-right: 10px;
+}
+
+
+.right ul li a{
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.right ul li{
+    margin: 10px;
+}
+.icons{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+.icons [class*="bi"]{
+    font-size: 2em;
+}
+.right{
+    padding-top: 15px;
+}
+.right ul{
+    padding: 15px;
+}
+
+

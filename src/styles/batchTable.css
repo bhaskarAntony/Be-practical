@@ -1,0 +1,24 @@
+.bacthTable [class*="bi-"]{
+    font-size: 1.3rem;
+}
+.bacthTable .bi-check-circle-fill{
+    color: rgb(5, 146, 56);
+}
+.bacthTable .bi-x-circle-fill{
+    color: rgb(247, 27, 27);
+}
+.bacthTable .table-head th {
+    background: var(--gold) !important;
+    color: #070707;
+    font-size: 1.3rem;
+    border: 1px solid #000000;
+}
+.bacthTable table{
+    border: 1px solid #f6d606;
+    background: #000;
+}
+.bacthTable tr td{
+    border: 1px solid #ffc400;
+    background-color: #272626;
+    color: #fff;
+}
