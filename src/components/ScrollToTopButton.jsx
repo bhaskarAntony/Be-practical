@@ -39,7 +39,7 @@ const ScrollToTopButton = () => {
    <div className='text-center'>
 
 <button
-      className={`scroll-to-top ${isVisible ? 'visible' : ''} btn-main`}
+      className={`scroll-to-top ${isVisible ? 'visible' : ''} hero-btn-main`}
       onClick={scrollToTop}
     >
      Apply Now <i class="bi bi-chevron-double-right"></i>
