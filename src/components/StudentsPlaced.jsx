@@ -138,14 +138,13 @@ function StudentsPlaced() {
           onMouseEnter={handleCarouselHover}
           onMouseLeave={handleCarouselLeave}
         >
-          <div className="d-flex flex-wrap  p-3 container-fluid">
+          <div className=" p-3 container-fluid">
           <div className="row">
 
             {slideItems.map((item) => (
                 <div className="col-12 col-md-6 col-lg-3">
-              <div className="placed-card" data-aos="zoom-in-left">
-                <div className="placed-card-header text-white">
-                    <p><i><ReadMore text={item.description} maxLength={50} /></i></p>
+              <div className="placed-card w-100" data-aos="zoom-in-left">
+                <div className="placed-card-header text-white d-flex justfy-content-center">
                     <div className="profile">
                         <img src={item.profile} alt="" />
                     </div>
@@ -171,7 +170,7 @@ function StudentsPlaced() {
     </Carousel>
       </div>
       <div className="text-center py-5 d-flex flex-wrap gap-20px justify-content-center">
-      <button className="hero-btn-main mx-2 mb-2" data-aos="fade-up">Explore Courses <i class="bi bi-chevron-double-right"></i></button>
+      <button className="hero-btn-main mt-2" data-aos="fade-up">Explore Courses <i class="bi bi-chevron-double-right"></i></button>
         <BookDemoBtn text={'Book your master classes'} data-aos="fade-up"/>
       </div>
     </section>

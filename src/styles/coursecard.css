@@ -17,7 +17,7 @@
 
 .course-single-card .list-group-item{
     padding: 10px !important;
-    background-color: var(--hero-dark-green);
+    background-color: var(--color-info-1);
     margin-bottom: 10px;
-    border-radius: 20px;
+    border-radius: 4px;
 }

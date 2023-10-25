@@ -19,7 +19,7 @@ function CoursePageEngine() {
   const { id } = useParams(); // Access the id parameter from the URL
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `http://localhost:3300/api/courses/${id}`; // Replace with your actual API endpoint
+        const apiUrl = `http://localhost:3300/api/course/${id}`; // Replace with your actual API endpoint
     
         axios
           .get(apiUrl)
@@ -46,12 +46,12 @@ function CoursePageEngine() {
                     <h1 className="course-heading text-white mb-4">{courseData.heroTitle}</h1>
                     <p className="heading-subtitle text-white">Learn with Real Work-Ex. Join the best product-based <br /> companies with <span className='text-green fw-bold'>guaranteed placement.</span></p>
                     <div className="batch  d-flex align-items-center"> 
-                        <i class="bi bi-calendar3 fs-4 text-green"></i>
-                            <p className='p-dark-small text-green mx-2 mt-2'>New Batch Starts At {courseData.BatchStarting} </p>
+                        <i class="bi bi-calendar3 fs-4 text-blue-1"></i>
+                            <p className='p-dark-small text-black text-900 mx-2 mt-2'>New Batch Starts At {courseData.BatchStarting} </p>
                         </div>
-                        <div className="course-btn mt-5">
-                            <button className="btn-main-outline-light p-4 hero-btn">Enroll This Course <i class="bi bi-chevron-double-right"></i></button>
-                            <button className="btn-main p-4 mx-2 hero-btn">Book Free Demo Classes <i class="bi bi-chevron-double-right"></i></button>
+                        <div className="course-btn mt-5 d-flex flex-wrap gap-2">
+                            <button className="hero-btn-main p-4 hero-btn ">Enroll This Course <i class="bi bi-chevron-double-right"></i></button>
+                            <button className="hero-btn-outline p-3 hero-btn">Book Free Demo Classes <i class="bi bi-chevron-double-right"></i></button>
                         </div>
                         <div className="course-highlight mt-5">
                             <div className="row">
@@ -102,25 +102,26 @@ function CoursePageEngine() {
         <HeroRegister/>
     </div>
     <h3 className="banner-heading" data-aos="fade-up">What Programming Languages <br /> You will Learn?</h3>
-      <section className='main-lan-container container bg-dark-v5-green py-2' id="languages">
+      <section className='main-lan-container container bg-blue-1 py-2' id="languages">
             <div className="lan-inner-container">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-7">
                         <Languages languages={courseData.programmingLanguages}/>
                     </div>
                     <div className="col-12 col-md-6 col-lg-5">
-                        {/* <CourseCard instructor={courseData.instructors} duration={courseData.courseDuration} course={courseData.courseName} mode={courseData.modeOfTraining} ></CourseCard> */}
+                        <CourseCard instructor={courseData.instructors} duration={courseData.courseDuration} course={courseData.courseName} ></CourseCard>
                     </div>
                 </div>
             </div>
       </section>
+      <Module modules={courseData.modules}/>
       <LandDreamJob/>
     <Companies/>
-    <Module modules={courseData.modules}/>
+
     <Adwantages/>
     <YoutubeVideos/>
-    <Feedback/>
     <FaqSection  faq={courseData.faqs}/>
+    <Feedback/>
     </section>
   )
 }

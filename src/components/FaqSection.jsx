@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/faq.css'
-import BookDemoBtn from '../Extra/BookDemoBtn';
+import ApplyNow from '../Extra/ApplyNow';
 
 const FaqSection = (props) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -14,11 +14,11 @@ const FaqSection = (props) => {
   };
 
   return (
-    <div className="container-fluid bg-light py-2">
+    <div className="container-fluid bg-light-1 py-2">
       <h2 className='banner-heading'>Frequently Asked Questions</h2>
       <div className="accordion container" id="faqAccordion">
         {props.faq.map((faq, index) => (
-          <div className="card course-faq" key={index}>
+          <div className="card border-0 course-faq" key={index}>
             <div className="course-faq-question" id={`heading${index}`}>
               <h4 className="mb-0">
                 <div
@@ -45,8 +45,8 @@ const FaqSection = (props) => {
           </div>
         ))}
       </div>
-      <div className="text-center">
-        <BookDemoBtn text={"Ask More Questions?"}/>
+      <div className="d-flex justify-content-center">
+        <ApplyNow text={"Ask More Questions?"}/>
       </div>
     </div>
   );

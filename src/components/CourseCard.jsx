@@ -9,7 +9,7 @@ useEffect(() => {
   }, []);
   return (
     <>
-        <div className='course-single-card bg-dark-green'  data-aos="flip-right">
+        <div className='course-single-card bg-white'  data-aos="flip-right">
           <div className="course-single-card-header">
            <img src="" alt="" />
            {/* <div className="course-single-card-header-curve">
@@ -18,22 +18,21 @@ useEffect(() => {
           </div>
           <ul className="list-group">
             <li className="list-group-item border-0">
-                <h4 className='text-light-green'>{props.course}</h4>
+                <h4 className='text-blue-1'>{props.course}</h4>
             </li>
-            <li className="list-group-item border-0 bg-main-green text-white">
-                <p><strong className='card-single-heading text-light-green'>Instructor: </strong>{props.instructor}</p>
+            <li className="list-group-item border-0 bg-main-green text-black">
+                <p><strong className='card-single-heading text-blue-1'>Instructor: </strong>{props.instructor.name}</p>
             </li>
-            <li className="list-group-item border-0 text-white">
-                <p><strong className='card-single-heading text-light-green'>Duration: </strong>{props.duration}</p>
+            <li className="list-group-item border-0 text-black">
+                <p><strong className='card-single-heading text-blue-1'>Duration: </strong>{props.duration}</p>
             </li>
-            <li className="list-group-item border-0 text-white">
-                <p><strong className='card-single-heading text-light-green'>Enrolled: </strong>{props.enrolled}</p>
+            <li className="list-group-item border-0 text-black">
+                <p><strong className='card-single-heading text-blue-1'>Enrolled: </strong>{props.instructor.enrolled}</p>
             </li>
-            <li className="list-group-item border-0 text-white">
-                <p><strong className='card-single-heading text-light-green'>Mode Of training: </strong>{props.mode}</p>
+            <li className="list-group-item border-0 text-black">
+                <p><strong className='card-single-heading text-blue-1'>Mode Of training: </strong></p>
             </li>
-            <button className="btn-main-outline-light w-100 mt-2">Enroll Now <i class="bi bi-chevron-double-right"></i></button>
-              <button className="btn-main w-100 mt-2">Join Free Demo Classes <i class="bi bi-chevron-double-right"></i></button>
+              <button className="hero-btn-main w-100 mt-2">Join Free Demo Classes <i class="bi bi-chevron-double-right"></i></button>
           </ul>
         </div>
     </>

@@ -20,24 +20,24 @@ const Module = (props) => {
    <div className="container-fluid faq" id="faq">
     <h3 className="banner-heading">Training Module</h3>
     <p className="p-light-small text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-     <div className="container modules bg-dark-v5-green p-lg-5 p-md-3 p-2">
+     <div className="container modules  p-lg-5 p-md-3 p-2">
      {props.modules.map((item, index) => (
         <div
-          className={`faq-item ${activeIndex === index ? 'active' : ''} bg-dark-green`}
+          className={`faq-item ${activeIndex === index ? 'active' : ''} `}
           key={index}
         >
           <div className="faq-question d-flex align-items-center" onClick={() => toggleAccordion(index)}>
             <span className="count p-2 px-3 rounded-5  text-white">
         {index+1}
             </span>
-            <span className="faq-question-text text-white"><span className="fw-bold  mx-2 text-light-green"> Module{index + 1}:</span> {item.title}</span>
+            <span className="faq-question-text text-black"><span className="fw-bold  mx-2"> Module{index + 1}:</span> {item.title}</span>
             <div className="faq-icon">
               {activeIndex === index ? <i class="bi bi-caret-up-fill"></i>:<i class="bi bi-caret-down-fill"></i>}
             </div>
           </div>
           {activeIndex === index && (
             <div className="faq-answer">
-                <h5 className='mt-4 text-light-green'>About</h5>
+                <h5 className='mt-4 text-black'>About</h5>
                 {item.title}
                 <h5 className='mt-4 text-light-green'>Topics Covered</h5>
                 <p>{item.topics}</p>

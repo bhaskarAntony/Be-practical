@@ -12,12 +12,12 @@ function Languages({languages}) {
         <div className="row">
           {languages.map((item, index) => (
             <div className="col-6 col-md-4 col-lg-4" key={index}>
-              <div className="language-card bg-dark-green" data-aos="zoom-in">
+              <div className="language-card bg-white" data-aos="zoom-in">
                 <div className="language-card-header">
                   <img src={item.image} alt="" />
                 </div>
                 <div className="language-card-body">
-                  <h4 className='text-light-green'>{item.name}</h4>
+                  <h4 className='text-black'>{item.name}</h4>
                 </div>
               </div>
             </div>
