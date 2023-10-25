@@ -38,15 +38,15 @@ function EliteProgram() {
              eliteProgram.map((item, index)=>(
                  <div className="col-12 col-md-6 col-lg-4">
                      <div className="elite-program-card">
-                         <h1 className="card-heading text-white mb-3 text-900"><i class="bi bi-stars"></i> {item.title}</h1>
-                         <p className="p-light-small text-white">{item.content}</p>
+                         <h1 className="card-heading text-black  mb-3 text-900"><i class="bi bi-stars text-main-danger"></i> {item.title}</h1>
+                         <p className="p-large1 text-secondary">{item.content}</p>
                      </div>
                   </div>
              ))
          }
        </div>
        <div className="p-4 d-flex justify-content-center py-2">
-            <button className="hero-btn-main-2">Book Your Free Trail, Now <i class="bi bi-chevron-double-right"></i></button>
+            <button className="btn-danger">Book Your Free Trail, Now <i class="bi bi-chevron-double-right"></i></button>
             </div>
      </section>
     

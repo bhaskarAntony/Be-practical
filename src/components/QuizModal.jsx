@@ -58,14 +58,16 @@ function QuizModal() {
     <div className='container-fluid  p-3 mt-4'>
         <h1 className="banner-heading">Get 10% discount</h1>
         <div className="quiz-container bg-blue-3 p-3 mt-3 rounded-5">
-            <div className="row d-flex align-items-center">
-                <div className="col-12 col-md-9 col-lg-9">
-                  <p className='card-heading text-800 text-white'>
-                  Complete this simple Quiz and  get 10% discount in your course fees
-                  </p>
+            <div className="row">
+                <div className="col-12 col-md-6 col-lg-6">
+                 <img src="https://demo.themewinter.com/wp/courselog/wp-content/uploads/2020/12/view_plans.png" alt="" className="w-100" />
                 </div>
-                <div className="col-12 col-md-3 col-lg-3 d-flex justify-content-center text-center">
-                    <button className="hero-btn-main-2" onClick={openModal}>Start Quiz <i class="bi bi-chevron-double-right"></i></button>
+                <div className="col-12 col-md-6 col-lg-6 p-5">
+                  <p className="p-large1 text-main-danger">Get Started</p>
+                  <h1 className="card-big-text text-900">Not Sure Where to Begin? <br /> Take Our Quiz.</h1>
+                  <p className="text-secondary p-large1">
+                      Get started now with hundreds of courses and thousands of labs — with new additions published every week</p>
+                    <button className="btn-danger" onClick={openModal}>Start Quiz <i class="bi bi-chevron-double-right"></i></button>
                 </div>
             </div>
         </div>

@@ -5,16 +5,17 @@
   }
 .youtube-card{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background-color: var(--color-purple-4);
+    background-color: #fff;
     max-width: 100%;
     word-break: inherit;
-    border-radius: 50px;
+    border-radius: 10px;
     margin-bottom: 45px;
+    min-height: 100%;
 }
 .youtube-header{
     position: relative !important;
     height: 250px !important;
-    padding: 20px;
+    padding: 10px;
 }
 /* .youtube-header::before{
     content: "";
@@ -49,7 +50,7 @@
     border-radius: 100px;
 }
 .youtube-header img{
-    border-radius: 40px;
+    border-radius: 20px;
 }
 .youtube-footer{
     min-height: 100px;

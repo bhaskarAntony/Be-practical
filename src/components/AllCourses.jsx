@@ -6,60 +6,60 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ShimmerCard from '../shimmer effects/ShimmerCard';
 
-var courses = [
-    {
-        id:1,
-        name: "Complete Fullstack",
-        tag:"Trending",
-        duration: "4.5 Months",
-        trainer: "...",
-        languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
-        ratedStudents: "465",
-        rating:"4.5",
-        icon: "https://cdn-icons-png.flaticon.com/128/7991/7991055.png",
-        image: "https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        path: "/course-fullstack"
-    },
-    {
-        id:2,
-        name: "MERN  Fullstack",
-        tag:"Trending",
-        duration: "4.5 Months",
-        trainer: "...",
-        languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
-        ratedStudents: "465",
-        rating:"4.5",
-        icon: "https://cdn-icons-png.flaticon.com/128/1183/1183669.png",
-        image: "https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        path:"/course-mern"
-    },
-    {
-        id:4,
-        name: "Cloud Oops",
-        duration: "4.5 Months",
-        trainer: "...",
-        languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
-        ratedStudents: "465",
-        rating:"4.5",
-        icon: "https://cdn-icons-png.flaticon.com/128/3305/3305673.png",
-        image: "https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        path:"/course-cloud-computing"
+// var courses = [
+//     {
+//         id:1,
+//         name: "Complete Fullstack",
+//         tag:"Trending",
+//         duration: "4.5 Months",
+//         trainer: "...",
+//         languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
+//         ratedStudents: "465",
+//         rating:"4.5",
+//         icon: "https://cdn-icons-png.flaticon.com/128/7991/7991055.png",
+//         image: "https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         path: "/course-fullstack"
+//     },
+//     {
+//         id:2,
+//         name: "MERN  Fullstack",
+//         tag:"Trending",
+//         duration: "4.5 Months",
+//         trainer: "...",
+//         languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
+//         ratedStudents: "465",
+//         rating:"4.5",
+//         icon: "https://cdn-icons-png.flaticon.com/128/1183/1183669.png",
+//         image: "https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         path:"/course-mern"
+//     },
+//     {
+//         id:4,
+//         name: "Cloud Oops",
+//         duration: "4.5 Months",
+//         trainer: "...",
+//         languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
+//         ratedStudents: "465",
+//         rating:"4.5",
+//         icon: "https://cdn-icons-png.flaticon.com/128/3305/3305673.png",
+//         image: "https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         path:"/course-cloud-computing"
 
-    },
-    {
-        id:5,
-        name: "Data Science",
-        duration: "4.5 Months",
-        trainer: "...",
-        languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
-        ratedStudents: "465",
-        rating:"4.5",
-        icon: "https://cdn-icons-png.flaticon.com/128/2756/2756778.png",
-        image: "https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        path:"/course-data-science"
+//     },
+//     {
+//         id:5,
+//         name: "Data Science",
+//         duration: "4.5 Months",
+//         trainer: "...",
+//         languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
+//         ratedStudents: "465",
+//         rating:"4.5",
+//         icon: "https://cdn-icons-png.flaticon.com/128/2756/2756778.png",
+//         image: "https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+//         path:"/course-data-science"
 
-    }
-]
+//     }
+// ]
 
 function AllCourses() {
   const [loading, setLoading] = useState(false)
@@ -83,8 +83,11 @@ function AllCourses() {
         AOS.init(); // Initialize AOS
       }, []);
     return (
-      <div className='container all-courses'>
-        <h1 className="banner-heading">Courses We Offering</h1>
+      <>
+      <p className="banner-sub-text text-main-danger w-100 text-center">Featured Courses</p>
+      <h1 className="banner-heading">Pick a Course to Get Started</h1>
+      <div className='container-fluid all-courses p-3 py-5'>
+      <div className="course-card-container container">
       <div className="row flex-wrap d-flex justify-content-center align-items-center">
       {loading ? (
               Array(4)
@@ -101,35 +104,27 @@ function AllCourses() {
                 <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
                 <div className="card course-card" data-aos="zoom-in">
                   <div className="course-header">
+                  <div className="go">
+                  <i class="bi bi-play-fill fs-4"></i>
+                    </div>
                     <img src="https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className="w-100 rounded-2" />
+                    
                   </div>
                <div className="course-card-body p-2">
+                <div className="course-top d-flex justify-content-between align-items-center">
+                  <p className="p-large1"><i class="bi bi-bar-chart-fill text-main-danger"></i> Beginers</p>
+                  <p className="p-large1"><i class="bi bi-stopwatch text-main-danger"></i> {item.courseDuration}</p>
+                </div>
                <h4 className='card-heading text-900 text-black'>{item.courseName}</h4>
-                  <hr />
-                  <div className="row">
-                  <div className="col-6 p-2 text-center d-flex align-items-center ">
-                      <i class="bi bi-clock  mx-2 fs-4"></i>
-                      <p>{item.courseDuration}</p>
-                      </div>
-                      <div className="col-6 p-2 text-center d-flex align-items-center">
-                      <i class="bi bi-camera-video  mx-2 fs-4"></i>
-                      <p>{item.modeOfTraining}</p>
-                      </div>
-                      <div className="col-6 p-2 text-center d-flex align-items-center">
-                      <i class="bi bi-mortarboard  mx-2 fs-4"></i>
-                      <p>Job Assurance</p>
-                      </div>
-                      <div className="col-6 p-2 text-center d-flex align-items-center">
-                      <i class="bi bi-person-lines-fill mx-2 fs-4"></i>
-                      <p>HR activities</p>
-                      </div>
-                  </div>
-                  
-                  {/* <p><small>{item.trainer}</small></p> */}
+               <div className="instructor d-flex gap-2 align-items-center mt-3">
+                <img src="https://demo.themewinter.com/wp/courselog/wp-content/uploads/learn-press-profile/14/f96ef85a8c1584c493287f8a3497742e.png" alt="" />
+                <p className="p-large1 mt-3">Ganesh</p>
+               </div>
+                <hr />
                   <div className="course-footer p-2 m-0">
                 
-                  <div className="mt-4">
-                  <Link to={`/course/${item.courseName}/${item._id}`} className="hero-btn-main w-100 text-decoration-none">Learn More</Link>
+                  <div className="mt-4 text-end">
+                  <Link to={`/course/${item.courseName}/${item._id}`} className="text-main-danger fs-5 text-end w-100">Learn More</Link>
 
                 
                 </div>
@@ -141,7 +136,12 @@ function AllCourses() {
           ))
             )}
       </div>
+      </div>
   </div>
+  <div className="text-center">
+    <button className="btn-danger">View All courses <i class="bi bi-arrow-right"></i></button>
+  </div>
+      </>
     )
 }
 

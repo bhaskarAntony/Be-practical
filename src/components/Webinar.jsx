@@ -40,7 +40,7 @@ function Webinar() {
     useEffect(() => {
         AOS.init(); // Initialize AOS
       }, []);
-    const [itemsPerSlide, setItemsPerSlide] = useState(3);
+    const [itemsPerSlide, setItemsPerSlide] = useState(4);
     const [carouselInterval, setCarouselInterval] = useState(1500);
     const [carouselPaused, setCarouselPaused] = useState(false);
   
@@ -55,7 +55,7 @@ function Webinar() {
             setItemsPerSlide(2);
             setCarouselInterval(1500);
           } else {
-          setItemsPerSlide(3);
+          setItemsPerSlide(4);
           setCarouselInterval(1500);
         }
       };
@@ -101,7 +101,7 @@ function Webinar() {
           <div>
             {text.slice(0, maxLength)}
             {text.length > maxLength && (
-              <p onClick={toggleTruncate} className="read-more-button light-green-text">
+              <p onClick={toggleTruncate} className="read-more-button text-main-danger">
                 Read More
               </p>
             )}
@@ -109,7 +109,7 @@ function Webinar() {
         ) : (
           <div>
             {text}
-            <p onClick={toggleTruncate} className="read-less-button light-green-text">
+            <p onClick={toggleTruncate} className="read-less-button text-main-danger">
               Read Less
             </p>
           </div>
@@ -121,7 +121,7 @@ function Webinar() {
   return (
   <>
           <h3 className="banner-heading mt-5" data-aos="fade-up">Pre Career Guidence program <span className="main-text" > <br /> From Top MNC's</span></h3>
-    <section className='p-2 container py-5' id="webinar">
+    <section className='p-2 container-fluid py-5' id="webinar">
 
       <div className="students-placed">
       <Carousel
@@ -136,13 +136,13 @@ function Webinar() {
           <div className="row w-100 d-flex justify-conent-center">
 
             {slideItems.map((item) => (
-                <div className="col-12 col-md-6 col-lg-4">
+                <div className="col-12 col-md-6 col-lg-3">
               <div className="webinar-card " data-aos="zoom-in-left">
                 <div className="webinar-card-header p-2">
                         <img src={item.image} alt="" />
                 </div>
                 <div className="webinar-card-body p-2">
-                  <p className="mt-2 p-light-small text-black">Conducted by</p>
+                  <p className="mt-2 p-light-small text-main-danger">Conducted by</p>
                     <h3 className="heading-small text-black">{item.company}</h3>
                     <p className='mt-2 p-dark-small text-black'><ReadMore text={item.description} maxLength={50} /></p>
                 </div>

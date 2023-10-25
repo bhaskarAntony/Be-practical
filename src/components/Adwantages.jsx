@@ -57,8 +57,7 @@ function Adwantages() {
             )}
         </div>
         <div className="py-5 d-flex flex-wrap justify-content-center">
-          <ApplyNow text={"Join Now"}/>
-         <BookDemoBtn text={"Book Your Master Classes"}/>
+          <ApplyNow text={"Book Your Master Classes"}/>
         </div>
       </div>
     </section>

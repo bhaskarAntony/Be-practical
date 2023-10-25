@@ -1,6 +1,6 @@
 
 .navbar-nav .nav-link {
-    color: #ffffff;
+    color: #0d0d0d;
     font-size: 1rem;
     padding: 10px 20px;
     font-weight: 500 !important;
@@ -8,7 +8,7 @@
   }
   .elite-link{
       background:var(--gold) !important;
-      color: #fff !important;
+      color: #000000 !important;
       border-radius: 100px;
       padding: 5px 20px !important;
   }
@@ -69,17 +69,19 @@
   }
   nav{
     /* background-color: var( --dark-green); */
-    background-color: var(--color-dark-1);
+    background-color: #fff;
     gap:30px !important;
-    border-bottom: 1px solid #d9b8ff;
-    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
   }
   .nav-top{
-    background-color: var(--color-green-1);
+    background-color: var(--danger);
     text-align: center;
     margin: 0;
 
+  }
+  header a{
+    min-width: fit-content;
   }
   header{
     position: sticky !important;

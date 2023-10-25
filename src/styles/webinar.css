@@ -1,7 +1,7 @@
 
 #webinar{
   position: relative;
-  background: var(--color-light-2) !important;
+  background: var(--pink) !important;
   
   border-radius: 30px;
 
@@ -11,7 +11,7 @@
   /* background:var( --color-purple-3); */
   /* background: linear-gradient(315deg, var(--color-dark-2), #6b9fff); */
   background: #fff;
-  border-bottom: 5px solid #6b9fff;
+  border-bottom: 5px solid var(--danger);
   color: #fff;
     padding: 10px;
     width: 100% !important;
@@ -19,6 +19,7 @@
     object-position: center;
     position: relative;
     overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .webinar-card::after{
   content: "";
@@ -26,7 +27,7 @@
   width: 50px;
   height: 100%;
   background-color: #000;
-  background:var(--color-green-1);
+  background:var(--primary);
   transform: rotate(45deg);
   bottom: -180px;
   right: 0;

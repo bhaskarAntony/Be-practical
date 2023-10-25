@@ -8,7 +8,7 @@ function ApplyNow({text}) {
     const handleClose = () => setShowModal(false);
   return (
     <>
-         <button className='hero-btn-main m-2 py-3' onClick={openModal}>{text}<i class="bi bi-chevron-double-right"></i></button>
+         <button className='btn-danger m-2 py-3' onClick={openModal}>{text}<i class="bi bi-chevron-double-right"></i></button>
            <DialogModel
         show={showModal}
         onHide={handleClose}

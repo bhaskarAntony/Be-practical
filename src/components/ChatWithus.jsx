@@ -13,8 +13,8 @@ function ChatWithus() {
     <div className="chat-with-us p-3">
     <div className="row">
         <div className="col-12 col-md-8 col-lg-8">
-            <h1 className="fs-2">Have any further <br />questions?</h1>
-            <button className='btn-main-outline-dark mt-5 mb-3'>Chat With Us <i class="bi bi-chevron-double-right"></i></button>
+            <h1 className="fs-1 text-white">Have any further <br />questions?</h1>
+            <button className='btn-danger mt-5 mb-3'>Chat With Us <i class="bi bi-chevron-double-right"></i></button>
         </div>
 
         <div className="col-12 col-md-4 col-lg-4">

@@ -4,9 +4,9 @@
     padding: 20px;
     color: #ffffff;
     overflow: hidden;
-    background: url(https://html.ditsolution.net/techno/assets/images/call-bg.png) no-repeat center;
-    background-size: cover;
-    background-color:var(--color-dark-1);
+    /* background: url(https://html.ditsolution.net/techno/assets/images/call-bg.png) no-repeat center;
+    background-size: cover; */
+    background-color:var(--dark);
 
 }
 *{

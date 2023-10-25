@@ -6,64 +6,6 @@ import AOS from 'aos';
 import { testinomials } from '../Data/DataFetcher';
 import ReadMore from '../Extra/ReadMore';
 
-const items = [
-  {
-    id: 1,
-    name: 'Adarsh',
-    rating: 5,
-    feedback:
-      "Be-practical is one of the best platforms for all non-technical and technical background students. I did MBA in 2017, and I'm learning lots of things at the institute. I like the faculty, and I feel that I had the very best platform for my career. I learned many new things from my teachers who were very helpful in every way they could. Teachers' and students' interaction was good, and they are very friendly, which helped me clarify many of my doubts in the course. I appreciate the faculty for their quick response and great support, and very special thanks to HR Kavitha Mam; she is very kind, and I am always thankful for her support and guidance. Thank you.",
-    profile: 'https://thenewcode.com/assets/images/thumbnails/sarah-parmenter.jpeg',
-    role:"student"
-  },
-  {
-    id: 1,
-    name: 'Sachin',
-    rating: 5,
-    feedback:
-      "Be-practical is one of the best platforms for all non-technical and technical background students. I did MBA in 2017, and I'm learning lots of things at the institute. I like the faculty, and I feel that I had the very best platform for my career. I learned many new things from my teachers who were very helpful in every way they could. Teachers' and students' interaction was good, and they are very friendly, which helped me clarify many of my doubts in the course. I appreciate the faculty for their quick response and great support, and very special thanks to HR Kavitha Mam; she is very kind, and I am always thankful for her support and guidance. Thank you.",
-    profile: 'https://thenewcode.com/assets/images/thumbnails/sarah-parmenter.jpeg',
-    role:"student"
-  },
-  {
-    id: 1,
-    name: 'Vishwas',
-    rating: 5,
-    feedback:
-      "Be-practical is one of the best platforms for all non-technical and technical background students. I did MBA in 2017, and I'm learning lots of things at the institute. I like the faculty, and I feel that I had the very best platform for my career. I learned many new things from my teachers who were very helpful in every way they could. Teachers' and students' interaction was good, and they are very friendly, which helped me clarify many of my doubts in the course. I appreciate the faculty for their quick response and great support, and very special thanks to HR Kavitha Mam; she is very kind, and I am always thankful for her support and guidance. Thank you.",
-    profile: 'https://thenewcode.com/assets/images/thumbnails/sarah-parmenter.jpeg',
-    role:"student"
-  },
-  {
-    id: 1,
-    name: 'Antony',
-    rating: 5,
-    feedback:
-      "Be-practical is one of the best platforms for all non-technical and technical background students. I did MBA in 2017, and I'm learning lots of things at the institute. I like the faculty, and I feel that I had the very best platform for my career. I learned many new things from my teachers who were very helpful in every way they could. Teachers' and students' interaction was good, and they are very friendly, which helped me clarify many of my doubts in the course. I appreciate the faculty for their quick response and great support, and very special thanks to HR Kavitha Mam; she is very kind, and I am always thankful for her support and guidance. Thank you.",
-    profile: 'https://thenewcode.com/assets/images/thumbnails/sarah-parmenter.jpeg',
-    role:"student"
-  },
-  {
-    id: 1,
-    name: 'babu',
-    rating: 5,
-    feedback:
-      "Be-practical is one of the best platforms for all non-technical and technical background students. I did MBA in 2017, and I'm learning lots of things at the institute. I like the faculty, and I feel that I had the very best platform for my career. I learned many new things from my teachers who were very helpful in every way they could. Teachers' and students' interaction was good, and they are very friendly, which helped me clarify many of my doubts in the course. I appreciate the faculty for their quick response and great support, and very special thanks to HR Kavitha Mam; she is very kind, and I am always thankful for her support and guidance. Thank you.",
-    profile: 'https://thenewcode.com/assets/images/thumbnails/sarah-parmenter.jpeg',
-    role:"student"
-  },
-  {
-    id: 1,
-    name: 'Bhaskar',
-    rating: 5,
-    feedback:
-      "Be-practical is one of the best platforms for all non-technical and technical background students. I did MBA in 2017, and I'm learning lots of things at the institute. I like the faculty, and I feel that I had the very best platform for my career. I learned many new things from my teachers who were very helpful in every way they could. Teachers' and students' interaction was good, and they are very friendly, which helped me clarify many of my doubts in the course. I appreciate the faculty for their quick response and great support, and very special thanks to HR Kavitha Mam; she is very kind, and I am always thankful for her support and guidance. Thank you.",
-    profile: 'https://thenewcode.com/assets/images/thumbnails/sarah-parmenter.jpeg',
-    role:"student"
-  }
-  // Add more items as needed
-];
-
 function Feedback() {
 
   const [loading, setLoading] = useState(true)
@@ -80,7 +22,7 @@ function Feedback() {
     useEffect(() => {
         AOS.init(); // Initialize AOS
       }, []);
-    const [itemsPerSlide, setItemsPerSlide] = useState(3);
+    const [itemsPerSlide, setItemsPerSlide] = useState(2);
     const [carouselInterval, setCarouselInterval] = useState(3000);
     const [carouselPaused, setCarouselPaused] = useState(false);
   
@@ -95,7 +37,7 @@ function Feedback() {
             setItemsPerSlide(2);
             setCarouselInterval(2000);
           } else {
-          setItemsPerSlide(3);
+          setItemsPerSlide(2);
           setCarouselInterval(3000);
         }
       };
@@ -128,8 +70,9 @@ function Feedback() {
   }, []);
 
   return (
-  <div className='feedback-container'>
-  <h1 className="banner-heading text-white">What Peoples Saying <br />About Institute and Courses?</h1>
+  <div className='feedback-container bg-blur p-5'>
+    <p className="text-center p-large1 text-main-danger">Testimonials</p>
+  <h1 className="banner-heading text-black mb-4">What Peoples Saying <br />About Institute and Courses?</h1>
     <Carousel
      interval={carouselInterval} 
      >
@@ -138,33 +81,39 @@ function Feedback() {
           onMouseEnter={handleCarouselHover}
           onMouseLeave={handleCarouselLeave}
         >
-          <div className="d-flex flex-wrap feedback p-3">
+          <div className="feedback  container ">
           <div className="row">
 
             {slideItems.map((item) => (
-                <div className="col-12 col-md-6 col-lg-4">
+                <div className="col-12 col-md-6 col-lg-6">
               <div className="feedback-card" data-aos="fade-left"
                                             data-aos-anchor="#example-anchor"
                                             data-aos-offset="500"
                                             data-aos-duration="500">
               <div key={item.id} className="custom-carousel-item">
                 <div className="feedback-header mb-2">
-                    <img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="" />
-                        <div>
-                        <h4 className='card-heading fw-bold'>{item.name}</h4>
-                        <small className='fw-bold'>{item.role}</small>
-                        </div>
-                </div>
-                <hr />
                 <div className="rating-container d-flex">
                   <small>{item.rating} Rating</small>
                   {Array.from({ length: item.rating }, (_, i) => (
                     <i key={i} className="bi bi-star-fill text-warning"></i>
                   ))}
                 </div>
-                <p className='p-dark-small'>
+                <div className="py-3">
+                <p className='p-large1'>
                 <ReadMore text={item.content} maxLength={100} />
                 </p>
+                </div>
+                <hr />
+                   <div className="d-flex gap-3">
+                   <img src="https://us.123rf.com/450wm/thesomeday123/thesomeday1231712/thesomeday123171200009/91087331-default-avatar-profile-icon-for-male-grey-photo-placeholder-illustrations-vector.jpg?ver=6" alt="" />
+                        <div>
+                        <h4 className='fs-5 fw-bold text-main-danger'>{item.name}</h4>
+                        <small className='text-secondary'>{item.role}</small>
+                        </div>
+                   </div>
+                </div>
+                
+                
               </div>
               </div>
                 </div>
@@ -174,8 +123,8 @@ function Feedback() {
         </Carousel.Item>
       ))}
     </Carousel>
-    <div className="text-center p-3">
-    <a href="/all-testinomials" className='card-heading  text-white p-2'>Read More<i class="bi bi-chevron-double-right"></i></a>
+    <div className="text-center p-3 mt-3">
+    <a href="/all-testinomials" className='btn-danger text-decoration-none'>Browse more<i class="bi bi-chevron-double-right"></i></a>
   </div>
   </div>
   );

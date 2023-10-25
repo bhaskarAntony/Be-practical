@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <div className="nav-top">
-        <p className="p-dark-small m-0">Join Our Elite program <b>Explore <i class="bi bi-arrow-right"></i></b></p>
+        <p className="p-dark-small m-0 text-white">Join Our Elite program <b>Explore <i class="bi bi-arrow-right"></i></b></p>
       </div>
       <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
@@ -75,10 +75,10 @@ function Header() {
         </li>
       </ul>
      <a href="/register" className='text-decoration-none'>
-     <button class="btn-main-outline-light bg-white text-black mx-1 p-2 px-3 hero-btn" type="button">Sign Up<i class="bi bi-chevron-double-right"></i></button>
+     <button class="btn-main-outline-dark bg-white text-black mx-1 p-3 px-3 hero-btn" type="button">Sign Up<i class="bi bi-chevron-double-right"></i></button>
      </a>
       <a href="/book-demo" className='text-decoration-none'>
-      <button class="hero-btn-main mx-1 p-2 px-3 hero-btn" type="button">Book Your Master Classes<i class="bi bi-chevron-double-right"></i></button>
+      <button class="btn-danger" type="button">Book Demo Classes <i class="bi bi-chevron-double-right"></i></button>
       </a>
     </div>
   </div>

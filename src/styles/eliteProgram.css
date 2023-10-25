@@ -1,13 +1,28 @@
 .elite-progarm{
-    background: var(--color-blue-7);
+    background: url(https://demo.themewinter.com/wp/courselog/wp-content/uploads/2020/12/testimonial_bg.png) no-repeat center;
+    background-size: cover;
     padding: 20px;
     border-radius: 20px;
 }
 .elite-program-card{
     margin-bottom: 20px;
-    background: linear-gradient(315deg, #a189ff , var(--color-purple-1)) !important;
-    padding: 10px;
     background: #fff;
-    min-height: 150px;
+    padding: 20px;
+    min-height: 190px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.elite-program-card::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--pink);
+    border-radius: 100px;
+    top: -20px;
+    right: -30px;
+    z-index: -2;
 }

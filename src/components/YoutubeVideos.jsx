@@ -8,80 +8,6 @@ import ShimmerCard from '../shimmer effects/ShimmerCard';
 import BookDemoBtn from '../Extra/BookDemoBtn';
 import Insights from './Insights';
 
-  const youtubevideos = [
-    {
-      youtubevedUrl: "https://youtu.be/m1Kp6IxFFVQ?si=-GCv-eUyUdsgiWAL",
-      title: "Video 1",
-      description: "Description for Video 1",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=3RfIzBsGHaQ",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=g3HbigGM1Lo",
-      title: "Video 1",
-      description: "Description for Video 1",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=o3TkssvkRlM",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=o3TkssvkRlM",
-      title: "Video 1",
-      description: "Description for Video 1",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=CNlSV74WTBk",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=CNlSV74WTBk",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=-5iEM0hzR-o",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=NiIo_jnB9Es",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=UHGDOe7hgoA",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=YgbHE8P09Qc",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=Zy1NqCysma4",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=UOLINVjfEZM",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    {
-      youtubevedUrl: "https://www.youtube.com/watch?v=LghwI-TbWhE",
-      title: "Video 2",
-      description: "Description for Video 2",
-    },
-    
-    // Add more video objects as needed
-  ];
 function StudentsPlaced() {
   const [loading, setLoading] = useState(true)
     const [youtubeVideosData, setYoutubeVideosData] = useState([]);
@@ -157,7 +83,6 @@ function StudentsPlaced() {
         <h3 className="banner-heading" data-aos="fade-up">What our students says <br /> about institute</h3>
         <p className=" text-center p-light-small " data-aos="fade-up">We don’t just give certification but outcomes!</p>
       <div className="students-placed">
-        <Insights/>
       <Carousel
        interval={carouselInterval}
        onMouseEnter={handleCarouselHover}
@@ -168,7 +93,7 @@ function StudentsPlaced() {
           onMouseEnter={handleCarouselHover}
           onMouseLeave={handleCarouselLeave}
         >
-          <div className="d-flex flex-wrap  p-3 container">
+          <div className="p-5 container-fluid  rounded-5">
           <div className="row w-100">
           {loading ? (
               Array(9)
@@ -197,17 +122,16 @@ function StudentsPlaced() {
                               alt={`Thumbnail ${index}`}
                               className="w-100 h-100"/>
                           </a>
-                              <div className="youtube-play-btn">
-                             <a >
-                               <div className="play-icon">
+                             <a className="go">
+                               <div >
                               <i class="bi bi-play-fill fs-4"></i>
                               </div>
                              </a>
-                              </div>
+                              
                         </div>
                         <div className="youtube-body">
-                        <h4 className='light-green-text heading-small mt-2'>{item.title}</h4>
-                            <p className='text-light'><ReadMore text={item.description} maxLength={50} /></p>
+                        <a href="" className='text-main-danger heading-small mt-2'>{item.title}</a>
+                            <p className='p-large1 text-black mt-3'><ReadMore text={item.description} maxLength={100} /></p>
                           </div>
                           <div className="youtube-footer">
 
