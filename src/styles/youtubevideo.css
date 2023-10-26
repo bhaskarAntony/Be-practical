@@ -8,18 +8,15 @@
     background-color: #ffffff;
     max-width: 100%;
     word-break: inherit;
-    border-radius: 20px;
-    margin-bottom: 45px;
+    border-radius: 150px 150px 0 0;
     overflow: hidden;
+    min-height: 380px;
+    border-top: 10px solid var(--red);
 }
 .youtube-header{
     position: relative !important;
-    height: 200px !important;
-  
+    height: 200px !important; 
 }
-.youtube-body a{
-    min-height: 250px;
-} 
 /* .youtube-header::before{
     content: "";
     position: absolute;
@@ -43,31 +40,13 @@
     padding: 10px;
 }
 .youtube-play-btn .play-icon{
-    width: 40px;
-    height: 40px;
-    background-color: #ffffff;
+    width: 60px;
+    height: 60px;
+    background-color: var(--red);
+    color: #fff;
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100px;
-}
-.youtube-header img{
-    border-radius: 0 0 100px 100px;
-}
-.youtube-footer{
-    min-height: 100px;
-    background-color: var(--color-green-1);
-    position: relative;
-    border-radius: 50px;
-}
-.youtube-footer::before{
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 40px;
-    bottom: -18px;
-    left: 40%;
-    transform: rotate(30deg);
-    background-color: var(--color-green-1);
 }

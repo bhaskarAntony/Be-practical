@@ -38,8 +38,8 @@ function CoursePageEngine() {
         return <Loading/>;
       }
   return (
-    <section>
-    <div className="course-hero container-fluid py-3">
+    <section className='overflow-hidden'>
+    <div className="course-hero container-fluid p-0 py-3">
         {/* <div className="row">
             <div className="col-12 col-md-6 col-lg-6">
                 <div className="course-hero-text p-lg-5 p-md-2 p-2">

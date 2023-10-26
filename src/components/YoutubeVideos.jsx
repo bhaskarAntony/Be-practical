@@ -79,8 +79,8 @@ function StudentsPlaced() {
     return accumulator;
   }, []);
   return (
-    <section className=' p-2 py-5 youtube-container' id="placed">
-        <h3 className="fs-1 text-900 text-center" data-aos="fade-up">What our students says about institute</h3>
+    <section className=' p-2 py-5 youtube-container bg-gray2' id="placed">
+        <h3 className="fs-1 text-900 text-center text-white" data-aos="fade-up">What our students says about institute</h3>
         <p className=" text-center p-large1 text-main-danger " data-aos="fade-up">We don’t just give certification but outcomes!</p>
       <div className="students-placed">
       <Carousel
@@ -108,7 +108,7 @@ function StudentsPlaced() {
             ):(
             slideItems.map((item) => (
                 <div className="col-12 col-md-6 col-lg-3">
-            <div className="youtube-card">
+            <div className="youtube-card bg-gray3 border-b">
             <div className="youtube-header mb-3">
                           <a
                           
@@ -122,16 +122,21 @@ function StudentsPlaced() {
                               alt={`Thumbnail ${index}`}
                               className="w-100 h-100"/>
                           </a>
-                             <a className="go">
-                               <div >
-                              <i class="bi bi-play-fill fs-4"></i>
+                          <div className="youtube-play-btn">
+                         <div>
+                         <a className="play-icon">
+                               <div className='d-flex'>
+                              <i class="bi bi-play-fill fs-1"></i>
                               </div>
                              </a>
+                         </div>
+                          </div>
+                           
                               
                         </div>
                         <div className="youtube-body">
                         <a href="" className='text-main-danger fs-5 text-900 mt-2 text-decoration-none'>{item.title}</a>
-                            <p className='fs-6 text-black mt-3'><ReadMore text={item.description} maxLength={15} /></p>
+                            <p className='fs-6 text-white mt-3'><ReadMore text={item.description} maxLength={15} /></p>
                           </div>
                           <div className="youtube-footer">
 

@@ -7,8 +7,8 @@
     padding: 10px;
 }
 .course-faq-question [class*="bi-"]{
-    background-color: #28027b5c;
-    color: #080559;
+    background-color: var(--blue-light);
+    color: var(--red);
     width: 30px;
     display: flex;
     align-items: center;

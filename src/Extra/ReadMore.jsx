@@ -14,7 +14,7 @@ function ReadMore({ text, maxLength }) {
           <div>
             {text.slice(0, maxLength)}
             {text.length > maxLength && (
-              <p onClick={toggleTruncate} className="read-more-button  fw-bold">
+              <p onClick={toggleTruncate} className="read-more-button text-main-danger  fw-bold">
                 ...Read More <i class="bi bi-chevron-double-right"></i>
               </p>
             )}
@@ -22,7 +22,7 @@ function ReadMore({ text, maxLength }) {
         ) : (
           <div>
             {text}
-            <p onClick={toggleTruncate} className="read-less-button fw-bold">
+            <p onClick={toggleTruncate} className="read-less-button text-main-danger fw-bold">
               Read Less
             </p>
           </div>

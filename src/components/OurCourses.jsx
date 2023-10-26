@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../styles/ourCourses.css'
 import { CoursePage } from '../Data/DataFetcher';
 import Aos from 'aos';
+import { Link } from 'react-router-dom';
 
 function OurCourses() {
   const [loading, setLoading] = useState(false)
@@ -99,10 +100,10 @@ function OurCourses() {
                           </div>
                           <div className="course-btns row mt-3">
                             <div className="col-12 col-md-6 col-lg-6">
-                            <button className="btn-gray  hero-btn flex-1">Know More</button>
+                            <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Talk to an Expert</button></Link>
                             </div>
                             <div className="col-12 col-md-6 col-lg-6">
-                            <button className="btn-gray-outline  hero-btn flex-1">Know More</button>
+                            <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
                               </div>
                            
                            
@@ -119,6 +120,9 @@ function OurCourses() {
             </div>
             ))
           }
+        </div>
+        <div className="text-center">
+        <Link to="/" className=" text-decoration-none"> <button className="btn-danger  hero-btn">Browse All Courses</button></Link>
         </div>
     </div>
   )
