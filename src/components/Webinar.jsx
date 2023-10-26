@@ -121,9 +121,9 @@ function Webinar() {
   return (
   <>
           <h3 className="banner-heading mt-5" data-aos="fade-up">Pre Career Guidence program <span className="main-text" > <br /> From Top MNC's</span></h3>
-    <section className='p-2 container-fluid py-5' id="webinar">
+    <section className='p-2 container-fluid py-5 bg-blur' id="webinar">
 
-      <div className="students-placed">
+      <div className="students-placed ">
       <Carousel
       interval={carouselInterval}
       >
@@ -132,7 +132,7 @@ function Webinar() {
           onMouseEnter={handleCarouselHover}
           onMouseLeave={handleCarouselLeave}
         >
-          <div className="d-flex flex-wrap container-fluid">
+          <div className="container-fluid ">
           <div className="row w-100 d-flex justify-conent-center">
 
             {slideItems.map((item) => (

@@ -1,7 +1,14 @@
 import React from 'react'
+import brand from '../images/brand-logo.jpg'
 import '../styles/header.css'
+import { Offcanvas } from 'react-bootstrap'
+import { useState } from 'react';
 
 function Header() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <header>
       {/* <div className="nav-top">
@@ -9,12 +16,20 @@ function Header() {
       </div> */}
       <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-  <a class="navbar-brand" href="/"> <img src="https://be-practical.com/images/Be-logo.png" alt="" /></a>
+  <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a>
 
- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" className='bg-danger rounded-2 d-lg-none'>
+ <button variant="primary" onClick={handleShow} className='btn-danger d-lg-none'>
     <i class="bi bi-list text-white"></i>
     </button>
-
+    <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          Some text as placeholder. In real life you can have the elements you
+          have chosen. Like, text, images, lists, etc.
+        </Offcanvas.Body>
+      </Offcanvas>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-group  d-flex justify-content-center w-100">
         <li class="nav-item">

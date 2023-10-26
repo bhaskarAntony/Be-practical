@@ -2,7 +2,7 @@
 .companies{
     /* background: url('../images/low-poly-grid-haikei.svg') no-repeat center; */
     background-size: cover;
-    background: var(--pink);
+    background: var(--blue-light);
     min-height: 200px;
     padding: 50px;
     color:#fff;
@@ -27,6 +27,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-bottom: 3px solid var(--red);
 }
 .companies-brands-container .all-company-card:hover{
     transform: scale(1.2);
