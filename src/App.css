@@ -26,7 +26,6 @@
     --success: #28a745;
     --info: #17a2b8;
     --warning: #ffc107;
-    --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
     --white: #fff;
@@ -34,12 +33,23 @@
     --green: #002935;
     --yellow: #F9C02F;
     --pink: #FFEAEE;
+    --gray2:#202937;
+    --gray3:#2e3643;
     --blue-light:#f3f5fb;
     --gold:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
   radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
+.bg-gray2{
+  background: var(--gray2) !important;
+}
+.bg-gray3{
+  background: var(--gray3) !important;
+}
 .text-yellow{
   color: var(--yellow) !important;
+}
+.border-b{
+  border-bottom: 3px solid var(--red);
 }
 .text-green{
   color: var(--success) !important;

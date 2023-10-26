@@ -1,11 +1,43 @@
-
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: moveParticle 3s linear infinite, fadeOut 3s ease-in-out forwards;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes anim {
+    from {
+      transform: translateY(10px) translateX(10px);
+    }
+    to {
+      transform: translateY(-10px) translateX(-10px);
+    }
+  }
+  
+  @keyframes moveParticle {
+    to {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 .elite-main-page{
-    background: var(--dim-black);
+    background: var(--black);
     color: #fff;
 }
 .elite-page{
     background-color: var(--dim-black);
+    background: url('../images/elite.svg') no-repeat center;
+    background-size: cover;
     min-height: 100vh;
+    position: relative;
 
 }
 .elite-right{

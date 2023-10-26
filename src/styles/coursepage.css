@@ -1,11 +1,12 @@
 .course-hero{
-    padding: 10px;
+    /* padding: 10px;
     min-height: 100vh;
     background-color: var(--color-dark-1);
     background: url(https://educrat-nextjs.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbg.86c9aca0.png&w=1920&q=75) no-repeat center;
     background-size: cover;
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 100px; */
+    min-height: 60vh;
 }
 .batch{
     padding: 10px;

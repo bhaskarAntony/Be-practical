@@ -3,6 +3,8 @@ import '../styles/elite-page.css'
 import Elite from '../components/Elite'
 import Batchtable from '../components/Batchtable'
 import EliteProgram from '../components/EliteProgram'
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 const eliteCourses =[
     {
@@ -15,6 +17,56 @@ const eliteCourses =[
     }
 ]
 function ElitePage() {
+    const [particles, setParticles] = useState([]);
+
+    // Function to create particles
+    const createParticle = () => {
+      const x = Math.random() * window.innerWidth;
+      const y = Math.random() * window.innerHeight;
+      const size = Math.random() * 30 + 3; // Adjust the size range as needed
+      const opacity = Math.random() * 0.7 + 0.3; // Adjust the opacity range as needed
+      const particle = {
+        id: Date.now(),
+        x,
+        y,
+        size,
+        opacity,
+        speedX: (Math.random() - 0.5) * 20,
+        speedY: (Math.random() - 0.5) * 20,
+      };
+      setParticles((prevState) => [...prevState, particle]);
+    };
+  
+    // Function to update particles' positions
+    const updateParticles = () => {
+      setParticles((prevState) =>
+        prevState.map((particle) => ({
+          ...particle,
+          x: particle.x + particle.speedX,
+          y: particle.y + particle.speedY,
+        }))
+      );
+    };
+  
+    // Create particles continuously
+    useEffect(() => {
+      const interval = setInterval(() => {
+        createParticle();
+      }, 100); // Adjust the interval as needed
+  
+      return () => {
+        clearInterval(interval);
+      };
+    }, []);
+  
+    // Update particles' positions
+    useEffect(() => {
+      const animationFrame = requestAnimationFrame(updateParticles);
+  
+      return () => {
+        cancelAnimationFrame(animationFrame);
+      };
+    }, [particles]);
   return (
 <>
 {/* <div className="elite-video">
@@ -27,7 +79,7 @@ function ElitePage() {
             <div className="elite-left py-5">
                 <h1>100% Placement Program</h1>
                 <h2>Get 50% Refund if not Placed</h2>
-                <p className="mt-2">Be Practical Conducting Elite Batch for Freshers and working Professionals to make you job ready. where we Guarantee Our Placements.
+                <p className="mt-2 text-white">Be Practical Conducting Elite Batch for Freshers and working Professionals to make you job ready. where we Guarantee Our Placements.
                 </p>
                <div className='text-start'>
                <button className="elite-btn btn p-3 px-4 fs-4">Join Now</button>
@@ -38,14 +90,27 @@ function ElitePage() {
             </div>
             
         </div>
-        <div className="col-12 col-md-6 col-lg-6">
+        {/* <div className="col-12 col-md-6 col-lg-6">
             <div className="elite-right">
                 <div className="elite-gold-circle">
 
                 </div>
             </div>
-        </div>
+        </div> */}
      </div>
+     {particles.map((particle) => (
+        <div
+          key={particle.id}
+          className="particle"
+          style={{
+            top: `${particle.y}px`,
+            left: `${particle.x}px`,
+            width: `${particle.size}px`,
+            height: `${particle.size}px`,
+            background: `rgba(159, 121, 40, ${particle.opacity})`,
+          }}
+        ></div>
+      ))}
     </div>
     <div className="container elite-devider"></div>
     <Elite/>

@@ -40,7 +40,7 @@ function CoursePageEngine() {
   return (
     <section>
     <div className="course-hero container-fluid py-3">
-        <div className="row">
+        {/* <div className="row">
             <div className="col-12 col-md-6 col-lg-6">
                 <div className="course-hero-text p-lg-5 p-md-2 p-2">
                     <h1 className="course-heading text-white mb-4">{courseData.heroTitle}</h1>
@@ -98,17 +98,45 @@ function CoursePageEngine() {
                     </div>
                 </div>
             </div>
+        </div> */}
+        <div className="course-hero p-lg-5 p-3 d-flex flex-column align-items-center justify-content-center bg-blur">
+            <h1 className="heading text-center text-900">{courseData.heroTitle}</h1>
+            <p className="p-large1 text-900 text-main-danger">{courseData.heroSubtitle}</p>
+            <div className="course-details container  p-lg-5 p-3">
+                <div className="row">
+                   <div className="col-12 col-md-4 col-lg-4">
+                   <div className="text-center bg-white rounded-3 py-3 border-b">
+                         <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
+                        <h1 className="fs-5 text-main-danger">Next Batch</h1>
+                        <h1 className="fs-4">{courseData.BatchStarting}</h1>
+                    </div>
+                   </div>
+                   <div className="col-12 col-md-4 col-lg-4">
+                   <div className="text-center bg-white rounded-3 py-3 border-b">
+                   <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
+                        <h1 className="fs-5 text-main-danger">Duration</h1>
+                        <h1 className="fs-4">{courseData.courseDuration}</h1>
+                    </div>
+                   </div>
+                   <div className="col-12 col-md-4 col-lg-4">
+                   <div className="text-center bg-white rounded-3 py-3 border-b">
+                   <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
+                        <h1 className="fs-5 text-main-danger">Next Batch</h1>
+                        <h1 className="fs-4">{courseData.BatchStarting}</h1>
+                    </div>
+                   </div>
+                </div>
+            </div>
         </div>
         <HeroRegister/>
     </div>
-    <h3 className="banner-heading" data-aos="fade-up">What Programming Languages <br /> You will Learn?</h3>
-      <section className='main-lan-container container bg-blue-1 py-2' id="languages">
-            <div className="lan-inner-container">
+      <section className='main-lan-container container-fluid bg-gray2 rounded-0 py-2' id="languages">
+            <div className="lan-inner-container container">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-7">
-                        <Languages languages={courseData.programmingLanguages}/>
+                        <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
                     </div>
-                    <div className="col-12 col-md-6 col-lg-5">
+                    <div className="col-12 col-md-6 col-lg-5 d-flex align-items-center ">
                         <CourseCard instructor={courseData.instructors} duration={courseData.courseDuration} course={courseData.courseName} ></CourseCard>
                     </div>
                 </div>

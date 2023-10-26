@@ -1,6 +1,7 @@
 
 .elite{
     background-color: var(--black) ;
+    background-size: cover;
     padding: 10px;
     display: flex;
     flex-direction: column;
