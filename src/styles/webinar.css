@@ -9,7 +9,7 @@
   /* background:var( --color-purple-3); */
   /* background: linear-gradient(315deg, var(--color-dark-2), #6b9fff); */
   background: #fff;
-    border-bottom: 5px solid var(--danger);
+    border-bottom: 5px solid var(--red);
     color: #fff;
     padding: 10px;
     width: 100% !important;
