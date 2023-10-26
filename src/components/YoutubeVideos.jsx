@@ -32,7 +32,7 @@ function StudentsPlaced() {
     useEffect(() => {
         AOS.init(); // Initialize AOS
       }, []);
-    const [itemsPerSlide, setItemsPerSlide] = useState(3);
+    const [itemsPerSlide, setItemsPerSlide] = useState(4);
     const [carouselInterval, setCarouselInterval] = useState(3000);
     const [carouselPaused, setCarouselPaused] = useState(false);
   
@@ -47,7 +47,7 @@ function StudentsPlaced() {
             setItemsPerSlide(2);
             setCarouselInterval(2000);
           } else {
-          setItemsPerSlide(3);
+          setItemsPerSlide(4);
           setCarouselInterval(3000);
         }
       };
@@ -99,7 +99,7 @@ function StudentsPlaced() {
               Array(9)
                 .fill(null)
                 .map((_, index) => (
-                  <div className="col-6 col-md-3 col-lg-2 rounded-2 p-3" key={index}>
+                  <div className="col-6 col-md-3 col-lg-3 rounded-2 p-3" key={index}>
                     <div>
                     <ShimmerCard />
                     </div>
@@ -107,7 +107,7 @@ function StudentsPlaced() {
                 ))
             ):(
             slideItems.map((item) => (
-                <div className="col-12 col-md-6 col-lg-4">
+                <div className="col-12 col-md-6 col-lg-3">
             <div className="youtube-card">
             <div className="youtube-header mb-3">
                           <a
@@ -130,8 +130,8 @@ function StudentsPlaced() {
                               
                         </div>
                         <div className="youtube-body">
-                        <a href="" className='text-main-danger heading-small mt-2'>{item.title}</a>
-                            <p className='p-large1 text-black mt-3'><ReadMore text={item.description} maxLength={100} /></p>
+                        <a href="" className='text-main-danger fs-5 text-900 mt-2 text-decoration-none'>{item.title}</a>
+                            <p className='fs-6 text-black mt-3'><ReadMore text={item.description} maxLength={15} /></p>
                           </div>
                           <div className="youtube-footer">
 

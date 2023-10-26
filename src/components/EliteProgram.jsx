@@ -29,7 +29,7 @@ const eliteProgram = [
 ]
 function EliteProgram() {
   return (
-    <div>
+    <div className='mt-5'>
          <h1 className="banner-heading">What is Elite Program?</h1>
          <section className='elite-progarm container py-5'>
        

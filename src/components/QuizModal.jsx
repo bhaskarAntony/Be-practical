@@ -62,7 +62,7 @@ function QuizModal() {
                 <div className="col-12 col-md-6 col-lg-6">
                  <img src="https://demo.themewinter.com/wp/courselog/wp-content/uploads/2020/12/view_plans.png" alt="" className="w-100" />
                 </div>
-                <div className="col-12 col-md-6 col-lg-6 p-5">
+                <div className="col-12 col-md-6 col-lg-6 p-1 p-lg-5">
                   <p className="p-large1 text-main-danger">Get Started</p>
                   <h1 className="card-big-text text-900">Not Sure Where to Begin? <br /> Take Our Quiz.</h1>
                   <p className="text-secondary p-large1">

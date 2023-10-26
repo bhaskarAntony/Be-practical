@@ -4,9 +4,9 @@ import '../styles/header.css'
 function Header() {
   return (
     <header>
-      <div className="nav-top">
+      {/* <div className="nav-top">
         <p className="p-dark-small m-0 text-white">Join Our Elite program <b>Explore <i class="bi bi-arrow-right"></i></b></p>
-      </div>
+      </div> */}
       <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
   <a class="navbar-brand" href="/"> <img src="https://be-practical.com/images/Be-logo.png" alt="" /></a>
