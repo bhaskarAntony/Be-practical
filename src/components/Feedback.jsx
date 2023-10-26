@@ -70,7 +70,7 @@ function Feedback() {
   }, []);
 
   return (
-  <div className='feedback-container bg-blur p-5'>
+  <div className='feedback-container bg-blur p-lg-5 p-2'>
     <p className="text-center p-large1 text-main-danger">Testimonials</p>
   <h1 className="banner-heading text-black mb-4">What Peoples Saying <br />About Institute and Courses?</h1>
     <Carousel

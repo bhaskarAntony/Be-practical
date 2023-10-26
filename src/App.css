@@ -20,6 +20,7 @@
     --white: #fff;
     --gray: #6c757d;
     --gray-dark: #343a40;
+    --faq-dark: #0f1114;
     --primary: #007bff;
     --secondary: #6c757d;
     --success: #28a745;
@@ -33,9 +34,17 @@
     --green: #002935;
     --yellow: #F9C02F;
     --pink: #FFEAEE;
+    --gold:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
+  radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+}
+.shadow1{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .text-main-danger{
   color: var(--red) !important;
+}
+.bg-danger{
+  background:var(--red)
 }
 .banner-sub-text{
   font-size: 1.4rem;
@@ -47,6 +56,9 @@
 .bg-blur{
   background: url(https://demo.themewinter.com/wp/courselog/wp-content/uploads/2020/12/testimonial_bg.png) no-repeat center;
   background-size: cover;
+}
+.bg-dark-gray{
+  background: var(--dark);
 }
 .card-big-text{
   font-size: 2.9rem;
@@ -205,15 +217,13 @@
 .btn-main-outline-dark, .btn-main-outline-light{
   border: none;
   border: 2px solid rgb(0 0 0/1);
-  padding: 15px 20px;
   color: rgb(0 0 0/1);
   background-color: transparent;
-  font-size: 1.5rem;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
-  white-space: nowrap;
+  padding: 15px 20px;
+  font-size: 16px;
   font-weight: 600;
-  border-radius: 10px;
+  line-height: 23px;
+  border-radius: 5px;
 }
 .btn-main-outline-light{
   border: 2px solid #fff;

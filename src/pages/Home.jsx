@@ -16,6 +16,7 @@ import QuizModal from '../components/QuizModal';
 import EliteProgram from '../components/EliteProgram';
 import Elite from '../components/Elite';
 import AllCourses from '../components/AllCourses';
+import Funfact from '../components/Funfact';
 
 function Home() {
       // Model open logic
@@ -49,7 +50,8 @@ function Home() {
         <YoutubeVideos/>
         <Certificate/>
         <ChatWithus/>
-        <StudentsPlaced/>
+        {/* <StudentsPlaced/> */}
+        <Funfact/>
         <Feedback/>
     </section>
   )

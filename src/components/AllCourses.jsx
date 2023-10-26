@@ -84,7 +84,7 @@ function AllCourses() {
       }, []);
     return (
       <>
-      <p className="banner-sub-text text-main-danger w-100 text-center">Featured Courses</p>
+      <p className="banner-sub-text text-main-danger w-100 text-center mt-4">Featured Courses</p>
       <h1 className="banner-heading">Pick a Course to Get Started</h1>
       <div className='container-fluid all-courses p-3 py-5'>
       <div className="course-card-container container">

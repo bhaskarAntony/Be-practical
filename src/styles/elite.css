@@ -1,6 +1,6 @@
 
 .elite{
-    background-color: var(--color-dark-1) ;
+    background-color: var(--black) ;
     padding: 10px;
     display: flex;
     flex-direction: column;

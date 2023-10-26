@@ -4,8 +4,9 @@ import '../styles/elite.css'
 function Elite() {
   return (
     <section>
-              <h2 className="text-center text-black text-900">Join our <span className="main-text">Elite</span> Program, Get 50% Refund if not Placed</h2>
+              
       <div className="container elite text-black">
+      <h2 className="text-center text-white text-900">Join our <span className="text-main-danger">Elite</span> Program, Get 50% Refund if not Placed</h2>
         <div className="elite-card-container container elite rounded-5">
         <div className="row">
           <div className="col-6 col-sm-6 col-md-3 col-lg-2">
@@ -52,9 +53,11 @@ function Elite() {
         </div>
         </div>
         <div className="p-4 d-flex justify-content-center py-2">
-            <button className="hero-btn-main-2">Join Now <i class="bi bi-chevron-double-right"></i></button>
+            <button className="btn-danger">Join Now <i class="bi bi-chevron-double-right"></i></button>
             </div>
       </div>
+
+            
     </section>
   )
 }

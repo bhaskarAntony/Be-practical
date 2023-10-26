@@ -80,8 +80,8 @@ function StudentsPlaced() {
   }, []);
   return (
     <section className=' p-2 py-5 youtube-container' id="placed">
-        <h3 className="banner-heading" data-aos="fade-up">What our students says <br /> about institute</h3>
-        <p className=" text-center p-light-small " data-aos="fade-up">We don’t just give certification but outcomes!</p>
+        <h3 className="banner-heading text-black" data-aos="fade-up">What our students says <br /> about institute</h3>
+        <p className=" text-center p-large1 text-main-danger " data-aos="fade-up">We don’t just give certification but outcomes!</p>
       <div className="students-placed">
       <Carousel
        interval={carouselInterval}
@@ -93,7 +93,7 @@ function StudentsPlaced() {
           onMouseEnter={handleCarouselHover}
           onMouseLeave={handleCarouselLeave}
         >
-          <div className="p-5 container-fluid  rounded-5">
+          <div className="p-2 p-lg-5 container-fluid  rounded-5">
           <div className="row w-100">
           {loading ? (
               Array(9)
@@ -109,7 +109,7 @@ function StudentsPlaced() {
             slideItems.map((item) => (
                 <div className="col-12 col-md-6 col-lg-4">
             <div className="youtube-card">
-            <div className="youtube-header">
+            <div className="youtube-header mb-3">
                           <a
                           
                             target="_blank"

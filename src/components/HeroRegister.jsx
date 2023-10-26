@@ -47,8 +47,8 @@ function HeroRegister() {
   };
   return (
    <div className="px-lg-5">
-     <div className="register-container-home bg-white container-fluid light-shadow border-0">
-      <div className="register align-items-center rounded-1 p-3">
+     <div className="register-container-home bg-white container-fluid light-shadow border-0 shadow1">
+      <div className="register align-items-center rounded-1 p-3 ">
         <div className="p-2 rounded-2 py-3 border-0 bg-transparent">
           <div className="card-header-text text-center w-100">
             <span className="banner-heading fs-3 text-center mb-3">Register For Free Demo Session</span>
@@ -120,7 +120,7 @@ function HeroRegister() {
                 </div>
               </div>
               <div className="col-12 col-sm-12 col-md-2 col-lg-2 mb-2">
-                <button type="submit" className="hero-btn-main w-100">Register <i className="bi bi-chevron-double-right"></i></button>
+                <button type="submit" className="btn-danger w-100">Register <i className="bi bi-chevron-double-right"></i></button>
               </div>
             </div>
           </form>

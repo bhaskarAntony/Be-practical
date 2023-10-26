@@ -11,7 +11,7 @@ function Header() {
   <div class="container-fluid">
   <a class="navbar-brand" href="/"> <img src="https://be-practical.com/images/Be-logo.png" alt="" /></a>
 
- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" className='btn-danger'>
     <i class="bi bi-list text-white"></i>
     </button>
 
@@ -75,7 +75,7 @@ function Header() {
         </li>
       </ul>
      <a href="/register" className='text-decoration-none'>
-     <button class="btn-main-outline-dark bg-white text-black mx-1 p-3 px-3 hero-btn" type="button">Sign Up<i class="bi bi-chevron-double-right"></i></button>
+     <button class="btn-main-outline-dark bg-white text-black mx-1 hero-btn" type="button">Sign Up<i class="bi bi-chevron-double-right"></i></button>
      </a>
       <a href="/book-demo" className='text-decoration-none'>
       <button class="btn-danger" type="button">Book Demo Classes <i class="bi bi-chevron-double-right"></i></button>
