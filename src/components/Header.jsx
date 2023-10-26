@@ -29,6 +29,10 @@ function Header() {
 
    fetchData();
  }, []);
+ const handleLinkClick = () => {
+  // Hide the Offcanvas when a link is clicked
+  setShow(false);
+};
   return (
     <header>
       {/* <div className="nav-top">
@@ -47,43 +51,43 @@ function Header() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul className='p-0 m-0 list-group'>
-            <li className='mobile-list-item list-group-item p-2'>
+            <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/" className='nav-link fs-4'>Home</Link>
             </li>
             <p className="p-large1 text-900 bg-danger text-white p-2 mt-3">Our Courses</p>
            {
             CourseData.map((item, index)=>(
-              <li className='mobile-list-item list-group-item p-2' key={index}>
+              <li className='mobile-list-item list-group-item p-2' key={index} onClick={handleLinkClick}>
               
-              <Link  to={`/course/${item.courseName}/${item._id}`} className='nav-link fs-4'>{item.courseName}</Link>
+              <Link  to={`/course/${item.courseName}/${item._id}`} className='nav-link fs-4' >{item.courseName}</Link>
             </li>
             ))
            }
-             <li className='mobile-list-item list-group-item p-2'>
+             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/" className='nav-link fs-4'>Gallery</Link>
             </li>
-            <li className='mobile-list-item list-group-item p-2'>
+            <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/" className='nav-link fs-4'>Events</Link>
             </li>
-            <li className='mobile-list-item list-group-item p-2'>
+            <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/" className='nav-link fs-4'>Blogs</Link>
             </li>
-            <li className='mobile-list-item list-group-item p-2'>
+            <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/" className='nav-link fs-4'>About Us</Link>
             </li>
-            <li className='mobile-list-item list-group-item p-2'>
+            <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/" className='nav-link fs-4'>Contact Us</Link>
             </li>
           </ul>
           <p className="p-large1 text-900 bg-danger text-white p-2 mt-3">For Companies</p>
           <ul className="for-companies p-0 m-0 list-group">
-            <li className="company-list-item list-group-item p-2">
+            <li className="company-list-item list-group-item p-2" onClick={handleLinkClick}>
             <Link to="/" className='nav-link fs-4'>Corporate Training</Link>
             </li>
-            <li className="company-list-item list-group-item p-2">
+            <li className="company-list-item list-group-item p-2" onClick={handleLinkClick}>
             <Link to="/" className='nav-link fs-4'>Services</Link>
             </li>
-            <li className="company-list-item list-group-item p-2">
+            <li className="company-list-item list-group-item p-2" onClick={handleLinkClick}>
             <Link to="/" className='nav-link fs-4'>Hire Trained Graduates</Link>
             </li>
           </ul>
