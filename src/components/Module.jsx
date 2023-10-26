@@ -20,7 +20,9 @@ const Module = (props) => {
    <div className="container-fluid faq" id="faq">
     <h3 className="banner-heading">Training Module</h3>
     <p className="p-light-small text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-     <div className="container modules  p-lg-5 p-md-3 p-2">
+    <div className="row">
+      <div className="col-12 col-md-12 col-lg-6">
+      <div className="container modules  p-lg-5 p-md-3 p-2">
      {props.modules.map((item, index) => (
         <div
           className={`faq-item ${activeIndex === index ? 'active' : ''} `}
@@ -49,6 +51,17 @@ const Module = (props) => {
         <button className="btn-main-outline-light mx-2 mb-2">Enquire Now <i class="bi bi-chevron-double-right"></i></button>
         <button className="btn-main mx-2 mb-2">Download Module PDF <i class="bi bi-chevron-double-right"></i></button>
     </div>
+    </div>
+      </div>
+      <div className="col-12 col-md-12 col-lg-6">
+        <div className="module-right">
+          <img src="https://eduquest.itech-theme.com/wp-content/uploads/2023/08/service-1.jpg" alt="module-image" className="w-100" />
+         <div className="module-desc p-3 rounded-2">
+          <h1 className="fs-2">{props.name}</h1>
+          <p className="p-large1">Architect client-centered total linkage for intuitive benefits. Dynamically restore convergence before convergence before real-time .</p>
+         </div>
+        </div>
+      </div>
     </div>
 
    </div>

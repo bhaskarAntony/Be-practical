@@ -14,13 +14,24 @@ const FaqSection = (props) => {
   };
 
   return (
-    <div className="container-fluid bg-light-1 py-2">
+    <div className="container-fluid bg-blur py-2">
       <h2 className='banner-heading'>Frequently Asked Questions</h2>
+     <div className="row">
+     <div className="col-12 col-md-12 col-lg-6">
+     <div className="faq-left">
+     <img src="https://eduquest.itech-theme.com/wp-content/uploads/2023/08/faq.png" alt="" className="w-100" />
+     <div className="faq-contact p-3 rounded-3">
+      <p className="p-large1 text-white">Contact Us For a <span className="text-main-danger ">Free Learning </span> Consulting Evaluation</p>
+      <h1 className="fs-1 text-white">+91 9606729320</h1>
+     </div>
+     </div>
+      </div>
+      <div className="col-12 col-md-12 col-lg-6">
       <div className="accordion container" id="faqAccordion">
         {props.faq.map((faq, index) => (
-          <div className="card border-0 course-faq" key={index}>
+          <div className="card course-faq" key={index}>
             <div className="course-faq-question" id={`heading${index}`}>
-              <h4 className="mb-0">
+              <h4 className="mb-0 fs-5">
                 <div
                   className={`d-flex w-100 align-items-center ${activeIndex === index ? '' : 'collapsed'}`}
                   type="button"
@@ -45,6 +56,8 @@ const FaqSection = (props) => {
           </div>
         ))}
       </div>
+      </div>
+     </div>
       <div className="d-flex justify-content-center">
         <ApplyNow text={"Ask More Questions?"}/>
       </div>

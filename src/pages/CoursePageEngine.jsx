@@ -114,7 +114,7 @@ function CoursePageEngine() {
                 </div>
             </div>
       </section>
-      <Module modules={courseData.modules}/>
+      <Module modules={courseData.modules} name={courseData.courseName}/>
       <LandDreamJob/>
     <Companies/>
 
