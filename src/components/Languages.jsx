@@ -11,7 +11,7 @@ function Languages({languages, course}) {
         <h3 className="fs-1 text-white" data-aos="fade-up">What <span className="text-main-danger">
           Programming Languages</span> <br /> You will Learn?</h3>
           <p className="fs-4 text-white">
-          We are proud to present the success of our {course} Design Program
+          We are proud to present the success of our {course} Course.
           </p>
       <div className="languages-items">
         <div className="row">

@@ -4,7 +4,7 @@ function Funfact() {
   return (
     <div className='container py-5 bg-blur'>
         <p className="p-larg1 text-center text-main-danger text-900">Funfact</p>
-        <h1 className="banner-heading mb-5">Strength in Numbers</h1>
+        <h1 className="fs-1 text-900 text-center mb-5">Strength in Numbers</h1>
       <div className="row">
         <div className="col-6 col-sm-6 col-md-3 col-lg-3">
             <div className="text-center c-card card mb-2 p-2">

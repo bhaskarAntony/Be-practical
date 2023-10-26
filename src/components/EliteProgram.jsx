@@ -30,7 +30,7 @@ const eliteProgram = [
 function EliteProgram() {
   return (
     <div className='mt-5'>
-         <h1 className="banner-heading">What is Elite Program?</h1>
+         <h1 className="fs-1 text-900 text-center">What is Elite Program?</h1>
          <section className='elite-progarm container py-5'>
        
        <div className="row">

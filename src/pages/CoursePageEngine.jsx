@@ -105,21 +105,21 @@ function CoursePageEngine() {
             <div className="course-details container  p-lg-5 p-3">
                 <div className="row">
                    <div className="col-12 col-md-4 col-lg-4">
-                   <div className="text-center bg-white rounded-3 py-3 border-b">
+                   <div className="text-center bg-white rounded-3 py-3 border-b mb-3">
                          <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
                         <h1 className="fs-5 text-main-danger">Next Batch</h1>
                         <h1 className="fs-4">{courseData.BatchStarting}</h1>
                     </div>
                    </div>
                    <div className="col-12 col-md-4 col-lg-4">
-                   <div className="text-center bg-white rounded-3 py-3 border-b">
+                   <div className="text-center bg-white rounded-3 py-3 border-b mb-3">
                    <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
                         <h1 className="fs-5 text-main-danger">Duration</h1>
                         <h1 className="fs-4">{courseData.courseDuration}</h1>
                     </div>
                    </div>
                    <div className="col-12 col-md-4 col-lg-4">
-                   <div className="text-center bg-white rounded-3 py-3 border-b">
+                   <div className="text-center bg-white rounded-3 py-3 border-b mb-3">
                    <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
                         <h1 className="fs-5 text-main-danger">Next Batch</h1>
                         <h1 className="fs-4">{courseData.BatchStarting}</h1>

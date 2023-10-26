@@ -72,7 +72,7 @@ function Feedback() {
   return (
   <div className='feedback-container bg-blur p-lg-5 p-2'>
     <p className="text-center p-large1 text-main-danger">Testimonials</p>
-  <h1 className="banner-heading text-black mb-4">What Peoples Saying <br />About Institute and Courses?</h1>
+  <h1 className="fs-1 text-900 text-center mb-4">Testimonials from Our Mentees</h1>
     <Carousel
      interval={carouselInterval} 
      >

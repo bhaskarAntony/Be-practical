@@ -80,7 +80,7 @@ function StudentsPlaced() {
   }, []);
   return (
     <section className=' p-2 py-5 youtube-container' id="placed">
-        <h3 className="banner-heading text-black" data-aos="fade-up">What our students says <br /> about institute</h3>
+        <h3 className="fs-1 text-900 text-center" data-aos="fade-up">What our students says about institute</h3>
         <p className=" text-center p-large1 text-main-danger " data-aos="fade-up">We don’t just give certification but outcomes!</p>
       <div className="students-placed">
       <Carousel
