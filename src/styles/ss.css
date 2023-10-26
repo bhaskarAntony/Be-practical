@@ -1,0 +1,39 @@
+/* Header.css */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0072c6;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .animation-container {
+    position: relative;
+  }
+  
+  .student-animation {
+    width: 100px;
+    height: 100px;
+    background-color: #ff4500;
+    border-radius: 50%;
+    animation: bounce 2s infinite;
+  }
+  
+  .header-content {
+    text-align: center;
+  }
+  
+  /* Keyframes for the student animation */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }

@@ -17,6 +17,7 @@ import EliteProgram from '../components/EliteProgram';
 import Elite from '../components/Elite';
 import AllCourses from '../components/AllCourses';
 import Funfact from '../components/Funfact';
+import OurCourses from '../components/OurCourses';
 
 function Home() {
       // Model open logic
@@ -37,7 +38,8 @@ function Home() {
         <HomeHero/>
         {/* <Stories/> */}
        <div className="spacer mt-5">
-        <AllCourses/>
+        {/* <AllCourses/> */}
+        <OurCourses/>
        </div>
        <Skills/>
        <Elite/>

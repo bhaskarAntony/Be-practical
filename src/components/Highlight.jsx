@@ -3,7 +3,7 @@ import '../styles/highlight.css'
 
 function Highlight() {
   return (
-    <div className='highlight'>
+    <div className='container highlight bg-dark-gray mb-4'>
       <div className="blur-highlight">
 
       </div>

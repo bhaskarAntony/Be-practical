@@ -32,7 +32,7 @@ useEffect(() => {
             <li className="list-group-item border-0 text-black">
                 <p><strong className='card-single-heading text-blue-1'>Mode Of training: </strong></p>
             </li>
-              <button className="hero-btn-main w-100 mt-2">Join Free Demo Classes <i class="bi bi-chevron-double-right"></i></button>
+              <button className="btn-danger w-100 mt-2">Join Free Demo Classes <i class="bi bi-chevron-double-right"></i></button>
           </ul>
         </div>
     </>

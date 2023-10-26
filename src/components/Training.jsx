@@ -29,7 +29,7 @@ function Training() {
                     <div className="col-12 col-md-12 col-lg-6 p-0">
                         <div className="training-left">
                             <p className="p-large1 text-white">Membership</p>
-                            <h1 className="heading text-white text-900">Start your Learning <br /> Journey Today!</h1>
+                            <h1 className="heading text-white text-900 text-start justify-content-start">Start your Learning <br /> Journey Today!</h1>
                             <p className="text-white p-large1">with a free 7-day trial, then $14.99/month.</p>
                             <button className="btn-danger">Apply Now</button>
                         </div>

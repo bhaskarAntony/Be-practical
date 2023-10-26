@@ -34,7 +34,7 @@ function BookDemoCard() {
                     </select>
                     </div>
                     <div className="form-group mt-3">
-                       <button className="hero-btn-main w-100">Register</button>
+                       <button className="btn-danger w-100">Register</button>
                     </div>
                 </form>
             </div>

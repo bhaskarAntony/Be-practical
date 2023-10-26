@@ -75,8 +75,11 @@ function HomeHero() {
   const numberOfSlides = home.length;
 
   return (
-    <section className='hero container-fluid p-1 py-2'>
+    <section className='hero container-fluid p-0 m-0 bg-blur'>
+      <div className="hero-1">
       <div className="custom-carousel">
+      <div className="row">
+      <div className="col-12 col-sm-12 col-md-12 col-lg-7">
         <Carousel
           activeIndex={index}
           onSelect={handleSelect}
@@ -86,28 +89,26 @@ function HomeHero() {
         >
           {home.map((item, index) => (
             <Carousel.Item key={index}>
-              <div className="row">
-                <div className="col-12 col-sm-12 col-md-12 col-lg-7">
                   <div className="hero-text p-lg-5 p-md-3 p-3">
                     <h1 className="card-heading text-main-2 text-start">100% Placement Programs</h1>
-                    <h1 className="heading text-white text-900 text-start">{item.heading}</h1>
-                    <p className="text-white heading-subtitle my-4 text-start">{item.subheading}</p>
+                    <h1 className="heading text-black text-900 text-start">{item.heading}</h1>
+                    <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap">
-                      <button className='hero-btn-main m-2 hero-btn py-3'>Join For Free <i class="bi bi-chevron-double-right"></i></button>
-                      <button className='hero-btn-outline m-2 hero-btn py-3' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-main-outline-dark  m-2 hero-btn py-3'>Join For Free <i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-danger m-2 hero-btn py-3' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
                     </div>
-                    <Highlight />
+                   
                   </div>
-                </div>
-                <div className="col-12 col-sm-12 col-md-12 col-lg-5">
-                  <div className="hero-image p-3">
-                    <img src={item.image} alt="" className="w-100" />
-                  </div>
-                </div>
-              </div>
             </Carousel.Item>
           ))}
         </Carousel>
+        </div>
+        <div className="col-12 col-sm-12 col-md-12 col-lg-5">
+                  <div className="hero-image p-3">
+                    <img src="https://img.freepik.com/free-vector/seminar-concept-illustration_114360-7480.jpg" alt="" className="w-100" />
+                  </div>
+                </div>
+                 </div>
         <div className="custom-indicators">
           {Array.from({ length: home.length }).map((_, i) => (
             <div
@@ -118,21 +119,14 @@ function HomeHero() {
           ))}
         </div>
       </div>
-
+      <Highlight />
       <HeroRegister />
+      </div>
 
       <DialogModal
         show={showModal}
         onHide={handleClose}
       />
-     <div className="custom-control-container">
-        <button className="custom-control-prev" onClick={() => handleSelect(index - 1)}>
-          <BiCaretLeft size={48} />
-        </button>
-        <button className="custom-control-next" onClick={() => handleSelect(index + 1)}>
-          <BiCaretRight size={48} />
-        </button>
-      </div>
 
     </section>
   );
