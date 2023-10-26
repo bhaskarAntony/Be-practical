@@ -3,12 +3,32 @@ import brand from '../images/brand-logo.jpg'
 import '../styles/header.css'
 import { Offcanvas } from 'react-bootstrap'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { CoursePage } from '../Data/DataFetcher';
 
 function Header() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [loading, setLoading] = useState(false)
+  const [CourseData, setCourseData] = useState([]);
+  useEffect(() => {
+   const fetchData = async () => {
+     try {
+       const data = await CoursePage;
+       setLoading(false)
+       setCourseData(data);
+       console.log("data", data)
+     } catch (error) {
+      setLoading(true)
+       console.error('Error fetching CoursePage:', error);
+     }
+   };
+
+   fetchData();
+ }, []);
   return (
     <header>
       {/* <div className="nav-top">
@@ -23,11 +43,50 @@ function Header() {
     </button>
     <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+          <Offcanvas.Title> <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          <ul className='p-0 m-0 list-group'>
+            <li className='mobile-list-item list-group-item p-2'>
+              <Link to="/" className='nav-link fs-4'>Home</Link>
+            </li>
+            <p className="p-large1 text-900 bg-danger text-white p-2 mt-3">Our Courses</p>
+           {
+            CourseData.map((item, index)=>(
+              <li className='mobile-list-item list-group-item p-2' key={index}>
+              
+              <Link  to={`/course/${item.courseName}/${item._id}`} className='nav-link fs-4'>{item.courseName}</Link>
+            </li>
+            ))
+           }
+             <li className='mobile-list-item list-group-item p-2'>
+              <Link to="/" className='nav-link fs-4'>Gallery</Link>
+            </li>
+            <li className='mobile-list-item list-group-item p-2'>
+              <Link to="/" className='nav-link fs-4'>Events</Link>
+            </li>
+            <li className='mobile-list-item list-group-item p-2'>
+              <Link to="/" className='nav-link fs-4'>Blogs</Link>
+            </li>
+            <li className='mobile-list-item list-group-item p-2'>
+              <Link to="/" className='nav-link fs-4'>About Us</Link>
+            </li>
+            <li className='mobile-list-item list-group-item p-2'>
+              <Link to="/" className='nav-link fs-4'>Contact Us</Link>
+            </li>
+          </ul>
+          <p className="p-large1 text-900 bg-danger text-white p-2 mt-3">For Companies</p>
+          <ul className="for-companies p-0 m-0 list-group">
+            <li className="company-list-item list-group-item p-2">
+            <Link to="/" className='nav-link fs-4'>Corporate Training</Link>
+            </li>
+            <li className="company-list-item list-group-item p-2">
+            <Link to="/" className='nav-link fs-4'>Services</Link>
+            </li>
+            <li className="company-list-item list-group-item p-2">
+            <Link to="/" className='nav-link fs-4'>Hire Trained Graduates</Link>
+            </li>
+          </ul>
         </Offcanvas.Body>
       </Offcanvas>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">

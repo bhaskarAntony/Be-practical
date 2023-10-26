@@ -83,10 +83,11 @@ const onLoad = () => {
                 widgetId="default"
                 onLoad={onLoad}
                 />
-      <Header/>
+     
       <ScrollProgressBar/>
       <Progressbar/>
         <BrowserRouter>
+        <Header/>
         <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/course-fullstack' element={<FullStack/>}/>
