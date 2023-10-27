@@ -2,16 +2,16 @@ import React from 'react'
 import ContactForm from './ContactForm'
 import Benifits from './Benifits'
 import '../styles/contact-page.css'
+import { Link } from 'react-router-dom'
 
 function ContactPage() {
   return (
     <div>
-        <section className="contact-home">
-        <h1 className='heading text-white'>Hire Trained graduates at <span className="text-warning">Be practical</span></h1>
-         <p className='fs-4 mt-4'>Build your Data & Engineering Team with industry ready top skilled tech talent.</p>
-         <a href="#contact" className="btn-main">Hire Now</a>
+        <section className="contact-home bg-blur">
+        <h1 className='fs-1 text-black text-900'>Hire Trained graduates at <br /> <span className="text-main-danger"> Be practical</span></h1>
+         <p className='fs-4 mt-4 text-black'>Build your Data & Engineering Team with industry ready top <br /> skilled tech talent.</p>
+         <Link to="#contact" className="btn-danger px-5 fs-3 text-decoration-none">Hire Now</Link>
         </section> 
-        <div className="hero-wave"></div>
       <ContactForm/>
         <Benifits/>
     </div>

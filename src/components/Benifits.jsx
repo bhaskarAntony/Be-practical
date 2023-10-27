@@ -45,20 +45,22 @@ const benifits = [
 ];
 function Benifits() {
   return (
-    <div className='container'>
-        <h3 className="banner-heading">benefits of hiring our trained students</h3>
-      <div className="row">
+   <div className="container-fluid bg-blur py-5">
+     <div className='container'>
+        <h3 className="fs-1 text-center text-900 mb-4">benefits of hiring our <span className="text-main-danger">trained students</span></h3>
+      <div className="row justify-content-center">
         {benifits.map((item, index) => (
           <div className="col-12 col-lg-4 col-md-6" key={index}>
-            <div className="benifits-component-card">
-              <img src={item.image} alt="" />
-              <h4 className="card-heading">{item.title}</h4>
-              <p className='p-light-small'>{item.description}</p>
+            <div className="benifits-component-card bg-white border text-start">
+              <img src={item.image} alt="" className='mb-3 bg-blue-light p-3 rounded-5' />
+              <h4 className="card-heading text-900 text-main-danger">{item.title}</h4>
+              <p className='fs-6'>{item.description}</p>
             </div>
           </div>
         ))}
       </div>
     </div>
+   </div>
   );
 }
 

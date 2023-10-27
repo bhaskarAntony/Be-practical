@@ -2,9 +2,13 @@
 .training-card{
     padding: 15px;
     /* box-shadow: var( --green-shadow); */
-    min-height: 100px;
+    min-height: 150px;
     background-color: #fff;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .training-card .header{
     text-align: center;

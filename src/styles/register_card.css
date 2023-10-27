@@ -1,15 +1,14 @@
 .register-card{
-    background-color: var(--dark-green) !important;
+    background-color: var(--gray3) !important;
     color: #fff;
 }
 .register-card form .form-control{
-    background-color: transparent;
+    border: none;
+    background: var(--gray4) !important;
+    border-radius: 20px !important;
+    padding: 15px !important;
 }
 .register-card form .form-control:focus{
     box-shadow: none;
-    border: 2px solid var(--green-light-color);
-}
-.register-card form label{
-    color: rgb(148, 148, 148);
-    background-color: transparent;
+    border: 2px solid var(--gray4);
 }

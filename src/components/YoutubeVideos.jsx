@@ -94,7 +94,7 @@ function StudentsPlaced() {
           onMouseLeave={handleCarouselLeave}
         >
           <div className="p-2 p-lg-5 container-fluid  rounded-5">
-          <div className="row w-100">
+          <div className="row justify-content-center w-100">
           {loading ? (
               Array(9)
                 .fill(null)
@@ -107,7 +107,7 @@ function StudentsPlaced() {
                 ))
             ):(
             slideItems.map((item) => (
-                <div className="col-12 col-md-6 col-lg-3">
+                <div className="col-12 col-md-6 col-lg-3 d-flex justify-content-center">
             <div className="youtube-card bg-gray3 border-b">
             <div className="youtube-header mb-3">
                           <a

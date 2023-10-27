@@ -1,10 +1,10 @@
 #contact{
-    background-color:var(--bg-v5-green);
+    background-color:var(--gray2);
     border-radius: 30px;
 }
 .benifits-card{
     padding: 10px;
-    background-color: var(--dark-green);
+    background-color: var(--gray3);
     display: flex;
     align-items: center;
     justify-content: center;

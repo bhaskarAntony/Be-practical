@@ -1,6 +1,4 @@
 .contact-home{
-    padding: 20px;
-    background: var( --hero-dark-green);
     min-height: 300px;
     display: flex;
     flex-direction: column;
@@ -8,10 +6,5 @@
     justify-content: center;
     color: #fff;
     text-align: center;
-}
-.hero-wave{
-    background: url('../images/contact-page-wave.svg') no-repeat top center;
-    background-size: cover;
-    min-height: 200px;
 }
 

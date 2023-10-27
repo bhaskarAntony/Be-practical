@@ -11,44 +11,44 @@ function ContactForm() {
                 <div className="contact-form-left">
                     <div className="row">
                         <div className="col-6">
-                        <div className="benifits-card">
-                        <i class="bi bi-check-circle-fill"></i>
-                           <h3 className='p-light-small text-white'> Quality Training</h3>
+                        <div className="benifits-card border-b">
+                        <i class="bi bi-check-circle-fill text-green"></i>
+                           <h3 className='fs-5 text-center text-white'> Quality Training</h3>
                         </div>
                        
                         </div>
                         <div className="col-6">
-                        <div className="benifits-card">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <h3 className='p-light-small text-white'> Practical Experience</h3>
+                        <div className="benifits-card border-b">
+                        <i class="bi bi-check-circle-fill text-green"></i>
+                        <h3 className='fs-5 text-center text-white'> Practical Experience</h3>
                         </div>
                        
                         </div>
                         <div className="col-6">
-                        <div className="benifits-card">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <h3 className='p-light-small text-white'>Adaptability</h3>
+                        <div className="benifits-card border-b"> 
+                        <i class="bi bi-check-circle-fill text-green"></i>
+                        <h3 className='fs-5 text-center text-white'>Adaptability</h3>
                         </div>
                       
                         </div>
                         <div className="col-6">
-                        <div className="benifits-card">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <h3 className='p-light-small text-white'> Team Collaboration</h3>
+                        <div className="benifits-card border-b">
+                        <i class="bi bi-check-circle-fill text-green"></i>
+                        <h3 className='fs-5 text-center text-white'> Team Collaboration</h3>
                         </div>
                         
                         </div>
                         <div className="col-6">
-                        <div className="benifits-card">
-                        <i class="bi bi-check-circle-fill"></i>
-                        <h3 className='p-light-small text-white'>Problem Solving</h3>
+                        <div className="benifits-card border-b">
+                        <i class="bi bi-check-circle-fill text-green"></i>
+                        <h3 className='fs-5 text-center text-white'>Problem Solving</h3>
                         </div>
                         
                         </div>
                         <div className="col-6">
-                       <div className="benifits-card">
-                       <i class="bi bi-check-circle-fill"></i>
-                       <h3 className='p-light-small text-white'> Continuous Learning</h3>
+                       <div className="benifits-card border-b">
+                       <i class="bi bi-check-circle-fill text-green"></i>
+                       <h3 className='fs-5 text-center text-white'> Continuous Learning</h3>
                        </div>
                         </div>
                     </div>

@@ -3,6 +3,7 @@ import '../styles/training.css';
 import AOS from 'aos';
 import { trainingModule } from '../Data/DataFetcher';
 import ShimmerCard from '../shimmer effects/ShimmerCard';
+import ApplyNow from '../Extra/ApplyNow';
 
 
 function Training() {
@@ -31,7 +32,7 @@ function Training() {
                             <p className="p-large1 text-white">Membership</p>
                             <h1 className="heading text-white text-900 text-start justify-content-start">Start your Learning <br /> Journey Today!</h1>
                             <p className="text-white p-large1">with a free 7-day trial, then $14.99/month.</p>
-                            <button className="btn-danger">Apply Now</button>
+                           <ApplyNow text="Apply now"/>
                         </div>
                     </div>
                     <div className="col-12 col-md-12 col-lg-6 p-0">
@@ -41,7 +42,7 @@ function Training() {
               Array(6)
                 .fill(null)
                 .map((_, index) => (
-                  <div className="col-6 col-md-3 col-lg-2 rounded-2 p-3" key={index}>
+                  <div className="col-6 col-md-6 col-lg-6 rounded-2 p-3" key={index}>
                     <div>
                     <ShimmerCard />
                     </div>
@@ -49,7 +50,7 @@ function Training() {
                 ))
             ):(
                 trainingModuleData.map((item, index) => (
-                    <div className="col-12 col-md-6 col-lg-6" key={index}>
+                    <div className="col-6 col-md-6 col-lg-6" key={index}>
                         <div className="training-card mb-3 text-center" data-aos="zoom-in-down">
                         <img src={item.image} alt="" />
                    
