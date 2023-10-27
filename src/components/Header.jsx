@@ -54,7 +54,7 @@ function Header() {
             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/" className='nav-link fs-4'>Home</Link>
             </li>
-            <p className="p-large1 text-900 bg-danger text-white p-2 mt-3">Our Courses</p>
+            <p className="p-large1 text-900 bg-danger-2 text-white p-2 mt-3">Our Courses</p>
            {
             CourseData.map((item, index)=>(
               <li className='mobile-list-item list-group-item p-2' key={index} onClick={handleLinkClick}>
@@ -79,7 +79,7 @@ function Header() {
               <Link to="/contact" className='nav-link fs-4'>Contact Us</Link>
             </li>
           </ul>
-          <p className="p-large1 text-900 bg-danger text-white p-2 mt-3">For Companies</p>
+          <p className="p-large1 text-900 bg-danger-2 text-white p-2 mt-3">For Companies</p>
           <ul className="for-companies p-0 m-0 list-group">
             <li className="company-list-item list-group-item p-2" onClick={handleLinkClick}>
             <Link to="/" className='nav-link fs-4'>Corporate Training</Link>

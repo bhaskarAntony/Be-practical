@@ -114,3 +114,13 @@
       margin-bottom: 10px !important;
     }
   }
+  .company-list-item, .mobile-list-item{
+    background: var(--gray2) !important;
+    color: #fff !important;
+  }
+  .company-list-item:hover{
+    background: var(--red) !important;
+  }
+  .mobile-list-item:hover{
+    background: var(--red) !important;
+  }
