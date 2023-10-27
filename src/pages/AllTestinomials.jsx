@@ -28,7 +28,9 @@ function AllTestimomials() {
 
   return (
   <div className='bg-blur'>
-  <h1 className="banner-heading">What Peoples Saying <br />About Institute and Courses?</h1>
+  <div className="bg-blur py-5">
+  <h1 className="fs-1 text-center text-900">What Peoples Saying <br />About Institute and <span className="text-main-danger">Courses?</span></h1>
+  </div>
   <div className="text-end">
   </div>
           <div className="d-flex flex-wrap feedback p-3 container overflow-hidden">

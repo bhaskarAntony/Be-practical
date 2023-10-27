@@ -64,19 +64,19 @@ function Header() {
             ))
            }
              <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
-              <Link to="/" className='nav-link fs-4'>Gallery</Link>
+              <Link to="/gallery" className='nav-link fs-4'>Gallery</Link>
             </li>
             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
-              <Link to="/" className='nav-link fs-4'>Events</Link>
+              <Link to="/events" className='nav-link fs-4'>Events</Link>
             </li>
             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
-              <Link to="/" className='nav-link fs-4'>Blogs</Link>
+              <Link to="/blogs" className='nav-link fs-4'>Blogs</Link>
             </li>
             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
-              <Link to="/" className='nav-link fs-4'>About Us</Link>
+              <Link to="/about" className='nav-link fs-4'>About Us</Link>
             </li>
             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
-              <Link to="/" className='nav-link fs-4'>Contact Us</Link>
+              <Link to="/contact" className='nav-link fs-4'>Contact Us</Link>
             </li>
           </ul>
           <p className="p-large1 text-900 bg-danger text-white p-2 mt-3">For Companies</p>
