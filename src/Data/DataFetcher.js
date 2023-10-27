@@ -6,7 +6,7 @@ async function fetchData(endpoint) {
     return response.data;
   } catch (error) {
     console.error('Error:', error);
-    throw error; // Rethrow the error so that the caller can handle it if needed
+    throw error;
   }
 }
 

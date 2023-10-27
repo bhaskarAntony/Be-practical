@@ -22,6 +22,7 @@ import PageLoader from './Modals/PageLoader'
 import SimpleRegister from './Modals/SimpleRegister'
 import CoursePageEngine from './pages/CoursePageEngine'
 import AllCourses from './components/AllCourses'
+import BlogsPage from './pages/BlogsPage/BlogsPage'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -86,7 +87,7 @@ const onLoad = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
         <Route path='/events' element={<Events/>}/>
-        <Route path='/blogs' element={<Blogs/>}/>
+        <Route path='/blogs' element={<BlogsPage/>}/>
         <Route path='/contacts' element={<ContactPage/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/elite' element={<ElitePage/>}/>
