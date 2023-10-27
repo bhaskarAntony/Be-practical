@@ -23,6 +23,7 @@ import SimpleRegister from './Modals/SimpleRegister'
 import CoursePageEngine from './pages/CoursePageEngine'
 import AllCourses from './components/AllCourses'
 import BlogsPage from './pages/BlogsPage/BlogsPage'
+import PageScrollToTop from './Extra/PageScrollToTop'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -82,6 +83,7 @@ const onLoad = () => {
       <ScrollProgressBar/>
       <Progressbar/>
         <BrowserRouter>
+        <PageScrollToTop/>
         <Header/>
         <Routes>
         <Route path='/' element={<Home/>}/>
