@@ -76,7 +76,7 @@ function Header() {
               <Link to="/about" className='nav-link fs-4'>About Us</Link>
             </li>
             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
-              <Link to="/contact" className='nav-link fs-4'>Contact Us</Link>
+              <Link to="/contacts" className='nav-link fs-4'>Contact Us</Link>
             </li>
           </ul>
           <p className="p-large1 text-900 bg-danger-2 text-white p-2 mt-3">For Companies</p>
