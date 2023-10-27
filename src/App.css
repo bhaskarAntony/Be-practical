@@ -45,11 +45,17 @@
 .bg-gray3{
   background: var(--gray3) !important;
 }
+.bg-blue-light{
+  background: var(--blue-light);
+}
 .text-yellow{
   color: var(--yellow) !important;
 }
 .border-b{
   border-bottom: 3px solid var(--red);
+}
+.border-a{
+  border: 3px solid var(--red);
 }
 .text-green{
   color: var(--success) !important;
@@ -399,4 +405,31 @@ font-size: 1.5rem;
     background-size: cover;
   }
 
+  
+/* Indicators styling (dots at the bottom) */
+.custom-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background: #ddd; /* Inactive indicator color */
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.indicator.active {
+  background: #333; /* Active indicator color */
+}
+
+/* Other carousel styles as needed */
+/* ... */
+.carousel-indicators{
+  display: none !important;
+}
 

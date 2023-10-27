@@ -13,6 +13,7 @@ import Module from '../components/Module'
 import Languages from '../components/Languages'
 import CourseCard from '../components/CourseCard'
 import Loading from '../Modals/Loading'
+import CourseCertificate from '../components/CourseCertificate'
 
 function CoursePageEngine() {
     const [courseData, setCourseData] = useState(null);
@@ -106,7 +107,7 @@ function CoursePageEngine() {
                 <div className="row">
                    <div className="col-12 col-md-4 col-lg-4">
                    <div className="text-center bg-white rounded-3 py-3 border-b mb-3">
-                         <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
+                   <i class="bi bi-calendar3 fs-1 text-green"></i>
                         <h1 className="fs-5 text-main-danger">Next Batch</h1>
                         <h1 className="fs-4">{courseData.BatchStarting}</h1>
                     </div>
@@ -120,12 +121,15 @@ function CoursePageEngine() {
                    </div>
                    <div className="col-12 col-md-4 col-lg-4">
                    <div className="text-center bg-white rounded-3 py-3 border-b mb-3">
-                   <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
+                   <i class="bi bi-stopwatch-fill fs-1 text-main-danger"></i>
                         <h1 className="fs-5 text-main-danger">Next Batch</h1>
                         <h1 className="fs-4">{courseData.BatchStarting}</h1>
                     </div>
                    </div>
                 </div>
+            </div>
+            <div className="row">
+                .col-md
             </div>
         </div>
         <HeroRegister/>
@@ -144,6 +148,7 @@ function CoursePageEngine() {
       </section>
       <Module modules={courseData.modules} name={courseData.courseName}/>
       <LandDreamJob/>
+      <CourseCertificate/>
     <Companies/>
 
     <Adwantages/>

@@ -23,7 +23,7 @@ function Training() {
     return (
         <div className='container-fluid p-3 py-1'>
             <p className="p-large1 text-main-danger text-center">Training</p>
-            <h3 className="banner-heading" data-aos="fade-up">Mode Of Training</h3>
+            <h3 className="fs-1 text-900 text-center" data-aos="fade-up">Mode Of Training</h3>
             <div className="training-container">
                 <div className="row">
                     <div className="col-12 col-md-12 col-lg-6 p-0">

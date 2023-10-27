@@ -90,13 +90,13 @@ function ElitePage() {
             </div>
             
         </div>
-        {/* <div className="col-12 col-md-6 col-lg-6">
+        <div className="col-12 col-md-6 col-lg-6">
             <div className="elite-right">
                 <div className="elite-gold-circle">
 
                 </div>
             </div>
-        </div> */}
+        </div>
      </div>
      {particles.map((particle) => (
         <div

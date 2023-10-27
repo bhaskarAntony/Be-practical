@@ -6,7 +6,7 @@
     overflow: hidden;
     /* background: url(https://html.ditsolution.net/techno/assets/images/call-bg.png) no-repeat center;
     background-size: cover; */
-    background-color:var(--faq-dark);
+    background-color:var(--gray2);
 
 }
 .left{

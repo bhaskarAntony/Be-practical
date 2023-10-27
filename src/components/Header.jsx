@@ -102,21 +102,15 @@ function Header() {
           <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Courses <i class="bi bi-chevron-down mx-1"></i>
           </a>
-          <ul class="dropdown-menu">
-          <li class="nav-item dropend list-group-item">
-              <a class="nav-link dropdown-toggle dropdown-item" href="/course-fullstack" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                FullStack Devolopment
-              </a>
-              <ul class="dropdown-menu list-group">
-                <li className='list-group-item'><a class="dropdown-item" href="/course-mern">MERN Fullstack Devolopment</a></li>
-                <li className='list-group-item'><a class="dropdown-item" href="/course-python">Python Fullstack Devolopment</a></li>
-                <li className='list-group-item'><a class="dropdown-item" href="/course-java">Java Fullstack Devolopment</a></li>
-              </ul>
-            </li>
-            <li className='list-group-item'><a class="dropdown-item" href="/course-data-science">Data Science</a></li>
-            <li className='list-group-item'><a class="dropdown-item" href="/course-cloud-computing">Cloud Computing</a></li>     
-            <li className='list-group-item'><a class="dropdown-item" href="/course-digital-marketing">Digital Marketing</a></li>   
-            <li className='list-group-item'><a class="dropdown-item" href="#">Job Oriented Courses</a></li>   
+          <ul class="dropdown-menu p-0">
+          {
+            CourseData.map((item, index)=>(
+              
+              <list className='list-group-item' >
+                <Link to={`/course/${item.courseName}/${item._id}`}  className='nav-link'>{item.courseName} Course <i class="bi bi-arrow-right"></i></Link>
+              </list>
+            ))
+           }
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -124,9 +118,15 @@ function Header() {
             Events<i class="bi bi-chevron-down"></i>
           </a>
           <ul class="dropdown-menu">
-            <li className='list-group-item'><a class="dropdown-item" href="/gallery">Gallery</a></li>
-            <li className='list-group-item'><a class="dropdown-item" href="/blogs">Blogs</a></li>     
-            <li className='list-group-item'><a class="dropdown-item" href="/events">Events</a></li>   
+            <li className='list-group-item'>
+            <Link to='/gallery' className='nav-link'>Gallery</Link>
+             </li>
+            <li className='list-group-item'>
+            <Link to='/blogs' className='nav-link'>Blogs</Link>
+             </li>     
+            <li className='list-group-item'>
+            <Link to='/events' className='nav-link'>Events</Link>
+              </li>   
           </ul>
         </li>
         <li class="nav-item">
@@ -137,8 +137,8 @@ function Header() {
             About Us <i class="bi bi-chevron-down"></i>
           </a>
           <ul class="dropdown-menu list-group">
-            <li className='list-group-item'><a class="dropdown-item" href="/about">Why Be Practical?</a></li>
-            <li className='list-group-item'><a class="dropdown-item" href="/contacts">Contact Us</a></li>
+            <li className='list-group-item'> <Link to='/about' className='nav-link'>About Us</Link></li>
+            <li className='list-group-item'> <Link to='/contacts' className='nav-link'>Contact Us</Link></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -146,9 +146,9 @@ function Header() {
             For Companies <i class="bi bi-chevron-down"></i>
           </a>
           <ul class="dropdown-menu">
-            <li className='list-group-item'><a class="dropdown-item" href="#">Corporate Training</a></li>
-            <li className='list-group-item'><a class="dropdown-item" href="#">HR Services</a></li>     
-            <li className='list-group-item'><a class="dropdown-item" href="/contacts">Hire Trained Graduates</a></li>   
+            <li className='list-group-item'> <Link to='/events' className='nav-link'>Corporate Training</Link></li>
+            <li className='list-group-item'> <Link to='/events' className='nav-link'>HR Services</Link></li>     
+            <li className='list-group-item'> <Link to='/events' className='nav-link'>Hire Trained Graduates</Link></li>   
           </ul>
         </li>
       </ul>

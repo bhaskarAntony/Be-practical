@@ -1,65 +1,8 @@
-import React, { useEffect } from 'react';
-import '../styles/allcourses.css'
-import AOS from 'aos';
+import React, { useEffect, useState } from 'react'
+import '../styles/ourCourses.css'
 import { CoursePage } from '../Data/DataFetcher';
-import { useState } from 'react';
+import Aos from 'aos';
 import { Link } from 'react-router-dom';
-import ShimmerCard from '../shimmer effects/ShimmerCard';
-
-// var courses = [
-//     {
-//         id:1,
-//         name: "Complete Fullstack",
-//         tag:"Trending",
-//         duration: "4.5 Months",
-//         trainer: "...",
-//         languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
-//         ratedStudents: "465",
-//         rating:"4.5",
-//         icon: "https://cdn-icons-png.flaticon.com/128/7991/7991055.png",
-//         image: "https://images.pexels.com/photos/3183165/pexels-photo-3183165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//         path: "/course-fullstack"
-//     },
-//     {
-//         id:2,
-//         name: "MERN  Fullstack",
-//         tag:"Trending",
-//         duration: "4.5 Months",
-//         trainer: "...",
-//         languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
-//         ratedStudents: "465",
-//         rating:"4.5",
-//         icon: "https://cdn-icons-png.flaticon.com/128/1183/1183669.png",
-//         image: "https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//         path:"/course-mern"
-//     },
-//     {
-//         id:4,
-//         name: "Cloud Oops",
-//         duration: "4.5 Months",
-//         trainer: "...",
-//         languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
-//         ratedStudents: "465",
-//         rating:"4.5",
-//         icon: "https://cdn-icons-png.flaticon.com/128/3305/3305673.png",
-//         image: "https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//         path:"/course-cloud-computing"
-
-//     },
-//     {
-//         id:5,
-//         name: "Data Science",
-//         duration: "4.5 Months",
-//         trainer: "...",
-//         languages: ["html", "css", "Bootstrap", "Javascript", "React Js", "NodeJs", "Express JS", "MongoDB"],
-//         ratedStudents: "465",
-//         rating:"4.5",
-//         icon: "https://cdn-icons-png.flaticon.com/128/2756/2756778.png",
-//         image: "https://images.pexels.com/photos/2102415/pexels-photo-2102415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-//         path:"/course-data-science"
-
-//     }
-// ]
 
 function AllCourses() {
   const [loading, setLoading] = useState(false)
@@ -80,69 +23,109 @@ function AllCourses() {
    fetchData();
  }, []);
     useEffect(() => {
-        AOS.init(); // Initialize AOS
+        Aos.init(); // Initialize AOS
       }, []);
-    return (
-      <>
-      <p className="banner-sub-text text-main-danger w-100 text-center mt-4">Featured Courses</p>
-      <h1 className="banner-heading">Pick a Course to Get Started</h1>
-      <div className='container-fluid all-courses p-3 py-5'>
-      <div className="course-card-container container">
-      <div className="row flex-wrap d-flex justify-content-center align-items-center">
-      {loading ? (
-              Array(4)
-                .fill(null)
-                .map((_, index) => (
-                  <div className="col-6 col-md-3 col-lg-3 rounded-2 p-3" key={index}>
-                    <div>
-                    <ShimmerCard />
+  return (
+    <div className='container-fluid our-courses p-lg-5 p-3'>
+        <h1 className="heading"><i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i>Our Courses<i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i></h1>
+        <p className="banner-sub-text text-800 text-center">Acquire real-world skills that guarantee the growth you deserve</p>
+        <div className="all-our-courses mt-5">
+          {
+            CourseData.map((item, index)=>(
+            <div className="our-course-card-wrapper">
+                <div className="container our-course-card p-lg-5 p-md-3 p-3 py-5">
+                <div className="row">
+                  <div className="col-12 col-md-6 col-lg-6">
+                    <div className="course-left">
+                          <p className=" text-white rounded-2 p-1 tag">
+                          <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
+                          </p>
+                          <h1 className="fs-3 text-900">{item.courseName}</h1>
+                          <p className="p-large1">{item.heroSubtitle}</p>
+                          <div className="course-info rounded-4 row mb-2 p-2 px-3">
+                          <div className="col-12 col-md-6 col-lg-6">
+                          <div className="d-flex align-items-center gap-2 w-100 mb-2">
+                             <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                            <i class="bi bi-calendar3 text-yellow fs-4"></i>
+                           </div>
+                           <div>
+                            <p>
+                            <p className="text-secondary">Duration</p>
+                            <p className='text-900'>{item.courseDuration}</p>
+                            </p>
+                           </div>
+                            </div>
+                          </div>
+                          <div className="col-12 col-md-6 col-lg-6">
+                          <div className="d-flex align-items-center gap-2 mb-2">
+                             <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                            <i class="bi bi-calendar3 text-green fs-4"></i>
+                           </div>
+                           <div>
+                            <p>
+                            <p className="text-secondary">Highest Salary</p>
+                            <p className='text-900'>{item.HighestSalary}</p>
+                            </p>
+                           </div>
+                            </div>
+                          </div>
+                          </div>
+                          <div className="course-info rounded-4 row mb-2 p-2 px-3">
+                          <div className="col-12 col-md-6 col-lg-6">
+                          <div className="d-flex align-items-center gap-2 w-100 mb-2">
+                             <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                            <i class="bi bi-camera-video-fill text-yellow fs-4"></i>
+                           </div>
+                           <div>
+                            <p>
+                            <p className="text-secondary">Mode Of Training</p>
+                            <p className='text-900'>{item.courseDuration}</p>
+                            </p>
+                           </div>
+                            </div>
+                          </div>
+                          <div className="col-12 col-md-6 col-lg-6">
+                          <div className="d-flex align-items-center gap-2 mb-2">
+                             <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                            <i class="bi  bi-person-check-fill text-green fs-4"></i>
+                           </div>
+                           <div>
+                            <p>
+                            <p className="text-secondary">Advantages</p>
+                            <p className='text-900'>HR Activities</p>
+                            </p>
+                           </div>
+                            </div>
+                          </div>
+                          </div>
+                          <div className="course-btns row mt-3">
+                            <div className="col-12 col-md-6 col-lg-6">
+                            <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Talk to an Expert</button></Link>
+                            </div>
+                            <div className="col-12 col-md-6 col-lg-6">
+                            <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
+                              </div>
+                           
+                           
+                          </div>
                     </div>
                   </div>
-                ))
-            ):(
-              CourseData.map((item, index) => (
-                <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-3 d-flex justify-content-center">
-                <div className="card course-card" data-aos="zoom-in">
-                  <div className="course-header">
-                  <div className="go">
-                  <i class="bi bi-play-fill fs-4"></i>
+                  <div className="col-12 col-md-6 col-lg">
+                    <div className="course-right">
+                        <img src={item.courseImage} alt="" className="w-100" />
                     </div>
-                    <img src="https://images.pexels.com/photos/1181472/pexels-photo-1181472.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className="w-100 rounded-2" />
-                    
                   </div>
-               <div className="course-card-body p-2">
-                <div className="course-top d-flex justify-content-between align-items-center">
-                  <p className="p-large1"><i class="bi bi-bar-chart-fill text-main-danger"></i> Beginers</p>
-                  <p className="p-large1"><i class="bi bi-stopwatch text-main-danger"></i> {item.courseDuration}</p>
                 </div>
-               <h4 className='card-heading text-900 text-black'>{item.courseName}</h4>
-               <div className="instructor d-flex gap-2 align-items-center mt-3">
-                <img src="https://demo.themewinter.com/wp/courselog/wp-content/uploads/learn-press-profile/14/f96ef85a8c1584c493287f8a3497742e.png" alt="" />
-                <p className="p-large1 mt-3">Ganesh</p>
-               </div>
-                <hr />
-                  <div className="course-footer p-2 m-0">
-                
-                  <div className="mt-4 text-end">
-                  <Link to={`/course/${item.courseName}/${item._id}`} className="text-main-danger fs-5 text-end w-100">Learn More</Link>
-
-                
-                </div>
-                
-               </div>
-                </div>
-                </div>
+              </div>
             </div>
-          ))
-            )}
-      </div>
-      </div>
-  </div>
-  <div className="text-center">
-    <button className="btn-danger">View All courses <i class="bi bi-arrow-right"></i></button>
-  </div>
-      </>
-    )
+            ))
+          }
+        </div>
+        <div className="text-center">
+        <Link to="/" className=" text-decoration-none"> <button className="btn-danger  hero-btn">Browse All Courses</button></Link>
+        </div>
+    </div>
+  )
 }
 
-export default AllCourses;
+export default AllCourses

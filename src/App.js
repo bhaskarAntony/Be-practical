@@ -21,6 +21,7 @@ import AllTestimomials from './pages/AllTestinomials'
 import PageLoader from './Modals/PageLoader'
 import SimpleRegister from './Modals/SimpleRegister'
 import CoursePageEngine from './pages/CoursePageEngine'
+import AllCourses from './components/AllCourses'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -93,6 +94,7 @@ const onLoad = () => {
         <Route path='/book-demo' element={<BookDemo/>}/>
         <Route path='/all-testinomials' element={<AllTestimomials/>}/>
         <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
+        <Route path='/all-courses' element={<AllCourses/>}/>
         </Routes>
         </BrowserRouter>
         <ScrollToTopButton/>

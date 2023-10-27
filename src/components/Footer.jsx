@@ -9,7 +9,7 @@ function Footer() {
     <>
     <div className="footer-wave ">
     </div>
-    <section className="footer_container container-fluid" id="footer">
+    <section className="footer_container d-flex flex-column justify-content-between container-fluid" id="footer">
     <div className="row">
         <div className="col-12 cl-md-12 col-lg-3 ">
            <div className="left">
@@ -82,23 +82,27 @@ function Footer() {
             </div>
             <div className="icons">
                 <div>
-                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-facebook text-main-danger"></i>
                 </div>
                 <div>
-                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-twitter text-main-danger"></i>
                 </div>
                 <div>
-                    <i class="bi bi-youtube"></i>
+                    <i class="bi bi-youtube text-main-danger"></i>
                 </div>
                 <div>
-                    <i class="bi bi-linkedin"></i>
+                    <i class="bi bi-linkedin text-main-danger"></i>
                 </div>
                 <div>
-                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-instagram text-main-danger"></i>
                 </div>
             </div>
             
         </div>
+    </div>
+    <hr />
+    <div className="text-center">
+        <p className="p-large1">Copyrights@2023</p>
     </div>
 </section>
 </>

@@ -6,6 +6,7 @@ import AOS from 'aos';
 import { testinomials } from '../Data/DataFetcher';
 import ReadMore from '../Extra/ReadMore';
 import FeedbackShimmer from '../shimmer effects/FeedbackShimmer';
+import YoutubeVideos from '../components/YoutubeVideos'
 
 function AllTestimomials() {
 
@@ -26,7 +27,7 @@ function AllTestimomials() {
       }, []);
 
   return (
-  <>
+  <div className='bg-blur'>
   <h1 className="banner-heading">What Peoples Saying <br />About Institute and Courses?</h1>
   <div className="text-end">
   </div>
@@ -44,28 +45,35 @@ function AllTestimomials() {
                 ))
             ):(
             testinomialData.map((item) => (
-                <div className="col-12 col-md-6 col-lg-4">
-              <div className="feedback-card" data-aos="fade-left"
+              <div className="col-12 col-md-6 col-lg-6">
+              <div className="feedback-card border-b border" data-aos="fade-left"
                                             data-aos-anchor="#example-anchor"
                                             data-aos-offset="500"
                                             data-aos-duration="500">
               <div key={item.id} className="custom-carousel-item">
                 <div className="feedback-header mb-2">
-                    <img src="https://cdn-icons-png.flaticon.com/128/1177/1177568.png" alt="" />
-                        <div>
-                        <h4 className='card-heading fw-bold'>{item.name}</h4>
-                        <small className='fw-bold'>{item.role}</small>
-                        </div>
-                </div>
-                <hr />
                 <div className="rating-container d-flex">
+                  <small>{item.rating} Rating</small>
                   {Array.from({ length: item.rating }, (_, i) => (
                     <i key={i} className="bi bi-star-fill text-warning"></i>
                   ))}
                 </div>
-                <p className='p-dark-small'>
+                <div className="py-3">
+                <p className='p-large1'>
                 <ReadMore text={item.content} maxLength={100} />
                 </p>
+                </div>
+                <hr />
+                   <div className="d-flex gap-3">
+                   <img src="https://us.123rf.com/450wm/thesomeday123/thesomeday1231712/thesomeday123171200009/91087331-default-avatar-profile-icon-for-male-grey-photo-placeholder-illustrations-vector.jpg?ver=6" alt="" />
+                        <div>
+                        <h4 className='fs-5 fw-bold text-main-danger'>{item.name}</h4>
+                        <small className='text-secondary'>{item.role}</small>
+                        </div>
+                   </div>
+                </div>
+                
+                
               </div>
               </div>
                 </div>
@@ -74,7 +82,8 @@ function AllTestimomials() {
               </div>
                   
           </div>
-  </>
+          <YoutubeVideos/>
+  </div>
   );
 }
 

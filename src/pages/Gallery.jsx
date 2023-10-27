@@ -4,6 +4,7 @@ import ImageGallery from '../components/GalleryImages';
 import StudentsPlaced from '../components/StudentsPlaced';
 import YoutubeVideos from '../components/YoutubeVideos'
 import galleryimage from '../images/gallery.svg'
+import Feedback from '../components/Feedback';
 
 const imagesData = [
     {
@@ -86,9 +87,13 @@ const imagesData = [
 function Gallery() {
   return (
     <div>
+      <div className="gallery-hero bg-blur py-5">
+        <h1 className='heading text-center text-900 '>Gallery</h1>
+        <p className="fs-3 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Minima, exercitationem.</p>
+      </div>
       <ImageGallery images={imagesData}/>
-      <StudentsPlaced/>
       <YoutubeVideos/>
+      <Feedback/>
     </div>
   )
 }

@@ -18,20 +18,20 @@ const ImageGallery = (props) => {
   };
 
   return (
-    <div className="container-fluid gallery-container p-4">
+    <div className="container-fluid gallery-container bg-gray2 p-4">
       <div className="row">
         {props.images.map((image, index) => (
              <div className="col-12 col-md-4 col-lg-3">
-                <div className="gallery-card">
+                <div className="gallery-card bg-gray3">
             <div
               className="gallery-image"
              
             >
-              <div className="image-container">
-                <img src={image.url} alt={image.title} />
+              <div className="image-container" onClick={() => handleImageClick(image)}>
+                <img src={image.url} alt={image.title} className="border-b" />
               </div>
             </div>
-            <div className="gallery-card-body"  onClick={() => handleImageClick(image)}>
+            <div className="gallery-card-body border-b"  >
                 <p className="text-white">{image.description}</p>
             </div>
           </div>
@@ -40,12 +40,12 @@ const ImageGallery = (props) => {
       </div>
 
       <Modal show={show} onHide={handleClose} size="lg" centered className="main-modal-gallery">
-        <Modal.Body>
-          <div className="square-lightbox">
+        <Modal.Body className="p-0 rounded-3">
+          <div className="square-lightbox  rounded-3">
             <img src={selectedImage?.url} alt={selectedImage?.title} />
             <div className="close-button">
               <Button variant="light" onClick={handleClose}>
-                <BiXCircle size={30} />
+                <BiXCircle size={30} variant="danger" />
               </Button>
             </div>
           </div>

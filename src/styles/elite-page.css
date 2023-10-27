@@ -34,8 +34,6 @@
 }
 .elite-page{
     background-color: var(--dim-black);
-    background: url('../images/elite.svg') no-repeat center;
-    background-size: cover;
     min-height: 100vh;
     position: relative;
 

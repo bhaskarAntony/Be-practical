@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import { Button, Modal, Form, FloatingLabel } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import '../styles/quiz.css'
+import {Modal, Form, FloatingLabel } from 'react-bootstrap';
+import { Quiz } from '../Data/DataFetcher';
 
-const quizData = [
-  {
-    question: 'HTML stands for?',
-    options: ['hyper text markup language', 'hyper text mini language', 'hyper tune markup language', 'hyper transform marque language'],
-    correctAnswer: 'hyper text markup language',
-  },
-  // Add more questions as needed
-];
+// const quizData = [
+//   {
+//     question: 'HTML stands for?',
+//     options: ['hyper text markup language', 'hyper text mini language', 'hyper tune markup language', 'hyper transform marque language'],
+//     correctAnswer: 'hyper text markup language',
+//   },
+//   // Add more questions as needed
+// ];
+var quizData = []
 
 function QuizModal() {
   const [showModal, setShowModal] = useState(false);
@@ -16,6 +19,25 @@ function QuizModal() {
   const [userAnswers, setUserAnswers] = useState(Array(quizData.length).fill(''));
   const [score, setScore] = useState(0);
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
+  const [loading, setLoading] = useState(false)
+  const [QuizData, setQuizData] = useState([]);
+  useEffect(() => {
+   const fetchData = async () => {
+     try {
+       const data = await Quiz;
+       setLoading(false)
+       setQuizData(data);
+       quizData = data;
+       console.log("quissz data = ", quizData[currentQuestion]?.question)
+       
+     } catch (error) {
+      setLoading(true)
+       console.error('Error fetching CoursePage:', error);
+     }
+   };
+
+   fetchData();
+ }, []);
 
   const openModal = () => {
     setShowModal(true);
@@ -79,11 +101,12 @@ function QuizModal() {
         <Modal.Body>
           {!isQuizCompleted ? (
             <div>
-              <h3>All the best 👍</h3>
-              <p> {currentQuestion + 1}) {quizData[currentQuestion].question}</p>
+              <p className='fs-4 text-main-danger'> {currentQuestion + 1}) {quizData[currentQuestion]?.question}</p>
               <Form>
-                {quizData[currentQuestion].options.map((option, index) => (
-                  <Form.Check
+                {quizData[currentQuestion]?.answers.map((option, index) => (
+                 <div className="q-option">
+                   <Form.Check
+                   className='text-900 fs-5'
                     type="radio"
                     name="quizOption"
                     key={index}
@@ -91,18 +114,18 @@ function QuizModal() {
                     onChange={() => handleAnswerSelection(option)}
                     checked={userAnswers[currentQuestion] === option}
                   />
+                 </div>
                 ))}
               </Form>
-              <div className="text-center">
-              <Button variant="primary" onClick={handleNextQuestion}>
-                Next <i class="bi bi-chevron-double-right"></i>
-              </Button>
+              <div className="text-center mt-3">
+              <button className='btn-gray' onClick={handleNextQuestion}>
+                Next <i className="bi bi-chevron-double-right"></i>
+              </button>
               </div>
             </div>
           ) : (
             <div>
-              <h3>Wow 👍,, you completed your Quiz. Download your Free Certificate</h3>
-              <p>Your Score: {score} out of {quizData.length}</p>
+              <p className='text-main-danger fs-3 text-center'>Your Score: {score} out of {quizData.length}</p>
               <Form onSubmit={handleFormSubmit}>
               <Form.Group className='mt-2'>
        <FloatingLabel controlId="floatingInputGrid" label="Student name">
@@ -119,14 +142,12 @@ function QuizModal() {
           <Form.Control type="email" placeholder="name@example.com"  required/>
         </FloatingLabel>
        </Form.Group>
-               <div className='d-flex justify-content-between mt-5'>
-               <button className='btn-main' type="submit">
+               <button className='btn-gray w-100 mb-2 mt-3' type="submit">
                   Download Certificate <i class="bi bi-download"></i>
                 </button>
-                <Button variant="secondary" onClick={openModal}>
+                <button  className="btn-gray-outline mb-2 p-3" variant="secondary" onClick={openModal}>
                 Retake Quiz
-              </Button>
-               </div>
+              </button>
               </Form>
               
             </div>
@@ -134,6 +155,7 @@ function QuizModal() {
         </Modal.Body>
       </Modal>
     </div>
+    
   );
 }
 

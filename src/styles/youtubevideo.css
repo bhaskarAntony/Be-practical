@@ -2,6 +2,10 @@
   .youtube-container{
     background-color: #ffffff;
     padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 .youtube-card{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -11,6 +15,7 @@
     border-radius: 150px 150px 0 0;
     overflow: hidden;
     min-height: 380px;
+    max-width: 300px;
     border-top: 10px solid var(--red);
 }
 .youtube-header{
