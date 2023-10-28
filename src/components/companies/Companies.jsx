@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/companies.css'
+import './companies.css'
 import AOS from 'aos';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Highlight from './Highlight';
-import { companies } from '../Data/DataFetcher';
-import ShimmerComponent from '../components/ShimmerComponent'
+import Highlight from '../Highlight';
+import { companies } from '../../Data/DataFetcher';
+import ShimmerComponent from '../ShimmerComponent'
 
 
 const Offlinecompanies = [
@@ -130,7 +130,7 @@ function Companies() {
   return (
 
     <section className="container-fluid main-company-container text-center">
-      <h3 className="fs-1 text-900 text-center" data-aos="fade-up">Boost Your Career With Our Hiring Partners</h3>
+      <h3 className="fs-1 text-900 text-center" data-aos="fade-up">Boost Your Career With Our <span className="text-main-danger">Hiring Partners</span></h3>
       <p className="fs-4 text-secondary" data-aos="fade-up">
         Get closer to your dream company <br />
         Our graduates are working with leading tech brands

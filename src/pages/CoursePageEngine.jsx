@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/coursepage.css'
 import HeroRegister from '../components/HeroRegister'
-import Companies from '../components/Companies'
-import Adwantages from '../components/Adwantages'
+import Companies from '../components/companies/Companies'
+import Adwantages from '../components/advantages/Adwantages'
 import YoutubeVideos from '../components/YoutubeVideos'
 import Feedback from '../components/Feedback'
 import LandDreamJob from '../components/LandDreamJob'
@@ -128,10 +128,13 @@ function CoursePageEngine() {
                    </div>
                 </div>
             </div>
-            <div className="row">
-                .col-md
-            </div>
+           
         </div>
+        <div className="row">
+                <div className="col-md-6 offset-3">
+                    <img src={courseData.courseImage} alt={courseData.courseName} className="w-100" />
+                </div>
+            </div>
         <HeroRegister/>
     </div>
       <section className='main-lan-container container-fluid bg-gray2 rounded-0 py-2' id="languages">

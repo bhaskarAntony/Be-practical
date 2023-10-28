@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/about.css'
-import Companies from './Companies'
+import Companies from './companies/Companies'
 
 function About() {
   return (

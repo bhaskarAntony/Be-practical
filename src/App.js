@@ -6,9 +6,7 @@ import Footer from './components/Footer'
 import { BrowserRouter, Route, Router, Routes} from 'react-router-dom'
 import Gallery from './pages/Gallery'
 import Events from './components/Events'
-import Blogs from './components/Blogs'
 import ContactPage from './components/ContactPage'
-import About from './components/About'
 import ElitePage from './pages/ElitePage'
 import RegistrationPage from './components/RegistrationPage'
 import BookDemo from './components/BookDemo'
@@ -21,9 +19,10 @@ import AllTestimomials from './pages/AllTestinomials'
 import PageLoader from './Modals/PageLoader'
 import SimpleRegister from './Modals/SimpleRegister'
 import CoursePageEngine from './pages/CoursePageEngine'
-import AllCourses from './components/AllCourses'
+import AllCourses from './components/allCourses/AllCourses'
 import BlogsPage from './pages/BlogsPage/BlogsPage'
 import PageScrollToTop from './Extra/PageScrollToTop'
+import AboutPage from './pages/About/AboutPage'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -91,7 +90,7 @@ const onLoad = () => {
         <Route path='/events' element={<Events/>}/>
         <Route path='/blogs' element={<BlogsPage/>}/>
         <Route path='/contacts' element={<ContactPage/>}/>
-        <Route path='/about' element={<About/>}/>
+        <Route path='/about' element={<AboutPage/>}/>
         <Route path='/elite' element={<ElitePage/>}/>
         <Route path='/register' element={<RegistrationPage/>}/>
         <Route path='/book-demo' element={<BookDemo/>}/>

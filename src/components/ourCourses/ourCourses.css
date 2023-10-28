@@ -1,18 +1,20 @@
 .our-courses{
     background: var(--blue-light);
     min-height: 100vh;
+    min-width: 100% !important;
 }
 .our-course-card-wrapper{
-    position: relative;
+    min-width: 100% !important;
 }
 .our-course-card {
-    position: relative;
     z-index: 10;
     border-left: 5px solid var(--red);
     margin-bottom: 50px !important;
+    min-width: 100% !important;
 }
 .course-right{
     min-height: 100%;
+    min-width: 100% !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,6 +31,9 @@
     background: var(--red);
     z-index: -1; /* Change z-index to -1 to send it behind .our-course-card
 } */
+.course-left{
+    min-width: 100% !important;
+}
 .course-left .tag{
     min-width:fit-content !important;
 }

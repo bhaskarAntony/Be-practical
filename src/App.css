@@ -40,6 +40,21 @@
     --gold:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
   radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
+.bg-orange-texture{
+  background: url(https://img.freepik.com/free-vector/hand-draw-colorful-brush-stroke-watercolor-design_1035-21735.jpg?w=740&t=st=1698472603~exp=1698473203~hmac=919c20e700d0f3d99d6dde4d87fd465068fc4a27093534720af62bba78055ae7) no-repeat center;
+  background-size: contain;
+}
+.bg-round{
+  min-width: 50px;
+  min-height: 50px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pink) !important;
+  border-radius: 100px;
+  width: fit-content !important;
+}
 .bg-gold{
   background: var(--gold) !important;
 }
@@ -438,5 +453,29 @@ font-size: 1.5rem;
 /* ... */
 .carousel-indicators{
   display: none !important;
+}
+
+/* ShimmerAnimation.css */
+.shimmer-wrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: #f3f3f3; /* Background color for the shimmer effect */
+}
+
+.shimmer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 25%, rgba(255, 255, 255, 0.4) 50%, transparent 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 

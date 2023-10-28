@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../styles/adwantage.css'
-import { advantages } from '../Data/DataFetcher';
-import ShimmerComponent from './ShimmerComponent';
-import ShimmerCard from '../shimmer effects/ShimmerCard';
-import ApplyNow from '../Extra/ApplyNow';
-import BookDemoBtn from '../Extra/BookDemoBtn';
+import './adwantage.css'
+import { advantages } from '../../Data/DataFetcher';
+import ShimmerComponent from '../ShimmerComponent';
+import ShimmerCard from '../../shimmer effects/ShimmerCard';
+import ApplyNow from '../../Extra/ApplyNow';
+import BookDemoBtn from '../../Extra/BookDemoBtn';
 function Adwantages() {
   const [loading, setLoading] = useState(true)
     console.log(advantages)

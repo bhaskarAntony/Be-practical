@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/ourCourses.css'
-import { CoursePage } from '../Data/DataFetcher';
+import '../../components/ourCourses/ourCourses.css'
+import { CoursePage } from '../../Data/DataFetcher';
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
 
-function OurCourses() {
+function AllCourses() {
   const [loading, setLoading] = useState(false)
   const [CourseData, setCourseData] = useState([]);
   useEffect(() => {
@@ -100,7 +100,7 @@ function OurCourses() {
                           </div>
                           <div className="course-btns row mt-3">
                             <div className="col-12 col-md-6 col-lg-6">
-                            <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right"></i></button></Link>
+                            <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More</button></Link>
                             </div>
                             <div className="col-12 col-md-6 col-lg-6">
                             <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
@@ -122,10 +122,10 @@ function OurCourses() {
           }
         </div>
         <div className="text-center">
-        <Link to="/all-courses" className=" text-decoration-none"> <button className="btn-danger  hero-btn">Browse All Courses</button></Link>
+        <Link to="/" className=" text-decoration-none"> <button className="btn-danger  hero-btn">Browse All Courses</button></Link>
         </div>
     </div>
   )
 }
 
-export default OurCourses
+export default AllCourses
