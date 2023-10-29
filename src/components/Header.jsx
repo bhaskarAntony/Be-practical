@@ -79,6 +79,9 @@ function Header() {
              <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/gallery" className='nav-link fs-4'>Gallery</Link>
             </li>
+            <li className='mobile-list-item list-group-item p-0' onClick={handleLinkClick}>
+              <Link to="/elite" className='nav-link fs-4 bg-gold text-black p-2'> <i class="bi bi-stars"></i>  Elite</Link>
+            </li>
             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/events" className='nav-link fs-4'>Events</Link>
             </li>

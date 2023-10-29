@@ -145,27 +145,27 @@ function ElitePage() {
                 CourseData.map((item, index)=>(
                   <div className="col-12 col-sm-12 col-md-6 col-lg-4">
                     <div className="elite-card p-4 text-start border-b">
-                      <p className="fs-2 text-black text-900">{item.courseName}</p>
+                      <p className="fs-2 text-black text-900"> <i class="bi bi-stars"></i>  {item.courseName}</p>
                       <p className="fs-5 text-black">{item.heroSubtitle}</p>
                       <div className="row">
-                        <div className="col-12 col-md-6 col-lg-6">
-                        <small className='text-black'>Duration</small>
+                        <div className="col-12 col-md-6 col-lg-6 border">
+                        <small className='text-black text-900'>Duration</small>
                           <p className="fs-6 text-900  text-white">{item.courseDuration}</p>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-6">
-                        <small className='text-black'>Training Mode</small>
+                        <div className="col-12 col-md-6 col-lg-6 border">
+                        <small className='text-black text-900'>Training Mode</small>
                           <p className="fs-6 text-900  text-white">{item.modeOfTraining}</p>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-6">
-                          <small className='text-black'>Enrolled</small>
+                        <div className="col-12 col-md-6 col-lg-6 border">
+                          <small className='text-black text-900'>Enrolled</small>
                           <p className="fs-6 text-900  text-white">{item.enrolledStudents}</p>
                         </div>
-                        <div className="col-12 col-md-6 col-lg-6">
-                        <small className='text-black'>Adwantages</small>
+                        <div className="col-12 col-md-6 col-lg-6 border mb-sm-2 mb-md-0 mb-lg-0">
+                        <small className='text-black text-900'>Adwantages</small>
                           <p className="fs-6 text-900  text-white">HR Sessions</p>
                         </div>
                       </div>
-                      <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-danger bg-black w-100">Know More</button></Link>
+                      <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-danger bg-black mt-3 w-100">Know More</button></Link>
                     </div>
                   </div>
                 ))
