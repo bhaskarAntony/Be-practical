@@ -83,7 +83,6 @@ function Feedback() {
         >
           <div className="feedback  container ">
           <div className="row">
-
             {slideItems.map((item) => (
                 <div className="col-12 col-md-6 col-lg-6">
               <div className="feedback-card" data-aos="fade-left"

@@ -6,13 +6,14 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { CoursePage } from '../Data/DataFetcher';
+import { Shimmer } from 'react-shimmer';
 
 function Header() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [CourseData, setCourseData] = useState([]);
   useEffect(() => {
    const fetchData = async () => {
@@ -55,13 +56,22 @@ function Header() {
               <Link to="/" className='nav-link fs-4'>Home</Link>
             </li>
             <p className="p-large1 text-900 bg-danger-2 text-white p-2 mt-3">Our Courses</p>
-           {
+            {loading ? (
+              Array(5)
+                .fill(null)
+                .map((_, index) => (
+               <div className="list-group-item p-2">
+                  <Shimmer width="100%" height={20}/>
+               </div>
+                ))
+            ):(
+           
             CourseData.map((item, index)=>(
               <li className='mobile-list-item list-group-item p-2' key={index} onClick={handleLinkClick}>
               
               <Link  to={`/course/${item.courseName}/${item._id}`} className='nav-link fs-4' >{item.courseName}</Link>
             </li>
-            ))
+            )))
            }
              <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
               <Link to="/gallery" className='nav-link fs-4'>Gallery</Link>
@@ -103,14 +113,24 @@ function Header() {
             Courses <i class="bi bi-chevron-down mx-1"></i>
           </a>
           <ul class="dropdown-menu p-0">
-          {
+          {loading ? (
+              Array(5)
+                .fill(null)
+                .map((_, index) => (
+                <div className="list-group-item p-2">
+                   <Shimmer width="100%" height={20}/>
+                </div>
+                ))
+            ):(
+          
             CourseData.map((item, index)=>(
               
               <list className='list-group-item' >
                 <Link to={`/course/${item.courseName}/${item._id}`}  className='nav-link'>{item.courseName} Course <i class="bi bi-arrow-right"></i></Link>
               </list>
-            ))
-           }
+            )))
+          }
+           
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -158,6 +178,9 @@ function Header() {
       <a href="/book-demo" className='text-decoration-none'>
       <button class="btn-danger" type="button">Book Demo Classes <i class="bi bi-chevron-double-right"></i></button>
       </a>
+      <button variant="primary" onClick={handleShow} className='btn bg-gray2 mx-2 p-2 rounded-2'>
+      <i class="bi bi-person-lines-fill fs-4 text-white"></i>
+    </button>
     </div>
   </div>
 </nav>

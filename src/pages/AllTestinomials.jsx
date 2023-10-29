@@ -7,6 +7,7 @@ import { testinomials } from '../Data/DataFetcher';
 import ReadMore from '../Extra/ReadMore';
 import FeedbackShimmer from '../shimmer effects/FeedbackShimmer';
 import YoutubeVideos from '../components/YoutubeVideos'
+import ShimmerFeedbackCard from '../shimmer effects/ShimmerFeedbackCard';
 
 function AllTestimomials() {
 
@@ -33,17 +34,13 @@ function AllTestimomials() {
   </div>
   <div className="text-end">
   </div>
-          <div className="d-flex flex-wrap feedback p-3 container overflow-hidden">
+          <div className=" feedback p-3 container overflow-hidden">
           <div className="row">
           {loading ? (
               Array(15)
                 .fill(null)
                 .map((_, index) => (
-                  <div className="col-6 col-md-3 col-lg-2 rounded-2 p-3" key={index}>
-                    <div>
-                    <FeedbackShimmer />
-                    </div>
-                  </div>
+                  <ShimmerFeedbackCard/>
                 ))
             ):(
             testinomialData.map((item) => (
