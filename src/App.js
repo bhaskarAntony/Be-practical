@@ -98,9 +98,9 @@ const onLoad = () => {
         <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
         <Route path='/all-courses' element={<AllCourses/>}/>
         </Routes>
+      <Footer/>
         </BrowserRouter>
         <ScrollToTopButton/>
-      <Footer/>
           </>
       )}
     </div>

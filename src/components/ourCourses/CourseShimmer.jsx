@@ -12,10 +12,13 @@ function CourseShimmer() {
               <Shimmer width={100} height={20} />
             </p>
             <h1 className="fs-3 text-900">
-              <Shimmer width={200} height={30} />
+              <Shimmer width="90%" height={30} />
             </h1>
             <p className="p-large1">
-              <Shimmer width={300} height={15} />
+              <Shimmer width="80%" height={15} />
+            </p>
+            <p className="p-large1 mt-2">
+              <Shimmer width="60%" height={15} />
             </p>
             <div className="rounded-4 row mb-2 p-2 px-3">
               <div className="col-12 col-md-6 col-lg-6">

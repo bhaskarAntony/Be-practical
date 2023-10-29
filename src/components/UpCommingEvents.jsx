@@ -25,34 +25,32 @@ const events = [
 
 function UpcomingEvents(props) {
   return (
-    <div className='event'>
-      <h3 className="banner-heading text-white">{props.heading}</h3>
+    <div className='event container py-4'>
+      <h3 className="fs-1 text-center text-white text-900 mb-3">{props.heading}</h3>
       {props.events.map((event, index) => (
-        <div className="event-card mb-5  p-lg-3 p-md-0 mb-3">
-          <div className="event-blur">
-          </div>
+        <div className="event-card bg-gray-4 mb-5  p-lg-3 p-md-0 mb-3 border-b">
           <div className="row" key={index}>
-          <div className="col-12 col-md-12 col-lg-6">
+          <div className="col-12 col-md-12 col-lg-6 d-flex align-items-center">
             <div className="event-image p-2">
-              <img src={event.image} alt={event.title} />
+              <img src={event.image} alt={event.title} className='w-100 border-a p-2' />
             </div>
           </div>
           <div className="col-12 col-md-12 col-lg-6">
             <div className="event-text p-3">
-              <h3 className="fw-bold text-white">{event.title}</h3>
-              <h5 className='keyword'>{event.keyword}</h5>
-              <h4 className="mt-3 text-success">What you will Learn</h4>
-              <p className='text-light'>{event.description}</p>
-              <p className="mt-lg-3 text-warning">{event.date}</p>
-              <p className="mt-lg-3 text-warning">{event.time}</p>
+              <h3 className="fs-3 text-900 text-white">{event.title}</h3>
+              <h5 className='bg-danger-2 text-white p-2'>{event.keyword}</h5>
+              <h4 className="mt-3 text-main-danger">What you will Learn</h4>
+              <p className='text-white fs-5'>{event.description}</p>
+              <p className="mt-lg-3 text-white"><i class="bi bi-calendar3 mx-2 text-green"></i>{event.date}</p>
+              <p className="mt-lg-3 text-white"><i class="bi bi-stopwatch mx-2 text-yellow"></i>{event.time}</p>
               <div className="carousel-footer">
                 {
                  event.bookticket? 
                  <>
-                <button className="btn-main p-2 w-md-100">Book Free Ticket</button>
+                <button className="btn-main-outline-light w-md-100">Book Free Ticket</button>
                  </> : null
                 }
-   <button className="btn-main-outline-light mx-2 p-2 w-md-100">Enquire</button>
+             <button className="btn-danger px-5 mx-2 w-md-100">Enquire</button>
 
                
               </div>

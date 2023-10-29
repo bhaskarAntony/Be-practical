@@ -10,9 +10,12 @@ import { Shimmer } from 'react-shimmer';
 
 function Header() {
   const [show, setShow] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleCloseContact = () => setShowContact(false);
+  const handleShowContact = () => setShowContact(true);
   const [loading, setLoading] = useState(true)
   const [CourseData, setCourseData] = useState([]);
   useEffect(() => {
@@ -126,7 +129,7 @@ function Header() {
             CourseData.map((item, index)=>(
               
               <list className='list-group-item' >
-                <Link to={`/course/${item.courseName}/${item._id}`}  className='nav-link'>{item.courseName} Course <i class="bi bi-arrow-right"></i></Link>
+                <Link to={`/course/${item.courseName}/${item._id}`}  className='nav-link'>{item.courseName}</Link>
               </list>
             )))
           }
@@ -166,9 +169,9 @@ function Header() {
             For Companies <i class="bi bi-chevron-down"></i>
           </a>
           <ul class="dropdown-menu">
-            <li className='list-group-item'> <Link to='/events' className='nav-link'>Corporate Training</Link></li>
-            <li className='list-group-item'> <Link to='/events' className='nav-link'>HR Services</Link></li>     
-            <li className='list-group-item'> <Link to='/events' className='nav-link'>Hire Trained Graduates</Link></li>   
+            <li className='list-group-item'> <Link to='https://www.be-practicalhr.com/corporate-training-in-bangalore/' className='nav-link'>Corporate Training</Link></li>
+            <li className='list-group-item'> <Link to='https://www.be-practicalhr.com/' className='nav-link'>HR Services</Link></li>     
+            <li className='list-group-item'> <Link to='/contacts' className='nav-link'>Hire Trained Graduates</Link></li>   
           </ul>
         </li>
       </ul>
@@ -178,9 +181,27 @@ function Header() {
       <a href="/book-demo" className='text-decoration-none'>
       <button class="btn-danger" type="button">Book Demo Classes <i class="bi bi-chevron-double-right"></i></button>
       </a>
-      <button variant="primary" onClick={handleShow} className='btn bg-gray2 mx-2 p-2 rounded-2'>
+      <button variant="primary" onClick={handleShowContact} className='btn bg-gray2 mx-2 p-2 rounded-2'>
       <i class="bi bi-person-lines-fill fs-4 text-white"></i>
     </button>
+    <Offcanvas show={showContact} onHide={handleCloseContact}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title> <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a></Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <ul className="list-group">
+            <li className="list-group-item p-2">
+            <p className="fs-5"><i class="bi bi-telephone-fill text-green mx-2"></i> +91-9242079779</p>
+            </li>
+            <li className="list-group-item p-2">
+            <p className="fs-5"><i class="bi bi-envelope-fill text-yellow mx-2"></i>info@be-practicle.com</p>
+            </li>
+            <li className="list-group-item p-2">
+            <p className="fs-5"><address> <i class="bi bi-building text-main-danger mx-2"></i>  #737C,1stFloor,1st cross 3rd Stage,4th Block Basaveshwara nagar Bengaluru-560079</address></p>
+            </li>
+          </ul>
+        </Offcanvas.Body>
+      </Offcanvas>
     </div>
   </div>
 </nav>

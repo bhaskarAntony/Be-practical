@@ -1,7 +1,27 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/footer.css'  
 import AOS from 'aos'; 
+import { CoursePage } from '../Data/DataFetcher';
+import { Shimmer } from 'react-shimmer';
+import { Link } from 'react-router-dom';
 function Footer() {
+    const [loading, setLoading] = useState(true)
+    const [CourseData, setCourseData] = useState([]);
+    useEffect(() => {
+     const fetchData = async () => {
+       try {
+         const data = await CoursePage;
+         setLoading(false)
+         setCourseData(data);
+         console.log("data", data)
+       } catch (error) {
+        setLoading(true)
+         console.error('Error fetching CoursePage:', error);
+       }
+     };
+  
+     fetchData();
+   }, []);
     useEffect(() => {
         AOS.init(); // Initialize AOS
       }, []);
@@ -26,12 +46,24 @@ function Footer() {
                     <div className="m1">
                         <h2 className='fs-4'>category</h2>
                         <ul>
-                            <li><a href="#">Mern Fullstack</a></li>
-                            <li><a href="#">Python Fullstack</a></li>
-                            <li><a href="#">Java Fullstack</a></li>
-                            <li><a href="#">Cloud Computing</a></li>
-                            <li><a href="#">Digital Marketing</a></li>
-                            <li><a href="#">Data Scince</a></li>
+                            {loading ? (
+                            Array(5)
+                                .fill(null)
+                                .map((_, index) => (
+                                <li>
+                                <Shimmer width="100%" height={20}/>
+                                </li>
+                                ))
+                            ):(
+                        
+                            CourseData.map((item, index)=>(
+                            
+                            <li>
+                                <Link to={`/course/${item.courseName}/${item._id}`}  className='nav-link'>{item.courseName}<i class="bi bi-arrow-right"></i></Link>
+                            </li>
+                            )))
+                        }
+                           
                         </ul>
                     </div>
 

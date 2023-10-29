@@ -6,6 +6,8 @@ import '../styles/events.css'
 import UpcomingEvents from './UpCommingEvents';
 import Feedback from './Feedback';
 import TicketBook from '../Modals/TicketBook';
+import HeroRegister from './HeroRegister';
+import NumberHiglight from './NumberHighlight/NumberHiglight';
 
 const upcomingevents = [
   {
@@ -59,25 +61,38 @@ function Events() {
     setBookTicket(true)
   }
   return (
-  <div className="container-fluid events-main p-lg-5 p-md-1 p-1">
+  <div className="container-fluid events-main p-0 overflow-hidden">
+    <div className="row bg-blur">
+      <div className="col-12 col-sm-12 col-md-8 col-lg-6 d-flex flex-column justify-content-center p-lg-5 p-3">
+        <p className="fs-4 text-main-danger">Events, Conferences and Meetups</p>
+          <h1 className="heading text-900">Be Practical Providing Featured Workshops</h1>
+          <p className="fs-5 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempore dolorum rem obcaecati. Assumenda aliquid exercitationem nulla, harum soluta nisi.</p>
+      </div>
+      <div className="col-12 col-sm-12 col-md-4 col-lg-6">
+        <img src="https://img.freepik.com/free-vector/hand-drawn-business-colleagues-communication_52683-76701.jpg" alt="events image" className="w-100 rounded-5" />
+      </div>
+    </div>
+    <HeroRegister/>
     {
       BookTicket?<TicketBook/> : null
     }
-      <div className="container-fluid">
-      <Tabs>
-    <TabList className="custom-tabs">
-      <Tab className="custom-tab">Events</Tab>
-      <Tab className="custom-tab">Upcoming Events</Tab>
+      <div className="container-fluid p-0 overflow-hidden mb-4">
+      <Tabs className="p-0">
+    <TabList className="custom-tabs p-2 sticky-top">
+      <Tab className="custom-tab fs-3">Events</Tab>
+      <Tab className="custom-tab fs-3">Upcoming Events</Tab>
     </TabList>
 
-    <TabPanel>
+    <TabPanel className="container-fluid  bg-gray2">
     <UpcomingEvents events={pastevents} heading="Recent Events @ Be Practical"/>
     </TabPanel>
-    <TabPanel>
+    <TabPanel className="container-fluid bg-gray2">
       <UpcomingEvents events={upcomingevents} heading="Upcoming Events @ Be Practical"/>
     </TabPanel>
   </Tabs>
     </div>
+
+    <NumberHiglight/>
     <Feedback/>
   </div>
   );

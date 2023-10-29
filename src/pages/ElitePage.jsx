@@ -5,6 +5,9 @@ import Batchtable from '../components/Batchtable'
 import EliteProgram from '../components/EliteProgram'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import { CoursePage } from '../Data/DataFetcher'
+import Aos from 'aos'
+import { Link } from 'react-router-dom'
 
 const eliteCourses =[
     {
@@ -17,6 +20,26 @@ const eliteCourses =[
     }
 ]
 function ElitePage() {
+  const [loading, setLoading] = useState(true)
+  const [CourseData, setCourseData] = useState([]);
+  useEffect(() => {
+   const fetchData = async () => {
+     try {
+       const data = await CoursePage;
+       setLoading(false)
+       setCourseData(data);
+       console.log("data", data)
+     } catch (error) {
+      setLoading(true)
+       console.error('Error fetching CoursePage:', error);
+     }
+   };
+
+   fetchData();
+ }, []);
+    useEffect(() => {
+        Aos.init(); // Initialize AOS
+      }, []);
     const [particles, setParticles] = useState([]);
 
     // Function to create particles
@@ -115,7 +138,42 @@ function ElitePage() {
     <div className="container elite-devider"></div>
     <Elite/>
     <div className="container elite-devider"></div>
-    <div className="elite-highlights container p-3">
+    <div className="elite-course container py-5">
+      <h1 className="fs-1 text-center text-900 text-white mb-4">Our Elite <span className="text-main-danger">Courses</span></h1>
+        <div className="row">
+            {
+                CourseData.map((item, index)=>(
+                  <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+                    <div className="elite-card p-4 text-start border-b">
+                      <p className="fs-2 text-black text-900">{item.courseName}</p>
+                      <p className="fs-5 text-black">{item.heroSubtitle}</p>
+                      <div className="row">
+                        <div className="col-12 col-md-6 col-lg-6">
+                        <small className='text-black'>Duration</small>
+                          <p className="fs-6 text-900  text-white">{item.courseDuration}</p>
+                        </div>
+                        <div className="col-12 col-md-6 col-lg-6">
+                        <small className='text-black'>Training Mode</small>
+                          <p className="fs-6 text-900  text-white">{item.modeOfTraining}</p>
+                        </div>
+                        <div className="col-12 col-md-6 col-lg-6">
+                          <small className='text-black'>Enrolled</small>
+                          <p className="fs-6 text-900  text-white">{item.enrolledStudents}</p>
+                        </div>
+                        <div className="col-12 col-md-6 col-lg-6">
+                        <small className='text-black'>Adwantages</small>
+                          <p className="fs-6 text-900  text-white">HR Sessions</p>
+                        </div>
+                      </div>
+                      <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-danger bg-black w-100">Know More</button></Link>
+                    </div>
+                  </div>
+                ))
+            }
+        </div>
+    </div>
+    <div className="container elite-devider"></div>
+    <div className="elite-highlights container p-3 py-5">
         <div className="row">
             <div className="col-12 col-md-4 col-lg-4">
                 <div className="highlight-card">
@@ -153,18 +211,9 @@ function ElitePage() {
         </div>
     </div>
     <div className="container elite-devider"></div>
-    <Batchtable/>
-    <div className="container elite-devider"></div>
-    <EliteProgram/>
-    <div className="elite-course container-fluid">
-        <div className="roW">
-            {
-                eliteCourses.map((item, index)=>{
-
-                })
-            }
-        </div>
-    </div>
+ <div className="py-5">
+ <Batchtable/>
+ </div>
    </div>
 </>
   )

@@ -1,30 +1,20 @@
 
 .custom-tabs {
   display: flex;
-  justify-content: space-between;
-  background-color: var(--green-main-color); /* Background color of the tab bar */
-  border-radius: 10px; /* Rounded corners for the tab bar */
-  outline: none;
-  /* background: url('../images/course-card-bg.svg') no-repeat center;
-  background-size: cover; */
-  background-color: #00724a;
+  background-color: #ffffff;
   border: none;
-  padding: 10px;
-  border-radius: 100px;
-  border: 1px solid var(--green-light-color);
   list-style-type: none;
+  margin-top: 30px;
 }
 
 /* Style individual tabs */
 .custom-tab {
-  flex: 1;
   text-align: center;
  /* Text color of tabs */
-  color: #c7c7c7;
-  padding: 20px 10px;
+  color: #212020;
+  padding: 20px;
   cursor: pointer;
-  border-radius: 100px; /* Rounded top corners for tabs */
-  transition: background-color 0.3s;
+  transition: color 0.3s;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -33,9 +23,9 @@
 
 /* Change the background color of the active tab */
 .custom-tab[aria-selected="true"] {
-  background-color: #ffffff; /* Background color of the active tab */
-  color: var(--white-color); /* Text color of the active tab */
+  color: var(--red); /* Text color of the active tab */
   outline: none;
+  border-bottom: 3px solid var(--red);
 }
 
 /* Tab content panel */
@@ -44,39 +34,8 @@
 }
 
 .event-card{
-  background-color: #ffffff4a;
-  background: linear-gradient(45deg, #021c13, #1b0005);
+  background: var(--gray3);
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;position: relative;
-}
-.event-card::after{
-  content: "";
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  background-color: #f5e0a1;
-  top: 0;
-  right: 0;
-  filter: blur(90px);
-}
-.event-card::before{
-  content: "";
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  background-color: #f8aed0;
-  bottom: 0 !important;
-  filter: blur(90px);
-  right: 0 !important;
-}
-.event-blur{
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  left: 0;
-  bottom: 0;
-  background-color: #e0ffff;
-  filter: blur(90px);
 }
 .event-image img{
   width: 100%;
