@@ -203,6 +203,7 @@ function Header() {
             <p className="fs-5"><address> <i class="bi bi-building text-main-danger mx-2"></i>  #737C,1stFloor,1st cross 3rd Stage,4th Block Basaveshwara nagar Bengaluru-560079</address></p>
             </li>
           </ul>
+          <Link to="tel:+919242079779"><button className="btn bg-success-2 w-100 text-white">Call Now</button></Link>
         </Offcanvas.Body>
       </Offcanvas>
     </div>
