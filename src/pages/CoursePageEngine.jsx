@@ -121,12 +121,15 @@ function CoursePageEngine() {
                    </div>
                    <div className="col-12 col-md-4 col-lg-4">
                    <div className="text-center bg-white rounded-3 py-3 border-b mb-3">
-                   <i class="bi bi-stopwatch-fill fs-1 text-main-danger"></i>
-                        <h1 className="fs-5 text-main-danger">Next Batch</h1>
-                        <h1 className="fs-4">{courseData.BatchStarting}</h1>
+                   <i class="bi bi-wallet-fill fs-1 text-main-danger"></i>
+                        <h1 className="fs-5 text-main-danger">Min Salary</h1>
+                        <h1 className="fs-4">{courseData.minSalary}</h1>
                     </div>
                    </div>
                 </div>
+            </div>
+            <div className="btns">
+                <button className="btn-danger">Download Syllubus</button>
             </div>
            
         </div>

@@ -4,6 +4,7 @@ import Companies from '../../components/companies/Companies'
 import ReadMore from '../../Extra/ReadMore'
 import NumberHiglight from '../../components/NumberHighlight/NumberHiglight'
 import BookDemoCard from '../../components/BookDemoCard'
+import { Link } from 'react-router-dom'
 
 function AboutPage() {
   return (
@@ -17,10 +18,10 @@ function AboutPage() {
                     <p className='p-large1 text-secondary'><ReadMore text={"At Be Practical Tech Solutions, we understand the importance of staying up to date with the latest technology trends. That’s why we offer comprehensive training in various tech-related fields, including information technology (IT). Our trainers are highly skilled and have a deep understanding of what it takes to succeed in the IT field. Plus, we’re using cutting-edge technology to help our students achieve their career goals."} maxLength={100}/></p>
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-6">
-                        <button className='w-100 btn-danger mb-2 mx-2'>Explore More</button>
+                       <Link to='/download-main'> <button className='w-100 btn-danger mb-2 mx-2'>Download Browcher</button></Link>
                         </div>
                         <div className="col-12 col-md-6 col-lg-6">
-                        <button className='hero-btn btn-gray-outline mb-2 mx-2'>Our Courses</button>
+                       <Link to='/all-courses'>    <button className='hero-btn btn-gray-outline mb-2 mx-2'>Our Courses</button></Link>
                         </div>
                        
                       

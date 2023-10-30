@@ -26,6 +26,7 @@ function OurCourses() {
     useEffect(() => {
         Aos.init(); // Initialize AOS
       }, []);
+      const displayedCourses = CourseData.slice(0, 3);
   return (
     <div className='container-fluid our-courses p-lg-5 p-3'>
         <h1 className="heading"><i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i>Our Courses<i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i></h1>
@@ -38,9 +39,9 @@ function OurCourses() {
                  <CourseShimmer/>
                 ))
             ):(
-              CourseData.map((item, index)=>(
-                <div className="our-course-card-wrapper">
-                    <div className="container our-course-card p-lg-5 p-md-3 p-3 py-5">
+              displayedCourses.map((item, index)=>(
+                <div className="our-course-card-wrapper" key={index}>
+                    <div className="container  our-course-card p-lg-5 p-md-3 p-3 py-5" data-aos="fade-right">
                     <div className="row">
                       <div className="col-12 col-md-6 col-lg-6">
                         <div className="course-left">
@@ -86,7 +87,7 @@ function OurCourses() {
                                <div>
                                 <p>
                                 <p className="text-secondary">Mode Of Training</p>
-                                <p className='text-900'>{item.courseDuration}</p>
+                                <p className='text-900'>{item.modeOfTraining}</p>
                                 </p>
                                </div>
                                 </div>

@@ -23,6 +23,8 @@ import AllCourses from './components/allCourses/AllCourses'
 import BlogsPage from './pages/BlogsPage/BlogsPage'
 import PageScrollToTop from './Extra/PageScrollToTop'
 import AboutPage from './pages/About/AboutPage'
+import Discount from '../src/Extra/Discount/Discount'
+import QuizModal from './components/QuizModal'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -78,13 +80,16 @@ const onLoad = () => {
                 widgetId="default"
                 onLoad={onLoad}
                 />
+    
      
       <ScrollProgressBar/>
       <Progressbar/>
         <BrowserRouter>
         <PageScrollToTop/>
         <Header/>
+        <Discount/>
         <Routes>
+          
         <Route path='/' element={<Home/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
         <Route path='/events' element={<Events/>}/>
@@ -97,6 +102,7 @@ const onLoad = () => {
         <Route path='/all-testinomials' element={<AllTestimomials/>}/>
         <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
         <Route path='/all-courses' element={<AllCourses/>}/>
+        <Route path='/discount/quiz' element={<QuizModal/>}/>
         </Routes>
       <Footer/>
         </BrowserRouter>

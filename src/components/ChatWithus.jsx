@@ -12,8 +12,8 @@ function ChatWithus() {
     <section className='container my-5 p-2 p-md-3 p-lg-5 ' data-aos="fade-right">
     <div className="chat-with-us p-3">
     <div className="row">
-        <div className="col-12 col-md-8 col-lg-8">
-            <h1 className="fs-1 text-white">Have any further <br />questions?</h1>
+        <div className="col-12 col-md-8 col-lg-8 diflex flex-column align-items-center">
+            <h1 className="fs-1 text-white text-start">Have any further <br />questions?</h1>
             <button className='btn-danger mt-5 mb-3'>Chat With Us <i class="bi bi-chevron-double-right"></i></button>
         </div>
 
