@@ -46,9 +46,14 @@ function Header() {
   <div class="container-fluid">
   <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a>
 
- <button variant="primary" onClick={handleShow} className='btn-danger d-lg-none'>
+<div>
+<button variant="primary" onClick={handleShow} className='btn-danger d-lg-none'>
     <i class="bi bi-list text-white"></i>
     </button>
+    <button variant="primary" onClick={handleShowContact} className='btn bg-gray2 mx-2 p-2 rounded-2 d-lg-none'>
+      <i class="bi bi-person-lines-fill fs-4 text-white"></i>
+    </button>
+</div>
     <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title> <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a></Offcanvas.Title>
