@@ -129,7 +129,7 @@ function CoursePageEngine() {
                 </div>
             </div>
             <div className="btns">
-                <button className="btn-danger">Download Syllubus</button>
+                <button className="btn-danger px-5">Download Syllubus</button>
             </div>
            
         </div>
