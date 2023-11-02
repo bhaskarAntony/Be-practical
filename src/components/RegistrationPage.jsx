@@ -3,10 +3,10 @@ import '../styles/registerPage.css'
 
 function RegistrationPage() {
   return (
-    <section className='register-page container py-3'>
+    <section className='register-page container-fluid py-3 bg-blur'>
       <div className="row">
-        <div className="col-12 col-md-12 col-lg-6 offset-3">
-            <div className="r-card p-2 p-lg-5">
+        <div className="col-md-6 offset-md-3">
+            <div className="r-card p-2 p-lg-5 bg-white">
                 <h1 className="card-heading">Register</h1>
                 <form>
                     <div className="form-group mt-3">
@@ -22,7 +22,7 @@ function RegistrationPage() {
                         <input type="text" className="form-control p-3" name='phone' placeholder='Enter your Number' />
                     </div>
                     <div className="form-group mt-3">
-                       <button className="btn-main w-100">Register</button>
+                       <button className="btn-danger w-100">Register</button>
                     </div>
                 </form>
             </div>

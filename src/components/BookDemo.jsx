@@ -6,7 +6,7 @@ function BookDemo() {
   return (
     <section className='register-page container py-1'>
       <div className="row">
-        <div className="col-12 col-md-12 col-lg-6 offset-3">
+        <div className="col-md-6 offset-md-3">
           <BookDemoCard/>
         </div>
       </div>
