@@ -302,7 +302,8 @@
   color: #fff;
 }
 [class*="btn-main-outline"]:hover{
-  background-color: #058425 !important;
+  background-color: var(--gray2) !important;
+  color: #fff !important;
   opacity: 0.8;
 }
 @media (max-width:800px){
@@ -479,6 +480,81 @@ font-size: 1.5rem;
   }
   100% {
     background-position: 200% 0;
+  }
+}
+
+/* shacking  */
+.shake-card {
+  animation: shake 0.8s ease infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* glowing dot  */
+.dot {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: var(--success);
+  border-radius: 50%;
+  animation: glow 1s ease-in-out infinite;
+}
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--success);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+
+@keyframes glow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
   }
 }
 

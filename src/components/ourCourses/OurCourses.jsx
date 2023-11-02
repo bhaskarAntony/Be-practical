@@ -45,6 +45,12 @@ function OurCourses() {
                     <div className="row">
                       <div className="col-12 col-md-6 col-lg-6">
                         <div className="course-left">
+                        <div className="mb-2 d-flex gap-2 flex-wrap align-items-center">
+                        <div class="dot">
+                             <span class="glow"></span>
+                             </div>
+                             <span className='fs-5 text-900 shake-card'>{item.BatchStarting}</span>
+                        </div>
                               <p className=" text-white rounded-2 p-1 tag">
                               <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
                               </p>

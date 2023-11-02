@@ -17,7 +17,6 @@ import ScrollProgressBar from './Extra/ScrollProgressbar'
 import Progressbar from './Extra/Progressbar'
 import AllTestimomials from './pages/AllTestinomials'
 import PageLoader from './Modals/PageLoader'
-import SimpleRegister from './Modals/SimpleRegister'
 import CoursePageEngine from './pages/CoursePageEngine'
 import AllCourses from './components/allCourses/AllCourses'
 import BlogsPage from './pages/BlogsPage/BlogsPage'
@@ -74,7 +73,6 @@ const onLoad = () => {
         <PageLoader />
       ) : (
           <>
-           <SimpleRegister show={showRegistrationModal} onClose={closeRegistrationModal} />
        <TawkMessengerReact
                 propertyId="https://tawk.to/chat/6524d9286fcfe87d54b8416a/1hcbv0iqn"
                 widgetId="default"
