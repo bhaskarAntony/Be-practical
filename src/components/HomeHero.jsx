@@ -12,8 +12,6 @@ import student2 from '../images/student2-img.svg';
 import DialogModal from './DialogModel';
 import { BiCaretLeft, BiCaretRight } from 'react-icons/bi'; 
 import { homeHeroApi } from '../Data/DataFetcher';
-import HomeHeroShimmer from '../shimmer effects/HomeHeroShimmer';
-import Loading from '../Modals/Loading';
 
 const home = [
   {
@@ -50,8 +48,8 @@ function HomeHero() {
         })
         .catch((error) => console.error('Error fetching advantages:', error));
     }, []);
-    const openModal = () => setShowModal(true);
-    const handleClose = () => setShowModal(false);
+  const openModal = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
 
   useEffect(() => {
     AOS.init();
@@ -84,13 +82,10 @@ function HomeHero() {
     };
   }, [paused]);
 
-  const numberOfSlides = homeData[0]?.heroText.length;
+  const numberOfSlides = home.length;
 
   return (
     <section className='hero container-fluid p-0 m-0 bg-blur'>
-      {
-        loading ? <Loading/> : null
-      }
       <div className="hero-1">
       <div className="custom-carousel">
       <div className="row">
@@ -102,25 +97,18 @@ function HomeHero() {
           onMouseEnter={handleCarouselHover}
           onMouseLeave={handleCarouselLeave}
         >
-          {homeData[0]?.heroText.map((item, index) => (
+          {home.map((item, index) => (
             <Carousel.Item key={index}>
-              {
-                loading ? (
-                  <HomeHeroShimmer/>
-                ):(
                   <div className="hero-text p-lg-5 p-md-3 p-3">
                     <h1 className="card-heading text-main-2 text-start">100% Placement Programs</h1>
-                    <h1 className="heading text-black text-900 text-start">{item.title}</h1>
-                    <p className="text-black heading-subtitle my-4 text-start">{item.subtitle}</p>
+                    <h1 className="heading text-black text-900 text-start">{item.heading}</h1>
+                    <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap">
-                      <button className='btn-main-outline-dark  m-2 hero-btn py-3'>DownLoad Browcher<i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-main-outline-dark  m-2 hero-btn py-3'>Join For Free <i class="bi bi-chevron-double-right"></i></button>
                       <button className='btn-danger m-2 hero-btn py-3' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
                     </div>
                    
                   </div>
-                )
-              }
-                  
             </Carousel.Item>
           ))}
         </Carousel>
@@ -132,7 +120,7 @@ function HomeHero() {
                 </div>
                  </div>
         <div className="custom-indicators">
-          {Array.from({ length: homeData[0]?.heroText.length }).map((_, i) => (
+          {Array.from({ length: home.length }).map((_, i) => (
             <div
               key={i}
               className={`indicator ${index === i ? 'active' : ''}`}
