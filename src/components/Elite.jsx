@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/elite.css'
+import { Link } from 'react-router-dom'
 
 function Elite() {
   return (
@@ -53,7 +54,9 @@ function Elite() {
         </div>
         </div>
         <div className="p-4 d-flex justify-content-center py-2">
-            <button className="btn-danger">Join Now <i class="bi bi-chevron-double-right"></i></button>
+          <Link to="/elite">
+          <button className="btn-danger">Join Now <i class="bi bi-chevron-double-right"></i></button>
+          </Link>
             </div>
       </div>
 

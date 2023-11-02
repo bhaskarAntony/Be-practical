@@ -1,5 +1,6 @@
 
 .hero{
+    /* min-height: 100vh; */
     min-height: fit-content;
     background-color: var(--color-dark-1);
     /* background: url('../images/homesec.svg') no-repeat center;

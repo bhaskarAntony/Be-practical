@@ -68,7 +68,7 @@ function Training() {
             </div>
             
             <div className="p-4 d-flex justify-content-center py-2 mt-4">
-            <button className="btn-danger">Book Your Free Trail, Now <i class="bi bi-chevron-double-right"></i></button>
+           <ApplyNow text="Book Your Free Trail, Now "/>
             </div>
         </div>
     );

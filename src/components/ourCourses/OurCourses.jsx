@@ -48,6 +48,9 @@ function OurCourses() {
                               <p className=" text-white rounded-2 p-1 tag">
                               <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
                               </p>
+                              <div className="seats rounded-4 p-2 d-flex gap-2 flex-wrap bg-gray2 text-white align-items-center mb-3">
+                              <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
+                              </div>
                               <h1 className="fs-3 text-900">{item.courseName}</h1>
                               <p className="p-large1">{item.heroSubtitle}</p>
                               <div className="course-info rounded-4 row mb-2 p-2 px-3">
@@ -106,6 +109,7 @@ function OurCourses() {
                                 </div>
                               </div>
                               </div>
+                            
                               <div className="course-btns row mt-3">
                                 <div className="col-12 col-md-6 col-lg-6">
                                 <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right"></i></button></Link>

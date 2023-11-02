@@ -1,5 +1,6 @@
 import React from 'react'
 import '../styles/eliteProgram.css'
+import ApplyNow from '../Extra/ApplyNow'
 
 const eliteProgram = [
     {
@@ -46,7 +47,7 @@ function EliteProgram() {
          }
        </div>
        <div className="p-4 d-flex justify-content-center py-2">
-            <button className="btn-danger">Book Your Free Trail, Now <i class="bi bi-chevron-double-right"></i></button>
+       <ApplyNow text="Book Your Free Trail, Now "/>
             </div>
      </section>
     

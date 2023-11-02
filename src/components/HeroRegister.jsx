@@ -46,7 +46,8 @@ function HeroRegister() {
       });
   };
   return (
-   <div className="px-lg-5">
+   <div className="p-2">
+    <div className="px-lg-5">
      <div className="register-container-home bg-white container-fluid light-shadow border-0 shadow1">
       <div className="register align-items-center rounded-1 p-3 ">
         <div className="p-2 rounded-2 py-3 border-0 bg-transparent">
@@ -129,6 +130,7 @@ function HeroRegister() {
       <SuccessDialog show={showSuccessDialog} onHide={() => setShowSuccessDialog(false)} msg={message} register={error} />
       {loading && <Loading />}
     </div>
+   </div>
    </div>
   )
 }
