@@ -122,8 +122,8 @@ function CoursePageEngine() {
                         </div>
                     </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
-                    <button className="btn-main-outline-light px-5 py-4 hero-btn d-flex align-items-center gap-2">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
-                <button className="btn-danger px-5 py-4 hero-btn d-flex align-items-center gap-2">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
+                    <button className="btn-main-outline-light px-5 py-4 hero-btn d-flex align-items-center gap-2 fs-5">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
+                <button className="btn-danger px-5 py-4 hero-btn d-flex align-items-center gap-2 fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
                
             </div>
                     
