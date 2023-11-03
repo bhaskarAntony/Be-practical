@@ -21,9 +21,12 @@ const Module = (props) => {
    <div className="container-fluid faq" id="faq">
     <h3 className="fs-1 text-center text-900">Program Curriculum</h3>
     <p className="p-light-small text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+     <div className="container">
+      <div className="row">
+      <div className="col-12 col-md-6 col-lg-6">
       <div className="container modules  p-lg-5 p-md-3 p-2">
      {props.modules.map((item, index) => (
-        <div
+         <div
           className={`faq-item ${activeIndex === index ? 'active' : ''} `}
           key={index}
         >
@@ -45,6 +48,12 @@ const Module = (props) => {
           )}
         </div>
       ))}
+      </div>
+      </div>
+      <div className="col-12 col-md-6 col-lg-6">
+        <img src="" alt="" className="w-100" />
+      </div>
+     </div>
         <div className="text-center mt-2">
        <ApplyNow text={"Enquire Now"}/>
     </div>

@@ -34,7 +34,11 @@ function CoursePageEngine() {
             console.error(error);
           });
       }, [id]);
-
+      useEffect(() => {
+        if (courseData) {
+          document.title = courseData.courseName;
+        }
+      }, [courseData]);
       if (courseData === null) {
         // You can display a loading message here while the data is being fetched
         return <Loading/>;
@@ -96,29 +100,29 @@ function CoursePageEngine() {
                     </div>
                     <div className="row mt-3">
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray4 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">100% Placement Support</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray4 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Industry Led Curriculum</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray4 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Real Time Projects</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray4 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i> <span className="fs-5">Flexible Timings</span>
                         </div>
                         </div>
                     </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
-                    <button className="btn-main-outline-light px-5 py-4 bero-btn">Apply Now</button>
-                <button className="btn-danger px-5 py-4">Download Syllubus</button>
+                    <button className="btn-main-outline-light px-5 py-4 hero-btn">Apply Now</button>
+                <button className="btn-danger px-5 py-4 hero-btn">Download Syllubus</button>
                
             </div>
                     
@@ -168,7 +172,7 @@ function CoursePageEngine() {
 
     
       <Module modules={courseData.modules} name={courseData.courseName}/>
-      <section className='main-lan-container container-fluid bg-gray2 rounded-0 py-2' id="languages">
+      <section className='main-lan-container container-fluid bg-gray2 rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-7">
