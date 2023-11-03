@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './ourCourses.css'
-import { CoursePage } from '../../Data/DataFetcher';
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import CourseShimmer from './CourseShimmer';
+import { CoursePage } from '../../Data/DataFetcher';
 
 function OurCourses() {
   const [loading, setLoading] = useState(true)

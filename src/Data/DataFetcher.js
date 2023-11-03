@@ -9,7 +9,6 @@ async function fetchData(endpoint) {
     throw error;
   }
 }
-
 const advantages = fetchData('https://fancy-mittens-ray.cyclic.app/api/advantages');
 const companies = fetchData('https://fancy-mittens-ray.cyclic.app/api/companies');
 const trainingModule = fetchData('https://fancy-mittens-ray.cyclic.app/api/trainingmodes');

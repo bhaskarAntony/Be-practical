@@ -14,6 +14,7 @@ import Languages from '../components/Languages'
 import CourseCard from '../components/CourseCard'
 import Loading from '../Modals/Loading'
 import CourseCertificate from '../components/CourseCertificate'
+import BookDemoCard from '../components/BookDemoCard'
 
 function CoursePageEngine() {
     const [courseData, setCourseData] = useState(null);
@@ -40,67 +41,9 @@ function CoursePageEngine() {
       }
   return (
     <section className='overflow-hidden'>
-    <div className="course-hero container-fluid p-0 py-3">
-        {/* <div className="row">
-            <div className="col-12 col-md-6 col-lg-6">
-                <div className="course-hero-text p-lg-5 p-md-2 p-2">
-                    <h1 className="course-heading text-white mb-4">{courseData.heroTitle}</h1>
-                    <p className="heading-subtitle text-white">Learn with Real Work-Ex. Join the best product-based <br /> companies with <span className='text-green fw-bold'>guaranteed placement.</span></p>
-                    <div className="batch  d-flex align-items-center"> 
-                        <i class="bi bi-calendar3 fs-4 text-blue-1"></i>
-                            <p className='p-dark-small text-black text-900 mx-2 mt-2'>New Batch Starts At {courseData.BatchStarting} </p>
-                        </div>
-                        <div className="course-btn mt-5 d-flex flex-wrap gap-2">
-                            <button className="hero-btn-main p-4 hero-btn ">Enroll This Course <i class="bi bi-chevron-double-right"></i></button>
-                            <button className="hero-btn-outline p-3 hero-btn">Book Free Demo Classes <i class="bi bi-chevron-double-right"></i></button>
-                        </div>
-                        <div className="course-highlight mt-5">
-                            <div className="row">
-                                <div className="col-12 col-md-8 col-lg-8">
-                                    <div className="course-highlight-left bg-light-green rounded-4 text-center p-2 mb-2">
-                                        <h3 className="heading-small py-3">
-                                        Placement Guarantee
-                                        </h3>
-                                        <div className="devider"></div>
-                                        <div className="row">
-                                            <div className="col-6">
-                                                <small>MIN DREAM SALARY</small>
-                                                <h4 class="heading-small">{courseData.minSalary}</h4>
-                                            </div>
-                                            <div className="col-6">
-                                                <small>HIGHEST SALARY</small>
-                                                <h4 className="heading-small">{courseData.HighestSalary}</h4>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-12 col-md-4 col-lg-4">
-                                    <div className="course-highlight-right bg-light-green rounded-4 p-2 text-center mb-2">
-                                    <small>COURSE DURATION</small>
-                                                <p className="heading-small"></p>
-                                                <h4 className="heading-small">{courseData.courseDuration}</h4>
-                                                <div className="devider"></div>
-                                                <small>DEMO CLASSES</small>
-                                                <h4 className="heading-small">FREE</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-            <div className="col-12 col-md-6 col-lg-6">
-                <div className="course-hero-video">
+    <div className="course-hero container-fluid p-0 py-3 bg-gray2 border-b ">
 
-                <div className="video-container">
-                        <img src="" alt="" />
-                        <div className="play-icon">
-                        <i class="bi bi-play-fill fs-4"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> */}
-        <div className="course-hero p-lg-5 p-3 d-flex flex-column align-items-center justify-content-center bg-blur">
+        {/* <div className="course-hero p-lg-5 p-3 d-flex flex-column align-items-center justify-content-center bg-blur">
             <h1 className="heading text-center text-900">{courseData.heroTitle}</h1>
             <p className="p-large1 text-900 text-main-danger">{courseData.heroSubtitle}</p>
             <div className="course-details container  p-lg-5 p-3">
@@ -134,14 +77,97 @@ function CoursePageEngine() {
                 <button className="btn-danger px-5">Download Syllubus</button>
             </div>
            
-        </div>
+        </div> */}
         <div className="row">
+            <div className="col-12 col-md-7 col-lg-7">
+                <div className="course-hero-left p-lg-5 p-3">
+                    <p className="text-main-danger fs-5 text-900">100% Placement Course</p>
+                    <h1 className="heading text-900 text-white">{courseData.heroTitle}</h1>
+                    <p className="fs-5 text-secondary">{courseData.heroSubtitle}</p>
+                    <div className="course-ratings mt-3 d-flex align-items-center gap-2">
+                        <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">rating <i class="bi bi-star-half text-yellow"></i><b> 4.5</b></small></p>
+                        <div className="d-flex gap-2">
+                        <i class="bi bi-star-fill text-yellow fs-4"></i>
+                        <i class="bi bi-star-fill text-yellow fs-4"></i>
+                        <i class="bi bi-star-fill text-yellow fs-4"></i>
+                        <i class="bi bi-star-fill text-yellow fs-4"></i>
+                        <i class="bi bi-star-half text-yellow fs-4"></i>
+                        </div>
+                    </div>
+                    <div className="row mt-3">
+                        <div className="col-12 col-md-12 col-lg-6">
+                        <div className="course-tags p-2 py-3 bg-gray4 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">100% Placement Support</span>
+                        </div>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-6">
+                        <div className="course-tags p-2 py-3 bg-gray4 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Industry Led Curriculum</span>
+                        </div>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-6">
+                        <div className="course-tags p-2 py-3 bg-gray4 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Real Time Projects</span>
+                        </div>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-6">
+                        <div className="course-tags p-2 py-3 bg-gray4 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <i class="bi bi-check-circle-fill fs-3 text-green"></i> <span className="fs-5">Flexible Timings</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div className="btns mt-3 d-flex flex-wrap gap-2">
+                    <button className="btn-main-outline-light px-5 py-4 bero-btn">Apply Now</button>
+                <button className="btn-danger px-5 py-4">Download Syllubus</button>
+               
+            </div>
+                    
+                </div>
+            </div>
+            <div className="col-12 col-md-5 col-lg-5">
+                <div className="course-hero-right p-lg-5 p-3">
+                    <BookDemoCard/>
+                </div>
+            </div>
+        </div>
+        <div className="course-details container  p-lg-5 p-3">
+            <h1 className="text-center text-white fs-3 mb-4">{courseData.courseName} Course Details</h1>
+                <div className="row">
+                   <div className="col-12 col-md-4 col-lg-4">
+                   <div className="text-center bg-gray3 rounded-3 py-3 border-b mb-3 shake-card">
+                   <i class="bi bi-calendar3 fs-1 text-green"></i>
+                        <h1 className="fs-5 text-main-danger">
+                             Next Batch Starting </h1>
+                                                 
+                        <h1 className="fs-4 text-white">{courseData.BatchStarting}</h1>
+                    </div>
+                   </div>
+                   <div className="col-12 col-md-4 col-lg-4">
+                   <div className="text-center bg-gray3 rounded-3 py-3 border-b mb-3">
+                   <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
+                        <h1 className="fs-5 text-main-danger">Course Duration</h1>
+                        <h1 className="fs-4 text-white">{courseData.courseDuration}</h1>
+                    </div>
+                   </div>
+                   <div className="col-12 col-md-4 col-lg-4">
+                   <div className="text-center bg-gray3 rounded-3 py-3 border-b mb-3">
+                   <i class="bi bi-wallet-fill fs-1 text-main-danger"></i>
+                        <h1 className="fs-5 text-main-danger">Job Min Salary</h1>
+                        <h1 className="fs-4 text-white">{courseData.minSalary}</h1>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        {/* <div className="row">
                 <div className="col-md-6 offset-3">
                     <img src={courseData.courseImage} alt={courseData.courseName} className="w-100" />
                 </div>
-            </div>
-        <HeroRegister/>
+            </div> */}
+        {/* <HeroRegister/> */}
     </div>
+
+    
+      <Module modules={courseData.modules} name={courseData.courseName}/>
       <section className='main-lan-container container-fluid bg-gray2 rounded-0 py-2' id="languages">
             <div className="lan-inner-container container">
                 <div className="row">
@@ -154,9 +180,9 @@ function CoursePageEngine() {
                 </div>
             </div>
       </section>
-      <Module modules={courseData.modules} name={courseData.courseName}/>
-      <LandDreamJob/>
       <CourseCertificate/>
+      <LandDreamJob/>
+
     <Companies/>
 
     <Adwantages/>
