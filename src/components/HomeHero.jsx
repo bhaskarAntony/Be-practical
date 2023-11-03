@@ -115,7 +115,31 @@ function HomeHero() {
         </div>
         <div className="col-12 col-sm-12 col-md-12 col-lg-5">
                   <div className="hero-image p-3">
-                    <img src="https://img.freepik.com/free-vector/seminar-concept-illustration_114360-7480.jpg" alt="" className="w-100" />
+                   <div className="w-100 hero-image">
+                    <div className="hero-box border p-2 py-3">
+                    <i class="bi bi-code-slash fs-3 text-danger"></i> <br />
+                     <span className="fs-5 text-900"> 36+ languages</span>
+                    </div>
+                    <div className="hero-box1 border p-2 py-3">
+                    <i class="bi bi-check2-circle fs-3 text-main-danger"></i> <br />
+                     <span className="fs-5 text-900"> 12 Years <br />Succsessfull  Journy</span>
+                    </div>
+                    <div className="hero-box2 border p-2 py-3">
+                    <i class="bi bi-building-fill-check fs-3 text-green"></i> <br />
+                     <span className="fs-5 text-900"> 300+ Hiring Partners</span>
+                    </div>
+                     <div className="hero-box3 border p-2 py-3">
+                     <span className="fs-5 text-900">
+                     <i class="bi bi-star-fill fs-3 text-warning"></i> <br />
+                      4.5 Google rating</span>
+                    </div>
+                    <div className="hero-box4 border p-2 py-3">
+                    <i class="bi bi-people-fill fs-3 text-primary"></i> <br />
+                     <span className="fs-5 text-900">
+                      5000+ Learned <br />Students</span>
+                    </div>
+                   <img src="https://img.freepik.com/free-vector/shared-workspace-concept-illustration_114360-5428.jpg?t=st=1699016958~exp=1699017558~hmac=31bfdfff4d60b1b0816842caaa808266a6d4712f166410a07fae833b16fd7bb7" alt="" className="w-100" />
+                   </div>
                   </div>
                 </div>
                  </div>

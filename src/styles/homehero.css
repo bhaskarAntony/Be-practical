@@ -1,4 +1,45 @@
-
+.hero-box{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    /* transform: translateX(50%); */
+    background-color: #fff;
+    text-align: center;
+}
+.hero-box1{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    /* transform: translateX(-30%); */
+    background-color: #fff;
+    text-align: center;
+}
+.hero-box2{
+    position: absolute;
+    top: 55%;
+    left: 0px;
+    transform: translateY(-50%);
+    background-color: #fff;
+    text-align: center;
+}
+.hero-box3{
+    position: absolute;
+    bottom: -30px;
+    left: 20%;
+    transform: translateX(-20%);
+    background-color: #fff;
+    text-align: center;
+}
+.hero-box4{
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    background-color: #fff;
+    text-align: center;
+}
+.hero-image{
+    position: relative;
+}
 .hero{
     /* min-height: 100vh; */
     min-height: fit-content;
