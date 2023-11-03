@@ -28,6 +28,7 @@ function CoursePageEngine() {
           .then((response) => {
             // Handle the response data, which should contain your course information
             setCourseData(response.data);
+            console.log(response.data)
           })
           .catch((error) => {
             // Handle any errors, such as a 404 if the course with the specified ID doesn't exist
@@ -100,29 +101,29 @@ function CoursePageEngine() {
                     </div>
                     <div className="row mt-3">
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-5 mb-2 d-flex gap-2 align-items-center border-l border-r border-b">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">100% Placement Support</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-5 mb-2 d-flex gap-2 align-items-center border-l border-r border-b">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Industry Led Curriculum</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-5 mb-2 d-flex gap-2 align-items-center border-l border-r border-b">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Real Time Projects</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-3 mb-2 d-flex gap-2 align-items-center border-l">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-5 mb-2 d-flex gap-2 align-items-center border-l border-r border-b">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i> <span className="fs-5">Flexible Timings</span>
                         </div>
                         </div>
                     </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
-                    <button className="btn-main-outline-light px-5 py-4 hero-btn">Apply Now</button>
-                <button className="btn-danger px-5 py-4 hero-btn">Download Syllubus</button>
+                    <button className="btn-main-outline-light px-5 py-4 hero-btn d-flex align-items-center gap-2">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
+                <button className="btn-danger px-5 py-4 hero-btn d-flex align-items-center gap-2">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
                
             </div>
                     
@@ -138,12 +139,12 @@ function CoursePageEngine() {
             <h1 className="text-center text-white fs-3 mb-4">{courseData.courseName} Course Details</h1>
                 <div className="row">
                    <div className="col-12 col-md-4 col-lg-4">
-                   <div className="text-center bg-gray3 rounded-3 py-3 border-b mb-3 shake-card">
+                   <div className="text-center bg-gray3 rounded-3 py-3 border-b mb-3">
                    <i class="bi bi-calendar3 fs-1 text-green"></i>
                         <h1 className="fs-5 text-main-danger">
                              Next Batch Starting </h1>
                                                  
-                        <h1 className="fs-4 text-white">{courseData.BatchStarting}</h1>
+                        <h1 className="fs-4 text-white d-flex align-items-center  justify-content-center gap-2"><span className="online-dot"></span>{courseData.BatchStarting}</h1>
                     </div>
                    </div>
                    <div className="col-12 col-md-4 col-lg-4">
@@ -179,7 +180,7 @@ function CoursePageEngine() {
                         <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
                     </div>
                     <div className="col-12 col-md-6 col-lg-5 d-flex align-items-center ">
-                        <CourseCard instructor={courseData.instructors} duration={courseData.courseDuration} course={courseData.courseName} ></CourseCard>
+                        <CourseCard data={courseData} ></CourseCard>
                     </div>
                 </div>
             </div>
