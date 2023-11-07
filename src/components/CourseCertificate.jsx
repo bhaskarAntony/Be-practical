@@ -2,7 +2,7 @@ import React from 'react'
 
 function CourseCertificate() {
   return (
-    <section className='course-cartificate bg-blue-light py-5' id='c-certificate'>
+    <section className='course-cartificate bg-blur py-5' id='c-certificate'>
         <h1 className="fs-1 text-900 text-center">Get Industry-Recognised <span className="text-main-danger">Certifications</span></h1>
         <p className="fs-3 text-center">Showcase your expertise with our prestigious certification.</p>
         <div className="certificate-img container p-lg-5">

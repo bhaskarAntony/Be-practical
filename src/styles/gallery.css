@@ -3,22 +3,13 @@
     margin: 10px;
     overflow: hidden;
     transition: transform 0.2s;
-    /* background-color: var(--dark-green); */
-  }
-  .gallery-container{
-    /* background-color:#040404; */
   }
   .gallery-card{
-    /* background-color: #1d1c1c; */
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 20px;
     border: 1px solid #8f8f8f7b;
   }
-  .gallery-card:hover{
-    background-color: var(--green-main-color) !important;
-    transition: 1s;
-}
   
   .gallery-image:hover, .gallery-image:hover~.gallery-image-text {
     transform: scale(1.05);
@@ -59,7 +50,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Maintain image aspect ratio within the square lightbox */
+    object-fit: contain; 
  
   }
   

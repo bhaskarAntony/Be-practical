@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './companies.css'
-import AOS from 'aos';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import Highlight from '../Highlight';
 import { companies } from '../../Data/DataFetcher';
 import ShimmerComponent from '../ShimmerComponent'
 
@@ -130,8 +128,8 @@ function Companies() {
   return (
 
     <section className="container-fluid main-company-container text-center">
-      <h3 className="fs-1 text-900 text-center" data-aos="fade-up">Boost Your Career With Our <span className="text-main-danger">Hiring Partners</span></h3>
-      <p className="fs-4 text-secondary" data-aos="fade-up">
+      <h3 className="fs-1 text-900 text-center">Boost Your Career With Our <span className="text-main-danger">Hiring Partners</span></h3>
+      <p className="fs-4 text-secondary">
         Get closer to your dream company <br />
         Our graduates are working with leading tech brands
       </p>
@@ -157,7 +155,7 @@ function Companies() {
               <Slider {...settings}>
                 {data.map((item, index) => (
                   <div className="col-6 col-md-3 col-lg-2 p-2" key={index}>
-                    <div className="all-company-card" data-aos="flip-up">
+                    <div className="all-company-card">
                       <img src={item.image} alt="" />
                     </div>
                   </div>

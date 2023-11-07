@@ -9,13 +9,9 @@ useEffect(() => {
   }, []);
   return (
     <>
-        <div className='course-single-card bg-gray3'  data-aos="flip-right">
+        <div className='course-single-card bg-gray3'>
           <div className="course-single-card-header py-4">
             <h1 className="fs-3 text-white">Apply for the <span className="text-main-danger">{data.courseName}</span>  Program</h1>
-           {/* <img src="" alt="" /> */}
-           {/* <div className="course-single-card-header-curve">
-            <button className="register-btn">Register Now</button>
-           </div> */}
           </div>
           <ul className="list-group">
             <li className="list-group-item border-0">

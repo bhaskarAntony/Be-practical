@@ -1,9 +1,7 @@
 import React from 'react'
 import '../styles/gallery.css'
 import ImageGallery from '../components/GalleryImages';
-import StudentsPlaced from '../components/StudentsPlaced';
 import YoutubeVideos from '../components/YoutubeVideos'
-import galleryimage from '../images/gallery.svg'
 import Feedback from '../components/Feedback';
 
 const imagesData = [

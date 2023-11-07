@@ -8,11 +8,11 @@
     background-color: #ffffff;
     max-width: 100%;
     word-break: inherit;
-    border-radius: 150px 150px 10px 10px;
+    border-radius: 38px 35px 2px 0px ;
     overflow: hidden;
-    min-height: 430px;
+    min-height: 390px;
     max-width: 300px;
-    border-top: 10px solid var(--red);
+    border-top: 4px solid var(--red);
 }
 .youtube-header{
     position: relative !important;

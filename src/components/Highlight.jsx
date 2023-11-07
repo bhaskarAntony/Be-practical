@@ -4,7 +4,7 @@ import '../styles/highlight.css'
 function Highlight({data}) {
   return (
     <div className="p-2">
-      <div className='container highlight bg-dark-gray mb-4 py-2'>
+      <div className='container highlight bg-dark-gray mb-4'>
       <div className="blur-highlight">
 
       </div>

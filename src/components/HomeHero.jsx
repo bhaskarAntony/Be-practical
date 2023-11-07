@@ -5,12 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Highlight from './Highlight';
 import HeroRegister from './HeroRegister';
-import codingimg from '../images/coding-img.svg';
-import portfolio from '../images/portfolio.svg';
-import resume from '../images/resume.svg';
-import student2 from '../images/student2-img.svg';
 import DialogModal from './DialogModel';
-import { BiCaretLeft, BiCaretRight } from 'react-icons/bi'; 
 import { homeHeroApi } from '../Data/DataFetcher';
 
 const home = [

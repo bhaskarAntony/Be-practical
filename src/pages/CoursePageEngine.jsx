@@ -47,42 +47,6 @@ function CoursePageEngine() {
   return (
     <section className='overflow-hidden'>
     <div className="course-hero container-fluid p-0 py-3 bg-gray2 border-b ">
-
-        {/* <div className="course-hero p-lg-5 p-3 d-flex flex-column align-items-center justify-content-center bg-blur">
-            <h1 className="heading text-center text-900">{courseData.heroTitle}</h1>
-            <p className="p-large1 text-900 text-main-danger">{courseData.heroSubtitle}</p>
-            <div className="course-details container  p-lg-5 p-3">
-                <div className="row">
-                   <div className="col-12 col-md-4 col-lg-4">
-                   <div className="text-center bg-white rounded-3 py-3 border-b mb-3 shake-card">
-                   <i class="bi bi-calendar3 fs-1 text-green"></i>
-                        <h1 className="fs-5 text-main-danger">
-                             Next Batch Starting </h1>
-                                                 
-                        <h1 className="fs-4">{courseData.BatchStarting}</h1>
-                    </div>
-                   </div>
-                   <div className="col-12 col-md-4 col-lg-4">
-                   <div className="text-center bg-white rounded-3 py-3 border-b mb-3">
-                   <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
-                        <h1 className="fs-5 text-main-danger">Course Duration</h1>
-                        <h1 className="fs-4">{courseData.courseDuration}</h1>
-                    </div>
-                   </div>
-                   <div className="col-12 col-md-4 col-lg-4">
-                   <div className="text-center bg-white rounded-3 py-3 border-b mb-3">
-                   <i class="bi bi-wallet-fill fs-1 text-main-danger"></i>
-                        <h1 className="fs-5 text-main-danger">Job Min Salary</h1>
-                        <h1 className="fs-4">{courseData.minSalary}</h1>
-                    </div>
-                   </div>
-                </div>
-            </div>
-            <div className="btns">
-                <button className="btn-danger px-5">Download Syllubus</button>
-            </div>
-           
-        </div> */}
         <div className="row">
             <div className="col-12 col-md-7 col-lg-7">
                 <div className="course-hero-left p-lg-5 p-3">
@@ -101,29 +65,29 @@ function CoursePageEngine() {
                     </div>
                     <div className="row mt-3">
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-5 mb-2 d-flex gap-2 align-items-center border-l border-r border-b">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center  border-b">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">100% Placement Support</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-5 mb-2 d-flex gap-2 align-items-center border-l border-r border-b">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Industry Led Curriculum</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-5 mb-2 d-flex gap-2 align-items-center border-l border-r border-b">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Real Time Projects</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-5 mb-2 d-flex gap-2 align-items-center border-l border-r border-b">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i> <span className="fs-5">Flexible Timings</span>
                         </div>
                         </div>
                     </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
-                    <button className="btn-main-outline-light px-5 py-4 hero-btn d-flex align-items-center gap-2 fs-5">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
-                <button className="btn-danger px-5 py-4 hero-btn d-flex align-items-center gap-2 fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
+                    <button className="btn-main-outline-light px-5 py-4 rounded-4 hero-btn d-flex align-items-center gap-2 fs-5">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
+                <button className="btn-danger px-5 py-2 rounded-4 hero-btn d-flex align-items-center gap-2 fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
                
             </div>
                     
@@ -163,12 +127,6 @@ function CoursePageEngine() {
                    </div>
                 </div>
             </div>
-        {/* <div className="row">
-                <div className="col-md-6 offset-3">
-                    <img src={courseData.courseImage} alt={courseData.courseName} className="w-100" />
-                </div>
-            </div> */}
-        {/* <HeroRegister/> */}
     </div>
 
     

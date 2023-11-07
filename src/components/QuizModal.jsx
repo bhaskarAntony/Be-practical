@@ -2,15 +2,8 @@ import React, { useEffect, useState } from 'react';
 import '../styles/quiz.css'
 import {Modal, Form, FloatingLabel } from 'react-bootstrap';
 import { Quiz } from '../Data/DataFetcher';
+import brandImage from '../images/view_plans.png'
 
-// const quizData = [
-//   {
-//     question: 'HTML stands for?',
-//     options: ['hyper text markup language', 'hyper text mini language', 'hyper tune markup language', 'hyper transform marque language'],
-//     correctAnswer: 'hyper text markup language',
-//   },
-//   // Add more questions as needed
-// ];
 var quizData = []
 
 function QuizModal() {
@@ -78,11 +71,11 @@ function QuizModal() {
 
   return (
     <div className='container-fluid  p-3 mt-4'>
-        <h1 className="banner-heading">Get 10% discount</h1>
+        <h1 className="banner-heading">Get 10% <span className="text-main-danger">Discount</span></h1>
         <div className="quiz-container bg-blue-3 p-3 mt-3 rounded-5">
             <div className="row">
                 <div className="col-12 col-md-6 col-lg-6">
-                 <img src="https://demo.themewinter.com/wp/courselog/wp-content/uploads/2020/12/view_plans.png" alt="" className="w-100" />
+                 <img src={brandImage} alt="quiz-brand-image" className="w-100" />
                 </div>
                 <div className="col-12 col-md-6 col-lg-6 p-1 p-lg-5">
                   <p className="p-large1 text-main-danger">Get Started</p>

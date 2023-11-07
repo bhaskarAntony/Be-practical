@@ -1,20 +1,19 @@
 
 .faq{
     padding: 20px;
-    background-color: var( --blue-light);
+    background-color: #fff;
 }
 .container {
-    /* margin-top: 30px; */
     position: relative;
   }
   
   .faq-item {
     border: 2px solid #c6c4c4;
-   background: #fff;
+   background: var(--gray2);
     position: relative;
   }
   .faq-item:hover{
-    background-color: var(--pink);
+    background-color: var(--gray4);
   }
   
   .faq-question {

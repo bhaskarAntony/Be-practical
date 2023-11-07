@@ -36,10 +36,6 @@ const webinar = [
   }
 ]
 function Webinar() {
-    
-    useEffect(() => {
-        AOS.init(); // Initialize AOS
-      }, []);
     const [itemsPerSlide, setItemsPerSlide] = useState(4);
     const [carouselInterval, setCarouselInterval] = useState(1500);
     const [carouselPaused, setCarouselPaused] = useState(false);
@@ -120,7 +116,7 @@ function Webinar() {
 
   return (
   <>
-          <h3 className="fs-1 text-900 text-center  mt-5" data-aos="fade-up">Pre Career Guidence program <span className="main-text" > <br /> From Top MNC's</span></h3>
+          <h3 className="fs-1 text-900 text-center  mt-5">Pre Career Guidence program <span className="main-text" > <br /> From Top MNC's</span></h3>
     <section className='p-2 container-fluid py-5 bg-blur' id="webinar">
 
       <div className="students-placed ">
@@ -137,7 +133,7 @@ function Webinar() {
 
             {slideItems.map((item) => (
                 <div className="col-12 col-md-6 col-lg-3">
-              <div className="webinar-card " data-aos="zoom-in-left">
+              <div className="webinar-card ">
                 <div className="webinar-card-header p-2">
                         <img src={item.image} alt="" />
                 </div>

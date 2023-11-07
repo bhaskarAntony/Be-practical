@@ -5,8 +5,6 @@ import AOS from 'aos';
 import ReadMore from '../Extra/ReadMore'
 import { youtubeVideos } from '../Data/DataFetcher';
 import ShimmerCard from '../shimmer effects/ShimmerCard';
-import BookDemoBtn from '../Extra/BookDemoBtn';
-import Insights from './Insights';
 
 function StudentsPlaced() {
   const [loading, setLoading] = useState(true)
@@ -80,8 +78,8 @@ function StudentsPlaced() {
   }, []);
   return (
     <section className=' p-2 py-5 youtube-container bg-gray2' id="placed">
-        <h3 className="fs-1 text-900 text-center text-white" data-aos="fade-up">What our students says about institute</h3>
-        <p className=" text-center p-large1 text-main-danger " data-aos="fade-up">We don’t just give certification but outcomes!</p>
+        <h3 className="fs-1 text-900 text-center text-white">What our students says about <span className="text-main-danger">Be Practical</span></h3>
+        <p className=" text-center p-large1 text-main-danger">We don’t just give <span className="text-white">certification but outcomes!</span></p>
       <div className="students-placed">
       <Carousel
        interval={carouselInterval}

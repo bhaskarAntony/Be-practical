@@ -5,6 +5,7 @@ import '../styles/feedback.css'
 import AOS from 'aos';
 import { testinomials } from '../Data/DataFetcher';
 import ReadMore from '../Extra/ReadMore';
+import profile from '../images/profile_testimonial.jpg'
 
 function Feedback() {
 
@@ -104,7 +105,7 @@ function Feedback() {
                 </div>
                 <hr />
                    <div className="d-flex gap-3">
-                   <img src="https://us.123rf.com/450wm/thesomeday123/thesomeday1231712/thesomeday123171200009/91087331-default-avatar-profile-icon-for-male-grey-photo-placeholder-illustrations-vector.jpg?ver=6" alt="" />
+                   <img src={profile} alt="profile" />
                         <div>
                         <h4 className='fs-5 fw-bold text-main-danger'>{item.name}</h4>
                         <small className='text-secondary'>{item.role}</small>
