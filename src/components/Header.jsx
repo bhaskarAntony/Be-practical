@@ -42,15 +42,15 @@ function Header() {
       {/* <div className="nav-top">
         <p className="p-dark-small m-0 text-white">Join Our Elite program <b>Explore <i class="bi bi-arrow-right"></i></b></p>
       </div> */}
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-xl">
   <div class="container-fluid container-xxl">
   <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a>
 
 <div>
-<button variant="primary" onClick={handleShow} className='btn-danger d-lg-none'>
+<button variant="primary" onClick={handleShow} className='btn-danger d-xl-none'>
     <i class="bi bi-list text-white"></i>
     </button>
-    <button variant="primary" onClick={handleShowContact} className='btn bg-gray2 mx-2 p-2 rounded-2 d-lg-none'>
+    <button variant="primary" onClick={handleShowContact} className='btn bg-gray2 mx-2 p-2 rounded-2 d-xl-none'>
       <i class="bi bi-person-lines-fill fs-4 text-white"></i>
     </button>
 </div>

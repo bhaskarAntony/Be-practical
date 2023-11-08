@@ -5,6 +5,7 @@ import AOS from 'aos';
 import ReadMore from '../Extra/ReadMore'
 import { youtubeVideos } from '../Data/DataFetcher';
 import ShimmerCard from '../shimmer effects/ShimmerCard';
+import Slider from 'react-slick';
 
 function StudentsPlaced() {
   const [loading, setLoading] = useState(true)
@@ -27,73 +28,55 @@ function StudentsPlaced() {
   const getThumbnailUrl = (videoId) =>
     `https://img.youtube.com/vi/${videoId}/default.jpg`;
     
+    const [slidesToShow, setSlidesToShow] = useState(6); // Default to showing 3 slides
+
     useEffect(() => {
-        AOS.init(); // Initialize AOS
-      }, []);
-    const [itemsPerSlide, setItemsPerSlide] = useState(4);
-    const [carouselInterval, setCarouselInterval] = useState(3000);
-    const [carouselPaused, setCarouselPaused] = useState(false);
-  
-    useEffect(() => {
+      // Check the screen width and update the number of slides to show
       const handleResize = () => {
-        // Adjust the number of items per slide based on the screen width
-        if (window.innerWidth < 800) {
-          setItemsPerSlide(1);
-          setCarouselInterval(2000);
+        if (window.innerWidth <= 600) {
+          setSlidesToShow(1); // On smaller screens, show only 1 slide
         }
-        else if(window.innerWidth < 1260) {
-            setItemsPerSlide(2);
-            setCarouselInterval(2000);
-          } else {
-          setItemsPerSlide(4);
-          setCarouselInterval(3000);
+        else if(window.innerWidth<=800) {
+          setSlidesToShow(2); // On wider screens, show 3 slides
+        } else if(window.innerWidth<=900) {
+          setSlidesToShow(3); // On wider screens, show 3 slides
+        }
+        else{
+            setSlidesToShow(4); // On wider screens, show 3 slides
         }
       };
-  
-      window.addEventListener('resize', handleResize);
+    
+      // Call the handleResize function initially and add a resize event listener
       handleResize();
-  
+      window.addEventListener('resize', handleResize);
+    
+      // Clean up the event listener when the component unmounts
       return () => {
         window.removeEventListener('resize', handleResize);
       };
     }, []);
-  
-    const handleCarouselHover = () => {
-      // Pause the Carousel when the user hovers over it
-      setCarouselPaused(true);
-    };
-  
-    const handleCarouselLeave = () => {
-      // Resume the Carousel when the user stops hovering
-      setCarouselPaused(false);
-    };
-  
-
-  const carouselItems = youtubeVideosData.reduce((accumulator, current, index) => {
-    if (index % itemsPerSlide === 0) {
-      accumulator.push([]);
-    }
-    accumulator[accumulator.length - 1].push(current);
-    return accumulator;
-  }, []);
+        const settings = {
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: slidesToShow,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 1000, // Change delay as needed
+            prevArrow: <button className="slick-prev">Previous</button>, // Add previous arrow
+            nextArrow: <button className="slick-next">Next</button>, // Add next arrow
+          };
   return (
     <section className=' p-2 py-5 youtube-container bg-gray2' id="placed">
         <h3 className="fs-1 text-900 text-center text-white">What our students says about <span className="text-main-danger">Be Practical</span></h3>
         <p className=" text-center p-large1 text-main-danger">We don’t just give <span className="text-white">certification but outcomes!</span></p>
       <div className="students-placed">
-      <Carousel
-       interval={carouselInterval}
-       onMouseEnter={handleCarouselHover}
-       onMouseLeave={handleCarouselLeave}
-       >
-      {carouselItems.map((slideItems, index) => (
-        <Carousel.Item key={index} 
-          onMouseEnter={handleCarouselHover}
-          onMouseLeave={handleCarouselLeave}
-        >
-          <div className="p-2 p-lg-5 container-fluid  rounded-5">
+      <div className="p-2 p-lg-5 container-fluid  rounded-5">
           <div className="row justify-content-center w-100 container-xxl m-xxl-auto">
+         
           {loading ? (
+             <Slider {...settings}>
+              {
               Array(9)
                 .fill(null)
                 .map((_, index) => (
@@ -103,9 +86,13 @@ function StudentsPlaced() {
                     </div>
                   </div>
                 ))
+          }
+                </Slider>
             ):(
-            slideItems.map((item) => (
-                <div className="col-12 col-md-6 col-lg-3 d-flex justify-content-center">
+              <Slider {...settings}>
+                {
+            youtubeVideosData.map((item, index) => (
+                <div className="col-12 col-md-6 col-lg-3 d-flex justify-content-center p-3">
             <div className="youtube-card bg-gray3 border-b">
             <div className="youtube-header mb-3">
                           <a
@@ -141,12 +128,11 @@ function StudentsPlaced() {
                           </div>
             </div>
                 </div>
-            )))}
+            ))}
+            </Slider>
+            )}
               </div>
           </div>
-        </Carousel.Item>
-      ))}
-    </Carousel>
       </div>
     </section>
   )

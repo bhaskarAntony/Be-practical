@@ -1,7 +1,6 @@
 
 #webinar{
   position: relative;
-  /* background: var(--blue-light) !important; */
   border-radius: 30px;
 }
 .webinar-card{
@@ -13,6 +12,7 @@
     color: #fff;
     padding: 10px;
     width: 100% !important;
+    max-width: 300px;
     object-fit: cover;
     object-position: center;
     position: relative;

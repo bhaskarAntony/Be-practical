@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/webinar.css'
-import { Carousel } from 'react-bootstrap';
-import AOS from 'aos';
+import Slider from 'react-slick';
 
 const webinar = [
   {
@@ -36,52 +35,45 @@ const webinar = [
   }
 ]
 function Webinar() {
-    const [itemsPerSlide, setItemsPerSlide] = useState(4);
-    const [carouselInterval, setCarouselInterval] = useState(1500);
-    const [carouselPaused, setCarouselPaused] = useState(false);
-  
-    useEffect(() => {
-      const handleResize = () => {
-        // Adjust the number of items per slide based on the screen width
-        if (window.innerWidth < 800) {
-          setItemsPerSlide(1);
-          setCarouselInterval(1000);
-        }
-        else if(window.innerWidth < 1260) {
-            setItemsPerSlide(2);
-            setCarouselInterval(1500);
-          } else {
-          setItemsPerSlide(4);
-          setCarouselInterval(1500);
-        }
-      };
-  
-      window.addEventListener('resize', handleResize);
-      handleResize();
-  
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, []);
-  
-    const handleCarouselHover = () => {
-      // Pause the Carousel when the user hovers over it
-      setCarouselPaused(true);
-    };
-  
-    const handleCarouselLeave = () => {
-      // Resume the Carousel when the user stops hovering
-      setCarouselPaused(false);
-    };
-  
+  const [slidesToShow, setSlidesToShow] = useState(3); // Default to showing 3 slides
+  useEffect(() => {
+    // Check the screen width and update the number of slides to show
+    const handleResize = () => {
+      if (window.innerWidth <= 600) {
+        setSlidesToShow(1); // On smaller screens, show only 1 slide
 
-  const carouselItems = webinar.reduce((accumulator, current, index) => {
-    if (index % itemsPerSlide === 0) {
-      accumulator.push([]);
-    }
-    accumulator[accumulator.length - 1].push(current);
-    return accumulator;
+      }
+      else if(window.innerWidth<=800) {
+        setSlidesToShow(2); // On wider screens, show 3 slides
+      } else if(window.innerWidth<=900) {
+        setSlidesToShow(2); // On wider screens, show 3 slides
+      }
+     
+      else{
+          setSlidesToShow(3); // On wider screens, show 3 slides
+      }
+    };
+  
+    // Call the handleResize function initially and add a resize event listener
+    handleResize();
+    window.addEventListener('resize', handleResize);
+  
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
+      const settings = {
+          dots: false,
+          infinite: true,
+          speed: 500,
+          slidesToShow: slidesToShow,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1000, // Change delay as needed
+          prevArrow: <button className="slick-prev">Previous</button>, // Add previous arrow
+          nextArrow: <button className="slick-next">Next</button>, // Add next arrow
+        };
 
 
   function ReadMore({ text, maxLength }) {
@@ -119,20 +111,10 @@ function Webinar() {
           <h3 className="fs-1 text-900 text-center  mt-5">Pre Career Guidence program <span className="main-text" > <br /> From Top MNC's</span></h3>
     <section className='p-2 container-fluid py-5 bg-blur' id="webinar">
 
-      <div className="students-placed ">
-      <Carousel
-      interval={carouselInterval}
-      >
-      {carouselItems.map((slideItems, index) => (
-        <Carousel.Item key={index}
-          onMouseEnter={handleCarouselHover}
-          onMouseLeave={handleCarouselLeave}
-        >
-          <div className="container-fluid container-xxl m-xxl-auto">
-          <div className="row w-100 d-flex justify-conent-center">
-
-            {slideItems.map((item) => (
-                <div className="col-12 col-md-6 col-lg-3">
+      <div className="students-placed container-fluid container-xl">
+      <Slider {...settings}>
+      {webinar.map((item) => (
+                <div className="col-12 col-md-6 col-lg-3 p-3 d-flex justify-content-center">
               <div className="webinar-card ">
                 <div className="webinar-card-header p-2">
                         <img src={item.image} alt="" />
@@ -145,11 +127,7 @@ function Webinar() {
               </div>
                 </div>
             ))}
-              </div>
-          </div>
-        </Carousel.Item>
-      ))}
-    </Carousel>
+              </Slider>
     <div className="custom-indicators">
         </div>
       </div>

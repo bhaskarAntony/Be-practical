@@ -40,6 +40,23 @@
     --gold:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
   radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
 }
+.slick-arrow{
+  padding: 10px !important;
+  width: 50px !important;
+  height: 50px !important;
+  z-index: 100px !important;
+  background-color: var(--white) !important;
+  border-radius: 100px !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important
+  ;
+}
+.slick-prev{
+  z-index: 10 !important;
+}
+.slick-prev::before, .slick-next::before{
+  color: var(--red) !important;
+  font-size: 2rem !important; 
+}
 .bg-success-2{
   background: var(--success) !important;
 }
