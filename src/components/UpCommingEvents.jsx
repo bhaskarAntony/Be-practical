@@ -21,7 +21,7 @@ function UpcomingEvents({ events, heading, type }) {
       {events.map((event, index) => (
         event.eventType === type ? (
           <div className="event-card bg-gray-4 mb-5 p-lg-3 p-md-0 mb-3 border-b" key={index}>
-            <div className="row">
+            <div className="row  container-xxl m-auto">
               <div className="col-12 col-md-12 col-lg-6 d-flex align-items-center">
                 <div className="event-image p-2">
                   <img src={event.image} alt={event.title} className='w-100 border-a p-2' />

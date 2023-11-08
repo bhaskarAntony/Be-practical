@@ -22,15 +22,12 @@ function Footer() {
   
      fetchData();
    }, []);
-    useEffect(() => {
-        AOS.init(); // Initialize AOS
-      }, []);
   return (
     <>
     <div className="footer-wave ">
     </div>
     <section className="footer_container d-flex flex-column justify-content-between container-fluid" id="footer">
-    <div className="row">
+    <div className="row container-xxl m-xxl-auto">
         <div className="col-12 cl-md-12 col-lg-3 ">
            <div className="left">
            <img src="https://be-practical.com/images/Be-logo.png" alt="" data-aos="fade-up"/>
@@ -132,7 +129,7 @@ function Footer() {
             
         </div>
     </div>
-    <hr />
+    {/* <hr /> */}
     <div className="text-center">
         <p className="p-large1">Copyrights@2023</p>
     </div>

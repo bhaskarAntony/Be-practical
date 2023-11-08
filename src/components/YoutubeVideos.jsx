@@ -92,7 +92,7 @@ function StudentsPlaced() {
           onMouseLeave={handleCarouselLeave}
         >
           <div className="p-2 p-lg-5 container-fluid  rounded-5">
-          <div className="row justify-content-center w-100">
+          <div className="row justify-content-center w-100 container-xxl m-xxl-auto">
           {loading ? (
               Array(9)
                 .fill(null)

@@ -134,7 +134,7 @@ function Companies() {
         Our graduates are working with leading tech brands
       </p>
 
-      <div className="companies container-fluid text-center">
+      <div className="companies container-fluid text-center  container-xxl m-auto">
         <div className="companies-brands-container container-fluid p-2">
           <div className="row">
             {loading ? (

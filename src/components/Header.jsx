@@ -43,7 +43,7 @@ function Header() {
         <p className="p-dark-small m-0 text-white">Join Our Elite program <b>Explore <i class="bi bi-arrow-right"></i></b></p>
       </div> */}
       <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
+  <div class="container-fluid container-xxl">
   <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a>
 
 <div>

@@ -93,13 +93,14 @@ function Events() {
   }
 
   return (
-  <div className="container-fluid events-main p-0 overflow-hidden">
-    <div className="row bg-blur">
+  <div className="container-fluid events-main p-0 overflow-hidden ">
+    <div className="bg-blur">
+    <div className="row  container-xxl m-xxl-auto">
       <div className="col-12 col-sm-12 col-md-8 col-lg-6 d-flex flex-column justify-content-center p-lg-5 p-5">
         <p className="fs-4 text-main-danger">Events, Conferences and Meetups</p>
           <h1 className="heading text-900">Be Practical Providing Featured Workshops</h1>
           <p className="fs-5 text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempore dolorum rem obcaecati. Assumenda aliquid exercitationem nulla, harum soluta nisi.</p>
-        <div className="row">
+        <div className="row  container-xxl m-auto">
           <div className="col-12 col-md-6 col-lg-6">
           <ApplyNow text="Enquire About Events"/>
           </div>
@@ -109,11 +110,12 @@ function Events() {
         <img src="https://img.freepik.com/free-vector/hand-drawn-business-colleagues-communication_52683-76701.jpg" alt="events image" className="w-100 rounded-5" />
       </div>
     </div>
+    </div>
     <HeroRegister/>
     {
       BookTicket?<TicketBook/> : null
     }
-      <div className="container-fluid p-0 overflow-hidden mb-4">
+      <div className="container-fluid p-0 overflow-hidden mb-4 container-xxl m-xxl-auto">
       <Tabs className="p-0">
     <TabList className="custom-tabs p-2 sticky-top">
       <Tab className="custom-tab fs-3">Events</Tab>

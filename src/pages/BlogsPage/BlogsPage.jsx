@@ -144,7 +144,7 @@ function BlogsPage() {
                 <Slider {...settings}>
                     {Blogsdata.map((item, index) => (
                         <div key={index} className="slider-item">
-                            <div className="row">
+                            <div className="row  container-xxl m-auto">
                                 <div className="col-12 col-md-6 col-lg-6">
                                     <div className="blogs-left p-lg-5 p-3">
                                         
@@ -170,7 +170,7 @@ function BlogsPage() {
                 </Slider>
             </div>
             <div className="all-blogs p-lg-5 p-2">
-                <div className="row">
+                <div className="row  container-xxl m-auto">
                     <div className="col-12 col-md-8 col-lg-8">
                         <div className="blogs-all-left">
                             {

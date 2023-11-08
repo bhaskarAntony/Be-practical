@@ -52,14 +52,15 @@ function Elite() {
             </div>
           </div>
         </div>
-        </div>
-       
-      </div>
-      <div className="p-4 d-flex justify-content-center py-2">
+        <div className="p-4 d-flex justify-content-center py-2">
           <Link to="/elite">
           <button className="btn-danger">Explore Elite Batch <i class="bi bi-chevron-double-right"></i></button>
           </Link>
             </div>
+        </div>
+       
+      </div>
+
 
             
     </section>

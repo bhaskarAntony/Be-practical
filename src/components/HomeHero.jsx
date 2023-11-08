@@ -80,10 +80,10 @@ function HomeHero() {
   const numberOfSlides = home.length;
 
   return (
-    <section className='hero container-fluid p-0 m-0 bg-blur'>
+    <section className='hero container-fluid bg-blur'>
       <div className="hero-1">
       <div className="custom-carousel">
-      <div className="row">
+      <div className="row align-items-center  container-xxl m-auto">
       <div className="col-12 col-sm-12 col-md-12 col-lg-7">
         <Carousel
           activeIndex={index}
@@ -94,7 +94,7 @@ function HomeHero() {
         >
           {home.map((item, index) => (
             <Carousel.Item key={index}>
-                  <div className="hero-text p-lg-5 p-md-3 p-3">
+                  <div className="hero-text p-lg-5 p-md-3 p-3 container p-xxl-5">
                     <h1 className="card-heading text-main-2 text-start">100% Placement Programs</h1>
                     <h1 className="heading text-black text-900 text-start">{item.heading}</h1>
                     <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
@@ -109,7 +109,7 @@ function HomeHero() {
         </Carousel>
         </div>
         <div className="col-12 col-sm-12 col-md-12 col-lg-5">
-                  <div className="hero-image p-3">
+                  <div className="hero-image p-3 p-xxl-5 container">
                    <div className="w-100 hero-image">
                     <div className="hero-box border p-2 py-3">
                     <i class="bi bi-code-slash fs-3 text-danger"></i> <br />

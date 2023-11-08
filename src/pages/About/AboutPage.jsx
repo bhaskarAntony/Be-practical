@@ -10,7 +10,7 @@ function AboutPage() {
   return (
     <section>
       <div className="about-hero container-fluid overflow-hidden">
-        <div className="row">
+        <div className="row  container-xxl m-auto">
             <div className="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center">
                 <div className="about-hero-text p-lg-5 p-3">
                     <h4 className='card-heading text-main-danger'>THE BEST TRAINING INSTITUTE</h4>
@@ -43,7 +43,7 @@ function AboutPage() {
     <h1 className="text-center fs-1 text-900">Our <span className="text-main-danger">Services</span></h1>
     <p className="fs-5 text-secondary text-center">We are providing best services <br /> what you want to reach you software goal</p>
    <div className="container p-lg-5 p-3">
-   <div className="row">
+   <div className="row  container-xxl m-auto">
         <div className="col-12 col-md-12 col-lg-4">
             <div className="service-card bg-white p-3 border">
                 <div className="service-card-header">
@@ -91,7 +91,8 @@ function AboutPage() {
    </div>
 </div>
 <NumberHiglight/>
-<div className="row bg-blue-light p-3 py-5">
+<div className="bg-blue-light">
+<div className="row p-3 py-5 container-xxl m-xxl-auto">
     <p className="text-center fs-4 text-900 text-main-danger">Get the latest info about</p>
     <p className="fs-1 text-900 text-center">About Us</p>
     <div className="col-12 col-md-6 col-lg-8">
@@ -131,6 +132,7 @@ function AboutPage() {
     </div>
     <div className="col-12 col-md-6 col-lg-4">
     <BookDemoCard/>
+</div>
 </div>
 </div>
     </section>

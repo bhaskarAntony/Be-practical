@@ -35,7 +35,7 @@ function AllTestimomials() {
   <div className="text-end">
   </div>
           <div className=" feedback p-3 container overflow-hidden">
-          <div className="row">
+          <div className="row  container-xxl m-auto">
           {loading ? (
               Array(15)
                 .fill(null)

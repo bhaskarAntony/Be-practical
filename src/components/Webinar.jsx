@@ -128,7 +128,7 @@ function Webinar() {
           onMouseEnter={handleCarouselHover}
           onMouseLeave={handleCarouselLeave}
         >
-          <div className="container-fluid ">
+          <div className="container-fluid container-xxl m-xxl-auto">
           <div className="row w-100 d-flex justify-conent-center">
 
             {slideItems.map((item) => (

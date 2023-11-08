@@ -3,7 +3,7 @@ import '../styles/batchTable.css'
 
 function Batchtable() {
   return (
-    <section className='bacthTable'>
+    <section className='bacthTable container-xxl m-xxl-auto'>
         <h1 className="fs-1 text-900 text-center text-white">Choose your Batch</h1>
      <div className="container">
      <table class="table text-center">

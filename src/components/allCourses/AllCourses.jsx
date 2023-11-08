@@ -34,7 +34,7 @@ function AllCourses() {
             CourseData.map((item, index)=>(
             <div className="our-course-card-wrapper">
                 <div className="container our-course-card p-lg-5 p-md-3 p-3 py-5">
-                <div className="row">
+                <div className="row container-xxl m-auto">
                   <div className="col-12 col-md-6 col-lg-6">
                     <div className="course-left">
                           <p className=" text-white rounded-2 p-1 tag">

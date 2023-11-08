@@ -73,7 +73,7 @@ function QuizModal() {
     <div className='container-fluid  p-3 mt-4'>
         <h1 className="banner-heading">Get 10% <span className="text-main-danger">Discount</span></h1>
         <div className="quiz-container bg-blue-3 p-3 mt-3 rounded-5">
-            <div className="row">
+            <div className="row container-xxl m-xxl-auto">
                 <div className="col-12 col-md-6 col-lg-6">
                  <img src={brandImage} alt="quiz-brand-image" className="w-100" />
                 </div>

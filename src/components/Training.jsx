@@ -26,7 +26,7 @@ function Training() {
             <p className="p-large1 text-main-danger text-center">Training</p>
             <h3 className="fs-1 text-900 text-center">Mode Of Training</h3>
             <div className="training-container">
-                <div className="row">
+                <div className="row container-xxl m-xxl-auto">
                     <div className="col-12 col-md-12 col-lg-6 p-0">
                         <div className="training-left">
                             <p className="p-large1 text-white">Membership</p>
@@ -65,10 +65,6 @@ function Training() {
                         </div>
                         </div>
                 </div>
-            </div>
-            
-            <div className="p-4 d-flex justify-content-center py-2 mt-4">
-           <ApplyNow text="Book Your Free Trail, Now "/>
             </div>
         </div>
     );

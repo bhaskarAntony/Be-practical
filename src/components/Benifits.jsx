@@ -48,7 +48,7 @@ function Benifits() {
    <div className="container-fluid bg-blur py-5">
      <div className='container'>
         <h3 className="fs-1 text-center text-900 mb-4">benefits of hiring our <span className="text-main-danger">trained students</span></h3>
-      <div className="row justify-content-center">
+      <div className="row justify-content-center  container-xxl m-auto">
         {benifits.map((item, index) => (
           <div className="col-12 col-lg-4 col-md-6" key={index}>
             <div className="benifits-component-card bg-white border text-start">

@@ -28,10 +28,10 @@ function OurCourses() {
       }, []);
       const displayedCourses = CourseData.slice(0, 3);
   return (
-    <div className='container-fluid our-courses p-lg-5 p-3'>
+    <div className='container-fluid container-xxl m-auto our-courses p-lg-5 p-3'>
         <h1 className="heading"><i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i>Our Courses<i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i></h1>
         <p className="banner-sub-text text-800 text-center">Acquire real-world skills that guarantee the growth you deserve</p>
-        <div className="all-our-courses mt-5">
+        <div className="all-our-courses mt-5 container-xxl m-auto">
         {loading ? (
               Array(3)
                 .fill(null)
@@ -41,7 +41,7 @@ function OurCourses() {
             ):(
               displayedCourses.map((item, index)=>(
                 <div className="our-course-card-wrapper" key={index}>
-                    <div className="container  our-course-card p-lg-5 p-md-3 p-3 py-5" data-aos="fade-right">
+                    <div className="container our-course-card p-lg-5 p-md-3 p-3 py-5" data-aos="fade-right">
                     <div className="row">
                       <div className="col-12 col-md-6 col-lg-6">
                         <div className="course-left">

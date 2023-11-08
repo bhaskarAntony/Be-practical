@@ -24,7 +24,7 @@ function Adwantages() {
         <p className="fs-4 text-secondary">
           Mentoring for our full-stack course starts long before a teacher gives an individual training session and continues long after the training session is over. Assessment, motivation, design, delivery, and evaluation are all connected stages or activities in this job guaranteed courses in Bangalore.
         </p>
-        <div className="row d-flex justify-content-center overflow-hidden">
+        <div className="row d-flex justify-content-center overflow-hidden container-xxl m-xxl-auto">
         {loading ? (
               Array(6)
                 .fill(null)
