@@ -110,19 +110,24 @@ function Footer() {
             </div>
             <div className="icons">
                 <div>
-                    <i class="bi bi-facebook text-white"></i>
+                <Link to='https://www.facebook.com/BangaloreBepractical/'>   <i class="bi bi-facebook text-white"></i></Link>
+                 
                 </div>
                 <div>
-                    <i class="bi bi-twitter text-white"></i>
+                <Link to='https://www.facebook.com/BangaloreBepractical/'>  <i class="bi bi-twitter text-white"></i></Link>
+                  
                 </div>
                 <div>
-                    <i class="bi bi-youtube text-white"></i>
+                <Link to='https://www.facebook.com/BangaloreBepractical/'>  <i class="bi bi-youtube text-white"></i></Link>
+                  
                 </div>
                 <div>
-                    <i class="bi bi-linkedin  text-white"></i>
+                <Link to='https://www.facebook.com/BangaloreBepractical/'> <i class="bi bi-linkedin  text-white"></i></Link>
+                   
                 </div>
                 <div>
-                    <i class="bi bi-instagram text-white"></i>
+                <Link to='https://www.facebook.com/BangaloreBepractical/'><i class="bi bi-instagram text-white"></i></Link>
+                    
                 </div>
             </div>
             

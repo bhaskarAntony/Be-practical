@@ -8,8 +8,8 @@ function Languages({languages, course}) {
   }, []);
   return (
     <section className='languages p-2 container-fluid bg-gray2'>
-        <h3 className="fs-1 text-white" data-aos="fade-up">What <span className="text-main-danger">
-          Programming Languages</span> <br /> You will Learn?</h3>
+        <h3 className="fs-1 text-white text-900" data-aos="fade-up">Master <span className="text-main-danger">
+         Thease Technologies</span></h3>
           <p className="fs-4 text-white">
           We are proud to present the success of our {course} Course.
           </p>

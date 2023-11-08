@@ -15,6 +15,8 @@ import CourseCard from '../components/CourseCard'
 import Loading from '../Modals/Loading'
 import CourseCertificate from '../components/CourseCertificate'
 import BookDemoCard from '../components/BookDemoCard'
+import Start from '../components/Start'
+import CourseOffering from '../components/Offering/CourseOffering'
 
 function CoursePageEngine() {
     const [courseData, setCourseData] = useState(null);
@@ -147,11 +149,13 @@ function CoursePageEngine() {
       <LandDreamJob/>
 
     <Companies/>
+    <CourseOffering/>
 
     <Adwantages/>
     <YoutubeVideos/>
     <FaqSection  faq={courseData.faqs}/>
     <Feedback/>
+    <Start/>
     </section>
   )
 }
