@@ -25,8 +25,8 @@ function Training() {
         <div className='container-fluid p-3 py-1'>
             <p className="p-large1 text-main-danger text-center">Training</p>
             <h3 className="fs-1 text-900 text-center">Mode Of Training</h3>
-            <div className="training-container">
-                <div className="row container-xxl m-xxl-auto">
+            <div className="training-container rounded-4 overflow-hidden container-xxl m-xxl-auto">
+                <div className="row ">
                     <div className="col-12 col-md-12 col-lg-6 p-0">
                         <div className="training-left">
                             <p className="p-large1 text-white">Membership</p>

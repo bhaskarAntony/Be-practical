@@ -1,6 +1,5 @@
 
 .footer_container{
-    min-height: 80vh;
     padding: 20px;
     color: #ffffff;
     overflow: hidden;
@@ -30,7 +29,7 @@
 }
 .m1 ul li a:hover{
     text-decoration:underline;
-    color:var(--main-color);
+    color:var(--red);
 
 }
 .m1 ul li{
@@ -116,6 +115,16 @@
 }
 .icons [class*="bi"]{
     font-size: 2em;
+    padding: 1px 5px;
+    border-radius: 100px;
+}
+.icons [class*="bi"]:hover{
+    transform: rotate(-360deg) !important;
+    transition: 0.6s;
+    color: var(--red) !important;
+    border-bottom: 3px solid #fff;
+    border-top: 3px solid var(--red);
+    cursor: pointer;
 }
 .right{
     padding-top: 15px;

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/footer.css'  
-import AOS from 'aos'; 
 import { CoursePage } from '../Data/DataFetcher';
 import { Shimmer } from 'react-shimmer';
 import { Link } from 'react-router-dom';
@@ -111,19 +110,19 @@ function Footer() {
             </div>
             <div className="icons">
                 <div>
-                    <i class="bi bi-facebook text-main-danger"></i>
+                    <i class="bi bi-facebook text-white"></i>
                 </div>
                 <div>
-                    <i class="bi bi-twitter text-main-danger"></i>
+                    <i class="bi bi-twitter text-white"></i>
                 </div>
                 <div>
-                    <i class="bi bi-youtube text-main-danger"></i>
+                    <i class="bi bi-youtube text-white"></i>
                 </div>
                 <div>
-                    <i class="bi bi-linkedin text-main-danger"></i>
+                    <i class="bi bi-linkedin  text-white"></i>
                 </div>
                 <div>
-                    <i class="bi bi-instagram text-main-danger"></i>
+                    <i class="bi bi-instagram text-white"></i>
                 </div>
             </div>
             
@@ -131,7 +130,7 @@ function Footer() {
     </div>
     {/* <hr /> */}
     <div className="text-center">
-        <p className="p-large1">Copyrights@2023</p>
+        <span className="fs-6">Copyrights@2023</span>
     </div>
 </section>
 </>

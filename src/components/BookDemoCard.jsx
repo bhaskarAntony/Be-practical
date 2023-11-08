@@ -8,7 +8,7 @@ function BookDemoCard() {
                 <form>
                     <div className="form-group mt-3">
                     <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="Enter your name"/>
+                    <input type="text" class="form-control" id="floatingInput" placeholder="Enter your name"/>
                     <label for="floatingInput">Student Name</label>
                     </div>
                     </div>
@@ -20,7 +20,7 @@ function BookDemoCard() {
                     </div>
                     <div className="form-group mt-3">
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="+91 000-0000-000"/>
+                        <input type="number" class="form-control" id="floatingInput" placeholder="+91 000-0000-000"/>
                         <label for="floatingInput">Phone number</label>
                         </div>
                     </div>

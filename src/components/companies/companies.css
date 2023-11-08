@@ -8,6 +8,9 @@
     color:#fff;
     border-radius: 20px;
 }
+.companies .slick-arrow{
+    display: none !important;
+}
 .main-company-container{
     padding: 6% !important;
 }
