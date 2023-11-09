@@ -4,3 +4,15 @@
 .blogs-hero{
     min-height: 100vh;
 }
+.blog-sticky-card{
+    position: sticky !important;
+    top: 100px !important;
+}
+.read-blog img{
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+.read-blog{
+    max-width: 100% !important;
+}

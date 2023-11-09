@@ -46,7 +46,7 @@ function Home() {
         <Adwantages/>
         <YoutubeVideos/>
         <Certificate/>
-        <ChatWithus/>
+        {/* <ChatWithus/> */}
         <Funfact/>
         <Feedback/>
     </section>

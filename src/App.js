@@ -24,6 +24,7 @@ import PageScrollToTop from './Extra/PageScrollToTop'
 import AboutPage from './pages/About/AboutPage'
 import Discount from '../src/Extra/Discount/Discount'
 import QuizModal from './components/QuizModal'
+import BlogsView from './pages/BlogsPage/BlogsView'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -101,6 +102,7 @@ const onLoad = () => {
         <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
         <Route path='/all-courses' element={<AllCourses/>}/>
         <Route path='/discount/quiz' element={<QuizModal/>}/>
+        <Route path='/Blog/read/:id' element={<BlogsView/>}/>
         </Routes>
       <Footer/>
         </BrowserRouter>

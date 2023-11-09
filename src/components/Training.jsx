@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/training.css';
-import AOS from 'aos';
 import { trainingModule } from '../Data/DataFetcher';
 import ShimmerCard from '../shimmer effects/ShimmerCard';
 import ApplyNow from '../Extra/ApplyNow';
 
 
 function Training() {
-    useEffect(() => {
-        AOS.init(); // Initialize AOS
-      }, []);
 
     const [loading, setLoading] = useState(true)
     const [trainingModuleData, setTrainingModuleData] = useState([]);
@@ -22,14 +18,14 @@ function Training() {
           .catch((error) => console.error('Error fetching advantages:', error));
       }, []);
     return (
-        <div className='container-fluid p-3 py-1'>
+        <div className='container-fluid p-3 py-1 p-0 m-0'>
             <p className="p-large1 text-main-danger text-center">Training</p>
             <h3 className="fs-1 text-900 text-center">Mode Of Training</h3>
             <div className="training-container rounded-4 overflow-hidden container-xxl m-xxl-auto">
-                <div className="row ">
+                <div className="row">
                     <div className="col-12 col-md-12 col-lg-6 p-0">
                         <div className="training-left">
-                            <p className="p-large1 text-white">Membership</p>
+                            <p className="p-large1 text-white">Master classes</p>
                             <h1 className="heading text-white text-900 text-start justify-content-start">Start your Learning <br /> Journey Today!</h1>
                             <p className="text-white p-large1">with a free Master Classes</p>
                            <ApplyNow text="Apply now"/>
@@ -37,7 +33,7 @@ function Training() {
                     </div>
                     <div className="col-12 col-md-12 col-lg-6 p-0">
                         <div className="training-right d-flex align-items-center p-lg-5 p-4">
-                        <div className="row">
+                        <div className="row align-items-center">
                 {loading ? (
               Array(6)
                 .fill(null)

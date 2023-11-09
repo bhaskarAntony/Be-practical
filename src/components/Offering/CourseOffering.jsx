@@ -57,6 +57,10 @@ const courseOfferingData = [
     {
         title:"Badging Tests",
         image:badge
+    },
+    {
+        title:"Projects",
+        image:Projects
     }
 ]
 function CourseOffering() {

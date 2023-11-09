@@ -18,5 +18,6 @@ const CoursePage = fetchData('https://fancy-mittens-ray.cyclic.app/api/courses')
 const Quiz = fetchData('https://fancy-mittens-ray.cyclic.app/api/Quiz');
 const EventsApi = fetchData('https://fancy-mittens-ray.cyclic.app/api/events');
 const homeHeroApi = fetchData('https://fancy-mittens-ray.cyclic.app/api/heroSection');
+const BlogsApi = fetchData('https://fancy-mittens-ray.cyclic.app/api/blogs');
 
-export { advantages, companies, trainingModule, testinomials, youtubeVideos, CoursePage, Quiz, EventsApi, homeHeroApi };
+export { advantages, companies, trainingModule, testinomials, youtubeVideos, CoursePage, Quiz, EventsApi, homeHeroApi, BlogsApi };
