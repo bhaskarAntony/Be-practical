@@ -71,7 +71,7 @@ function Feedback() {
   }, []);
 
   return (
-  <div className='feedback-container bg-blur p-lg-5 p-2'>
+  <div className='feedback-container bg-blur p-lg-5 p-2 py-5'>
     <p className="text-center p-large1 text-main-danger">Testimonials</p>
   <h1 className="fs-1 text-900 text-center mb-4">Testimonials from Our Mentees</h1>
     <Carousel

@@ -8,7 +8,7 @@ function Certificate() {
         Aos.init(); // Initialize AOS
       }, []);
   return (
-   <div className="container-fluid mt-3">
+   <div className="container-fluid mt-3 py-5">
      <div className='container certificate' data-aos="fade-left">
         <div className="row">
             <div className="col-12 col-md-4 col-lg-4">

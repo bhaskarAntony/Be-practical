@@ -7,7 +7,7 @@ function Languages({languages, course}) {
     AOS.init(); // Initialize AOS
   }, []);
   return (
-    <section className='languages container-fluid bg-gray2'>
+    <section className='languages container-fluid bg-gray2 p-0 m-0'>
         <h3 className="fs-1 text-white text-900" data-aos="fade-up">Master <span className="text-main-danger">
          Thease Technologies</span></h3>
           <p className="fs-4 text-white">
@@ -16,7 +16,7 @@ function Languages({languages, course}) {
       <div className="languages-items">
         <div className="row">
           {languages.map((item, index) => (
-            <div className="col-6 col-md-4 col-lg-4" key={index}>
+            <div className="col-6 col-md-4 col-lg-4 m-0 p-1" key={index}>
               <div className="language-card bg-gray3 border-b" data-aos="zoom-in">
                 <div className="language-card-header">
                   <img src={item.image} alt="" />
