@@ -97,7 +97,7 @@ function ElitePage() {
   </div> */}
    <div className="elite-main-page overflow-hidden">
      <div className='elite-page container-fluid p-0'>
-     <div className="row  container-xxl m-auto">
+     <div className="row">
         <div className="col-12 col-md-6 col-lg-6">
             <div className="elite-left py-5">
                 <h1>100% Placement Program</h1>
@@ -140,7 +140,7 @@ function ElitePage() {
     <div className="container elite-devider"></div>
     <div className="elite-course container py-5">
       <h1 className="fs-1 text-center text-900 text-white mb-4">Our Elite <span className="text-main-danger">Courses</span></h1>
-        <div className="row  container-xxl m-auto overflow-hidden">
+        <div className="row overflow-hidden">
             {
                 CourseData.map((item, index)=>(
                   <div className="col-12 col-sm-12 col-md-6 col-lg-4">
@@ -174,7 +174,7 @@ function ElitePage() {
     </div>
     <div className="container elite-devider"></div>
     <div className="elite-highlights container p-3 py-5">
-        <div className="row  container-xxl m-auto">
+        <div className="row">
             <div className="col-12 col-md-4 col-lg-4">
                 <div className="highlight-card">
                 <div className="highlight-header">

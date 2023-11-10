@@ -10,7 +10,7 @@ function AboutPage() {
   return (
     <section>
       <div className="about-hero container-fluid overflow-hidden">
-        <div className="row  container-xxl m-auto">
+        <div className="row">
             <div className="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center">
                 <div className="about-hero-text p-lg-5 p-3">
                     <h4 className='card-heading text-main-danger'>THE BEST TRAINING INSTITUTE</h4>

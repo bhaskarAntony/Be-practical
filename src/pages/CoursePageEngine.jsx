@@ -49,7 +49,7 @@ function CoursePageEngine() {
   return (
     <section className='overflow-hidden'>
     <div className="course-hero container-fluid p-0 py-3 bg-gray2 border-b ">
-        <div className="row  container-xxl m-auto">
+        <div className="row">
             <div className="col-12 col-md-7 col-lg-7">
                 <div className="course-hero-left p-lg-5 p-3">
                     <p className="text-main-danger fs-5 text-900">100% Placement Course</p>
@@ -135,7 +135,7 @@ function CoursePageEngine() {
       <Module modules={courseData.modules} name={courseData.courseName}/>
       <section className='main-lan-container container-fluid bg-gray2 rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
-                <div className="row  container-xxl m-auto">
+                <div className="row">
                     <div className="col-12 col-md-6 col-lg-7">
                         <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
                     </div>
