@@ -11,6 +11,10 @@
       color: #ffffff !important;
       border-radius: 10px;
       padding: 5px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* animation: star-anim 1s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate !important; */
   }
   .navbar-nav .nav-link:active{
     color: var(--green-light-color);
@@ -123,4 +127,16 @@
   }
   .mobile-list-item:hover{
     background: var(--red) !important;
+  }
+  .bi-stars{
+   
+    display: block;
+  }
+  @keyframes star-anim{
+    from{
+      transform: rotate(-20deg);
+    }
+    to{
+      transform: rotate(20deg);
+    }
   }

@@ -14,9 +14,9 @@ const FaqSection = (props) => {
   };
 
   return (
-    <div className="container-fluid bg-blur py-2">
+    <div className="container-fluid bg-blur py-5">
       <h2 className='fs-1 text-center text-900'>Still have Doubts?</h2>
-      <p className="fs-4 text-secondary text-center">We have answered some of the frequent questions for you!</p>
+      <p className="fs-4 text-secondary text-center my-4">We have answered some of the frequent questions for you!</p>
      <div className="row mt-2">
      <div className="col-12 col-md-12 col-lg-6">
      <div className="faq-left">

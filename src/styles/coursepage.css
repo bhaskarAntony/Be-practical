@@ -2,6 +2,10 @@
 .main-lan-container{
     border-radius: 30px;
 }
+.c-img{
+    position: sticky !important;
+    top: 0 !important;
+}
 @media (max-width:768px){
     .course-hero-video{
         min-height: fit-content;

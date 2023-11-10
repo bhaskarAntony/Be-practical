@@ -161,7 +161,7 @@ function Header() {
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link  elite-link" href='/elite' > <i class="bi bi-stars"></i> Elite</a>
+          <a class="nav-link  elite-link d-flex align-items-center justify-content-center" href='/elite' > <i class="bi bi-stars"></i> Elite</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

@@ -65,9 +65,9 @@ const courseOfferingData = [
 ]
 function CourseOffering() {
   return (
-    <section className='course-offering'>
+    <section className='course-offering '>
       <h1 className="text-center fs-1 text-900 mb-5">Course <span className="text-main-danger">Offering</span></h1>
-    <div className="bg-gray2 p-md-5 p-3">
+    <div className="bg-gray2 p-md-5 p-3 bg-texture">
     <div className="row">
         {
             courseOfferingData.map((item, index)=>(

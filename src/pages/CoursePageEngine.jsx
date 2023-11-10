@@ -48,13 +48,13 @@ function CoursePageEngine() {
       }
   return (
     <section className='overflow-hidden'>
-    <div className="course-hero container-fluid p-0 py-3 bg-gray2 border-b ">
-        <div className="row">
+    <div className="course-hero container-fluid p-0 py-3 bg-texture bg-gray2 border-b ">
+        <div className="row align-items-center">
             <div className="col-12 col-md-7 col-lg-7">
                 <div className="course-hero-left p-lg-5 p-3">
                     <p className="text-main-danger fs-5 text-900">100% Placement Course</p>
                     <h1 className="heading text-900 text-white">{courseData.heroTitle}</h1>
-                    <p className="fs-5 text-secondary">{courseData.heroSubtitle}</p>
+                    <p className="fs-5 text-secondary my-4">{courseData.heroSubtitle}</p>
                     <div className="course-ratings mt-3 d-flex align-items-center gap-2">
                         <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">rating <i class="bi bi-star-half text-yellow"></i><b> 4.5</b></small></p>
                         <div className="d-flex gap-2">
@@ -67,29 +67,29 @@ function CoursePageEngine() {
                     </div>
                     <div className="row mt-3">
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center  border-b">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center  border-b mb-3">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">100% Placement Support</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b mb-3">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Industry Led Curriculum</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b mb-3">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Real Time Projects</span>
                         </div>
                         </div>
                         <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b">
+                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b mb-3">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i> <span className="fs-5">Flexible Timings</span>
                         </div>
                         </div>
                     </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
-                    <button className="btn-main-outline-light px-5 py-4 rounded-4 hero-btn d-flex align-items-center gap-2 fs-5">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
-                <button className="btn-danger px-5 py-2 rounded-4 hero-btn d-flex align-items-center gap-2 fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
+                    <button className="btn-main-outline-light px-5 py-4 rounded-4 hero-btn d-flex align-items-center gap-2 fs-5 justify-content-center">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
+                <button className="btn-danger p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
                
             </div>
                     
@@ -132,8 +132,8 @@ function CoursePageEngine() {
     </div>
 
     
-      <Module modules={courseData.modules} name={courseData.courseName}/>
-      <section className='main-lan-container container-fluid bg-gray2 rounded-0 py-5' id="languages">
+      <Module modules={courseData.modules} name={courseData.courseName} description={courseData.courseDescription}/>
+      <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-7">
@@ -145,7 +145,7 @@ function CoursePageEngine() {
                 </div>
             </div>
       </section>
-      <CourseCertificate/>
+      <CourseCertificate data={courseData}/>
       <LandDreamJob/>
 
     <Companies/>

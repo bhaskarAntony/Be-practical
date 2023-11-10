@@ -84,16 +84,16 @@
   background: var(--gold) !important;
 }
 .bg-gray2{
-  background: var(--gray2) !important;
+  background-color: var(--gray2) !important;
 }
 .bg-gray3{
-  background: var(--gray3) !important;
+  background-color: var(--gray3) !important;
 }
 .bg-gray4{
-  background: var(--gray4) !important;
+  background-color: var(--gray4) !important;
 }
 .bg-blue-light{
-  background: var(--blue-light);
+  background-color: var(--blue-light);
 }
 .text-yellow{
   color: var(--yellow) !important;
@@ -131,6 +131,10 @@
 
 .bg-blur{
   background: url('./images/blur-bg.png') no-repeat center;
+  background-size: cover;
+}
+.bg-texture{
+  background: url(https://www.wordpress.codeinsolution.com/carveo/wp-content/uploads/sites/32/2023/09/Background-2@2x-e1694589743783.png) no-repeat center;
   background-size: cover;
 }
 .bg-dark-gray{
