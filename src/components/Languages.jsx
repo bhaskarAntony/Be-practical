@@ -7,7 +7,7 @@ function Languages({languages, course}) {
     AOS.init(); // Initialize AOS
   }, []);
   return (
-    <section className='languages p-2 container-fluid bg-gray2'>
+    <section className='languages container-fluid bg-gray2'>
         <h3 className="fs-1 text-white text-900" data-aos="fade-up">Master <span className="text-main-danger">
          Thease Technologies</span></h3>
           <p className="fs-4 text-white">
