@@ -6,7 +6,7 @@ function ContactForm() {
   return (
     <section className='container p-lg-5 p-md-2' id="contact">
      <div className="contact-form">
-     <div className="row  container-xxl m-auto">
+     <div className="row">
             <div className="col-12 col-md-12 col-lg-6">
                 <div className="contact-form-left">
                     <div className="row">

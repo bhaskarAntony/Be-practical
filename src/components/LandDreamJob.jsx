@@ -5,7 +5,7 @@ import happy_student from '../images/happy-student.avif'
 function LandDreamJob() {
   return (
    <div className='px-lg-5  p-3 py-5 container-fluid bg-gray2'>
-    <div className="row  container-xxl m-auto">
+    <div className="row">
       <div className="col-12 col-md-5 col-lg-4">
         <img src={happy_student} alt="happy-student" className="w-100 rounded-5 mb-3" />
       </div>

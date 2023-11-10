@@ -43,7 +43,7 @@ function Header() {
         <p className="p-dark-small m-0 text-white">Join Our Elite program <b>Explore <i class="bi bi-arrow-right"></i></b></p>
       </div> */}
       <nav class="navbar navbar-expand-xl">
-  <div class="container-fluid container-xxl">
+  <div class="container-fluid">
   <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a>
 
 <div>
@@ -120,7 +120,7 @@ function Header() {
           <a class="nav-link" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link bg-danger-2 text-white rounded-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Courses <i class="bi bi-chevron-down mx-1"></i>
           </a>
           <ul class="dropdown-menu p-0">
@@ -183,9 +183,9 @@ function Header() {
           </ul>
         </li>
       </ul>
-     <a href="/register" className='text-decoration-none'>
+     {/* <a href="/register" className='text-decoration-none'>
      <button class="btn-main-outline-dark bg-white text-black mx-1 hero-btn" type="button">Sign Up<i class="bi bi-chevron-double-right"></i></button>
-     </a>
+     </a> */}
       <a href="/book-demo" className='text-decoration-none'>
       <button class="btn-danger" type="button">Book Demo Classes <i class="bi bi-chevron-double-right"></i></button>
       </a>

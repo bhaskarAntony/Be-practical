@@ -72,7 +72,7 @@ function StudentsPlaced() {
         <p className=" text-center p-large1 text-main-danger">We don’t just give <span className="text-white">certification but outcomes!</span></p>
       <div className="students-placed">
       <div className="p-2 p-lg-5 container-fluid  rounded-5">
-          <div className="row justify-content-center w-100 container-xxl m-xxl-auto">
+          <div className="row justify-content-center w-100">
          
           {loading ? (
              <Slider {...settings}>

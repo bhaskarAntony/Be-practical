@@ -19,7 +19,7 @@ const ImageGallery = (props) => {
 
   return (
     <div className="container-fluid gallery-container bg-gray2 p-4">
-      <div className="row container-xxl m-auto">
+      <div className="row">
         {props.images.map((image, index) => (
              <div className="col-12 col-md-4 col-lg-3">
                 <div className="gallery-card bg-gray3">

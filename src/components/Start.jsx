@@ -5,7 +5,7 @@ import ApplyNow from '../Extra/ApplyNow'
 function Start() {
   return (
     <section className='start-learning container'>
-    <div className="row  container-xxl m-xxl-auto align-items-center">
+    <div className="row align-items-center">
         <div className="col-12 col-md-6 col-lg-6">
             <div className="start-text">
                 <h1 className="text-900 fs-1">You Are Still Here?</h1>

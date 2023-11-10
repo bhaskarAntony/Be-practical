@@ -9,8 +9,8 @@
   .elite-link{
       background:var(--gold) !important;
       color: #ffffff !important;
-      border-radius: 100px;
-      padding: 5px 20px !important;
+      border-radius: 10px;
+      padding: 5px 20px;
   }
   .navbar-nav .nav-link:active{
     color: var(--green-light-color);

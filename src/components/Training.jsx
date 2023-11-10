@@ -18,10 +18,10 @@ function Training() {
           .catch((error) => console.error('Error fetching advantages:', error));
       }, []);
     return (
-        <div className='container-fluid p-3 py-1 p-0 m-0'>
+        <div className='container-fluid p-3 py-1'>
             <p className="p-large1 text-main-danger text-center">Training</p>
             <h3 className="fs-1 text-900 text-center">Mode Of Training</h3>
-            <div className="training-container rounded-4 overflow-hidden container-xxl m-xxl-auto">
+            <div className="training-container rounded-4 overflow-hidden">
                 <div className="row">
                     <div className="col-12 col-md-12 col-lg-6 p-0">
                         <div className="training-left">
@@ -35,7 +35,7 @@ function Training() {
                         <div className="training-right d-flex align-items-center p-lg-5 p-4">
                         <div className="row align-items-center">
                 {loading ? (
-              Array(6)
+              Array(4)
                 .fill(null)
                 .map((_, index) => (
                   <div className="col-6 col-md-6 col-lg-6 rounded-2 p-3" key={index}>

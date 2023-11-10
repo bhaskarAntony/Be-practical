@@ -95,7 +95,7 @@ function Events() {
   return (
   <div className="container-fluid events-main p-0 overflow-hidden ">
     <div className="bg-blur">
-    <div className="row  container-xxl m-xxl-auto">
+    <div className="row">
       <div className="col-12 col-sm-12 col-md-8 col-lg-6 d-flex flex-column justify-content-center p-lg-5 p-5">
         <p className="fs-4 text-main-danger">Events, Conferences and Meetups</p>
           <h1 className="heading text-900">Be Practical Providing Featured Workshops</h1>
@@ -115,7 +115,7 @@ function Events() {
     {
       BookTicket?<TicketBook/> : null
     }
-      <div className="container-fluid p-0 overflow-hidden mb-4 container-xxl m-xxl-auto">
+      <div className="container-fluid p-0 overflow-hidden mb-4">
       <Tabs className="p-0">
     <TabList className="custom-tabs p-2 sticky-top">
       <Tab className="custom-tab fs-3">Events</Tab>

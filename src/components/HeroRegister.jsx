@@ -48,7 +48,7 @@ function HeroRegister() {
   return (
    <div className="p-2">
     <div className="px-lg-5">
-     <div className="register-container-home bg-white container-fluid container-xxl m-auto light-shadow border-0 shadow1">
+     <div className="register-container-home bg-white container-fluid light-shadow border-0 shadow1">
       <div className="register align-items-center rounded-1 p-3 ">
         <div className="p-2 rounded-2 py-3 border-0 bg-transparent">
           <div className="card-header-text text-center w-100">

@@ -108,10 +108,10 @@ function Webinar() {
 
   return (
   <>
-          <h3 className="fs-1 text-900 text-center  mt-5">Pre Career Guidence program <span className="main-text" > <br /> From Top MNC's</span></h3>
+          <h3 className="fs-1 text-900 text-center  mt-5">Pre Career Guidence program <br /> From  <span className="text-main-danger" >Top MNC's</span></h3>
     <section className='p-2 container-fluid py-5 bg-blur' id="webinar">
 
-      <div className="students-placed container-fluid container-xl">
+      <div className="students-placed container">
       <Slider {...settings}>
       {webinar.map((item) => (
                 <div className="col-12 col-md-6 col-lg-3 p-3 d-flex justify-content-center">
@@ -122,7 +122,7 @@ function Webinar() {
                 <div className="webinar-card-body p-2">
                   <p className="mt-2 p-light-small text-main-danger">Conducted by</p>
                     <h3 className="heading-small text-black">{item.company}</h3>
-                    <p className='mt-2 p-dark-small text-black'><ReadMore text={item.description} maxLength={50} /></p>
+                    <p className='mt-2 fs-5 text-black'><ReadMore text={item.description} maxLength={50} /></p>
                 </div>
               </div>
                 </div>

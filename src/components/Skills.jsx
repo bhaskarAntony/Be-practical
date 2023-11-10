@@ -28,7 +28,7 @@ function Skills() {
       <div className=" skillsecond">
       {/* <div className="section-blur"></div>
         <div className="section-blur2"></div> */}
-        <div className="row container-xxl m-auto">
+        <div className="row">
           <div className="col-12 col-md-12 col-lg-6">
             <div className="left col-12 col-md-12 col-lg-10">
               <video src={playVideoUrl} autoPlay muted loop></video>
