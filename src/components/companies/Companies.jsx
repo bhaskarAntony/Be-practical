@@ -129,7 +129,7 @@ function Companies() {
 
     <section className="container-fluid main-company-container text-center py-5">
       <h3 className="fs-1 text-900 text-center">Boost Your Career With Our <span className="text-main-danger">Hiring Partners</span></h3>
-      <p className="fs-4 text-secondary my-3">
+      <p className="fs-5 text-secondary my-3">
         Get closer to your dream company <br />
         Our graduates are working with leading tech brands
       </p>

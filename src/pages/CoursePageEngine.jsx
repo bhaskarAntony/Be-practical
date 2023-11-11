@@ -16,6 +16,7 @@ import CourseCertificate from '../components/CourseCertificate'
 import BookDemoCard from '../components/BookDemoCard'
 import Start from '../components/Start'
 import CourseOffering from '../components/Offering/CourseOffering'
+import Benifits from '../components/Benifits/Benifits'
 
 function CoursePageEngine() {
     const [courseData, setCourseData] = useState(null);
@@ -94,18 +95,14 @@ function CoursePageEngine() {
                 <button className="btn-danger p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
                
             </div>
-            <div className="share-course d-flex gap-3 py-3 flex-wrap align-items-center">
-              <button className="share-btn whatsapp-share mt-3"><i className='bi bi-whatsapp'></i>Whatsapp</button>
-              <button className="share-btn facebook-share mt-3"><i className='bi bi-facebook'></i>Facebook</button>
-              <button className="share-btn telegram-share mt-3"><i className='bi bi-telegram'></i>Telegram</button>
-              <button className="share-btn twitter-share mt-3"><i className='bi bi-twitter'></i>Twitter</button>
-            </div>
+            
                     
                 </div>
             </div>
             <div className="col-12 col-md-5 col-lg-5">
                 <div className="course-hero-right p-lg-5 p-3">
                     <BookDemoCard/>
+                    
                 </div>
             </div>
         </div>
@@ -137,6 +134,15 @@ function CoursePageEngine() {
                    </div>
                 </div>
             </div>
+       <div className="text-center">
+       <span className="fs-4 text-main-danger text-center w-100">Share Course On</span>
+       </div>
+            <div className="share-course d-flex gap-3 py-3 flex-wrap align-items-center justify-content-center">
+              <button className="share-btn whatsapp-share"><i className='bi bi-whatsapp'></i>Whatsapp</button>
+              <button className="share-btn facebook-share"><i className='bi bi-facebook'></i>Facebook</button>
+              <button className="share-btn telegram-share"><i className='bi bi-telegram'></i>Telegram</button>
+              <button className="share-btn twitter-share"><i className='bi bi-twitter'></i>Twitter</button>
+            </div>
     </div>
 
     
@@ -158,7 +164,7 @@ function CoursePageEngine() {
 
     <Companies/>
     <CourseOffering/>
-
+    <Benifits data={courseData}/>
     <Adwantages/>
     <YoutubeVideos/>
     <FaqSection  faq={courseData.faqs}/>

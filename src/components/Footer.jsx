@@ -25,7 +25,7 @@ function Footer() {
     <>
     <div className="footer-wave ">
     </div>
-    <section className="footer_container d-flex flex-column justify-content-between container-fluid" id="footer">
+    <section className="footer_container d-flex flex-column justify-content-between container-fluid bg-texture" id="footer">
     <div className="row">
         <div className="col-12 cl-md-12 col-lg-3 ">
            <div className="left">
@@ -114,19 +114,19 @@ function Footer() {
                  
                 </div>
                 <div>
-                <Link to='https://www.facebook.com/BangaloreBepractical/'>  <i class="bi bi-twitter text-white"></i></Link>
+                <Link to='https://twitter.com/bepractical_com'>  <i class="bi bi-twitter text-white"></i></Link>
                   
                 </div>
                 <div>
-                <Link to='https://www.facebook.com/BangaloreBepractical/'>  <i class="bi bi-youtube text-white"></i></Link>
+                <Link to='https://www.youtube.com/channel/UCXZrCfbP7ZITt5WFjQ5mZbQ'>  <i class="bi bi-youtube text-white"></i></Link>
                   
                 </div>
                 <div>
-                <Link to='https://www.facebook.com/BangaloreBepractical/'> <i class="bi bi-linkedin  text-white"></i></Link>
+                <Link to='https://www.linkedin.com/company/13338555/admin/'> <i class="bi bi-linkedin  text-white"></i></Link>
                    
                 </div>
                 <div>
-                <Link to='https://www.facebook.com/BangaloreBepractical/'><i class="bi bi-instagram text-white"></i></Link>
+                <Link to='https://www.instagram.com/bepracticaltraining/'><i class="bi bi-instagram text-white"></i></Link>
                     
                 </div>
             </div>
