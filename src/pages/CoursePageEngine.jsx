@@ -88,7 +88,7 @@ function CoursePageEngine() {
                         </div>
                     </div> */}
                   <div className="course-points">
-                  <div className='fs-5 text-white' dangerouslySetInnerHTML={{ __html: courseData.courseHeroPoints}} />
+                  <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.courseHeroPoints}} />
                   </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
                     <button className="btn-main-outline-light px-5 py-4 rounded-4 hero-btn d-flex align-items-center gap-2 fs-5 justify-content-center">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
