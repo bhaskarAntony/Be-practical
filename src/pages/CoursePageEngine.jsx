@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/coursepage.css'
-import HeroRegister from '../components/HeroRegister'
 import Companies from '../components/companies/Companies'
 import Adwantages from '../components/advantages/Adwantages'
 import YoutubeVideos from '../components/YoutubeVideos'
@@ -65,7 +64,7 @@ function CoursePageEngine() {
                         <i class="bi bi-star-half text-yellow fs-4"></i>
                         </div>
                     </div>
-                    <div className="row mt-3">
+                    {/* <div className="row mt-3">
                         <div className="col-12 col-md-12 col-lg-6">
                         <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center  border-b mb-3">
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">100% Placement Support</span>
@@ -86,11 +85,20 @@ function CoursePageEngine() {
                         <i class="bi bi-check-circle-fill fs-3 text-green"></i> <span className="fs-5">Flexible Timings</span>
                         </div>
                         </div>
-                    </div>
+                    </div> */}
+                  <div className="course-points">
+                  <div className='fs-5 text-white' dangerouslySetInnerHTML={{ __html: courseData.courseHeroPoints}} />
+                  </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
                     <button className="btn-main-outline-light px-5 py-4 rounded-4 hero-btn d-flex align-items-center gap-2 fs-5 justify-content-center">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
                 <button className="btn-danger p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
                
+            </div>
+            <div className="share-course d-flex gap-3 py-3 flex-wrap align-items-center">
+              <button className="share-btn whatsapp-share mt-3"><i className='bi bi-whatsapp'></i>Whatsapp</button>
+              <button className="share-btn facebook-share mt-3"><i className='bi bi-facebook'></i>Facebook</button>
+              <button className="share-btn telegram-share mt-3"><i className='bi bi-telegram'></i>Telegram</button>
+              <button className="share-btn twitter-share mt-3"><i className='bi bi-twitter'></i>Twitter</button>
             </div>
                     
                 </div>
