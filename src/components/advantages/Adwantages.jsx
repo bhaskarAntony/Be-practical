@@ -21,7 +21,7 @@ function Adwantages() {
     <section id="adwantages" className='overflow-hidden py-5'>
       <div className="adwantages-container container p-lg-5 text-center rounded-4">
         <h3 className="fs-1 text-900 text-center">Advantages At <span className="text-main-danger"> Be Practical</span></h3>
-        <p className="fs-5 text-secondary my-4">
+        <p className="fs-6 text-secondary my-4">
           Mentoring for our full-stack course starts long before a teacher gives an individual training session and continues long after the training session is over. Assessment, motivation, design, delivery, and evaluation are all connected stages or activities in this job guaranteed courses in Bangalore.
         </p>
         <div className="row d-flex justify-content-center overflow-hidden">

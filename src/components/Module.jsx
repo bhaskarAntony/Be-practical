@@ -13,7 +13,7 @@ const Module = (props) => {
   return (
    <div className="container-fluid faq" id="faq">
     <h3 className="fs-1 text-center text-900">Program Curriculum</h3>
-    <p className="fs-5 text-secondary text-center container ">{props.description}</p>
+    <p className="fs-md-5 fs-6 text-secondary text-center container ">{props.description}</p>
      <div className="container">
       <div className="row">
       <div className="col-12 col-md-6 col-lg-6">

@@ -5,7 +5,7 @@ function Benifits({data}) {
   return (
     <section className='py-5 container'>
         <h1 className="text-center fs-1 mb-2 text-900">Benifits Of <span className="text-main-danger">Technology</span></h1>
-        <div className='fs-5 mb-4 text-center' dangerouslySetInnerHTML={{ __html: data.courseDescription}} />
+        <div className='fs-6 mb-4 text-center' dangerouslySetInnerHTML={{ __html: data.courseDescription}} />
         <div className="row">
             <div className="col-12 col-sm-12 col-md-4 p-0 m-0 bg-blue-light">
                 <div className="designation w-100 p-0">
