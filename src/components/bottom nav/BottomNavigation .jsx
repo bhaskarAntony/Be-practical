@@ -10,31 +10,31 @@ const BottomNavigation = () => {
     <Navbar fixed="bottom" bg="light" variant="light" className='d-lg-none text-center p-0 m-0 overflow-scroll dark-shadow'>
       <Nav className="m-0 p-0 d-flex justify-content-between flex-row text-black w-100">
         <Nav.Item>
-          <Nav.Link href="#search">
+          <Nav.Link href="/courses">
             <FontAwesomeIcon icon={faGraduationCap} className='text-black'/>
             <small className="d-block fs-6 text-black">Courses</small>
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#add">
+          <Nav.Link href="/elite">
             <FontAwesomeIcon icon={faStar} className='text-black' />
             <small className="d-block fs-6 text-black">Elite</small>
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#favorites">
+          <Nav.Link href="/events">
             <FontAwesomeIcon icon={faCalendar} className='text-black'/>
             <small className="d-block fs-6 text-black">Events</small>
           </Nav.Link>
         </Nav.Item>
-        <Nav.Item className='k'>
-          <Nav.Link href="/">
+        <Nav.Item>
+          <Nav.Link href="/discount/quiz">
             <FontAwesomeIcon icon={faCode} className='text-black' />
             <small className="d-block fs-6 text-black">Quiz</small>
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="#profile">
+          <Nav.Link href="/blogs">
             <FontAwesomeIcon icon={faNewspaper} className='text-black'/>
             <small className="d-block fs-6 text-black">Blogs</small>
           </Nav.Link>
