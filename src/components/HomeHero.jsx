@@ -7,6 +7,7 @@ import Highlight from './Highlight';
 import HeroRegister from './HeroRegister';
 import DialogModal from './DialogModel';
 import { homeHeroApi } from '../Data/DataFetcher';
+import heroImage from '../images/coding-hero-image.svg'
 
 const home = [
   {
@@ -133,7 +134,7 @@ function HomeHero() {
                      <span className="fs-5 text-900">
                       5000+ Learned <br />Students</span>
                     </div> */}
-                   <img src="https://png.pngtree.com/png-vector/20220719/ourmid/pngtree-software-developer-semi-flat-color-vector-character-png-image_6020581.png" alt="" className="w-100" />
+                   <img src={heroImage} alt="coding hero image" className="w-100" />
                    </div>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/chatwithus.css'
-import callimage from '../images/call-bg2.svg'
+import callimage from '../images/chat-with-us.svg'
 import Aos from 'aos';
 import { useEffect } from 'react';
 
