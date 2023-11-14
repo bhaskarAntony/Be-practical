@@ -48,14 +48,24 @@
     position: relative;
     margin-bottom: 100px;
 }
-.hero .carousel-control-next, .hero .carousel-control-prev{
+/* .hero .carousel-control-next, .hero .carousel-control-prev{
     display: none;
-}
+} */
+.home .carousel-control-prev{
+    display: none !important;
+  }
+  .carousel-control-next-icon{
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    border-radius: 100px;
+    padding: 10px !important;
+    background: url('../images/angle-right.svg') no-repeat center !important;
+    background-size: cover !important;
+  }
 .hero-text{
     padding: 10px;
     position: relative;
     z-index: 10;
-   
 }
 
 .hero-image{
