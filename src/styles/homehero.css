@@ -47,7 +47,6 @@
     background-size: cover; */
     position: relative;
     margin-bottom: 100px;
-
 }
 .hero .carousel-control-next, .hero .carousel-control-prev{
     display: none;

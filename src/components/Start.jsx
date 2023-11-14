@@ -8,7 +8,7 @@ function Start() {
     <div className="row align-items-center">
         <div className="col-12 col-md-6 col-lg-9">
             <div className="start-text">
-                <h1 className="text-900 fs-1">You Are Still Here?</h1>
+                <h1 className="text-900 fs-1">Are you are still here?</h1>
                 <p className="fs-3 text-secondary">Ready to start? Book your free Master Classes Now..</p>
                 <ApplyNow text={"Apply Now"}/>
             </div>
