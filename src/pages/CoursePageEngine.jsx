@@ -46,6 +46,33 @@ function CoursePageEngine() {
         // You can display a loading message here while the data is being fetched
         return <Loading/>;
       }
+      const ToWhatsapp = () => {
+        const courseCard =  `*Hello* \n
+                              _This message from software development traning program_ \n
+                              *${courseData.courseName}* \n
+                              *${courseData.courseDescription}*\n
+                              *New Batch Starting: * ${courseData.BatchStarting}\n
+                           
+                              \n
+                              *Click Below Link To Explore This Course* \n
+                              https://be-practical.com \n \n
+
+                              *You may Also Like Thease Course* \n
+                                Mern Fullstack Development \n
+                                Python Fullstack Development \n
+                                Java Fullstack Development \n
+                                Cloud Computing \n
+                                Digital Marketing \n
+                                Job Oriented Courses\n
+                                and ...more \n
+
+                                https://be-practical.com
+                               we are offering all software development courses\n \n
+                               _*Thank You*_
+                               `; // Replace with your actual course card content
+        const encodedCard = encodeURIComponent(courseCard);
+        window.open(`https://wa.me/?text=${encodedCard}`, '_blank');
+      }
   return (
     <section className='overflow-hidden'>
     <div className="course-hero container-fluid p-0 py-3 bg-texture bg-gray2 border-b ">
@@ -138,7 +165,7 @@ function CoursePageEngine() {
        <span className="fs-4 text-main-danger text-center w-100">Share Course On</span>
        </div>
             <div className="share-course d-flex gap-3 py-3 flex-wrap align-items-center justify-content-center">
-              <button className="share-btn whatsapp-share"><i className='bi bi-whatsapp'></i>Whatsapp</button>
+              <button className="share-btn whatsapp-share" onClick={ToWhatsapp}><i className='bi bi-whatsapp'></i>Whatsapp</button>
               <button className="share-btn facebook-share"><i className='bi bi-facebook'></i>Facebook</button>
               <button className="share-btn telegram-share"><i className='bi bi-telegram'></i>Telegram</button>
               <button className="share-btn twitter-share"><i className='bi bi-twitter'></i>Twitter</button>

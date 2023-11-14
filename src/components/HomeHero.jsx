@@ -84,7 +84,7 @@ function HomeHero() {
       <div className="hero-1">
       <div className="custom-carousel container-fluid">
       <div className="row align-items-center">
-      <div className="col-12 col-sm-12 col-md-12 col-lg-7">
+      <div className="col-12 col-sm-12 col-md-8">
         <Carousel
           activeIndex={index}
           onSelect={handleSelect}
@@ -108,10 +108,10 @@ function HomeHero() {
           ))}
         </Carousel>
         </div>
-        <div className="col-12 col-sm-12 col-md-12 col-lg-5">
+        <div className="col-12 col-sm-12 col-md-4">
                   <div className="hero-image p-3 p-xxl-5">
                    <div className="w-100 hero-image">
-                    <div className="hero-box border p-2 py-3 d-none d-md-block">
+                    {/* <div className="hero-box border p-2 py-3 d-none d-md-block">
                     <i class="bi bi-code-slash fs-3 text-danger"></i> <br />
                      <span className="fs-5 text-900"> 36+ languages</span>
                     </div>
@@ -132,8 +132,8 @@ function HomeHero() {
                     <i class="bi bi-people-fill fs-3 text-primary"></i> <br />
                      <span className="fs-5 text-900">
                       5000+ Learned <br />Students</span>
-                    </div>
-                   <img src="https://img.freepik.com/free-vector/shared-workspace-concept-illustration_114360-5428.jpg?t=st=1699016958~exp=1699017558~hmac=31bfdfff4d60b1b0816842caaa808266a6d4712f166410a07fae833b16fd7bb7" alt="" className="w-100" />
+                    </div> */}
+                   <img src="https://png.pngtree.com/png-vector/20220719/ourmid/pngtree-software-developer-semi-flat-color-vector-character-png-image_6020581.png" alt="" className="w-100" />
                    </div>
                   </div>
                 </div>

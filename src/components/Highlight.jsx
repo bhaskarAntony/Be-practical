@@ -29,8 +29,8 @@ function Highlight({data}) {
         </div>
         <div className="col-6 col-md-4 col-lg-3 mb-3">
             <div className="highlight-card">
-            <h1 className='fs-1 text-900 text-white'>12 Years</h1>
-                <span className='p-dark-small text-white'><small>Experience</small></span>
+            <h1 className='fs-1 text-900 text-white'>2011</h1>
+                <span className='p-dark-small text-white'><small>Since</small></span>
             </div>
         </div>
       </div>

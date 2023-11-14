@@ -10,23 +10,12 @@ function ChatWithus() {
   }, []);
   
   return (
-    <section className='container my-5 p-2 p-md-3 p-lg-5 ' data-aos="fade-right">
-    <div className="chat-with-us px-0">
-    <div className="row">
-        <div className="col-12 col-md-8 col-lg-8 d-flex flex-column justify-content-between">
-          <div className="bar">
-            <span className="fs-5">STILL</span>
-          </div>
-          <div className="bar">
-          <span className="fs-5">ARE YOU THINKING</span>
-          </div>
-          <div className="bar">
-          <span className="fs-5">ABOUT YOUR</span>
-          </div>
-          <div className="bar">
-          <span className="fs-5">CAREER?</span>
-          </div>
-         
+    <section className='container my-5 p-2 p-md-3 p-lg-5' data-aos="fade-right">
+    <div className="chat-with-us px-0  bg-texture">
+    <div className="row align-items-center">
+        <div className="col-12 col-md-8 col-lg-8  p-4">
+        <h1 className="fs-1 text-white">Still Are you thinking about your career?</h1>
+        <button className='btn-danger mt-5 mb-3'>Chat With Us <i class="bi bi-chevron-double-right"></i></button>
         </div>
 
         <div className="col-12 col-md-4 col-lg-4">
@@ -35,7 +24,7 @@ function ChatWithus() {
       </div>
     </div>
     <div className="text-center chat-btn">
-          <button className='btn-danger mt-5 mb-3'>Chat With Us <i class="bi bi-chevron-double-right"></i></button>
+         
           </div>
     </section>
   )
