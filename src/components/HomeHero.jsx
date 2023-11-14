@@ -94,7 +94,7 @@ function HomeHero() {
         >
           {home.map((item, index) => (
             <Carousel.Item key={index}>
-                  <div className="hero-text p-lg-5 p-md-3 p-1">
+                  <div className="hero-text p-lg-5 p-md-3 p-1 py-3">
                     <h1 className="card-heading text-main-2 text-start">100% Placement Programs</h1>
                     <h1 className="heading text-black text-900 text-start">{item.heading}</h1>
                     <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>

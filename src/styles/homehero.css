@@ -54,6 +54,9 @@
 .home .carousel-control-prev{
     display: none !important;
   }
+  .carousel-control-next{
+    z-index: 10 !important;
+  }
   .carousel-control-next-icon{
     width: 3.5rem !important;
     height: 3.5rem !important;
@@ -61,6 +64,7 @@
     padding: 10px !important;
     background: url('../images/angle-right.svg') no-repeat center !important;
     background-size: cover !important;
+    z-index: 1020 !important;
   }
 .hero-text{
     padding: 10px;
