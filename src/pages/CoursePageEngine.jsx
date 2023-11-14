@@ -46,33 +46,41 @@ function CoursePageEngine() {
         // You can display a loading message here while the data is being fetched
         return <Loading/>;
       }
+
+      const messageContent = `
+        *Hello!*
+        _This message is from the software development training program._
+        *${courseData.courseName}*
+        *${courseData.courseDescription}*
+        *New Batch Starting:* ${courseData.BatchStarting}
+        
+        [Click Here to Explore This Course](https://be-practical.com)
+        
+        *You may also like these courses:*
+        - Mern Fullstack Development
+        - Python Fullstack Development
+        - Java Fullstack Development
+        - Cloud Computing
+        - Digital Marketing
+        - Job Oriented Courses
+        - ...and more
+        
+        [Explore More Courses](https://be-practical.com)
+        
+        _Thank You_
+      `;
       const ToWhatsapp = () => {
-        const courseCard =  `*Hello* \n
-                              _This message from software development traning program_ \n
-                              *${courseData.courseName}* \n
-                              *${courseData.courseDescription}*\n
-                              *New Batch Starting: * ${courseData.BatchStarting}\n
-                           
-                              \n
-                              *Click Below Link To Explore This Course* \n
-                              https://be-practical.com \n \n
-
-                              *You may Also Like Thease Course* \n
-                                Mern Fullstack Development \n
-                                Python Fullstack Development \n
-                                Java Fullstack Development \n
-                                Cloud Computing \n
-                                Digital Marketing \n
-                                Job Oriented Courses\n
-                                and ...more \n
-
-                                https://be-practical.com
-                               we are offering all software development courses\n \n
-                               _*Thank You*_
-                               `; // Replace with your actual course card content
-        const encodedCard = encodeURIComponent(courseCard);
-        window.open(`https://wa.me/?text=${encodedCard}`, '_blank');
+      const encodedMessage = encodeURIComponent(messageContent);
+        window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
       }
+      const sendTelegramMessage = () => {
+        const encodedMessage = encodeURIComponent(messageContent);
+        window.open(`tg://resolve?text=${encodedMessage}`, '_blank');
+      };
+      const sendTwitterMessage = () => {
+        const encodedMessage = encodeURIComponent(messageContent);
+        window.open(`https://twitter.com/intent/tweet?text=${encodedMessage}`, '_blank');
+      };
   return (
     <section className='overflow-hidden'>
     <div className="course-hero container-fluid p-0 py-3 bg-texture bg-gray2 border-b ">
@@ -118,8 +126,8 @@ function CoursePageEngine() {
                   <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.courseHeroPoints}} />
                   </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
-                    <button className="btn-main-outline-light px-5 py-4 rounded-4 hero-btn d-flex align-items-center gap-2 fs-5 justify-content-center">Apply Now <i class="bi bi-arrow-right fs-4"></i></button>
-                <button className="btn-danger p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
+                    <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
+                <button className="hero-btn-outline-danger py-3 p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
                
             </div>
             
@@ -166,9 +174,9 @@ function CoursePageEngine() {
        </div>
             <div className="share-course d-flex gap-3 py-3 flex-wrap align-items-center justify-content-center">
               <button className="share-btn whatsapp-share" onClick={ToWhatsapp}><i className='bi bi-whatsapp'></i>Whatsapp</button>
-              <button className="share-btn facebook-share"><i className='bi bi-facebook'></i>Facebook</button>
-              <button className="share-btn telegram-share"><i className='bi bi-telegram'></i>Telegram</button>
-              <button className="share-btn twitter-share"><i className='bi bi-twitter'></i>Twitter</button>
+              {/* <button className="share-btn facebook-share"  ><i className='bi bi-facebook'></i>Facebook</button>
+              <button className="share-btn telegram-share"  onClick={sendTelegramMessage}><i className='bi bi-telegram'></i>Telegram</button>
+              <button className="share-btn twitter-share"  onClick={sendTwitterMessage}><i className='bi bi-twitter'></i>Twitter</button> */}
             </div>
     </div>
 

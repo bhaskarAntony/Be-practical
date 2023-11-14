@@ -293,7 +293,7 @@
     border: 2px solid var(--color-green-1);
     color: #0d0d0d;
 }
-.hero-btn-outline{
+.hero-btn-outline, .hero-btn-outline-danger{
   border: 2px solid var(--color-green-1);
   color: var(--color-green-1);
   background-color: transparent;
@@ -309,6 +309,15 @@
   padding: 10px 20px;
   transition: all .3s cubic-bezier(.165,.84,.44,1);
   
+}
+.hero-btn-outline-danger{
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+.hero-btn-outline-danger:hover{
+  background-color: var(--red);
+  color: #fff;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.7s;
 }
 .hero-btn-outline:hover{
   background-color: var(--color-green-1);

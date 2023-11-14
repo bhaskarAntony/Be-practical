@@ -8,35 +8,35 @@ import { faHome, faPlaneDeparture, faVanShuttle, faCarSide, faBuilding, faGradua
 const BottomNavigation = () => {
   return (
     <Navbar fixed="bottom" bg="light" variant="light" className='d-lg-none text-center p-0 m-0 overflow-scroll dark-shadow'>
-      <Nav className="m-0 p-0 d-flex justify-content-between flex-row text-black w-100">
+      <Nav className="m-0 p-0 d-flex justify-content-between flex-row  w-100">
         <Nav.Item>
           <Nav.Link href="/courses">
-            <FontAwesomeIcon icon={faGraduationCap} className='text-black'/>
-            <small className="d-block fs-6 text-black">Courses</small>
+            <FontAwesomeIcon icon={faGraduationCap} className='text-secondary'/>
+            <small className="d-block fs-6 text-main-danger">Courses</small>
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="/elite">
-            <FontAwesomeIcon icon={faStar} className='text-black' />
-            <small className="d-block fs-6 text-black">Elite</small>
+            <FontAwesomeIcon icon={faStar} className='text-secondary' />
+            <small className="d-block fs-6 text-main-danger">Elite</small>
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="/events">
-            <FontAwesomeIcon icon={faCalendar} className='text-black'/>
-            <small className="d-block fs-6 text-black">Events</small>
+            <FontAwesomeIcon icon={faCalendar} className='text-secondary'/>
+            <small className="d-block fs-6 text-main-danger">Events</small>
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="/discount/quiz">
-            <FontAwesomeIcon icon={faCode} className='text-black' />
-            <small className="d-block fs-6 text-black">Quiz</small>
+            <FontAwesomeIcon icon={faCode} className='text-secondary' />
+            <small className="d-block fs-6 text-main-danger">Quiz</small>
           </Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="/blogs">
-            <FontAwesomeIcon icon={faNewspaper} className='text-black'/>
-            <small className="d-block fs-6 text-black">Blogs</small>
+            <FontAwesomeIcon icon={faNewspaper} className='text-secondary'/>
+            <small className="d-block fs-6 text-main-danger">Blogs</small>
           </Nav.Link>
         </Nav.Item>
       </Nav>
