@@ -94,13 +94,13 @@ function HomeHero() {
         >
           {home.map((item, index) => (
             <Carousel.Item key={index}>
-                  <div className="hero-text p-lg-5 p-md-3 p-3">
+                  <div className="hero-text p-lg-5 p-md-3 p-1">
                     <h1 className="card-heading text-main-2 text-start">100% Placement Programs</h1>
                     <h1 className="heading text-black text-900 text-start">{item.heading}</h1>
                     <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
-                    <div className="carousel-footer w-100 d-flex flex-wrap">
-                      <button className='btn-main-outline-dark  m-2 hero-btn py-3'>Join For Free <i class="bi bi-chevron-double-right"></i></button>
-                      <button className='btn-danger m-2 hero-btn py-3' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
+                    <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
+                      <button className='btn-main-outline-dark  hero-btn bg-gray2 text-white'>Join For Free <i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-danger  hero-btn' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
                     </div>
                    
                   </div>
