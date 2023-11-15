@@ -1,5 +1,5 @@
 .elite-progarm{
-    background: url(https://demo.themewinter.com/wp/courselog/wp-content/uploads/2020/12/testimonial_bg.png) no-repeat center;
+   
     background-size: cover;
     padding: 20px;
     border-radius: 20px;
@@ -8,19 +8,23 @@
     margin-bottom: 20px;
     background: #fff;
     padding: 20px;
-    min-height: 190px;
+    min-height: 250px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: relative;
     overflow: hidden;
     z-index: 1;
+}
+.elite-program-card img{
+    width: 60px;
+    height: 60px;
 }
 .elite-program-card::before{
     content: "";
     position: absolute;
     width: 100px;
     height: 100px;
-    background: var(--pink);
+    background: rgb(175, 233, 237);
     border-radius: 100px;
     top: -20px;
     right: -30px;
