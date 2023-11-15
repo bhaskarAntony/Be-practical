@@ -4,9 +4,8 @@
   border-radius: 30px;
 }
 .webinar-card{
-  border-radius: 10px !important;
-  /* background:var( --color-purple-3); */
-  /* background: linear-gradient(315deg, var(--color-dark-2), #6b9fff); */
+  border-radius: 30px !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background: #fff;
     border-bottom: 5px solid var(--red);
     color: #fff;

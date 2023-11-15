@@ -7,7 +7,6 @@ import skills from '../images/analytical-skill.gif'
 import internship from '../images/hiring.gif'
 import assistance from '../images/call-service.gif'
 import addOnce from '../images/html (1).gif'
-import { icon } from '@fortawesome/fontawesome-svg-core'
 
 
 
@@ -49,7 +48,7 @@ const eliteProgram = [
 ]
 function EliteProgram() {
   return (
-    <div className='mt-5 bg-blue-light'>
+    <div className='mt-5'>
          <h1 className="fs-1 text-900 text-center">What is Elite Program?</h1>
          <section className='elite-progarm container py-5'>
        

@@ -46,7 +46,7 @@ function Adwantages() {
                     </div>
                     <div className="adwantage-card-body">
                       <h5 className='fs-5 text-900'>{item.title}</h5>
-                      <p className="p-dark-small text-black">{item.content}</p>
+                      <p className="fs-6 text-secondary">{item.content}</p>
                     </div>
                     <div className="adwantage-card-footer"></div>
                   </div>

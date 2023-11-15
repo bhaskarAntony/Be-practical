@@ -72,7 +72,8 @@ const onLoad = () => {
     <div>
        {
        loading ? (
-        <PageLoader />
+        // <PageLoader/>
+        null
       ) : (
           <>
        <TawkMessengerReact

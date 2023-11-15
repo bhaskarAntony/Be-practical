@@ -107,9 +107,9 @@ function Webinar() {
   }
 
   return (
-  <>
-          <h3 className="fs-1 text-900 text-center  mt-5">Pre Career Guidence program <br /> From  <span className="text-main-danger" >Top MNC's</span></h3>
-    <section className='p-2 container-fluid py-5 bg-blur' id="webinar">
+  <div className='bg-blue-light py-5'>
+          <h3 className="fs-1 text-900 text-center">Pre Career Guidence program <br /> From  <span className="text-main-danger" >Top MNC's</span></h3>
+    <section className='p-2 container-fluid py-5' id="webinar">
 
       <div className="students-placed container">
       <Slider {...settings}>
@@ -132,7 +132,7 @@ function Webinar() {
         </div>
       </div>
     </section>
-  </>
+  </div>
   )
 }
 

@@ -10,9 +10,9 @@
     background-color: #ffffff;
     min-height:280px;
     text-align: center;
-    border-radius: 12px;
+    border-radius: 30px;
     border-bottom: 3px solid var(--red);
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .adwantage-card:hover .icon{
     background-color: var(--red) !important;

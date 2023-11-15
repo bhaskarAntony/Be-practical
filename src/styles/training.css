@@ -1,14 +1,17 @@
 .training-container{}
 .training-card{
-    padding: 15px;
+    padding: 10px;
     /* box-shadow: var( --green-shadow); */
     min-height: 150px;
-    background-color: #fff;
+    background-color: #6b6b6b90;
+    color: #fff;
+    backdrop-filter: blur(10px);
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 20px;
 }
 .training-card .header{
     text-align: center;
@@ -21,12 +24,14 @@
     color: #5b5959;
 }
 .training-left{
-    background: linear-gradient(135deg,#7351ff 0%,#60bbff 100%);
+    background: linear-gradient(135deg,var(--red) 0%,rgb(243, 200, 170) 100%);
     min-height: 100%;
     padding: 100px 30px;
 }
 .training-right{
-    background: var(--gray-dark);
+    background: linear-gradient(315deg, #000, #00000035), url(https://img.freepik.com/free-photo/red-shirt-group-people-business-conference-modern-classroom-daytime_146671-16291.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=sph) no-repeat center;
+    background-size: cover;
+
     min-height: 100%;
     padding: 50px 10px;
 }
