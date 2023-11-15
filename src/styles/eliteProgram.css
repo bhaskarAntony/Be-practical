@@ -19,7 +19,6 @@
     width: 60px;
     height: 60px;
     margin-bottom: 10px;
-    border-radius: 100px;
 }
 .elite-program-card:hover{
    transform: scale(0.9);
