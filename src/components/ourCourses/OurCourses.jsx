@@ -41,7 +41,7 @@ function OurCourses() {
             ):(
               displayedCourses.map((item, index)=>(
                 <div className="our-course-card-wrapper" key={index}>
-                    <div className="container our-course-card p-lg-5 p-md-3 p-1" data-aos="fade-right">
+                    <div className="container our-course-card p-lg-5 p-md-3 p-2 py-3" data-aos="fade-right">
                     <div className="row">
                       <div className="col-12 col-sm-12 col-md-6 col-lg-7">
                         <div className="course-left">
@@ -58,8 +58,8 @@ function OurCourses() {
                               <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
                               </div> */}
                               <h1 className="fs-3 text-900">{item.courseName}</h1>
-                              <p className="p-large1">{item.heroSubtitle}</p>
-                              <div className="course-info rounded-4 row mb-2 p-1 px-3">
+                              <p className="fs-6">{item.heroSubtitle}</p>
+                              <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
                               <div className="col-12 col-md-6 col-lg-6">
                               <div className="d-flex align-items-center gap-2 w-100 mb-2">
                                  <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
@@ -76,7 +76,7 @@ function OurCourses() {
                               <div className="col-12 col-md-6 col-lg-6">
                               <div className="d-flex align-items-center gap-2 mb-2">
                                  <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
-                                <i class="bi bi-calendar3 text-green fs-4"></i>
+                                <i class="bi bi-calendar3 text-green fs-5"></i>
                                </div>
                                <div>
                                 <span>
@@ -87,11 +87,11 @@ function OurCourses() {
                                 </div>
                               </div>
                               </div>
-                              <div className="course-info rounded-4 row mb-2 p-1 px-3">
+                              <div className="course-info rounded-4 w-100 row mb-2 p-1 px-3 p-3 m-auto">
                               <div className="col-12 col-md-6 col-lg-6">
-                              <div className="d-flex align-items-center gap-2 w-100 mb-2">
+                              <div className="d-flex align-items-center gap-2 mb-2">
                                  <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
-                                <i class="bi bi-camera-video-fill text-yellow fs-4"></i>
+                                <i class="bi bi-camera-video-fill text-yellow fs-5"></i>
                                </div>
                                <div>
                                 <span>
@@ -104,7 +104,7 @@ function OurCourses() {
                               <div className="col-12 col-md-6 col-lg-6">
                               <div className="d-flex align-items-center gap-2 mb-2">
                                  <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
-                                <i class="bi  bi-person-check-fill text-green fs-4"></i>
+                                <i class="bi  bi-person-check-fill text-green fs-5"></i>
                                </div>
                                <div>
                                 <span>

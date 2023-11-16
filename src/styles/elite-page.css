@@ -1,254 +1,62 @@
-.particle {
-    position: absolute;
-    border-radius: 50%;
-    animation: moveParticle 3s linear infinite, fadeOut 3s ease-in-out forwards;
-    transform: translate(-50%, -50%);
-  }
-  
-  @keyframes anim {
-    from {
-      transform: translateY(10px) translateX(10px);
-    }
-    to {
-      transform: translateY(-10px) translateX(-10px);
-    }
-  }
-  
-  @keyframes moveParticle {
-    to {
-      transform: translateX(0) translateY(0);
-    }
-  }
-  
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-.elite-main-page{
-    background: var(--black);
-    color: #fff;
-}
-.elite-page{
-    background-color: var(--dim-black);
+.elite-hero{
     min-height: 100vh;
-    position: relative;
-
-}
-.elite-right{
-    position: relative;
-    /* overflow: hidden; */
-    min-height: 100vh;
-}
-.elite-gold-circle{
-    background: var(--gold);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    right: -50%;
-    border-radius: 100%;
-    
-}
-.elite-right::after{
-    content: "";
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    background: var(--gold);
-    border-radius: 100%;
-    left:0;
-    box-shadow: 0px 0px 100px #FDB931;
-    animation: highlight-card-anim 2s linear infinite alternate;
-}
-.elite-right::before{
-    content: "";
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background: var(--gold);
-    border-radius: 100%;
-    left:20%;
-    bottom: 30%;
-    box-shadow: 0px 0px 100px #FDB931;
-    animation: highlight-card-anim 2s linear infinite alternate;
-    /* animation-delay: 2s; */
-}
-@media (max-width:768px){
-    .elite-right{
-        min-height: 20vh;
-        background: var(--gold);
-        overflow: hidden;
-    }
-    .elite-right::before{
-        right: 0;
-    }
-    .elite-gold-circle{
-        visibility:hidden;
-        height: 50%;
-        bottom: -10%;
-        left: 0;
-    }
-}
-.elite-left{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    min-height: 80vh;
-    padding: 20px;
-}
-.elite-left h1{
-    font-size: 3.4rem;
-    font-weight: 900;
-    color: #FDB931;
-}
-.elite-left h2{
-    color: #fff;
-}
-.elite-left p{
-    font-size: 1.2em;
-    color: #525252;
-}
-.elite-banner{
-    width: 100px;
-    height: 50px;
-    background: var(--gold);
-    position: absolute;
-    left: 0;
-    top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 0px 100px 100px 0;
+}
+.elite-main-page{
+    background-color: #0d0d0d;
+}
+.elite-dark-2{
+    background-color: #2d2d2d;
+}
+.elite-g-text{
+    background: linear-gradient(45deg, var(--red), #fffffe) !important; 
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}
+.elite-g2-text{
+    background: linear-gradient(45deg, rgb(107, 15, 255), #f7f7ec) !important; 
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}
+.elite-yellow{
+    color: #f9e166;
 }
 .elite-btn{
-    background: var(--gold);
-    min-width: 200px;
-    position: relative;
-    letter-spacing: 1.6px;
-}
-.elite-btn::before{
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: var(--gold);
+    border: none;
+    padding: 15px 20px;
     border-radius: 100px;
-    right: -80px;
-    top: 0;
-    box-shadow: 0px 0px 40px #FDB931;
-    animation: highlight-card-anim 2s linear infinite alternate;
+    font-size: 1.3rem;
+    color: #1f1f1f;
+    background:linear-gradient(45deg, var(--red), #fffffe)!important; 
+    text-transform: uppercase;
 }
-.elite-btn::after{
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: var(--gold);
-    border-radius: 100px;
-    right: -10px;
-    bottom: -30px;
-    box-shadow: 0px 0px 30px #FDB931;
-    animation: highlight-card-anim 2s linear infinite alternate;
-    animation-delay: 1s;
-}
-.elite-devider{
-    height: 5px;
-    background: var(--gold);
-    border-radius: 100px;
-}
-.elite-main-page .highlight-card{
-    background: #1c1c1c;
-    color: #FDB931 !important;
-    text-shadow: 0px 0px 1px #000;
-    /* box-shadow: 0px 0px 500px #FDB931; */
-    min-height: 470px;
-    /* font-weight: 900; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    text-align: center;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    overflow: hidden;
 
-    }
-    @keyframes highlight-card-anim{
-        0%{
-            box-shadow: 0px 0px 50px #FDB931; 
-        }
-        10%{
-            box-shadow: 0px 0px 100px #FDB931; 
-        }
-        20%{
-            box-shadow: 0px 0px 150px #FDB931; 
-        }
-        30%{
-            box-shadow: 0px 0px 200px #FDB931; 
-        }
-        40%{
-            box-shadow: 0px 0px 250px #FDB931; 
-        }
-        50%{
-            box-shadow: 0px 0px 300px #FDB931; 
-        }
-        60%{
-            box-shadow: 0px 0px 350px #FDB931; 
-        }
-        70%{
-            box-shadow: 0px 0px 400px #FDB931; 
-        }
-        80%{
-            box-shadow: 0px 0px 450px #FDB931; 
-        }
-        90%{
-            box-shadow: 0px 0px 500px #FDB931; 
-        }
-        100%{
-            box-shadow: 0px 0px 500px #FDB931; 
-        }
-    }
-.highlight-card p{
-    font-size: 1.1em;
-}
-.highlight-card h2{
-    font-weight: 900;
-}
-.elite-main-page .highlight-card [class*="bi-"]{
-    font-size: 3em;
+/* elite features  */
+.elite-page-card{
     padding: 10px;
-    border: 3px solid #000;
-    color:#000;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
+    background-color: #1d1c1cf9;
+    color: #fff;
+    min-height: 150px;
+    border-radius: 5px;
+}
+.highlight-card{
+    background: linear-gradient(45deg, var(--red), #a55cff);
+      position: relative;
+      border-radius: 14px;
+      padding: 2px !important;
+      height: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.742);
+}
+.highlight-card-item{
+    z-index: 1;
+    height: 100%;
+    background-color: #191a1e;
+    border-radius: 14px;
+    padding: 15px;
+}
+.highlight-card [class*="bi"]{
+    font-size: 4rem;
     margin-bottom: 20px;
-}
-.highlight-header{
-    background: var(--gold);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 0 0 150px 0;
-}
-.highlight-body{
-    padding: 20px;
-}
-.elite-video{
-    width: 100%;
-    min-height: 100vh;
-
-}
-.elite-video video{
-    width: 100%;
-    object-fit: cover;
 }

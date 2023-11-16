@@ -40,56 +40,6 @@ function ElitePage() {
     useEffect(() => {
         Aos.init(); // Initialize AOS
       }, []);
-    const [particles, setParticles] = useState([]);
-
-    // Function to create particles
-    const createParticle = () => {
-      const x = Math.random() * window.innerWidth;
-      const y = Math.random() * window.innerHeight;
-      const size = Math.random() * 30 + 3; // Adjust the size range as needed
-      const opacity = Math.random() * 0.7 + 0.3; // Adjust the opacity range as needed
-      const particle = {
-        id: Date.now(),
-        x,
-        y,
-        size,
-        opacity,
-        speedX: (Math.random() - 0.5) * 20,
-        speedY: (Math.random() - 0.5) * 20,
-      };
-      setParticles((prevState) => [...prevState, particle]);
-    };
-  
-    // Function to update particles' positions
-    const updateParticles = () => {
-      setParticles((prevState) =>
-        prevState.map((particle) => ({
-          ...particle,
-          x: particle.x + particle.speedX,
-          y: particle.y + particle.speedY,
-        }))
-      );
-    };
-  
-    // Create particles continuously
-    useEffect(() => {
-      const interval = setInterval(() => {
-        createParticle();
-      }, 100); // Adjust the interval as needed
-  
-      return () => {
-        clearInterval(interval);
-      };
-    }, []);
-  
-    // Update particles' positions
-    useEffect(() => {
-      const animationFrame = requestAnimationFrame(updateParticles);
-  
-      return () => {
-        cancelAnimationFrame(animationFrame);
-      };
-    }, [particles]);
   return (
 <>
 {/* <div className="elite-video">
@@ -97,48 +47,68 @@ function ElitePage() {
   </div> */}
    <div className="elite-main-page overflow-hidden">
      <div className='elite-page container-fluid p-0'>
-     <div className="row">
-        <div className="col-12 col-md-6 col-lg-6">
-            <div className="elite-left py-5">
-                <h1>100% Placement Program</h1>
-                <h2>Get 50% Refund if not Placed</h2>
-                <p className="mt-2 text-white">Be Practical Conducting Elite Batch for Freshers and working Professionals to make you job ready. where we Guarantee Our Placements.
-                </p>
-               <div className='text-start'>
-               <button className="elite-btn btn p-3 px-4 fs-4">Join Now</button>
-               </div>
-                <div className="elite-banner">
-                    <h3>Elite</h3>
-                </div>
-            </div>
-            
-        </div>
-        <div className="col-12 col-md-6 col-lg-6">
-            <div className="elite-right">
-                <div className="elite-gold-circle">
-
-                </div>
-            </div>
-        </div>
+     <div className="elite-hero bg-texsture">
+      <div className="elite-text text-center ">
+          <h4 className="fs-3 elite-yellow">100% Placement Program</h4>
+          <h1 className="heading elite-g-text text-900">MAKE SUCCESS YOUR <br /> JOURNEY WITH OUR ELITE PROGRAM</h1>
+          <h1 className="fs-1 text-white">Get 50% Refund if not Placed</h1>
+          <p className="fs-3 text-secondary">Be Practical Conducting Elite Batch for Freshers and working Professionals to make you job ready. where we Guarantee Our Placements.</p>
+          <button className="elite-btn text-900">Join to ELITE PROGRAM</button>
+      </div>
      </div>
-     {particles.map((particle) => (
-        <div
-          key={particle.id}
-          className="particle"
-          style={{
-            top: `${particle.y}px`,
-            left: `${particle.x}px`,
-            width: `${particle.size}px`,
-            height: `${particle.size}px`,
-            background: `rgba(159, 121, 40, ${particle.opacity})`,
-          }}
-        ></div>
-      ))}
     </div>
     <div className="container elite-devider"></div>
-    <Elite/>
+
+    {/* elite  */}
+   <div className="elite-page-features text-center container">
+    <h4 className="fs-3 elite-yellow">Featurs</h4>
+    <h1 className="heading text-white"><span className="elite-g-text mx-2 text-900">FEATURES OF </span> ELITE</h1>
+   <div className="row mt-5">
+          <div className="col-6 col-sm-6 col-md-3 col-lg-2">
+            <div className="elite-page-card elite-c1">
+            <i class="bi bi-cash-stack fs-1 elite-g-text"></i>
+              <h4 className='elite-page-card-text-main'>Refund</h4>
+            </div>
+          </div>
+
+          <div className="col-6 col-sm-6 col-md-3 col-lg-2">
+            <div className="elite-page-card elite-c2">
+            <i class="bi bi-code-slash fs-1 elite-g-text"></i>
+              <h4 className='fs-4'>DSA</h4>
+            </div>
+          </div>
+
+          <div className="col-6 col-sm-6 col-md-3 col-lg-2">
+            <div className="elite-page-card  elite-c3">
+            <i class="bi bi-stars fs-1 elite-g-text"></i>
+              <h4 >Softskills</h4>
+            </div>
+          </div>
+
+          <div className="col-6 col-sm-6 col-md-3 col-lg-2">
+            <div className="elite-page-card  elite-c4">
+            <i class="bi bi-person-check-fill fs-1 elite-g-text"></i>
+              <h4>Internship</h4>
+            </div>
+          </div>
+
+          <div className="col-6 col-sm-6 col-md-3 col-lg-2">
+            <div className="elite-page-card  elite-c5">
+            <i class="bi bi-building-fill-up fs-1 elite-g-text"></i>
+              <h4>Placemnet Assistant</h4>
+            </div>
+          </div>
+
+          <div className="col-6 col-sm-6 col-md-3 col-lg-2">
+            <div className="elite-page-card  elite-c6">
+            <i class="bi bi-building-fill-up fs-1 elite-g-text"></i>
+              <h4>Add-On's</h4>
+            </div>
+          </div>
+        </div>
+   </div>
     <div className="container elite-devider"></div>
-    <div className="elite-course container py-5">
+    {/* <div className="elite-course container py-5">
       <h1 className="fs-1 text-center text-900 text-white mb-4">Our Elite <span className="text-main-danger">Courses</span></h1>
         <div className="row overflow-hidden">
             {
@@ -171,41 +141,49 @@ function ElitePage() {
                 ))
             }
         </div>
-    </div>
+    </div> */}
     <div className="container elite-devider"></div>
-    <div className="elite-highlights container p-3 py-5">
-        <div className="row">
+    <div className="elite-highlights container p-3 py-5 text-center mt-5">
+    <h4 className="fs-3 elite-yellow">Featurs</h4>
+    <h1 className="heading text-white"><span className="elite-g-text mx-4 text-900">ELITE PROGRAM </span>HIGHLIGHTS</h1>
+        <div className="row mt-5">
             <div className="col-12 col-md-4 col-lg-4">
-                <div className="highlight-card">
+               <div className="highlight-card">
+               <div className="highlight-card-item">
                 <div className="highlight-header">
-                <i class="bi bi-check-circle-fill"></i>
+                <i class="bi bi-check-circle-fill elite-g-text"></i>
                 </div>
                    <div className="highlight-body">
-                   <h4 className='fw-bold'>100% Job Placement</h4>
-                    <small>Looking for a training institute that offers job placement Guarantee? Look no further! Because be practical Started Elite Program where every student get 100% Job placement. Our institute offers comprehensive training programs that equip you with the skills you need to succeed in your career.</small>
+                   <h4 className='text-900 elite-g-text fs-3'>100% Job Placement</h4>
+                    <p className='fs-6 mt-3'>Looking for a training institute that offers job placement Guarantee? Look no further! Because be practical Started Elite Program where every student get 100% Job placement. Our institute offers comprehensive training programs that equip you with the skills you need to succeed in your career.</p>
                    </div>
                 </div>
+               </div>
             </div>
             <div className="col-12 col-md-4 col-lg-4">
                 <div className="highlight-card">
-                    <div className="highlight-header">
-                    <i class="bi bi-cash"></i>
+                   <div className="highlight-card-item">
+                   <div className="highlight-header">
+                    <i class="bi bi-cash elite-g-text"></i>
                     </div>
                    <div className="highlight-body">
-                   <h4 className='fw-bold'>50% refund If not Placed</h4>
-                    <small>Our Elite Program takes you to various Learning Paths to make you perfect for Industry Ready, If we fail to get you the job, 50% of the paid amount will be refunded.</small>
+                   <h4 className='text-900 elite-g-text fs-3'>50% refund If not Placed</h4>
+                    <p className='fs-6 mt-3'>Our Elite Program takes you to various Learning Paths to make you perfect for Industry Ready, If we fail to get you the job, 50% of the paid amount will be refunded.</p>
+                   </div>
                    </div>
                 </div>
             </div>
             <div className="col-12 col-md-4 col-lg-4">
                 <div className="highlight-card">
-                <div className="highlight-header">
-                <i class="bi bi-building-fill-check"></i>
+               <div className="highlight-card-item">
+               <div className="highlight-header">
+                <i class="bi bi-building-fill-check elite-g-text"></i>
                 </div>
                   <div className="highlight-body">
-                  <h4 className='fw-bold'>Batch Monitored by Company Experts.</h4>
-                    <small>This Feature of the program makes you perfect for Job ready because you will be directly monitored by Company experts, where you will get a chance to know what our partnered clients are expecting from freshers so that it will help you restructure your learning skills and make you crack your dream job.</small>
+                  <h4 className='text-900 elite-g-text fs-3'>Batch Monitored by Company Experts.</h4>
+                    <p className='fs-6 mt-3'>This Feature of the program makes you perfect for Job ready because you will be directly monitored by Company experts, where you will get a chance to know what our partnered clients are expecting from freshers so that it will help you restructure your learning skills and make you crack your dream job.</p>
                   </div>
+               </div>
                 </div>
             </div>
         </div>
