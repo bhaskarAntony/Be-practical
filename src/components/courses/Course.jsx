@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import './ourCourses.css'
+import './style.css'
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import CourseShimmer from './CourseShimmer';
 import { CoursePage } from '../../Data/DataFetcher';
 
-function OurCourses() {
+function Course() {
   const [loading, setLoading] = useState(true)
   const [CourseData, setCourseData] = useState([]);
   useEffect(() => {
@@ -41,10 +41,10 @@ function OurCourses() {
             ):(
               displayedCourses.map((item, index)=>(
                 <div className="our-course-card-wrapper" key={index}>
-                    <div className="container our-course-card p-lg-5 p-md-3 p-1" data-aos="fade-right">
+                    <div className="container-fluid py-5" data-aos="fade-right">
                     <div className="row">
-                      <div className="col-12 col-sm-12 col-md-6 col-lg-7">
-                        <div className="course-left">
+                      <div className="col-12 col-md-7">
+                        <div className="course-left bg-white p-lg-5 p-2 rounded-4">
                         <div className="mb-2 d-flex gap-2 flex-wrap align-items-center">
                         <div class="dot">
                              <span class="glow"></span>
@@ -54,9 +54,6 @@ function OurCourses() {
                               <p className=" text-white rounded-2 p-1 tag">
                               <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
                               </p>
-                              {/* <div className="seats rounded-4 p-2 d-flex gap-2 flex-wrap bg-gray2 text-white align-items-center mb-3">
-                              <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
-                              </div> */}
                               <h1 className="fs-3 text-900">{item.courseName}</h1>
                               <p className="p-large1">{item.heroSubtitle}</p>
                               <div className="course-info rounded-4 row mb-2 p-1 px-3">
@@ -128,9 +125,9 @@ function OurCourses() {
                               </div>
                         </div>
                       </div>
-                      <div className="col-12 col-sm-12 col-md-6 col-lg-5">
-                        <div className="course-right">
-                            <img src={item.courseImage} alt="" className="w-100" />
+                      <div className="col-12 col-md-5">
+                        <div className="course-right bg-gray2 rounded-4 bg-texture">
+                        <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: item.courseHeroPoints}} />
                         </div>
                       </div>
                     </div>
@@ -147,4 +144,4 @@ function OurCourses() {
   )
 }
 
-export default OurCourses
+export default Course

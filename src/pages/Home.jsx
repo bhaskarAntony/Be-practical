@@ -15,6 +15,7 @@ import EliteProgram from '../components/EliteProgram';
 import Elite from '../components/Elite';
 import Funfact from '../components/Funfact';
 import OurCourses from '../components/ourCourses/OurCourses';
+import Course from '../components/courses/Course';
 
 function Home() {
       // Model open logic

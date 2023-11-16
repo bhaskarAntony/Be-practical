@@ -115,12 +115,12 @@ function Header() {
         </Offcanvas.Body>
       </Offcanvas>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-group  d-flex justify-content-center w-100">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-group  d-flex align-items-center justify-content-around w-100">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link bg-danger-2 text-white rounded-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Courses <i class="bi bi-chevron-down mx-1"></i>
           </a>
           <ul class="dropdown-menu p-0">
@@ -161,7 +161,7 @@ function Header() {
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link  elite-link d-flex align-items-center justify-content-center" href='/elite' > <i class="bi bi-stars"></i> Elite</a>
+          <a class="nav-link  elite-link" href='/elite' > <i class="bi bi-stars"></i> Elite</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

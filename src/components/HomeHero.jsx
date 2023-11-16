@@ -86,7 +86,7 @@ function HomeHero() {
       <div className="hero-1">
       <div className="custom-carousel container-fluid">
       <div className="row align-items-center">
-      <div className="col-12 col-sm-12 col-md-8">
+      <div className="col-12 col-sm-12 col-md-8 ">
         <Carousel
           activeIndex={index}
           onSelect={handleSelect}
@@ -96,9 +96,9 @@ function HomeHero() {
         >
           {home.map((item, index) => (
             <Carousel.Item key={index}>
-                  <div className="hero-text p-lg-5 p-md-3 p-1 py-3">
+                  <div className="hero-text p-lg-5 p-md-3 p-1 py-3 ">
                     <h1 className="card-heading text-main-2 text-start">100% Placement Programs</h1>
-                    <h1 className="heading text-black text-900 text-start">{item.heading}</h1>
+                    <h1 className="heading text-900 text-start hero-heading">{item.heading}</h1>
                     <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
                       <button className='btn-main-outline-dark  hero-btn bg-gray2 text-white'>Join For Free <i class="bi bi-chevron-double-right"></i></button>
