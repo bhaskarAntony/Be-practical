@@ -8,6 +8,7 @@ import HeroRegister from './HeroRegister';
 import DialogModal from './DialogModel';
 import { homeHeroApi } from '../Data/DataFetcher';
 import heroImage from '../images/coding-hero-image.svg'
+import ImageCarousel from '../Extra/ImageCarousel ';
 
 const home = [
   {
@@ -110,33 +111,9 @@ function HomeHero() {
         </Carousel>
         </div>
         <div className="col-12 col-sm-12 col-md-4">
-                  <div className="hero-image p-3 p-xxl-5">
-                   <div className="w-100 hero-image">
-                    {/* <div className="hero-box border p-2 py-3 d-none d-md-block">
-                    <i class="bi bi-code-slash fs-3 text-danger"></i> <br />
-                     <span className="fs-5 text-900"> 36+ languages</span>
-                    </div>
-                    <div className="hero-box1 border p-2 py-3 d-none d-md-block">
-                    <i class="bi bi-check2-circle fs-3 text-main-danger"></i> <br />
-                     <span className="fs-5 text-900"> 12 Years <br />Succsessfull  Journy</span>
-                    </div>
-                    <div className="hero-box2 border p-2 py-3 d-none d-md-block">
-                    <i class="bi bi-building-fill-check fs-3 text-green"></i> <br />
-                     <span className="fs-5 text-900"> 300+ Hiring Partners</span>
-                    </div>
-                     <div className="hero-box3 border p-2 py-3 d-none d-md-block">
-                     <span className="fs-5 text-900">
-                     <i class="bi bi-star-fill fs-3 text-warning"></i> <br />
-                      4.5 Google rating</span>
-                    </div>
-                    <div className="hero-box4 border p-2 py-3 d-none d-md-block">
-                    <i class="bi bi-people-fill fs-3 text-primary"></i> <br />
-                     <span className="fs-5 text-900">
-                      5000+ Learned <br />Students</span>
-                    </div> */}
-                   <img src={heroImage} alt="coding hero image" className="w-100" />
-                   </div>
-                  </div>
+   <div className="hero-image">
+   <ImageCarousel/>
+   </div>
                 </div>
                  </div>
         <div className="custom-indicators">
