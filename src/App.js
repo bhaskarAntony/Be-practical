@@ -88,7 +88,7 @@ const onLoad = () => {
         <BrowserRouter>
         <PageScrollToTop/>
         <Header/>
-        <BottomNavigation/>
+        {/* <BottomNavigation/> */}
         <Discount/>
         <Routes>
           

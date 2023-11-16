@@ -47,7 +47,7 @@ function ElitePage() {
   </div> */}
    <div className="elite-main-page overflow-hidden">
      <div className='elite-page container-fluid p-0'>
-     <div className="elite-hero bg-texsture">
+     <div className="elite-hero py-5 p-3 bg-texsture">
       <div className="elite-text text-center ">
           <h4 className="fs-3 elite-yellow">100% Placement Program</h4>
           <h1 className="heading elite-g-text text-900">MAKE SUCCESS YOUR <br /> JOURNEY WITH OUR ELITE PROGRAM</h1>
@@ -57,12 +57,14 @@ function ElitePage() {
       </div>
      </div>
     </div>
-    <div className="container elite-devider"></div>
+    <div className="d-flex justify-content-center">
+  <div className="elite-devider"></div>
+  </div>
 
     {/* elite  */}
    <div className="elite-page-features text-center container">
     <h4 className="fs-3 elite-yellow">Featurs</h4>
-    <h1 className="heading text-white"><span className="elite-g-text mx-2 text-900">FEATURES OF </span> ELITE</h1>
+    <h1 className="heading text-900 elite-g-text">FEATURES OF ELITE</h1>
    <div className="row mt-5">
           <div className="col-6 col-sm-6 col-md-3 col-lg-2">
             <div className="elite-page-card elite-c1">
@@ -107,7 +109,9 @@ function ElitePage() {
           </div>
         </div>
    </div>
-    <div className="container elite-devider"></div>
+  <div className="d-flex justify-content-center">
+  <div className="elite-devider"></div>
+  </div>
     {/* <div className="elite-course container py-5">
       <h1 className="fs-1 text-center text-900 text-white mb-4">Our Elite <span className="text-main-danger">Courses</span></h1>
         <div className="row overflow-hidden">
@@ -142,10 +146,10 @@ function ElitePage() {
             }
         </div>
     </div> */}
-    <div className="container elite-devider"></div>
-    <div className="elite-highlights container p-3 py-5 text-center mt-5">
+    {/* <div className="container elite-devider"></div> */}
+    <div className="elite-highlights container p-3  text-center mt-2">
     <h4 className="fs-3 elite-yellow">Featurs</h4>
-    <h1 className="heading text-white"><span className="elite-g-text mx-4 text-900">ELITE PROGRAM </span>HIGHLIGHTS</h1>
+    <h1 className="heading elite-g-text text-900">ELITE PROGRAM HIGHLIGHTS </h1>
         <div className="row mt-5">
             <div className="col-12 col-md-4 col-lg-4">
                <div className="highlight-card">
@@ -188,7 +192,9 @@ function ElitePage() {
             </div>
         </div>
     </div>
-    <div className="container elite-devider"></div>
+    <div className="d-flex justify-content-center">
+  <div className="elite-devider"></div>
+  </div>
  <div className="py-5">
  <Batchtable/>
  </div>

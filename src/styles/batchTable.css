@@ -18,5 +18,4 @@
 }
 .table th{
     background: linear-gradient(45deg, var(--red), #ffffff) !important; 
-    backdrop-filter: blur(10px);
 }

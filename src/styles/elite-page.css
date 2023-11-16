@@ -1,8 +1,15 @@
 .elite-hero{
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.elite-devider{
+    background: linear-gradient(45deg, var(--red), #fffffe) !important; 
+    height: 5px;
+    width: 100px;
+    border-radius: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 .elite-main-page{
     background-color: #0d0d0d;
@@ -40,14 +47,16 @@
     color: #fff;
     min-height: 150px;
     border-radius: 5px;
+    margin-bottom: 20px;
 }
 .highlight-card{
     background: linear-gradient(45deg, var(--red), #a55cff);
       position: relative;
       border-radius: 14px;
       padding: 2px !important;
-      height: 100%;
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.742);
+      margin-bottom: 20px;
+      
 }
 .highlight-card-item{
     z-index: 1;
@@ -55,6 +64,8 @@
     background-color: #191a1e;
     border-radius: 14px;
     padding: 15px;
+    color: #fff;
+    min-height: 300px;
 }
 .highlight-card [class*="bi"]{
     font-size: 4rem;
