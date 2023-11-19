@@ -5,7 +5,6 @@ import { Quiz } from '../Data/DataFetcher';
 import brandImage from '../images/view_plans.png'
 
 var quizData = []
-
 function QuizModal() {
   const [showModal, setShowModal] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -22,13 +21,11 @@ function QuizModal() {
        setQuizData(data);
        quizData = data;
        console.log("quissz data = ", quizData[currentQuestion]?.question)
-       
      } catch (error) {
       setLoading(true)
        console.error('Error fetching CoursePage:', error);
      }
    };
-
    fetchData();
  }, []);
 
@@ -52,7 +49,6 @@ function QuizModal() {
     if (currentQuestion < quizData.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
-      // Calculate the score
       let totalScore = 0;
       for (let i = 0; i < quizData.length; i++) {
         if (userAnswers[i] === quizData[i].correctAnswer) {
@@ -66,23 +62,24 @@ function QuizModal() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    // Handle the form submission (e.g., send data to a server or generate a certificate)
+
   };
 
   return (
     <div className='container-fluid  p-3 mt-4'>
-        <h1 className="banner-heading">Get 10% <span className="text-main-danger">Discount</span></h1>
+     
         <div className="quiz-container bg-blue-3 p-3 mt-3 rounded-5">
             <div className="row align-items-center">
                 <div className="col-12 col-md-6 col-lg-6">
                  <img src={brandImage} alt="quiz-brand-image" className="w-100" />
                 </div>
                 <div className="col-12 col-md-6 col-lg-6 p-1 p-lg-5">
-                  <p className="p-large1 text-main-danger">Get Started</p>
+                <h1 className="fs-1">Get 10% <span className="text-main-danger">Discount</span></h1>
+                  {/* <p className="p-large1 text-main-danger">Get Started</p> */}
                   <h1 className="card-big-text text-900">Not Sure Where to Begin? <br /> Take Our Quiz.</h1>
                   <p className="text-secondary p-large1">
                       Get started now with hundreds of courses and thousands of labs — with new additions published every week</p>
-                    <button className="btn-danger" onClick={openModal}>Start Quiz <i class="bi bi-chevron-double-right"></i></button>
+                    <button className="btn-danger" onClick={openModal}>Get Started <i class="bi bi-chevron-double-right"></i></button>
                 </div>
             </div>
         </div>

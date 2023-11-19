@@ -8,6 +8,7 @@ import { useEffect } from 'react'
 import { CoursePage } from '../Data/DataFetcher'
 import Aos from 'aos'
 import { Link } from 'react-router-dom'
+import EliteCarousel from '../components/EliteCarousel/EliteCarousel'
 
 const eliteCourses =[
     {
@@ -62,7 +63,7 @@ function ElitePage() {
   </div>
 
     {/* elite  */}
-   <div className="elite-page-features text-center container">
+   <div className="elite-page-features text-center container d-sm-block d-md-none">
     <h4 className="fs-3 elite-yellow">Featurs</h4>
     <h1 className="heading text-900 elite-g-text">FEATURES OF ELITE</h1>
    <div className="row mt-5">
@@ -109,6 +110,7 @@ function ElitePage() {
           </div>
         </div>
    </div>
+   <EliteCarousel/>
   <div className="d-flex justify-content-center">
   <div className="elite-devider"></div>
   </div>

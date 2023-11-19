@@ -54,7 +54,7 @@
     
 }
 .hero .hero-heading{
-    background: linear-gradient(45deg, var(--red), #070808) !important;
+    background: linear-gradient(45deg, var(--red), #a1a1a1) !important;
     -webkit-background-clip: text !important;
     color: transparent !important;
     text-align: center;
