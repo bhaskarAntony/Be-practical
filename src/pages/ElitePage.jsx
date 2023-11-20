@@ -51,10 +51,10 @@ function ElitePage() {
      <div className="elite-hero py-5 p-3 bg-texsture">
       <div className="elite-text text-center ">
           <h4 className="fs-3 elite-yellow">100% Placement Program</h4>
-          <h1 className="heading elite-g-text text-900">MAKE SUCCESS YOUR <br /> JOURNEY WITH OUR ELITE PROGRAM</h1>
+          <h1 className="heading text-white text-900">MAKE SUCCESS YOUR <br /> JOURNEY WITH OUR ELITE PROGRAM</h1>
           <h1 className="fs-1 text-white">Get 50% Refund if not Placed</h1>
-          <p className="fs-3 text-secondary">Be Practical Conducting Elite Batch for Freshers and working Professionals to make you job ready. where we Guarantee Our Placements.</p>
-          <button className="elite-btn text-900">Join to ELITE PROGRAM</button>
+          <p className="fs-3 text-white">Be Practical Conducting Elite Batch for Freshers and working Professionals to make you job ready. where we Guarantee Our Placements.</p>
+          <button className="elite-btn bg-white text-900">Join to ELITE PROGRAM</button>
       </div>
      </div>
     </div>

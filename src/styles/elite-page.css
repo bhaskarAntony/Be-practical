@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url(https://assets.website-files.com/64f721ea7cb41a6156cafeca/64f85c84623a74c3a8df7130_Hero%20Bg.png) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
 }
 .elite-devider{
     background: linear-gradient(45deg, var(--red), #fffffe) !important; 

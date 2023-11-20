@@ -161,7 +161,7 @@ function Header() {
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link  elite-link" href='/elite' > <i class="bi bi-stars"></i> Elite</a>
+          <a class="nav-link  elite-link " href='/elite' > <i class="bi bi-stars"></i> Elite</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -187,7 +187,7 @@ function Header() {
      <button class="btn-main-outline-dark bg-white text-black mx-1 hero-btn" type="button">Sign Up<i class="bi bi-chevron-double-right"></i></button>
      </a> */}
       <a href="/book-demo" className='text-decoration-none'>
-      <button class="btn-danger" type="button">Book Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
+      <button class="btn-danger shimmer-btn" type="button">Book Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
       </a>
       <button variant="primary" onClick={handleShowContact} className='btn bg-gray2 mx-2 p-2 rounded-2'>
       <i class="bi bi-person-lines-fill fs-4 text-white"></i>
