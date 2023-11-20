@@ -69,6 +69,7 @@ const handleMinimize = () => {
 const onLoad = () => {
   console.log('onLoad works!');
 };
+
   return (
     <div>
        {
