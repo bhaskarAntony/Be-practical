@@ -15,7 +15,7 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .adwantage-card:hover .icon{
-    background-color: var(--red) !important;
+    background-color: var(--gray2) !important;
 }
 .adwantage-card:hover{
     transform: scale(0.9);

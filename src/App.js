@@ -26,6 +26,7 @@ import Discount from '../src/Extra/Discount/Discount'
 import QuizModal from './components/QuizModal'
 import BlogsView from './pages/BlogsPage/BlogsView'
 import BottomNavigation from './components/bottom nav/BottomNavigation '
+import CustomCursor from './Extra/cursor/CustomCursor'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -82,7 +83,7 @@ const onLoad = () => {
                 onLoad={onLoad}
                 />
     
-     
+        <CustomCursor/>
       <ScrollProgressBar/>
       <Progressbar/>
         <BrowserRouter>
