@@ -21,7 +21,7 @@
     background-color: #2d2d2d;
 }
 .elite-g-text{
-    background: linear-gradient(45deg, var(--red), #fffffe) !important; 
+    background: linear-gradient(45deg, #FEDB37, #fffffe) !important; 
     -webkit-background-clip: text !important;
     color: transparent !important;
 }

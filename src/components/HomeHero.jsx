@@ -101,7 +101,7 @@ function HomeHero() {
                     <h1 className="heading text-900 text-start hero-heading">{item.heading}</h1>
                     <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
-                      <button className='btn-main-outline-dark  hero-btn bg-gray2 text-white'>Join For Free <i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-main-outline-dark  hero-btn bg-gray2 text-white'>Apply Now <i class="bi bi-chevron-double-right"></i></button>
                       <button className='btn-danger  hero-btn' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
                     </div>
                    
