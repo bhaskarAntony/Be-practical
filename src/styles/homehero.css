@@ -53,13 +53,6 @@
     margin-bottom: 100px;
     
 }
-.hero .hero-heading{
-    background: linear-gradient(45deg, var(--red), #a1a1a1) !important;
-    -webkit-background-clip: text !important;
-    color: transparent !important;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-}
 .home .carousel-control-prev{
     display: none !important;
   }

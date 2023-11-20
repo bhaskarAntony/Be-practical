@@ -11,7 +11,7 @@ const images = ['https://img.freepik.com/free-photo/person-front-computer-workin
 const settings1 = {
   dots: false,
   infinite: true,
-  speed: 3000, // Speed of the transition
+  speed: 10000, // Speed of the transition
   slidesToShow: 2,
   slidesToScroll: 1,
   vertical: true,
@@ -25,7 +25,7 @@ const settings1 = {
 const settings2 = {
   dots: false,
   infinite: true,
-  speed: 2000, // Different speed for the second set of sliders
+  speed: 9000, // Different speed for the second set of sliders
   slidesToShow: 2,
   slidesToScroll: 1,
   cssEase: 'linear',
@@ -39,7 +39,7 @@ const settings2 = {
 const settings3 = {
   dots: false,
   infinite: true,
-  speed: 4000, // Different speed for the third set of sliders
+  speed: 11000, // Different speed for the third set of sliders
   slidesToShow: 2,
   slidesToScroll: 1,
   vertical: true,

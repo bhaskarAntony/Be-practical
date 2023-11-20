@@ -82,7 +82,7 @@ function HomeHero() {
   const numberOfSlides = home.length;
 
   return (
-    <section className='hero container-fluid bg-blu'>
+    <section className='hero container-fluid bg-blur'>
       <div className="hero-1">
       <div className="custom-carousel container-fluid">
       <div className="row align-items-center">
@@ -112,8 +112,8 @@ function HomeHero() {
         </div>
         <div className="col-12 col-sm-12 col-md-4">
    <div className="hero-image">
-   {/* <ImageCarousel/> */}
-   <img src="https://img.freepik.com/free-vector/advanced-computer-skills-abstract-concept-illustration_335657-3877.jpg?w=740&t=st=1700216536~exp=1700217136~hmac=e4d581d6b61a6d5addb03809bffeaf15253f4d28360575c4e4ec3bb46231c589" alt="" className="w-100" />
+   <ImageCarousel/>
+   {/* <img src="https://img.freepik.com/free-vector/advanced-computer-skills-abstract-concept-illustration_335657-3877.jpg?w=740&t=st=1700216536~exp=1700217136~hmac=e4d581d6b61a6d5addb03809bffeaf15253f4d28360575c4e4ec3bb46231c589" alt="" className="w-100" /> */}
    </div>
                 </div>
                  </div>
