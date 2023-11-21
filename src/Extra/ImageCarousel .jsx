@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '../styles/homehero.css';
 import { companies } from '../Data/DataFetcher';
+import student1 from '../images/student1.svg'
 
 const images = ['https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040430.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=sph', 'https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040430.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=sph', 'https://img.freepik.com/free-photo/person-front-computer-working-html_23-2150040430.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=sph', /* Add more images as needed */];
 
@@ -79,9 +80,10 @@ const ImageCarousel = () => {
             <div className="col-4">
             <Slider {...settings2}>
         {images.map((image, index) => (
-          <div key={index} className="scroll-image profile w-100">
-            <img src='https://cdn-icons-png.flaticon.com/128/847/847969.png?ga=GA1.1.874872603.1694171926&track=ais' alt={`Image ${index + 1}`} />
-            <p className="fs-4">Name</p>
+          <div key={index} className="scroll-image placements w-100">
+            <img src={student1} alt={`Image ${index + 1}`} />
+          
+          
           </div>
         ))}
       </Slider>  
@@ -90,7 +92,7 @@ const ImageCarousel = () => {
                 <Slider {...settings3}>
         {
             companiesData.map((item, index)=>(
-                <div className="scroll-image w-100">
+                <div className="scroll-image w-100 ">
                     <img src={item.image} alt="" className="w-100" />
                 </div>
             ))

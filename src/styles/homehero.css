@@ -21,12 +21,24 @@
     width: fit-content !important;
 }
   
-  .profile img {
+  .placements img {
     width: 70px;
-    border-radius: 100px;
-    /* border: 1px solid var(--red); */
+    height: 70px;
+    /* border-radius: 100px; */
+    /* filter: grayscale(100%); */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     
   }
+ .company{
+    position: absolute;
+    bottom: 10px !important;
+    color: #fff;
+  }
+
   .scroll-image{
     margin-bottom: 10px;
     width: 100px !important;
@@ -43,6 +55,17 @@
   }
   .scroll-image p{
     mix-blend-mode: exclusion;
+  }
+  .placements{
+    background: linear-gradient(var(--red) 20%,#000 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #6a6a6a;
+    width: fit-content !important;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
   }
   
   
