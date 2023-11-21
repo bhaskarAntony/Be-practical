@@ -212,12 +212,12 @@
   height: 100%;
   transform: rotate(45deg);
   background: linear-gradient(to right, transparent 0%, #ffffff 50%, #fff 50%, transparent 100%);
-  animation: shimmer 3s infinite linear;
+  animation: shimmer 4s infinite linear;
   filter: blur(25px);
 }
 
 .shimmer-btn::after {
-  animation-delay: 1.5s;
+  animation-delay: 2s;
 }
 
 @keyframes shimmer {

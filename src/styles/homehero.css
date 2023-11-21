@@ -53,6 +53,9 @@
     padding: 10px;
     mix-blend-mode: exclusion;
   }
+  .company{
+    max-height: 100px !important;
+  }
   .scroll-image p{
     mix-blend-mode: exclusion;
   }

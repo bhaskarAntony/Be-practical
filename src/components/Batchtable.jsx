@@ -23,42 +23,42 @@ function Batchtable() {
     </tr>
     <tr>
       <th scope="row">DSA</th>
-      <td><i class="bi bi-check-circle-fill elite-g2-text fs-4"></i></td>
-      <td><i class="bi bi-check-circle-fill elite-g2-text fs-4"></i></td>
+      <td><i class="bi bi-check-circle-fill text-success fs-4"></i></td>
+      <td><i class="bi bi-check-circle-fill text-success fs-4"></i></td>
     </tr>
     <tr>
     <th scope="row">DSA (Exclusive Problems)</th>
-      <td class="table-danger"><i class="bi bi-x-circle-fill elite-g-text fs-4"></i></td>
-      <td><i class="bi bi-check-circle-fill elite-g2-text fs-4"></i></td>
+      <td class="table-danger"><i class="bi bi-x-circle-fill text-danger fs-4"></i></td>
+      <td><i class="bi bi-check-circle-fill text-success fs-4"></i></td>
     </tr>
     <tr>
     <th scope="row">Softskills</th>
-      <td class="table-success"><i class="bi bi-check-circle-fill elite-g2-text fs-4"></i></td>
-      <td class="table-success"><i class="bi bi-check-circle-fill elite-g2-text fs-4"></i></td>
+      <td class="table-success"><i class="bi bi-check-circle-fill text-success fs-4"></i></td>
+      <td class="table-success"><i class="bi bi-check-circle-fill text-success fs-4"></i></td>
     </tr>
     <tr>
          <th scope="row">Internship</th>
-      <td class="table-danger"><i class="bi bi-x-circle-fill elite-g-text fs-4"></i></td>
-      <td class="table-success"><i class="bi bi-check-circle-fill elite-g2-text fs-4"></i></td>
+      <td class="table-danger"><i class="bi bi-x-circle-fill text-danger fs-4"></i></td>
+      <td class="table-success"><i class="bi bi-check-circle-fill text-success fs-4"></i></td>
     </tr>
     <tr>
     <th scope="row">Placement ready Program</th>
-      <td class="table-success"><i class="bi bi-check-circle-fill elite-g2-text fs-4"></i></td>
-      <td class="table-success"><i class="bi bi-check-circle-fill elite-g2-text fs-4"></i></td>
+      <td class="table-success"><i class="bi bi-check-circle-fill text-success fs-4"></i></td>
+      <td class="table-success"><i class="bi bi-check-circle-fill text-success fs-4"></i></td>
     </tr>
     <tr>
     <th scope="row">Job Guaranteed</th>
-      <td class="table-danger"><i class="bi bi-x-circle-fill elite-g-text fs-4"></i></td>
-      <td class="table-success"><i class="bi bi-check-circle-fill elite-g2-text fs-4"></i></td>
+      <td class="table-danger"><i class="bi bi-x-circle-fill text-danger fs-4"></i></td>
+      <td class="table-success"><i class="bi bi-check-circle-fill text-success fs-4"></i></td>
     </tr>
     <tr>
     <th scope="row">Refund</th>
-      <td class="table-danger"><i class="bi bi-x-circle-fill elite-g-text fs-4"></i></td>
+      <td class="table-danger"><i class="bi bi-x-circle-fill text-danger fs-4"></i></td>
       <td><small className='fs-6'>if not placed (50% of course fees)</small></td>
     </tr>
     <tr>
     <th scope="row">Add-On's</th>
-      <td class="table-danger"><i class="bi bi-x-circle-fill elite-g-text fs-4"></i></td>
+      <td class="table-danger"><i class="bi bi-x-circle-fill text-danger fs-4"></i></td>
       <td><small className=' fs-6'>(AWS, DevOps tools(Jenkins, Git) <br /> Starting with Python)</small></td>
     </tr>
   </tbody>

@@ -44,7 +44,7 @@ function Header() {
       </div> */}
       <nav class="navbar navbar-expand-xl">
   <div class="container-fluid">
-  <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a>
+  <a class="navbar-brand" href="/"> <img src={brand} alt="" className='rounded-2' /></a>
 
 <div>
 <button variant="primary" onClick={handleShow} className='btn-danger d-xl-none'>

@@ -3,7 +3,7 @@ import './style.css'
 
 function EliteCarousel() {
   return (
-    <section class="container-fluid d-sm-none d-md-block mt-5 text-center">
+    <section class="container-fluid d-none d-md-block mt-5 text-center">
          <h4 className="fs-3 elite-yellow">Featurs</h4>
     <h1 className="heading text-900 elite-g-text">FEATURES OF ELITE</h1>
     <div id="home">
@@ -59,7 +59,7 @@ function EliteCarousel() {
                     <div class="last-circle"></div>
                     <div class="second-circle"></div>
                 </div>
-               <div class="mask d-flex align-items-center p-2">
+               <div class="mask d-flex align-items-center p-2 overflow-auto">
               <p className="fs-5 elite-g-text text-start">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam sequi architecto culpa consequatur praesentium excepturi suscipit numquam rerum ad, odit aliquam neque quasi blanditiis odio corporis molestiae reiciendis facilis quis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis tenetur dolor sunt quis consequatur aliquid est ipsa recusandae esse! Est omnis dignissimos voluptatum magni hic reprehenderit aliquam cupiditate obcaecati nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo optio asperiores nesciunt quas maiores tenetur officia aspernatur necessitatibus, harum, labore ad at vitae. Eius fugiat commodi laudantium deleniti quos voluptatem!
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam sequi architecto culpa consequatur praesentium excepturi suscipit numquam rerum ad, odit aliquam neque quasi blanditiis odio corporis molestiae reiciendis facilis quis? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis tenetur dolor sunt quis consequatur aliquid est ipsa recusandae esse! Est omnis dignissimos voluptatum magni hic reprehenderit aliquam cupiditate obcaecati nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo optio asperiores nesciunt quas maiores tenetur officia aspernatur necessitatibus, harum, labore ad at vitae. Eius fugiat commodi laudantium deleniti quos voluptatem!

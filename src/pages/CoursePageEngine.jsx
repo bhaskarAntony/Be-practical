@@ -100,28 +100,6 @@ function CoursePageEngine() {
                         <i class="bi bi-star-half text-yellow fs-4"></i>
                         </div>
                     </div>
-                    {/* <div className="row mt-3">
-                        <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center  border-b mb-3">
-                        <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">100% Placement Support</span>
-                        </div>
-                        </div>
-                        <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b mb-3">
-                        <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Industry Led Curriculum</span>
-                        </div>
-                        </div>
-                        <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b mb-3">
-                        <i class="bi bi-check-circle-fill fs-3 text-green"></i><span className="fs-5">Real Time Projects</span>
-                        </div>
-                        </div>
-                        <div className="col-12 col-md-12 col-lg-6">
-                        <div className="course-tags p-2 py-3 bg-gray3 text-white rounded-2 mb-2 d-flex gap-2 align-items-center border-b mb-3">
-                        <i class="bi bi-check-circle-fill fs-3 text-green"></i> <span className="fs-5">Flexible Timings</span>
-                        </div>
-                        </div>
-                    </div> */}
                   <div className="course-points">
                   <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.courseHeroPoints}} />
                   </div>
@@ -174,9 +152,7 @@ function CoursePageEngine() {
        </div>
             <div className="share-course d-flex gap-3 py-3 flex-wrap align-items-center justify-content-center">
               <button className="share-btn whatsapp-share" onClick={ToWhatsapp}><i className='bi bi-whatsapp'></i>Whatsapp</button>
-              {/* <button className="share-btn facebook-share"  ><i className='bi bi-facebook'></i>Facebook</button>
-              <button className="share-btn telegram-share"  onClick={sendTelegramMessage}><i className='bi bi-telegram'></i>Telegram</button>
-              <button className="share-btn twitter-share"  onClick={sendTwitterMessage}><i className='bi bi-twitter'></i>Twitter</button> */}
+             
             </div>
     </div>
 
@@ -204,7 +180,6 @@ function CoursePageEngine() {
     <YoutubeVideos/>
     <FaqSection  faq={courseData.faqs}/>
     <Feedback/>
-    <Start/>
     </section>
   )
 }

@@ -9,6 +9,8 @@ import { CoursePage } from '../Data/DataFetcher'
 import Aos from 'aos'
 import { Link } from 'react-router-dom'
 import EliteCarousel from '../components/EliteCarousel/EliteCarousel'
+import ReadMore from '../Extra/ReadMore'
+import BookDemoCard from '../components/BookDemoCard'
 
 const eliteCourses =[
     {
@@ -48,13 +50,20 @@ function ElitePage() {
   </div> */}
    <div className="elite-main-page overflow-hidden">
      <div className='elite-page container-fluid p-0'>
-     <div className="elite-hero py-5 p-3 bg-texsture">
-      <div className="elite-text text-center ">
-          <h4 className="fs-3 elite-yellow">100% Placement Program</h4>
-          <h1 className="heading text-white text-900">MAKE SUCCESS YOUR <br /> JOURNEY WITH OUR ELITE PROGRAM</h1>
+     <div className="elite-hero py-5 p-3 bg-texture">
+      <div className="row">
+        <div className="col-12 col-sm-12 col-md-10">
+        <div className="elite-text">
+          <span className="fs-3 elite-yellow">100% Placement Program</span>
+          <h1 className="elite-heading elite-g-text text-900 p-0 m-0 my-4">Make Your Success<br />Journy with Our Elite Program</h1>
           <h1 className="fs-1 text-white">Get 50% Refund if not Placed</h1>
-          <p className="fs-3 text-white">Be Practical Conducting Elite Batch for Freshers and working Professionals to make you job ready. where we Guarantee Our Placements.</p>
-          <button className="elite-btn bg-white text-900">Join to ELITE PROGRAM</button>
+          <p className="fs-5  text-secondary">Be Practical Conducting Elite Batch for Freshers and working Professionals to make you job ready. where we Guarantee Our Placements.</p>
+          <button className="btn border-0 fs-4 p-3 rounded-5 text-900 bg-gold">Join to Elite Program</button>
+      </div>
+        </div>
+        <div className="col-12 col-sm-12 col-md-2">
+          <img src="" alt="" />
+        </div>
       </div>
      </div>
     </div>
@@ -63,7 +72,7 @@ function ElitePage() {
   </div>
 
     {/* elite  */}
-   <div className="elite-page-features text-center container d-sm-block d-md-none">
+   <div className="elite-page-features text-center container">
     <h4 className="fs-3 elite-yellow">Featurs</h4>
     <h1 className="heading text-900 elite-g-text">FEATURES OF ELITE</h1>
    <div className="row mt-5">
@@ -110,20 +119,21 @@ function ElitePage() {
           </div>
         </div>
    </div>
-   <EliteCarousel/>
+   {/* <EliteCarousel/> */}
   <div className="d-flex justify-content-center">
   <div className="elite-devider"></div>
   </div>
-    {/* <div className="elite-course container py-5">
+    <div className="elite-course container rounded-5 p-lg-5 p-2 py-5 bg-dark">
       <h1 className="fs-1 text-center text-900 text-white mb-4">Our Elite <span className="text-main-danger">Courses</span></h1>
-        <div className="row overflow-hidden">
+        <div className="row overflow-hidden justify-conent-center">
             {
                 CourseData.map((item, index)=>(
                   <div className="col-12 col-sm-12 col-md-6 col-lg-4">
-                    <div className="elite-card p-4 text-start border-b">
-                      <p className="fs-2 text-black text-900"> <i class="bi bi-stars"></i>  {item.courseName}</p>
-                      <p className="fs-5 text-black">{item.heroSubtitle}</p>
-                      <div className="row">
+                    <div className="highlight-card">
+                    <div className="course-card p-4 text-start border-b text-center">
+                      <p className="fs-3  text-900  elite-g-text"> <i class="bi bi-star fs-4"></i>  {item.courseName}</p>
+                      <p className="fs-6 text-white">{item.heroSubtitle}</p>
+                      {/* <div className="row">
                         <div className="col-12 col-md-6 col-lg-6 border">
                         <small className='text-black text-900'>Duration</small>
                           <p className="fs-6 text-900  text-white">{item.courseDuration}</p>
@@ -140,15 +150,17 @@ function ElitePage() {
                         <small className='text-black text-900'>Adwantages</small>
                           <p className="fs-6 text-900  text-white">HR Sessions</p>
                         </div>
-                      </div>
-                      <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-danger bg-black mt-3 w-100">Know More</button></Link>
+                      </div> */}
+                      <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-danger  elite-course-btn rounded-5 mt-3 w-100">Know More</button></Link>
                     </div>
+                    </div>
+                   
                   </div>
                 ))
             }
         </div>
-    </div> */}
-    {/* <div className="container elite-devider"></div> */}
+    </div> 
+    <div className="container elite-devider"></div>
     <div className="elite-highlights container p-3  text-center mt-2">
     <h4 className="fs-3 elite-yellow">Featurs</h4>
     <h1 className="heading elite-g-text text-900">ELITE PROGRAM HIGHLIGHTS </h1>
@@ -199,6 +211,44 @@ function ElitePage() {
   </div>
  <div className="py-5">
  <Batchtable/>
+ <div className="container-fluid py-5">
+    <span className="d-block fs-4 elite-yellow text-center">A Mordern and unique style</span>
+  <h1 className="heading elite-g-text">Why is it Best</h1>
+  
+  <div className="row">
+    <div className="col-12 col-sm-12 col-md-8">
+      <ul className='elite-best'>
+        <li className='fs-6 text-white mb-4'>
+        <span className="text-main-danger text-900">100% Job Placement:</span> Our Elite Program offers a 100% job Placement, which means that we are committed to getting you placed in a job that matches your skills and expertise.
+        </li>
+        <li className='fs-6 text-white mb-4'>
+        <span className="text-main-danger text-900">100% Job Placement:</span> Our Elite Program offers a 100% job Placement, which means that we are committed to getting you placed in a job that matches your skills and expertise.
+        </li>
+        <li className='fs-6 text-white mb-4'>
+        <span className="text-main-danger text-900"> Comprehensive Training Programs:</span> Our training programs are comprehensive and cover all the skills and knowledge that you need to succeed in your career. We equip you with the latest industry-relevant skills that are in demand in the market.
+        </li>
+        <li className='fs-6 text-white mb-4'>
+        <span className="text-main-danger text-900">Industry Expert Trainers:</span> Our trainers are industry experts who have several years of experience working in their respective fields. They have hands-on experience in working on real-time projects, and they share their knowledge and expertise to help you excel in your career.
+        </li>
+        <li className='fs-6 text-white mb-4'>
+        <span className="text-main-danger text-900">Personalized Attention:</span> We provide personalized attention to each student and ensure that they receive the necessary guidance and support throughout the program. Our batch sizes are limited, which enables us to focus on individual learning needs.
+        </li>
+        <li className='fs-6 text-white mb-4'>
+        <span className="text-main-danger text-900">Partnering with Leading Companies:</span> We have partnered with leading companies in the industry, which gives us access to the latest trends, tools, and technologies. We ensure that our programs are aligned with the requirements of our partners, which increases your chances of getting placed in a job.
+        </li>
+        <li className='fs-6 text-white mb-4'>
+        <span className="text-main-danger text-900">Competitive Pricing:</span> We offer competitive pricing for our Elite Program, which makes it accessible to students from all backgrounds. We believe that quality education should be affordable and accessible to everyone.
+        </li>
+      </ul>
+    </div>
+    <div className="col-12 col-sm-12 col-md-4">
+      <BookDemoCard/>
+    </div>
+  </div>
+  <p className="fs-5 text-center text-white">
+  Overall, Be Practical's Elite Program is the perfect choice for anyone who wants to build a successful career in the IT industry. Our commitment to quality education, personalized attention, and job placement guarantees makes us stand out from the crowd.
+  </p>
+ </div>
  </div>
    </div>
 </>

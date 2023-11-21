@@ -92,7 +92,7 @@ const ImageCarousel = () => {
                 <Slider {...settings3}>
         {
             companiesData.map((item, index)=>(
-                <div className="scroll-image w-100 ">
+                <div className="scroll-image company w-100">
                     <img src={item.image} alt="" className="w-100" />
                 </div>
             ))

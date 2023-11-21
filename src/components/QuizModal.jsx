@@ -14,20 +14,38 @@ function QuizModal() {
   const [loading, setLoading] = useState(false)
   const [QuizData, setQuizData] = useState([]);
   useEffect(() => {
-   const fetchData = async () => {
-     try {
-       const data = await Quiz;
-       setLoading(false)
-       setQuizData(data);
-       quizData = data;
-       console.log("quissz data = ", quizData[currentQuestion]?.question)
-     } catch (error) {
-      setLoading(true)
-       console.error('Error fetching CoursePage:', error);
-     }
-   };
-   fetchData();
- }, []);
+    const fetchData = async () => {
+      try {
+        const data = await Quiz;
+        setLoading(false);
+  
+        // Shuffle the array of quiz questions
+        const shuffledQuestions = shuffleArray(data);
+
+        const selectedQuestions = shuffledQuestions.slice(0, 10);
+  
+        setQuizData(selectedQuestions);
+        quizData = selectedQuestions;
+  
+        console.log("quiz data = ", quizData[currentQuestion]?.question);
+      } catch (error) {
+        setLoading(true);
+        console.error('Error fetching Quiz:', error);
+      }
+    };
+  
+    fetchData();
+  }, []);
+  
+  // Function to shuffle an array (Fisher-Yates algorithm)
+  const shuffleArray = (array) => {
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
 
   const openModal = () => {
     setShowModal(true);
@@ -118,21 +136,21 @@ function QuizModal() {
               <p className='text-main-danger fs-3 text-center'>Your Score: {score} out of {quizData.length}</p>
               <Form onSubmit={handleFormSubmit}>
               <Form.Group className='mt-2'>
-       <FloatingLabel controlId="floatingInputGrid" label="Student name">
-          <Form.Control type="text" placeholder="name@example.com" required />
-        </FloatingLabel>
-       </Form.Group>
-       <Form.Group className='mt-2'>
-       <FloatingLabel controlId="floatingInputGrid" label="Mobile number">
-          <Form.Control type="text" placeholder="+91-000-0000-000"  required/>
-        </FloatingLabel>
-       </Form.Group>
-       <Form.Group className='mt-2'>
-       <FloatingLabel controlId="floatingInputGrid" label="Email address">
-          <Form.Control type="email" placeholder="name@example.com"  required/>
-        </FloatingLabel>
-       </Form.Group>
-               <button className='btn-gray w-100 mb-2 mt-3' type="submit">
+                <FloatingLabel controlId="floatingInputGrid" label="Student name">
+                    <Form.Control type="text" placeholder="name@example.com" required />
+                  </FloatingLabel>
+                </Form.Group>
+                <Form.Group className='mt-2'>
+                <FloatingLabel controlId="floatingInputGrid" label="Mobile number">
+                    <Form.Control type="text" placeholder="+91-000-0000-000"  required/>
+                  </FloatingLabel>
+                </Form.Group>
+                <Form.Group className='mt-2'>
+                <FloatingLabel controlId="floatingInputGrid" label="Email address">
+                    <Form.Control type="email" placeholder="name@example.com"  required/>
+                  </FloatingLabel>
+                </Form.Group>
+                <button className='btn-gray w-100 mb-2 mt-3' type="submit">
                   Download Certificate <i class="bi bi-download"></i>
                 </button>
                 <button  className="btn-gray-outline mb-2 p-3" variant="secondary" onClick={openModal}>
