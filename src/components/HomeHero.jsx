@@ -85,7 +85,7 @@ function HomeHero() {
       <div className="hero-1 ">
       <div className="custom-carousel container-fluid bg-dot">
       <div className="row align-items-center">
-      <div className="col-12 col-sm-12 col-md-8 ">
+      <div className="col-12 col-sm-12 col-md-8">
         <Carousel
           activeIndex={index}
           onSelect={handleSelect}
@@ -97,11 +97,11 @@ function HomeHero() {
             <Carousel.Item key={index}>
                   <div className="hero-text p-lg-5 p-md-3 p-1 py-3 ">
                     <h1 className="card-heading text-main-2 text-start">100% Placement Programs</h1>
-                    <h1 className="heading text-900 text-start hero-heading">{item.heading}</h1>
+                    <h1 className="heading text-bold text-start hero-heading">{item.heading}</h1>
                     <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
                       <button className='btn-main-outline-dark  hero-btn bg-gray2 text-white'>Apply Now <i class="bi bi-chevron-double-right"></i></button>
-                      <button className='btn-danger bg-aqua  hero-btn' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-danger  hero-btn' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
                     </div>
                    
                   </div>
