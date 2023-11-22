@@ -84,7 +84,7 @@ const onLoad = () => {
                 onLoad={onLoad}
                 />
     
-        <CustomCursor/>
+        {/* <CustomCursor/> */}
       <ScrollProgressBar/>
       <Progressbar/>
         <BrowserRouter>

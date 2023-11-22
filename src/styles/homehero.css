@@ -75,6 +75,7 @@
 .hero{
     min-height: fit-content;
     background-color: var(--color-dark-1);
+    background-color: #e3faf1;
     position: relative;
     margin-bottom: 100px;
     

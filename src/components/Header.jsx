@@ -115,7 +115,7 @@ function Header() {
         </Offcanvas.Body>
       </Offcanvas>
     <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-group  d-flex align-items-center justify-content-around w-100">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-group  d-flex align-items-center justify-content-center w-100">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/">Home</a>
         </li>

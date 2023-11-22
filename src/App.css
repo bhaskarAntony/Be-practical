@@ -14,7 +14,7 @@
 } */
 
 :root {
-    --blue: #007bff;
+    --blue: #3dd1a2;
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
@@ -140,6 +140,14 @@
   background: url('./images/blur-bg.png') no-repeat center;
   background-size: cover;
 }
+.bg-dot{
+  background: url(https://ciseco-nextjs.vercel.app/_next/static/media/Moon.d5aa06ae.svg) no-repeat center;
+  background-size: cover;
+}
+.bg-aqua{
+  background-color: var(--blue) !important;
+}
+
 .bg-texture{
   background: url(https://www.wordpress.codeinsolution.com/carveo/wp-content/uploads/sites/32/2023/09/Background-2@2x-e1694589743783.png) no-repeat center;
   background-size: cover;

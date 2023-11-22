@@ -7,8 +7,7 @@ import Highlight from './Highlight';
 import HeroRegister from './HeroRegister';
 import DialogModal from './DialogModel';
 import { homeHeroApi } from '../Data/DataFetcher';
-import heroImage from '../images/coding-hero-image.svg'
-import ImageCarousel from '../Extra/ImageCarousel ';
+import heroImage from '../images/hero-image.svg'
 
 const home = [
   {
@@ -82,9 +81,9 @@ function HomeHero() {
   const numberOfSlides = home.length;
 
   return (
-    <section className='hero container-fluid bg-blur'>
-      <div className="hero-1">
-      <div className="custom-carousel container-fluid">
+    <section className='hero container-fluid '>
+      <div className="hero-1 ">
+      <div className="custom-carousel container-fluid bg-dot">
       <div className="row align-items-center">
       <div className="col-12 col-sm-12 col-md-8 ">
         <Carousel
@@ -102,7 +101,7 @@ function HomeHero() {
                     <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
                       <button className='btn-main-outline-dark  hero-btn bg-gray2 text-white'>Apply Now <i class="bi bi-chevron-double-right"></i></button>
-                      <button className='btn-danger  hero-btn' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-danger bg-aqua  hero-btn' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
                     </div>
                    
                   </div>
@@ -113,7 +112,8 @@ function HomeHero() {
         <div className="col-12 col-sm-12 col-md-4">
    <div className="hero-image d-flex align-items-center h-100">
    {/* <ImageCarousel/> */}
-   <img src="https://png.pngtree.com/png-vector/20220725/ourmid/pngtree-collaboration-of-partners-handshaking-partnership-png-image_6065274.png" alt="" className='w-100' />
+   {/* <img src="https://png.pngtree.com/png-vector/20220725/ourmid/pngtree-collaboration-of-partners-handshaking-partnership-png-image_6065274.png" alt="" className='w-100' /> */}
+   <img src={heroImage} alt="" className='w-100'/>
    {/* <img src="https://img.freepik.com/free-vector/advanced-computer-skills-abstract-concept-illustration_335657-3877.jpg?w=740&t=st=1700216536~exp=1700217136~hmac=e4d581d6b61a6d5addb03809bffeaf15253f4d28360575c4e4ec3bb46231c589" alt="" className="w-100" /> */}
    </div>
                 </div>
@@ -129,7 +129,7 @@ function HomeHero() {
         </div>
       </div>
       <Highlight data={homeData} />
-      <HeroRegister />
+      {/* <HeroRegister /> */}
       </div>
 
       <DialogModal
