@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            padding:0;
+            margin:0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+            background-color: black;
+            background: repeating-radial-gradient(#4e4c4a, #121212);
+            flex-direction: column;
+        }
+        .container{
+            position: relative;
+            transform-style: preserve-3d;
+            display: flex;
+            transform: perspective(1000px) rotateX(-20deg) rotateY(20deg);
+            flex-flow: row wrap;
+            gap:5px;
+            width:300px;
+            animation: rotate 20s linear infinite alternate;
+        }
+        .cube{
+            width:50px;
+            height:50px;
+            position: relative;
+            background-color: rgb(73, 73, 83);
+            transform-style: preserve-3d;
+            animation:  1.5s anim linear infinite alternate;
+            animation-delay: var(--i);
+        }
+        .cube::before{
+            content: "";
+            position: absolute;
+            transform-style: preserve-3d;
+            transform-origin: bottom;
+            left: 0;
+            background-color: rgb(29, 30, 31);
+            width:100%;
+            height:100%;
+            transform: rotateX(90deg);
+        }
+        .cube::after{
+            content: "";
+            position: absolute;
+            transform-style: preserve-3d;
+            transform-origin: right;
+            top: 0;
+            background-color: rgb(23, 23, 24);
+            width:100%;
+            height:100%;
+            transform: rotateY(-90deg);
+        }
+        .cube1{
+            width:100%;
+            height:100%;
+            background-color: rgb(47, 47, 48);
+            transform-style: preserve-3d;
+            position: absolute;
+            transform: translateZ(-50px);
+            animation:  1.5s anim2 linear infinite alternate;
+            animation-delay: var(--j);
+        }
+        .cube1::before{
+            content: "";
+            position: absolute;
+            transform-style: preserve-3d;
+            transform-origin: left;
+            left: 0;
+            background-color: rgb(26, 26, 26);
+            width:100%;
+            height:100%;
+            transform: rotateY(-90deg);
+        }
+        .cube1::after{
+            content: "";
+            position: absolute;
+            transform-style: preserve-3d;
+            transform-origin: top;
+            top: 0;
+            background-color: rgb(40, 41, 40);
+            width:100%;
+            height:100%;
+            transform: rotateX(90deg);
+        }
+        
+        @keyframes anim {
+            0%{
+                transform: translateZ(0px);
+            }
+            50%{
+                transform: translateZ(0px);
+                background-color: rgb(212, 231, 231);
+            }
+            100%{
+                transform: translateZ(-50px);
+            }
+        }
+        @keyframes anim2 {
+            0%{
+            }
+            50%{
+                background-color: rgb(212, 231, 231);
+            }
+            100%{
+            }
+        }
+        @keyframes rotate{
+            from{
+                transform: rotateX(-360deg) rotateZ(-360deg);
+            }
+            to{
+                transform: rotateX(360deg) rotateZ(360deg);
+                background-color: var(--back);
+            }
+        }
+    .root{
+        --i:2s;
+        --back:#fff;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    
+    <script>
+        let container = document.querySelector(".container");
+        let cube = document.querySelector(".cube");
+        for(let i = 0; i<25; i++){
+            let cube = document.createElement("div");
+            cube.classList.add("cube");
+            cube.setAttribute("style", `--i:${i/2}s`);
+            container.appendChild(cube);
+            let cube1 = document.createElement("div");
+            cube1.classList.add("cube1");
+            cube1.setAttribute("style", `--j:${i/2}s`)
+            cube.appendChild(cube1);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --main-color:rgb(21, 21, 21);
+    --main-text:#38e784;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    color: #fff;
+    background-color: rgb(21, 21, 21);
+}
+.navbar ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    flex-flow: wrap;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 300;
+    transition: 1s;
+}
+.navbar ul li a:hover{
+    color: #38e784;
+    font-weight: bold;
+    transition: color 0.5s ease-in-out;
+}
+.navbar ul li button, .btn{
+    border: none;
+    padding: 7px 15px;
+    color: #fff;
+    background-color: #38e784;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.text-bold{
+    font-weight: 900;
+}
+.main-text{
+    color: var(--main-text);
+}
+.container{
+    max-width: 100%;
+}
+.home-container{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    background-color: var(--main-color);
+    color: #fff;
+    flex-flow: wrap;
+}
+.home-text-container, .home-img-container{
+    flex: 1;
+}
+.home-img-container .home-img{
+    width: 60%;
+    height: 200px;
+    position: relative;
+}
+.home-text-container{
+    padding: 20px;
+}
+
+.home-img-container .home-img::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--main-text);
+    left: 40px;
+    top: 0;
+    border-radius: 20px;
+}
+.home-img-container .home-img::before{
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: #fff;
+    left: -30px;
+    bottom: -50px;
+    border-radius: 100px;
+    z-index: 1;
+}
+.home-heading{
+    font-size: 4rem;
+}
+.heighlighter{
+    color: #fff;
+    background-color: var(--main-text);
+    padding: 5px;
+}
+.home-description-text{
+    font-size: 1.4rem;
+}
+.home-button{
+    color: black;
+    margin-top: 20px;
+    padding: 8px 30px;
+}
+.podcast-container{
+    margin-top: 20px;
+}
+.podcast-container h2{
+    font-weight: 200;
+}
+.podcast-container ul{
+    display: flex;
+    gap: 20px;
+    flex-flow: wrap;
+    list-style: none;
+    padding: 30px 0px;
+}
+.podcast-container ul li a{
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 2px solid var(--main-text);
+    padding: 5px;
+}
+.open{
+    display: none;
+}

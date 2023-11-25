@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background:linear-gradient(45deg, #000000, #2a002e)
+        }
+        .container{
+            position: relative;
+         
+            transform-style: preserve-3d;
+        }
+        .atom{
+            position: absolute;
+            left:15px;
+            top:10px;
+            animation: rotate 5s infinite;
+            width:40px;
+            height: 40px;
+            background-color: aliceblue;
+            border-radius: 100%;
+            box-shadow: inset 10px 10px 30px #0890a4;
+        }
+        .line1{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            transform-style: preserve-3d;
+            transform: rotateX(75deg) rotateY(-25deg);
+            animation: animationZ1 0.1s infinite ease-in-out;
+            background-color: transparent;
+            border-bottom: 10px solid #ffffff;
+            top: -135px;
+            left: -110px;
+            box-shadow: 1px 2px 20px #00c2d8;
+            border-top: 10px solid #ffffff;
+        }
+        .line2{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            transform-style: preserve-3d;
+            transform: rotateX(70deg) rotateY(50deg);
+            background-color: transparent;
+            border-bottom: 10px solid #ffffff;
+            top: -120px;
+            left: -110px;
+            box-shadow: 1px 2px 20px #04e11a;
+            animation: animationZ2 0.2s infinite ease-in-out;
+            border-top: 10px solid #ffffff;
+        }
+        .line3{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 100%;
+            transform-style: preserve-3d;
+            transform: rotateX(70deg) rotateY(-70deg);
+            background-color: transparent;
+            border-bottom: 10px solid #ffffff;
+            top: -135px;
+            left: -110px;
+            box-shadow: 1px 2px 20px #a0cb05;
+            animation: animationZ3 0.3s infinite ease-in-out;
+            border-top: 10px solid #ffffff;
+        }
+        @keyframes animationZ1{
+            0%{
+                transform: rotateX(75deg) rotateY(-25deg) rotateZ(0deg);
+            }
+            100%{
+                transform: rotateX(75deg) rotateY(-25deg) rotateZ(360deg);
+            }
+        }
+        @keyframes animationZ2{
+            0%{
+                transform:  rotateX(70deg) rotateY(50deg) rotateZ(0deg);
+            }
+            100%{
+                transform:rotateX(70deg) rotateY(50deg) rotateZ(360deg);
+            }
+        }
+        @keyframes animationZ3{
+            0%{
+                transform:  rotateX(70deg) rotateY(-70deg) rotateZ(0deg);
+            }
+            100%{
+                transform: rotateX(70deg) rotateY(-70deg) rotateZ(360deg);
+            }
+        }
+        @keyframes rotate{
+            0%{
+                transform:  rotate(0deg);
+            }
+            100%{
+                transform:  rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="atom"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    
+</body>
+</html>

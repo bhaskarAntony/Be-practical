@@ -1,0 +1,31 @@
+@media (max-width:768px){
+    .navbar{
+        display: none;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 300px;
+        z-index: 100;
+    }
+    .navbar ul{
+        flex-direction: column;
+        background-color: rgb(2, 2, 2);
+        height: 100vh;
+        padding: 10px;
+        position: relative;
+        text-align: left;
+        justify-content: flex-start;
+    }
+    .close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.3em;
+    }
+    .open{
+        display: block;
+    }
+    .home-container{
+        flex-direction: column;
+    }
+}

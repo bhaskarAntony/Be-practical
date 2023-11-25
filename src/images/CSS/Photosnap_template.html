@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoSnap</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            justify-content: space-evenly;
+            gap: 20px;
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            z-index: 100;
+        }
+        nav ul li a:hover{
+            text-decoration: overline;
+            font-weight: bold;
+            color: #e82034;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+        }
+        header button, .text button, .image-btn, .copyright button{
+            border: none;
+            padding: 10px 30px;
+            font-size: 1.1em;
+            letter-spacing: 1.5px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.5s;
+            letter-spacing: 2px;
+        }
+        button:hover{
+            transform: translate(10px);
+        }
+        header button:hover{
+            background-color: #e82034;
+        }
+        .container{
+            display: flex;
+            max-height: 80vh;
+            overflow: hidden;
+        }
+        .text-container{
+            flex: 1;
+            padding: 4%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .img-contianer{
+            flex: 2;
+        }
+        .img-contianer img{
+            object-fit: cover;
+            width: 100%;
+        }
+        .text h1{
+            font-size: 3em;
+            color: #e82034;
+            margin-bottom: 20px;
+        }
+        .stories h1{
+            color: #fff;
+        }
+        .stories{
+            background-color: #000;
+            color: #fff;
+        }
+        .text p {
+            margin-bottom: 20px;
+        }
+        .text button, .copyright button{
+            padding: 0;
+            margin-top: 20px;
+            background-color: transparent;
+        }
+        .features button, .design button{
+            color: #000;
+        }
+        .gallery{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        .gallery-image{
+            flex:1;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            padding: 2%;
+            background-size: cover;
+            color: #fff;
+        }
+        .gallery-image img{
+            width: 100%;
+        }
+        .gallery-image:nth-child(1){
+            background: url(https://images.pexels.com/photos/1842865/pexels-photo-1842865.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load) no-repeat center;
+        }
+        .gallery-image:nth-child(2){
+            background: url(https://images.pexels.com/photos/1848472/pexels-photo-1848472.jpeg?auto=compress&cs=tinysrgb&w=600) no-repeat center;
+        }
+        .gallery-image:nth-child(3){
+            background: url(https://images.pexels.com/photos/1983035/pexels-photo-1983035.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load) no-repeat center;
+        }
+        .gallery-image:nth-child(4){
+            background: url(https://images.pexels.com/photos/11120515/pexels-photo-11120515.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load) no-repeat center;
+        }
+        .image-btn{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:  10px 0;
+            background-color: transparent;
+        }
+        .image-text{
+            text-align: left;
+            border-bottom: 1px solid #fff;
+            padding: 10px 0;
+        }
+        .card{
+            text-align: center;
+            max-width: 350px;
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .card:hover{
+            box-shadow: 0px 0px 20px #c2c1c1;
+            transform: scale(1.1);
+            border-bottom: 5px solid #e82034;
+        }
+        .card-container{
+            padding: 5%;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card h2{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #e82034;
+        }
+        .card:hover h2{
+            color: #000000;
+        }
+        .card p{
+            font-size: 1.2em;
+            color: #434242;
+        }
+        .card [class*="fa-"]{
+            color: #c2c0c0;
+            transition: 0.5s;
+        }
+        .card:hover [class*="fa-"]{
+            color: #e82034;
+        }
+        footer{
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px;
+            min-height: 50vh;
+            overflow: hidden;
+        }
+        .nav{
+            text-align: left;
+        }
+        .nav ul{
+            list-style: none;
+        }
+        .nav ul li{
+            margin-bottom: 20px;
+        }
+        .nav ul li a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .nav ul li a:hover{
+            text-decoration: underline;
+        }
+        .logo, .copyright{
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 3%;
+            align-items: center;
+        }
+        .logo [class*="fa-"]{
+            font-size: 2em;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .logo [class*="fa-"]:hover{
+            color: var(--color);
+            transform: scale(1.2);
+        }
+        .social-icons{
+            display: flex;
+            gap: 20px;
+        }
+        .copyright p{
+            color: #4b4a4a;
+        }
+        .fa-product-hunt{
+            color: #e82034;
+        }
+        .text-main{
+            color: #c2c0c0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fa fa-product-hunt"></i> Photo <span class="text-main">Snap</span></h1>
+        <nav>
+            <ul>
+                <li><a href="#stories">STORIES</a></li>
+                <li><a href="#features">FEATURES</a></li>
+                <li><a href="#design">DESIGNS</a></li>
+                <li><a href="#trending">TRENDING</a></li>
+                <li><a href="#more">INFORMATION</a></li>
+            </ul>
+        </nav>
+        <button type="button">GET AN INVITE</button>
+
+    </header>
+    <section id="stories" class="container">
+        <div class="text-container stories">
+            <div class="text">
+                <h1>CREATE AND <br> SHARE YOUR <br> PHOTO STORIES</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem aut quos recusandae totam cupiditate quia illo, enim corporis autem.</p>
+                <button class="text-btn">GET AN INVITE <i class="fa fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="img-contianer">
+            <img src="https://images.pexels.com/photos/2333719/pexels-photo-2333719.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        </div>
+    </section>
+    <section id="features" class="container">
+        <div class="img-contianer">
+            <img src="https://images.pexels.com/photos/2820607/pexels-photo-2820607.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="">
+        </div>
+        <div class="text-container features">
+            <div class="text">
+                <h1>BEUTIFULL<br> STORIES EVERY<br> TIME</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem aut quos recusandae totam cupiditate quia illo, enim corporis autem.</p>
+                <button class="text-btn">GET AN INVITE <i class="fa fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+    <section id="design" class="container">
+        <div class="text-container design">
+            <div class="text">
+                <h1>DESIGN FOR<br> EVERYONE</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem aut quos recusandae totam cupiditate quia illo, enim corporis autem.</p>
+                <button class="text-btn">GET AN INVITE <i class="fa fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="img-contianer">
+            <img src="https://images.pexels.com/photos/933118/pexels-photo-933118.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+        </div>
+    </section>
+    <section id="trending" class="gallery">
+        <div class="gallery-image">
+          <div class="image-text">
+            <h2>The Mountains</h2>
+            <p>by bhaksar Antony</p>
+          </div>
+          <button class="image-btn">READ STORY <i class="fa fa-arrow-right"></i></button>
+        </div>
+        <div class="gallery-image">
+            <div class="image-text">
+              <h2>Sunset Cityscape</h2>
+              <p>by Guna</p>
+            </div>
+            <button class="image-btn">READ STORY <i class="fa fa-arrow-right"></i></button>
+          </div>
+          <div class="gallery-image">
+            <div class="image-text">
+              <h2>18 days Voyage</h2>
+              <p>by Kalki</p>
+            </div>
+            <button class="image-btn">READ STORY <i class="fa fa-arrow-right"></i></button>
+          </div>
+          <div class="gallery-image">
+            <div class="image-text">
+              <h2>Architecturals</h2>
+              <p>by John Doe</p>
+            </div>
+            <button class="image-btn">READ STORY <i class="fa fa-arrow-right"></i></button>
+          </div>
+    </section>
+    <section id="more" class="container card-container">
+        <div class="card">
+            <i class="fa fa-laptop fa-5x"></i>
+            <h2>100% Responsive</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, earum. Quae itaque minima odio temporibus.</p>
+        </div>
+        <div class="card">
+            <i class="fa fa-file-movie-o fa-5x"></i>
+            <h2>No file Upload Limit</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, earum. Quae itaque minima odio temporibus.</p>
+        </div>
+        <div class="card">
+            <i class="fa fa-get-pocket fa-5x"></i>
+            <h2>Available to Embed</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, earum. Quae itaque minima odio temporibus.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="logo">
+            <h1><i class="fa fa-product-hunt"></i> Photo <span class="text-main">Snap</span></h1>
+            <div class="social-icons">
+                <i class="fa fa-facebook-square" style="--color: #3300c0;"></i>
+                <i class="fa fa-youtube-square" style="--color: #8b0202;"></i>
+                <i class="fa fa-twitter-square" style="--color: #0666c7;"></i>
+                <i class="fa fa-pinterest-square" style="--color: #ea0089;"></i>
+                <i class="fa fa-instagram" style="--color: #f01742;"></i>
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li><a href="#stories">STORIES</a></li>
+                <li><a href="#features">FEATURES</a></li>
+                <li><a href="#design">DESIGNS</a></li>
+                <li><a href="#trending">TRENDING</a></li>
+                <li><a href="#more">INFORMATION</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <button>GET AN INVITE <i class="fa fa-arrow-right"></i></button>
+            <p>Copyright 2023 All Rights Reserved</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

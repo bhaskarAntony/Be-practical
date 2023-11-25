@@ -9,7 +9,7 @@ function Elite() {
       <div className="container elite text-black py-5">
       <h2 className="text-center text-white text-900">Join our <span className="text-main-danger">Elite</span> Program, Get 50% Refund if not Placed</h2>
         <div className="elite-card-container container elite rounded-5">
-        <div className="row">
+        <div className="row align-items-center justify-content-center">
           <div className="col-6 col-sm-6 col-md-3 col-lg-2">
             <div className="elite-card elite-c1">
             <i class="bi bi-cash-stack"></i>

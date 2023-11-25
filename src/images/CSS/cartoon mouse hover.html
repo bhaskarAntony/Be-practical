@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .face{
+            position: relative;
+            background-color: rgb(216, 196, 22);
+            width:130px;
+            height: 130px;
+            display: flex;
+            border-radius: 100px;
+            padding:20px;
+
+        }
+        .eye, .eye2{
+            position: relative;
+            text-align: center;
+            width:50px;
+            height: 50px;
+            background-color: rgb(230, 230, 230);
+            border-radius: 100px;
+            margin: 10px;
+            transition: 0.1s;
+            
+        }
+        span{
+            position: absolute;
+            top:30%;
+            left: 50%;
+            display: block;
+            width:20px;
+            height:20px;
+            background-color: black;
+            border-radius: 100px;
+           
+        }
+        .nose{
+            width:100px;
+            position: absolute;
+            top:54%;
+            height:49px;
+            border-radius: 0 0 60px 60px;
+            background-color: black;
+            transition: all 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="face">
+    <div class="eye">
+        <span class="ball"></span>
+    </div>
+    <div class="eye2">
+        <span class="ball"></span>
+    </div>
+</div>
+<div class="nose"></div>
+</div>
+    <script>
+          const card2 = document.querySelector(".container");
+         const card = document.querySelector(".eye");
+         const card1 = document.querySelector(".eye2");
+         const face = document.querySelector(".face");
+         const nose = document.querySelector(".nose");
+        card2.addEventListener("mousemove", (e)=>{
+            let xAxis= (window.innerWidth / 2 - e.pageX);
+            let yAxis= (window.innerHeight / 4 - e.pageX)/2;
+           card.style.transform = "rotate(" + yAxis +"deg)";
+           card1.style.transform = "rotate(" + yAxis +"deg)";
+        });
+        face.addEventListener("mouseenter", (e)=>{
+          nose.style.borderRadius = "10px";
+          nose.style.height = "20px";
+          nose.style.top = "55%";
+        });
+        face.addEventListener("mouseleave", (e)=>{
+          nose.style.borderRadius = "0px 0px 60px 60px";
+          nose.style.height = "50px";
+          nose.style.top = "54%";
+        });
+    </script>
+</body>
+</html>

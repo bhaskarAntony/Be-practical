@@ -6,6 +6,7 @@ import ReadMore from '../Extra/ReadMore'
 import { youtubeVideos } from '../Data/DataFetcher';
 import ShimmerCard from '../shimmer effects/ShimmerCard';
 import Slider from 'react-slick';
+import { Shimmer } from 'react-shimmer';
 
 function StudentsPlaced() {
   const [loading, setLoading] = useState(true)
@@ -39,7 +40,7 @@ function StudentsPlaced() {
         else if(window.innerWidth<=800) {
           setSlidesToShow(2); // On wider screens, show 3 slides
         } else if(window.innerWidth<=900) {
-          setSlidesToShow(3); // On wider screens, show 3 slides
+          setSlidesToShow(2); // On wider screens, show 3 slides
         }
         else{
             setSlidesToShow(4); // On wider screens, show 3 slides
@@ -80,11 +81,28 @@ function StudentsPlaced() {
               Array(9)
                 .fill(null)
                 .map((_, index) => (
-                  <div className="col-6 col-md-3 col-lg-3 rounded-2 p-3" key={index}>
-                    <div>
-                    <ShimmerCard />
-                    </div>
+                  <div className="col-12 col-md-6 col-lg-3 d-flex justify-content-center p-3">
+                  <div className="youtube-card bg-gray3 border-b w-100">
+                  <div className="youtube-header mb-3">
+
+                                    <Shimmer width="100%" height="100%"/>
+                                 
+                                    
+                              </div>
+                              <div className="youtube-body">
+                              
+                              <Shimmer width="70%" height={15} className='mb-3'/>
+
+                               
+                                  <Shimmer width="100%" height={10} className='mb-2'/>
+                                  <Shimmer width="90%" height={10} className='mb-2'/>
+                                  <Shimmer width="80%" height={10} className='mb-2'/>
+                                </div>
+                                <div className="youtube-footer">
+      
+                                </div>
                   </div>
+                      </div>
                 ))
           }
                 </Slider>

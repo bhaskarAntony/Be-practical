@@ -41,7 +41,7 @@ function OurCourses() {
             ):(
               displayedCourses.map((item, index)=>(
                 <div className="our-course-card-wrapper" key={index}>
-                    <div className="container our-course-card p-lg-5 p-md-3 p-2 py-3" data-aos="fade-right">
+                    <div className="container our-course-card p-lg-5 p-md-3 p-sm-4" data-aos="fade-right">
                     <div className="row">
                       <div className="col-12 col-sm-12 col-md-6 col-lg-7">
                         <div className="course-left">
@@ -87,11 +87,11 @@ function OurCourses() {
                                 </div>
                               </div>
                               </div>
-                              <div className="course-info rounded-4 w-100 row mb-2 p-1 px-3 p-3 m-auto">
-                              <div className="col-12 col-md-6 col-lg-6">
+                              <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
+                              <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                               <div className="d-flex align-items-center gap-2 mb-2">
                                  <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
-                                <i class="bi bi-camera-video-fill text-yellow fs-5"></i>
+                                <i class="bi bi-camera-video-fill text-yellow fs-6"></i>
                                </div>
                                <div>
                                 <span>
@@ -101,15 +101,15 @@ function OurCourses() {
                                </div>
                                 </div>
                               </div>
-                              <div className="col-12 col-md-6 col-lg-6">
+                              <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                               <div className="d-flex align-items-center gap-2 mb-2">
                                  <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
-                                <i class="bi  bi-person-check-fill text-green fs-5"></i>
+                                <i class="bi  bi-person-check-fill text-green fs-6"></i>
                                </div>
                                <div>
                                 <span>
                                 <span className="text-secondary d-block">Advantages</span>
-                                <span className='text-900'>HR Activities</span>
+                                <span className='text-900'>Placement Activities</span>
                                 </span>
                                </div>
                                 </div>
@@ -118,7 +118,7 @@ function OurCourses() {
                             
                               <div className="course-btns row mt-3">
                                 <div className="col-12 col-md-6 col-lg-6">
-                                <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right"></i></button></Link>
+                                <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-6">
                                 <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
@@ -128,7 +128,7 @@ function OurCourses() {
                               </div>
                         </div>
                       </div>
-                      <div className="col-12 col-sm-12 col-md-6 col-lg-5">
+                      <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-lg-block">
                         <div className="course-right">
                             <img src={item.courseImage} alt="" className="w-100" />
                         </div>

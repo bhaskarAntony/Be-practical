@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { companies } from '../../Data/DataFetcher';
 import ShimmerComponent from '../ShimmerComponent'
+import { Shimmer } from 'react-shimmer';
 
 
 const Offlinecompanies = [
@@ -117,10 +118,9 @@ function Companies() {
             speed: 500,
             slidesToShow: slidesToShow,
             slidesToScroll: 1,
+            cssEase: 'linear',
             autoplay: true,
             autoplaySpeed: 1000, // Change delay as needed
-            prevArrow: <button className="slick-prev">Previous</button>, // Add previous arrow
-            nextArrow: <button className="slick-next">Next</button>, // Add next arrow
           };
     // useEffect(() => {
     //     AOS.init(); // Initialize AOS
@@ -144,8 +144,8 @@ function Companies() {
                  .fill(null)
                  .map((_, index) => (
                    <div className="col-6 col-md-3 col-lg-2 p-2" key={index}>
-                    <div className="overflow-hidden">
-                    <ShimmerComponent />
+                    <div className="overflow-hidden rounded-4">
+                    <Shimmer width="100%" height={100} />
                     </div>
                    </div>
                  ))

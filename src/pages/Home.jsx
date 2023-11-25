@@ -46,7 +46,6 @@ function Home() {
         <QuizModal/>
         <Adwantages/>
         <YoutubeVideos/>
-        <Certificate/>
         <ChatWithus/>
         <Funfact/>
         <Feedback/>

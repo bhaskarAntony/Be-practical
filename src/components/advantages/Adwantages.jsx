@@ -4,6 +4,7 @@ import './adwantage.css'
 import { advantages } from '../../Data/DataFetcher';
 import ShimmerCard from '../../shimmer effects/ShimmerCard';
 import ApplyNow from '../../Extra/ApplyNow';
+import { Shimmer } from 'react-shimmer';
 function Adwantages() {
   const [loading, setLoading] = useState(true)
     console.log(advantages)
@@ -18,10 +19,10 @@ function Adwantages() {
       }, []);
 
   return (
-    <section id="adwantages" className='overflow-hidden py-5'>
+    <section id="adwantages" className='overflow-hidden'>
       <div className="adwantages-container container p-lg-5 text-center rounded-4">
         <h3 className="fs-1 text-900 text-center">Advantages At <span className="text-main-danger"> Be Practical</span></h3>
-        <p className="fs-6 text-secondary my-4">
+        <p className="fs-6 text-secondary">
           Mentoring for our full-stack course starts long before a teacher gives an individual training session and continues long after the training session is over. Assessment, motivation, design, delivery, and evaluation are all connected stages or activities in this job guaranteed courses in Bangalore.
         </p>
         <div className="row d-flex justify-content-center overflow-hidden">
@@ -29,10 +30,22 @@ function Adwantages() {
               Array(6)
                 .fill(null)
                 .map((_, index) => (
-                  <div className="col-6 col-md-3 col-lg-2 rounded-2 p-3" key={index}>
-                    <div>
-                    <ShimmerCard />
+                  <div className="col-12 col-sm-12 col-md-6 col-lg-4 rounded-2 p-3" key={index}>
+                   <div className="adwantage-card mb-3 p-3  border-0">
+                    <div className="adwantage-header">
+                      <div className=" rounded-5 overflow-hidden">
+                       
+                        <Shimmer width={80} height={80} className='rounded-5'/>
+                      </div>
                     </div>
+                    <div className="adwantage-card-body">
+                      <Shimmer width="80%" height={25} className='mb-2'/>
+                      <Shimmer width="70%" height={15} className='mb-2'/>
+                      <Shimmer width="100%" height={15} className='mb-2'/>
+                      <Shimmer width="80%" height={15} className='mb-2'/>
+                      <Shimmer width="90%" height={15} className='mb-2'/>
+                    </div>
+                  </div>
                   </div>
                 ))
             ):(

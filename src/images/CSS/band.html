@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>band</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #98ddf9;
+        }
+        .band{
+            width: 330px;
+            height: 100px;
+            position: absolute;
+            left: -300px;
+            background-color: #000000;
+            transition: 0.5s steps(5, end);
+        }
+        .band2{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+        }
+        .band2 [class*="fa-"]{
+            font-size: 1.3em;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            background:var(--c);
+            color: #fff;
+            border-radius: 100px;
+            transition: 1s;
+            cursor: pointer;
+        }
+        .band2 [class*="fa-"]:hover{
+            transform: rotate(360deg) scale(1.5);
+        }
+        .band2::before{
+            content: "open";
+            position: absolute;
+            width: 30%;
+            height: 100%;
+            background-color: rgb(159, 7, 22);
+            right: -30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6em;
+            color: #ffffff;
+            border-radius: 0px 10px 10px 0px;
+            cursor: pointer;
+        }
+        .band2:hover::before{
+            content: "Follow";
+            background-color: #b61f29;
+        }
+        .band:hover{
+            left: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hover that open button to watch animation</h1>
+        <div class="band">
+            <div class="band2">
+                <i class="fa fa-facebook" style="--c:#0729c0"></i>
+                <i class="fa fa-instagram" style="--c:#f82141"></i>
+                <i class="fa fa-whatsapp" style="--c:#01712a"></i>
+                <i class="fa fa-linkedin" style="--c:#0467d8"></i>
+                <i class="fa fa-youtube-play" style="--c:#7d0408"></i>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

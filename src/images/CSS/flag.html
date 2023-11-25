@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(#ec791b, #f0f0f0, #026215);
+        }
+        .flag{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: antiquewhite;
+            overflow: hidden;
+            /* animation: rotate2 5s linear infinite; */
+
+        }
+        .flag0{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: transparent;
+            position: relative;
+            /* animation: rotate2 5s linear infinite; */
+        }
+        .flag0::before{
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            background:url(https://cdn-icons-png.flaticon.com/128/9421/9421117.png) no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            left: -60px;
+            top: 10px;
+            animation: rotate2 3s linear infinite alternate;
+        }
+        .flag0::after{
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-color: #fff;
+            border-radius: 50%;
+            background:url(https://cdn-icons-png.flaticon.com/128/9421/9421117.png) no-repeat center;
+            background-size: cover;
+            top: 100px;
+            left: -100px;
+            animation: rotate2 3s linear infinite alternate;
+            animation-delay: 2s;
+        }
+        .first{
+            width: 200px;
+            height: 66.6px;
+            background-color: orange;
+            background: linear-gradient(50deg, #7c3102, #ff9350);
+        }
+        .second{
+            width: 200px;
+            height: 66.6px;
+            background-color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(50deg, rgb(223, 223, 223), #fff);
+
+        }       
+        .third{
+            width: 200px;
+            height: 66.9px;
+            background-color: green;
+            background: linear-gradient(50deg, #053303, #50f952);
+
+        }
+        .chakra{
+            width: 66.6px;
+            height: 66.6px;
+            background-color: transparent;
+            border: 2px solid blue;
+            border-radius: 100px;
+            background: url(https://cdn.pixabay.com/photo/2023/04/06/16/29/ashoka-chakra-7904695_1280.png) no-repeat center;
+            background-size: cover;
+            animation: rotate 5s linear infinite;
+        }
+        @keyframes rotate{
+            form{
+                transform: rotate(-360deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes rotate2{
+            form{
+                transform: translate(-20px) translateY(10px);
+            }
+            to{
+                transform: translate(20px) translateY(-10px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flag0">
+            <div class="flag">
+                <div class="first"></div>
+                <div class="second">
+                    <div class="chakra">
+                    </div>
+                </div>
+                <div class="third"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

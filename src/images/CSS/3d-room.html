@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documen1t1</title>
+    <style>
+    *{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+    body{
+        margin:0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #000;
+    }
+    .container{
+        position: relative;
+        width:300px;
+        height:300px;
+        transform-style: preserve-3d;
+        transform: perspective(100px);
+    }
+    .bottom{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(19, 9, 29);
+        transform: perspective(0px) rotateX(0deg);
+        box-shadow:  inset 3px 6px 10px #23042f, inset 10px 20px 40px 40px #39034e;
+    }
+    .top{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(78, 51, 8);
+        transform:perspective(1200px) rotateX(80deg) translateY(155px) translateZ(-110px);
+        box-shadow:  inset 3px 6px 10px #321302, inset 10px 20px 40px 40px #170c02;
+    }
+    .top1{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(73, 45, 0);
+        transform:perspective(1200px) rotateX(80deg) translateY(90px) translateZ(150px);
+    }
+    .left{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        left:-50%;
+        background-color: rgb(16, 66, 146);
+        transform: rotateY(90deg) translateX(-150px);
+        box-shadow:  inset 3px 6px 10px #0a2079, inset 10px 20px 40px 40px #020b38;
+    }
+    .right{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:0;
+        right:-50%;
+        background-color: rgb(12, 50, 131);
+        transform: rotateY(-90deg)  translateX(150px);
+        box-shadow:  inset 3px 6px 10px #0a2079, inset 10px 20px 40px 40px #020b38;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="bottom">
+        </div>
+        <div class="top"></div>
+        <div class="top1"></div>
+        <div class="left"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quo! Distinctio necessitatibus neque perferendis quisquam! Nobis voluptatum molestiae dicta quae qui pariatur enim nihil fugit molestias at. Iste, quos et? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi magnam, accusamus officia ex tenetur commodi debitis ipsam consequuntur dolorem reprehenderit vero et eius voluptatibus eveniet vel voluptatum. Vero, rem! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam temporibus sint harum consequatur numquam nobis. Eveniet, ipsa molestias, non fuga officiis quia mollitia natus, harum dolores facilis consequatur voluptas nulla!</p></div>
+        <div class="right"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quo! Distinctio necessitatibus neque perferendis quisquam! Nobis voluptatum molestiae dicta quae qui pariatur enim nihil fugit molestias at. Iste, quos et? Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi magnam, accusamus officia ex tenetur commodi debitis ipsam consequuntur dolorem reprehenderit vero et eius voluptatibus eveniet vel voluptatum. Vero, rem! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam temporibus sint harum consequatur numquam nobis. Eveniet, ipsa molestias, non fuga officiis quia mollitia natus, harum dolores facilis consequatur voluptas nulla!</p></div>
+    </div>
+</body>
+</html>

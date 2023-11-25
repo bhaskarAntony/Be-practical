@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .conatiner{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .card, .item{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+        }
+        .card{
+            max-width: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0px 0px 40px #ddd9d9;
+        }
+        .left, .right{
+            flex: 1;
+            min-height: 400px;
+            border-radius: 30px;
+        }
+        .left{
+            background-color: rgb(0, 10, 205);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            color: #fff;
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .progress{
+            padding: 30px;
+            text-align: center;
+            background-color: rgb(7, 7, 53);
+            background: linear-gradient(#06258a, #4b17e9);
+            box-shadow: 0px 0px 30px #7349f0, 0px 0px 100px #622dff;
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+        }
+        .progress h1{
+            font-size: 4em;
+        }
+        .text{
+            text-align: center;
+        }
+        .item{
+            background-color: var(--i);
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            color: var(--j);
+        }
+        button{
+            border: none;
+            padding: 10px;
+            border-radius: 100px;
+            background-color: #180429;
+            color: #fff;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="conatiner">
+        <div class="card">
+            <div class="left">
+                <h5>Your Result</h5>
+                <div class="progress">
+                    <h1>76</h1>
+                    <p>of 100</p>
+                </div>
+               <div class="text">
+                <h2>Great</h2>
+                <p>you scored higher than 65% of the people who have taken these test</p>
+               </div>
+            </div>
+            <div class="right">
+                <h3>Summery</h3>
+                <div class="item" style="--i:#d419451f; --j:#ea1123">
+                    <i class="fa fa-openid"></i>
+                    <h3>Reaction</h3>
+                    <h3>80/100</h3>
+                </div>
+                <div class="item" style="--i:#d4b2191f; --j:#caa70c">
+                    <i class="fa fa-hacker-news"></i>
+                    <h3>Reaction</h3>
+                    <h3>80/100</h3>
+                </div>
+                <div class="item" style="--i:#0fed341f; --j:#088c06">
+                    <i class="fa fa-gavel"></i>
+                    <h3>Reaction</h3>
+                    <h3>80/100</h3>
+                </div>
+                <div class="item" style="--i:#4e0fed1f; --j:#2b0785">
+                    <i class="fa fa-address-card-o"></i>
+                    <h3>Reaction</h3>
+                    <h3>80/100</h3>
+                </div>
+                <button>Continue</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

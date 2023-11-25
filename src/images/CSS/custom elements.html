@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+        <head>
+            <title>index2</title>
+            <style>
+                button{
+                    margin:50px;
+                    position: relative;
+                    outline:none;
+                    border: none;
+                    padding:10px 15px;
+                    font-size: 1.4em;
+                    background-color: #fff;
+                    color:rgb(0, 0, 0);
+                    z-index: 1;
+                    
+                }
+                button::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top:0;
+                    background-color: #000;
+                    position: absolute;
+                    transform: scale(0);
+                    opacity: 0;
+                    transition: 0.5s;
+                    z-index: -1;
+                    border-bottom: 3px solid #000;
+                 
+                }
+                button:hover{
+                    color:#ffffff;
+
+                }
+                button:hover:after{
+                    color: rgb(255, 251, 251);
+                    transform: scale(1);
+                    opacity: 1;
+                    z-index: -1;
+                }
+                button::before{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    top:0;
+                    position: absolute;
+                    transform: scaleY(2);
+                    transition: 0.5s;
+                    opacity: 0;
+                    z-index: -1;
+                    border-bottom: 3px solid #000;
+                    border-top: 3px solid #000;
+                 
+                }
+                button:hover:before{
+                    color: black;
+                    transform: scale(1);
+                    opacity: 1;
+                    z-index: -1;
+                }
+                input[type="checkbox"]{
+                    position: relative;
+                    width:100px;
+                    height: 50px;
+                    appearance: none;
+                    background-color: gray;
+                    border-radius: 50px;
+                }
+                input:checked[type="checkbox"]{
+                    background-color: #4c0771;
+                }
+                input[type="checkbox"]:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 50px;
+                    width:50px;
+                    background-color: #ffffff;
+                    border-radius: 30px;
+                    box-shadow: 1px 1px 10px 1px gray, inset 1px 2px 20px gray;
+                    transition: 0.5s;
+                   
+                   
+                }
+                input[type="checkbox"]:hover::before{
+                    transform: scale(1.1);
+                }
+                input:checked[type="checkbox"]::before{
+                    top: 0;
+                    left: 50px;
+                    box-shadow: 1px 1px 5px 1px#9e4acb, inset 1px 2px 20px rgb(201, 151, 212);
+                }
+                ul{
+                    display: flex;
+                }
+                li{
+                    list-style-type: none;
+                    margin:20px;
+                    color: #404040;
+                    font-size: 1.5em;
+                    width: fit-content;
+                    position: relative;
+                    cursor: pointer;
+                   
+                }
+                li::before{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    transform: scaleX(0);
+                    top:22px;
+                    left: 0;
+                    width:100%;
+                    height: 40%;
+                    border-bottom: 3px solid rgb(255, 0, 43);
+                    border-top: 3px solid rgb(255, 0, 43);
+                    transition: 0.5s;
+                }
+                li:hover:before{
+                    transform: scaleX(1);
+
+                }
+                a{
+                    font-size: 25px;
+                   text-decoration: none;
+                    border:none;
+                    padding:10px;
+                    color:#000;
+                    position: relative;
+                }
+                a::before{
+                    content: "";
+                    position: absolute;
+                    background-color: #4c0771;
+                    width: 100%;
+                    height:100%;
+                    z-index: -1;
+                    top:0;
+                    left:0;
+                    opacity: 0;
+                    transform: scale(0);
+                    transition: 0.5s;
+                }
+                a:hover{
+                    color:#fff;
+                }
+                a:hover::before{
+                    opacity:1;
+                    transform: scale(1);
+                }
+                .range{
+                    position: relative;
+                    appearance: none;
+                    accent-color: green;
+                    background-color: #404040;
+                    border-radius: 20px;
+                    width:300px;
+                    overflow: hidden;
+                   
+                }
+                input[type="range"]::-webkit-slider-thumb{
+                    appearance: none;
+                    cursor: pointer;
+                    width: 30px;
+                    height: 30px;
+                    border:5px solid #57009a;
+                    transform: scale(1.2);
+                    border-radius: 30px;
+                    background-color: #35e209;
+                    box-shadow: -430px 4px 10px green;
+                }
+               
+
+            </style>
+        </head>
+        <body>
+
+            <button>GET IN TOUCH</button> <br>
+            <input type="checkbox" id="ran" onfocus="slider(this.value);" onchange="slider(this.value);" onmousemove="slider(this.value);" >
+            <ul>
+                <li> <h3>Home</h3></li>
+                <li> <h3>Services</h3></li>
+                <li> <h3>Contact</h3></li>
+            </ul>
+            <a href="#">Sathish</a>
+           <span id="val"></span>
+           <div>
+            <input type="range" class="range" value="0" min="0" max="100">
+        </div>
+           <script>
+            let range=document.getElementById("ran").value;
+            function slider(value){
+                document.getElementById("val").innerHTML=value;
+            }
+           </script>
+        </body>
+    </html>

@@ -35,22 +35,19 @@ const webinar = [
   }
 ]
 function Webinar() {
-  const [slidesToShow, setSlidesToShow] = useState(3); // Default to showing 3 slides
+  const [slidesToShow, setSlidesToShow] = useState(4); // Default to showing 3 slides
   useEffect(() => {
     // Check the screen width and update the number of slides to show
     const handleResize = () => {
-      if (window.innerWidth <= 600) {
+      if (window.innerWidth <= 768) {
         setSlidesToShow(1); // On smaller screens, show only 1 slide
 
-      }
-      else if(window.innerWidth<=800) {
-        setSlidesToShow(2); // On wider screens, show 3 slides
       } else if(window.innerWidth<=900) {
         setSlidesToShow(2); // On wider screens, show 3 slides
       }
      
       else{
-          setSlidesToShow(3); // On wider screens, show 3 slides
+          setSlidesToShow(4); // On wider screens, show 3 slides
       }
     };
   
@@ -109,20 +106,20 @@ function Webinar() {
   return (
   <div className='bg-blue-light py-5'>
           <h3 className="fs-1 text-900 text-center">Pre Career Guidence program <br /> From  <span className="text-main-danger" >Top MNC's</span></h3>
-    <section className='p-2 container-fluid py-5' id="webinar">
+    <section className='p-2 container-fluid' id="webinar">
 
-      <div className="students-placed container">
+      <div className="students-placed container-fluid">
       <Slider {...settings}>
       {webinar.map((item) => (
-                <div className="col-12 col-md-6 col-lg-3 p-3 d-flex justify-content-center">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-3 p-3 d-flex justify-content-center">
               <div className="webinar-card ">
                 <div className="webinar-card-header p-2">
                         <img src={item.image} alt="" />
                 </div>
                 <div className="webinar-card-body p-2">
-                  <p className="mt-2 p-light-small text-main-danger">Conducted by</p>
+                  <p className="mt-1 fs-6 text-black">Conducted by</p>
                     <h3 className="heading-small text-black">{item.company}</h3>
-                    <p className='mt-2 fs-5 text-black'><ReadMore text={item.description} maxLength={50} /></p>
+                    <p className='mt-2 fs-6 text-secondary'><ReadMore text={item.description} maxLength={50} /></p>
                 </div>
               </div>
                 </div>

@@ -19,6 +19,7 @@ function Highlight({ data }) {
     };
 
     window.addEventListener('scroll', handleScroll);
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -28,7 +29,7 @@ function Highlight({ data }) {
     <div className="p-2">
       <div className="container highlight bg-dark-gray mb-4">
         <div className="blur-highlight"></div>
-        <div className="row align-items-center">
+        <div className="row align-items-center justify-content-center">
           <div className="col-6 col-md-4 col-lg-3 mb-3">
             <div className="highlight-card-hero">
               <h1 className={`fs-1 text-900 text-white ${counting ? 'counting' : ''}`}>
@@ -44,6 +45,7 @@ function Highlight({ data }) {
               </span>
             </div>
           </div>
+
           <div className="col-6 col-md-4 col-lg-3 mb-3">
             <div className="highlight-card-hero ">
               <h1 className={`fs-1 text-900 text-white ${counting ? 'counting' : ''}`}>
@@ -59,6 +61,7 @@ function Highlight({ data }) {
               </span>
             </div>
           </div>
+
           <div className="col-6 col-md-4 col-lg-3 mb-3">
             <div className="highlight-card-hero">
               <h1 className={`fs-1 text-900 text-white ${counting ? 'counting' : ''}`}>
@@ -74,8 +77,11 @@ function Highlight({ data }) {
               </span>
             </div>
           </div>
+
           <div className="col-6 col-md-4 col-lg-3 mb-3">
+
             <div className="highlight-card-hero">
+
               <h1 className={`fs-1 text-900 text-white ${counting ? 'counting' : ''}`}>
                 {counting ? <CountUp start={0} end={2011} duration={2} decimal={0} /> : 2011}
               </h1>

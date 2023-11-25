@@ -27,6 +27,7 @@ import QuizModal from './components/QuizModal'
 import BlogsView from './pages/BlogsPage/BlogsView'
 import BottomNavigation from './components/bottom nav/BottomNavigation '
 import CustomCursor from './Extra/cursor/CustomCursor'
+// import Trending from './components/trending/Trending'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -115,6 +116,9 @@ const onLoad = () => {
           </>
       )}
     </div>
+    // <>
+    // <Trending/>
+    // </>
   )
 }
 

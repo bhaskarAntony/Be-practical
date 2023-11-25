@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pricing card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container{
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .card{
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
+            min-width: 300px;
+            box-shadow: 0px 0px 20px #d3d3d3;
+            border-radius: 15px;
+            transition: 1s;
+            cursor: pointer;
+
+        }
+        ul li{
+            padding: 15px 0px;
+            border-bottom: 1px solid #e1dede;
+            font-weight: bold;
+            color: #3d3c3c;
+        }
+        .card h3{
+            color: #676666;
+        }
+        .card h1{
+            font-size: 3em;
+        }
+        .card button{
+            padding: 10px;
+            border: none;
+            font-size: 1.2em;
+            background: linear-gradient(45deg, #813df7, #4e03e4);
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px #c1aaff;
+            cursor: pointer;
+        }
+        .card:hover button{
+            background: #fff;
+            color: #4e03e4;
+            box-shadow: 0px 0px 20px #760fec;
+        }
+        .card:hover{
+            background: linear-gradient(5deg, #813df7, #4e03e4);
+            transform: scale(1.1);
+        }
+        .card:hover{
+            color: #fff;
+        }
+        .card:hover ul li, .card:hover h3{
+            color: #fff;
+        }
+        @media (max-width:768px){
+            .container{
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px;
+            }
+            .card{
+                width:100%
+            }
+            .card:hover{
+                transform: scale(0.9);
+            }
+        }
+        .top{
+            text-align: center;
+            padding: 2%;
+        }
+        .radio{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding:10px;
+            font-size: 1.3em;
+        }
+        input[type="checkbox"]{
+                    position: relative;
+                    width:80px;
+                    height: 40px;
+                    appearance: none;
+                    background-color: rgb(173, 173, 173);
+                    border-radius: 50px;
+                }
+                input:checked[type="checkbox"]{
+                    background-color: #6b49ca;
+                }
+                input[type="checkbox"]:before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 40px;
+                    width:40px;
+                    background-color: #ffffff;
+                    border-radius: 30px;
+                    box-shadow: 1px 1px 10px 1px rgb(199, 199, 199), inset 1px 2px 20px rgb(195, 191, 191);
+                    transition: 0.5s;
+                   
+                   
+                }
+                input[type="checkbox"]:hover::before{
+                    transform: scale(1.1);
+                }
+                input:checked[type="checkbox"]::before{
+                    top: 0;
+                    left: 50px;
+                    box-shadow: 1px 1px 5px 1px#5e2ce9, inset 1px 2px 20px rgb(166, 121, 255);
+                }
+                .top h2{
+                    color: #5e2ce9;
+                    font-size: 2.1em;
+                }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <h2>Our Pricing</h2>
+        <div class="radio">
+            <p class="off">Annually</p>
+            <input type="checkbox" name="price" id="price">
+            <p class="on">Monthly</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h3>Basic</h3>
+            <div class="coast">
+                <h1>$19.99</h1>
+            </div>
+            <ul>
+                <li>500 GB Storage</li>
+                <li>2 Users Allowed</li>
+                <li>Send upto 3 GB</li>
+            </ul>
+            <button>LEARN MORE</button>
+        </div>
+        <div class="card">
+            <h3>Proffesional</h3>
+            <div class="coast">
+                <h1>$24.99</h1>
+            </div>
+            <ul>
+                <li>500 GB Storage</li>
+                <li>2 Users Allowed</li>
+                <li>Send upto 3 GB</li>
+            </ul>
+            <button>LEARN MORE</button>
+        </div>
+        <div class="card">
+            <h3>Master</h3>
+            <div class="coast">
+                <h1>$39.99</h1>
+            </div>
+            <ul>
+                <li>500 GB Storage</li>
+                <li>2 Users Allowed</li>
+                <li>Send upto 3 GB</li>
+            </ul>
+            <button>LEARN MORE</button>
+        </div>
+    </div>
+    
+</body>
+</html>

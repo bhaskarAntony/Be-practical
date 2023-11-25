@@ -103,7 +103,7 @@ function AllCourses() {
                           </div>
                           <div className="course-btns row mt-3">
                             <div className="col-12 col-md-6 col-lg-6">
-                            <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More</button></Link>
+                            <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none mb-1"> <button className="btn-gray  hero-btn">Know More</button></Link>
                             </div>
                             <div className="col-12 col-md-6 col-lg-6">
                             <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
@@ -113,7 +113,7 @@ function AllCourses() {
                           </div>
                     </div>
                   </div>
-                  <div className="col-12 col-md-6 col-lg">
+                  <div className="col-12 col-md-6 col-lg d-none d-lg-block">
                     <div className="course-right">
                         <img src={item.courseImage} alt="" className="w-100" />
                     </div>

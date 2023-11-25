@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body{
+            margin: 0;
+            padding:0;
+            background-color: #c7c7c7;
+        }
+        label{
+            font-size: 2em;
+            font-family:'Times New Roman', Times, serif;
+            letter-spacing: 4px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+            height: 100vh;
+        }
+        
+        .calucator{
+            margin-top:20px;
+            position: relative;
+            background-color: rgb(28, 27, 27);
+            padding:5px;
+            width: 300px;
+            border-radius: 10px 10px 2px 2px;
+            padding-top: 50px;
+            padding-bottom: 15px;
+            transform-style: preserve-3d;
+            transform: perspective(800px) rotateX(70deg) ;
+            transition: 0.5s;
+            box-shadow:inset 2px 3px 10px #000000;
+        }
+        .calucator label{
+            color: #4b4b4b;
+            font-size: 1.3em;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            letter-spacing: 3px;
+        }
+        .calucator::after{
+            content:"";
+            position: absolute;
+            bottom: -49px;
+            left:0.4px;
+            height: 50px;
+            width: 100%;
+            transform-origin: top;
+            background:linear-gradient(#595858, #010101);
+            border-radius:0px 0px 10px 10px;
+            transform: rotateX(-80deg);
+            transition: 0.5s;
+            box-shadow: 10px 50px 20px #6e6e6e, inset 2px 3px 15px #100f0f;
+        }
+        .main:hover .calucator{
+            transform: rotate(10deg) skewY(-25deg);
+            box-shadow: -10px 100px 40px #666666;  
+            border-radius: 2px 2px 8px 2px;
+           }
+        .main:hover .calucator::before{
+            content:"";
+            position: absolute;
+            border-radius: 8px 0px 0px 8px;
+            top:-25px;
+            left:-49.5px;
+            height: 100%;
+            width: 50px;
+            background-color: rgb(39, 41, 41);
+            background:linear-gradient(#595858, #010101);
+            transform: rotate(0deg) skewY(45deg);
+            transition: 0.5s;
+            box-shadow: inset 2px 5px 30px #303030;
+        }
+        .main:hover .calucator::after{
+            top:-49.5px;
+            left:-50px;
+            border-radius: 8px 8px 0px 0px;
+            background:linear-gradient(#272727, #4e4b4b);
+            transform: rotate(0deg) skewX(45deg);
+            transition: 0.5s;
+            box-shadow: inset 2px 3px 15px #282828;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .grid button:nth-child(16){
+            grid-column: 4;
+            grid-row: 4/6;
+
+        }
+        .calucator input[type="text"]{
+            width:99%;
+            outline: none;
+            border:none;
+            padding:8px;
+            font-size:2em;
+            color:#8c8c8c;
+            margin: 10px 0;
+            height: 60px;
+            background-color: rgb(46, 46, 46);
+            box-shadow: 2px -5px 10px #1e1e1e, inset 5px 2px 5px #000000, inset 5px 5px 10px #4b4b4b; }
+       
+        .main:hover .grid button{
+            box-shadow: 2px -5px 5px #121111, inset 8px 2px 5px #000,inset 2px 2px 2px #b9b9b9;
+        }
+        .grid button{
+            margin:3px;
+            outline: none;
+            border:none;
+            background-color: #484848;
+            font-size: 1.3em;
+            padding:15px 0px;
+            border-radius: 5px;
+            color:#fff;
+            transition: 0.5s;
+            box-shadow: 2px -5px 5px #121111, 3px 5px 5px #000,5px 8px 8px #000;
+        }
+        .main:hover .grid button:active{
+            box-shadow: inset 4px 2px 2px #000;
+        }
+
+    </style>
+</head>
+<body>
+    <label>CALUCATOR</label>
+    <div class="container">
+        <div class="main">
+        <div class="calucator">
+            <label for="title">BASCO</label>
+            <input type="text" id="display">
+            <div class="grid">
+                <button style="background-color: #770404;color: #fff;" onclick="display.value=''">AC</button>
+                <button  style="background-color: #03430c;color: #fff;" onclick="display.value = display.value.toString().slice(0,-1)">DE</button>
+                <button onclick="display.value+='.'">.</button>
+                <button onclick="display.value+='+'">+</button>
+
+                <button onclick="display.value+=1">1</button>
+                <button  onclick="display.value+=2">2</button>
+                <button  onclick="display.value+=3">3</button>
+                <button  onclick="display.value+='-'">-</button>
+
+                <button onclick="display.value+=4">4</button>
+                <button onclick="display.value+=5">5</button>
+                <button onclick="display.value+=6">6</button>
+                <button onclick="display.value+='/'">/</button>
+
+                <button onclick="display.value+=7">7</button>
+                <button onclick="display.value+=8">8</button>
+                <button onclick="display.value+=9">9</button>
+                <button onclick="display.value=eval(display.value)">=</button>
+
+                <button onclick="display.value+='*'">*</button>
+                <button onclick="display.value+=0">0</button>
+                <button onclick="display.value+='%'">%</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

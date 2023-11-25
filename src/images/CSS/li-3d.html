@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            transition: 0.5s;
+        }
+        body{
+            overflow: hiden;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000000;
+            overflow: hidden;
+            z-index: -10;
+        }
+        ul{
+            display: flex;
+            gap:60px;
+            flex-flow: row wrap;
+            z-index: 3;
+            position: absolute;
+        }
+        ul li{
+            width: 200px;
+            height: 100px;
+            background-color: #d8b6dd;
+            box-shadow: inset 3px 5px 20px #a248cc;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4em;
+            gap: 20px;
+            position: relative;
+            letter-spacing: 3px;
+            font-weight: bolder;
+            cursor: pointer;
+            animation: li-anim 0.6s ease-out infinite alternate;
+            animation-delay: var(--j);
+        }
+       .fa {
+            font-size: 2em;
+            
+        }
+        ul li:hover:nth-child(1){
+            background-color: rgb(32, 26, 200);
+        }
+        ul li:hover:nth-child(2){
+            background-color: rgb(219, 6, 56);
+        }
+        ul li:hover:nth-child(3){
+            background-color: rgb(144, 17, 212);
+        }
+        ul li:hover:nth-child(4){
+            background-color: rgb(8, 124, 43);
+        }
+        ul li:hover:nth-child(1)::before{
+            background-color: rgb(15, 25, 84);
+        }
+        ul li:hover:nth-child(1)::after{
+            background-color: rgb(83, 101, 202);
+        }
+        ul li:hover:nth-child(2)::before{
+            background-color: rgb(72, 8, 29);
+        }
+        ul li:hover:nth-child(2)::after{
+            background-color: rgb(216, 51, 101);
+        }
+        ul li:hover:nth-child(3)::before{
+            background-color: rgb(45, 6, 58);
+        }
+        ul li:hover:nth-child(3)::after{
+            background-color: rgb(168, 91, 206);
+        }
+        ul li:hover:nth-child(4)::before{
+            background-color: rgb(8, 78, 47);
+        }
+        ul li:hover:nth-child(4)::after{
+            background-color: rgb(28, 184, 158);
+        }
+        ul li:hover{
+            transform: translateY(-60px);
+            color: #fff;
+            box-shadow: inset 0px 0px 0px #616161;
+
+        }
+        ul li::before{
+            background-color: #bc89c5;
+            box-shadow: inset 3px 5px 20px #616161;
+        }
+        ul li::after{
+            background-color: #bc89c5;
+            box-shadow: inset 3px 5px 20px #616161;
+        }
+        ul li:hover:after{
+            box-shadow: 0px 0px 0px #000;
+        }
+        ul li:hover:before{
+            box-shadow: 0px 0px 0px #000;
+        }
+        ul li:before{
+            content: "";
+            position: absolute;
+            width:45px;
+            height: 100%;
+            background-color: #bc89c5;
+            box-shadow: inset 3px 5px 20px #616161;
+            left:-45px;
+            top:-16px;
+            transform: skewY(35deg);
+        }
+        ul li:after{
+            content: "";
+            position: absolute;
+            width:100%;
+            height:30px;
+            background-color: #bc89c5;
+            box-shadow: inset 3px 5px 20px #616161;
+            top:-30px;
+            left: -22px;
+            transform: skewX(55deg);
+
+        }
+        .ground{
+            width: 85%;
+            height: 100%;
+            background: repeating-linear-gradient(
+            90deg, #000 0, #343131 40px, 
+            #fff 40px, #fff 80px);
+            z-index: 1;
+            transform: perspective(450px) rotateX(65deg);
+        }
+        .ground::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                -180deg, #000 0, #000 40px, 
+                #fff 40px, #fff 80px);
+            mix-blend-mode: difference;
+        }
+        .text{position: absolute;top:20px;}
+        label{
+            color: #fff;
+            letter-spacing: 9px;
+            font-size: 4em;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            animation: color-animation 4s ease-in infinite alternate;
+            animation-delay: var(--i);
+        }
+        @keyframes color-animation{
+            0%{color:#a248cc}
+            10%{color:#0dff19}
+            20%{color:#cb0070}
+            30%{color:#ba0505}
+            40%{color:#cbdc0d}
+            50%{color:#be6a16}
+            60%{color:#061174}
+            70%{color:#02cbd5}
+            80%{color:#47069c}
+            90%{color:#0a5404}
+            100%{color:#062d82}
+        }
+        @keyframes li-anim{
+            from{
+                transform:translateY(0px)
+             }
+             to{
+                transform:translateY(-80px)
+             }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+    <label style="--i:1s;"> Follow</label> <label style="--i:2s;">On</label> <label style="--i:3s;">Social</label><label style="--i:4s;"> Media</label>
+</div>
+    <ul>
+        <li  style="--j:0.2s;"><i class="fa fa-facebook"></i>Facebook</li>
+        <li  style="--j:0.6s;"><i class="fa fa-instagram"></i>Instagram</li>
+        <li  style="--j:1s;"><i class="fa fa-twitter"></i>Twitter</li>
+        <li  style="--j:1.4s;"><i class="fa fa-linkedin"></i>Linkedin</li>
+    </ul>
+
+    <div class="ground"></div>
+</div>
+    
+</body>
+</html>

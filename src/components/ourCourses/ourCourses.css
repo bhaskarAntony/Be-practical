@@ -8,7 +8,7 @@
 }
 .our-course-card {
     z-index: 10;
-    border-left: 5px solid var(--red);
+    /* border-left: 5px solid var(--red); */
     margin-bottom: 50px !important;
     min-width: 100% !important;
 }
@@ -21,6 +21,8 @@
 }
 .our-course-card img{
     border: 1px solid #e6e3e3;
+    width: 300px;
+    height: 300px;
 }
 .our-courses .course-right ul li{
     margin-bottom: 20px;

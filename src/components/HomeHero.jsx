@@ -83,7 +83,7 @@ function HomeHero() {
   return (
     <section className='hero container-fluid '>
       <div className="hero-1 ">
-      <div className="custom-carousel container-fluid bg-dot">
+      <div className="custom-carousel container-fluid">
       <div className="row align-items-center">
       <div className="col-12 col-sm-12 col-md-8">
         <Carousel
