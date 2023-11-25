@@ -8,6 +8,7 @@ import HeroRegister from './HeroRegister';
 import DialogModal from './DialogModel';
 import { homeHeroApi } from '../Data/DataFetcher';
 import heroImage from '../images/hero-image.svg'
+import home_video from '../images/home-video.mp4'
 
 const home = [
   {
@@ -95,13 +96,13 @@ function HomeHero() {
         >
           {home.map((item, index) => (
             <Carousel.Item key={index}>
-                  <div className="hero-text p-lg-5 p-md-3 p-1 py-3 ">
+                  <div className="hero-text p-lg-2 p-md-2 p-1 py-3 ">
                     <h1 className="card-heading text-main-2 text-start">100% Placement Programs</h1>
                     <h1 className="heading text-bold text-start hero-heading">{item.heading}</h1>
                     <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
-                      <button className='btn-main-outline-dark  hero-btn bg-gray2 text-white'>Apply Now <i class="bi bi-chevron-double-right"></i></button>
-                      <button className='btn-danger  hero-btn' onClick={openModal}>Book Your Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-main-outline-dark  hero-btn bg-gray2 text-white' onClick={openModal}>Apply Now <i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-danger  hero-btn'>Download Browcher<i class="bi bi-chevron-double-right"></i></button>
                     </div>
                    
                   </div>
@@ -113,7 +114,8 @@ function HomeHero() {
    <div className="hero-image d-flex align-items-center h-100">
    {/* <ImageCarousel/> */}
    {/* <img src="https://png.pngtree.com/png-vector/20220725/ourmid/pngtree-collaboration-of-partners-handshaking-partnership-png-image_6065274.png" alt="" className='w-100' /> */}
-   <img src={heroImage} alt="" className='w-100'/>
+   {/* <img src={heroImage} alt="" className='w-100'/> */}
+   <video src={home_video} className='w-100 border-0 bg-transparent' autoPlay muted loop></video>
    {/* <img src="https://img.freepik.com/free-vector/advanced-computer-skills-abstract-concept-illustration_335657-3877.jpg?w=740&t=st=1700216536~exp=1700217136~hmac=e4d581d6b61a6d5addb03809bffeaf15253f4d28360575c4e4ec3bb46231c589" alt="" className="w-100" /> */}
    </div>
                 </div>

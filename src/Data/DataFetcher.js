@@ -19,5 +19,6 @@ const Quiz = fetchData('http://localhost:3300/api/Quiz');
 const EventsApi = fetchData('http://localhost:3300/api/events');
 const homeHeroApi = fetchData('http://localhost:3300/api/heroSection');
 const BlogsApi = fetchData('http://localhost:3300/api/blogs');
+const ourCoursesApi = fetchData('http://localhost:3300/api/ourCourses');
 
-export { advantages, companies, trainingModule, testinomials, youtubeVideos, CoursePage, Quiz, EventsApi, homeHeroApi, BlogsApi };
+export { advantages, companies, trainingModule, testinomials, youtubeVideos, CoursePage, Quiz, EventsApi, homeHeroApi, BlogsApi, ourCoursesApi };

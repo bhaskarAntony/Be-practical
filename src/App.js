@@ -27,6 +27,7 @@ import QuizModal from './components/QuizModal'
 import BlogsView from './pages/BlogsPage/BlogsView'
 import BottomNavigation from './components/bottom nav/BottomNavigation '
 import CustomCursor from './Extra/cursor/CustomCursor'
+import CourseMainEngine from './pages/CourseMainEngine'
 // import Trending from './components/trending/Trending'
 
 function App() {
@@ -72,7 +73,7 @@ const onLoad = () => {
 };
 
   return (
-    <div>
+    <div className='container-fluid m-auto container-xxl'>
        {
        loading ? (
         // <PageLoader/>
@@ -106,6 +107,7 @@ const onLoad = () => {
         <Route path='/book-demo' element={<BookDemo/>}/>
         <Route path='/all-testinomials' element={<AllTestimomials/>}/>
         <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
+        <Route path='/ourCourses/:ourCourse/:id' element={<CourseMainEngine/>}/>
         <Route path='/all-courses' element={<AllCourses/>}/>
         <Route path='/discount/quiz' element={<QuizModal/>}/>
         <Route path='/Blog/read/:id' element={<BlogsView/>}/>

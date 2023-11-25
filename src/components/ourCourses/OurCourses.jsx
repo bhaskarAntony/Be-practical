@@ -3,7 +3,7 @@ import './ourCourses.css'
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import CourseShimmer from './CourseShimmer';
-import { CoursePage } from '../../Data/DataFetcher';
+import {ourCoursesApi } from '../../Data/DataFetcher';
 
 function OurCourses() {
   const [loading, setLoading] = useState(true)
@@ -11,7 +11,7 @@ function OurCourses() {
   useEffect(() => {
    const fetchData = async () => {
      try {
-       const data = await CoursePage;
+       const data = await ourCoursesApi;
        setLoading(false)
        setCourseData(data);
        console.log("data", data)
@@ -58,7 +58,7 @@ function OurCourses() {
                               <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
                               </div> */}
                               <h1 className="fs-3 text-900">{item.courseName}</h1>
-                              <p className="fs-6">{item.heroSubtitle}</p>
+                              <p className="fs-6">{item.description}</p>
                               <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
                               <div className="col-12 col-md-6 col-lg-6">
                               <div className="d-flex align-items-center gap-2 w-100 mb-2">
@@ -81,7 +81,7 @@ function OurCourses() {
                                <div>
                                 <span>
                                 <span className="text-secondary d-block">Highest Salary</span>
-                                <span className='text-900'>{item.HighestSalary}</span>
+                                <span className='text-900'>{item.HighestCtc}</span>
                                 </span>
                                </div>
                                 </div>
@@ -96,7 +96,7 @@ function OurCourses() {
                                <div>
                                 <span>
                                 <span className="text-secondary d-block">Mode Of Training</span>
-                                <span className='text-900 '>{item.modeOfTraining}</span>
+                                <span className='text-900 '>Online & Offline</span>
                                 </span>
                                </div>
                                 </div>
@@ -118,7 +118,7 @@ function OurCourses() {
                             
                               <div className="course-btns row mt-3">
                                 <div className="col-12 col-md-6 col-lg-6">
-                                <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                                <Link to={`/${item.PageLink}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-6">
                                 <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
@@ -130,7 +130,7 @@ function OurCourses() {
                       </div>
                       <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-lg-block">
                         <div className="course-right">
-                            <img src={item.courseImage} alt="" className="w-100" />
+                            <img src={item.image} alt="" className="w-100" />
                         </div>
                       </div>
                     </div>
