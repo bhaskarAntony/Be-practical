@@ -23,7 +23,7 @@ function CoursePageEngine() {
   const { id } = useParams(); // Access the id parameter from the URL
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `https://fancy-mittens-ray.cyclic.app/api/course/${id}`; // Replace with your actual API endpoint
+        const apiUrl = `https://backend-bp-bpdeveloperscommunity.onrender.com/api/course/${id}`; // Replace with your actual API endpoint
     
         axios
           .get(apiUrl)

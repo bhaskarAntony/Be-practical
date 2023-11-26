@@ -9,10 +9,3 @@
     text-align: center;
     color: #fff !important;
 }
-.blur-highlight{
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100px;
-  height: 100px;
-}

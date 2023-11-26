@@ -1,6 +1,6 @@
 
 .elite{
-    background-color: var(--black) ;
+    background-color: #101010 ;
     background-size: cover;
     padding: 10px;
     display: flex;
@@ -32,6 +32,9 @@
     transition: 0.5s;
 }
 @media (max-width:600px){
+    .elite{
+        border-radius: 0;
+    }
     .elite-card h4{
         font-size: 1.1em;
     }

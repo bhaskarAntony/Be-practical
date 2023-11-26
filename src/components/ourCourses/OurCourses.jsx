@@ -128,7 +128,7 @@ function OurCourses() {
                               </div>
                         </div>
                       </div>
-                      <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-lg-block">
+                      <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-sm-none d-lg-block">
                         <div className="course-right">
                             <img src={item.image} alt="" className="w-100" />
                         </div>
@@ -141,7 +141,7 @@ function OurCourses() {
               }
         </div>
         <div className="text-center">
-        <Link to="/all-courses" className=" text-decoration-none"> <button className="btn-danger  hero-btn">Browse All Courses</button></Link>
+        <Link to="/all-courses" className=" text-decoration-none"> <button className="btn-danger">Browse All Courses</button></Link>
         </div>
     </div>
   )

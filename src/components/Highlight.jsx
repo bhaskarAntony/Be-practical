@@ -44,11 +44,10 @@ function Highlight({ data }) {
   return (
     <div className="p-2">
       <div className="container highlight bg-dark-gray overflow-hidden p-0">
-        <div className="blur-highlight"></div>
         <div className="row align-items-center justify-content-center">
-          <div className="col-6 col-md-4 col-lg-3 border m-0">
+          <div className="col-6 col-md-4 col-lg-3 border h-100">
             <div className="highlight-card-hero ">
-              <small className={`fs-4 d-flex gap-1 d-block justify-content-center align-items-center w-100  text-white ${counting ? 'counting' : ''}`}>
+              <small className={`fs-3 d-flex gap-1 d-block justify-content-center align-items-center w-100  text-white ${counting ? 'counting' : ''}`}>
                <small className='fs-6'>
                {counting ? (
                   <CountUp start={0} end={data[0]?.rating ? data[0]?.rating : 4.6} duration={2} decimals={1} />
@@ -68,7 +67,7 @@ function Highlight({ data }) {
             </div>
           </div>
 
-          <div className="col-6 col-md-4 col-lg-3 border">
+          <div className="col-6 col-md-4 col-lg-3 border h-100">
             <div className="highlight-card-hero ">
               <h1 className={`fs-3 text-900 text-white ${counting ? 'counting' : ''}`}>
                 {counting ? (
@@ -84,7 +83,7 @@ function Highlight({ data }) {
             </div>
           </div>
 
-          <div className="col-6 col-md-4 col-lg-3 border">
+          <div className="col-6 col-md-4 col-lg-3 border h-100">
             <div className="highlight-card-hero">
               <h1 className={`fs-3 text-900 text-white ${counting ? 'counting' : ''}`}>
                 {counting ? (
@@ -100,7 +99,7 @@ function Highlight({ data }) {
             </div>
           </div>
 
-          <div className="col-6 col-md-4 col-lg-3 border">
+          <div className="col-6 col-md-4 col-lg-3 border h-100">
 
             <div className="highlight-card-hero">
 

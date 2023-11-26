@@ -73,9 +73,6 @@ function Skills() {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-center py-5">
-        <button className="btn-danger">Explore Courses <i class="bi bi-chevron-double-right"></i></button>
-      </div>
       <VideosModal isOpen={modalOpen} videoSrc={playVideoUrl} onClose={closeModal} />
     </section>
   );

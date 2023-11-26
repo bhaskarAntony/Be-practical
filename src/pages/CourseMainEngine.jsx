@@ -23,7 +23,7 @@ function CourseMainEngine() {
   const { id } = useParams(); // Access the id parameter from the URL
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `http://localhost:3300/api/ourCourses/${id}`; // Replace with your actual API endpoint
+        const apiUrl = `https://backend-bp-bpdeveloperscommunity.onrender.com/api/ourCourses/${id}`; // Replace with your actual API endpoint
     
         axios
           .get(apiUrl)
