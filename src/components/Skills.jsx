@@ -24,17 +24,17 @@ function Skills() {
 
 
   return (
-    <section className=' skillsmain overflow-hidden'>
+    <section className=' skillsmain overflow-hidden bg-gray2 mb-4 text-white bg-texture'>
       <div className=" skillsecond">
       {/* <div className="section-blur"></div>
         <div className="section-blur2"></div> */}
-        <div className="row">
-          <div className="col-12 col-md-12 col-lg-6">
-            <div className="left col-12 col-md-12 col-lg-10">
-              <video src={playVideoUrl} autoPlay muted loop></video>
+        <div className="row align-items-center">
+          <div className="col-12 col-md-12 col-lg-6 p-0">
+            <div className="left h-100 p-0">
+              <video src={playVideoUrl} autoPlay muted loop className='w-100 '></video>
             </div>
           </div>
-          <div className="col-12 col-md-12 col-lg-6">
+          <div className="col-12 col-md-12 col-lg-6 p-0">
             <div className="right">
               <div className="text-right">
                 <h1 className='heading'>Why Choose Be-Practical?</h1>
@@ -42,27 +42,27 @@ function Skills() {
                 <p></p>
                 <div className="status">
                   <div className="row video-status d-flex g-2">
-                    <div className="col-3 col-sm-6 col-md-6 col-lg-3 mb-2">
-                      <div className="video">
-                        <video src={hackethon} autoPlay muted loop onClick={() => handleVideoClick(hackethon) }></video>
+                    <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
+                      <div className="video h-100">
+                        <video src={hackethon} autoPlay muted loop onClick={() => handleVideoClick(hackethon) } className=''></video>
                         
                       </div>
                     </div>
-                    <div className="col-3 col-sm-6 col-md-6 col-lg-3 mb-2">
-                      <div className="video">
-                        <video src={video1} autoPlay muted loop onClick={() => handleVideoClick(video1)}></video>
+                    <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
+                      <div className="video h-100">
+                        <video src={video1} autoPlay muted loop onClick={() => handleVideoClick(video1)}  className=''></video>
                         
                       </div>
                     </div>
-                    <div className="col-3 col-sm-6 col-md-6 col-lg-3 mb-2">
-                      <div className="video">
-                        <video src={video2} autoPlay muted loop onClick={() => handleVideoClick(video2)}></video>
+                    <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
+                      <div className="video h-100">
+                        <video src={video2} autoPlay muted loop onClick={() => handleVideoClick(video2)}  className=''></video>
                         
                       </div>
                     </div>
-                    <div className="col-3 col-sm-6 col-md-6 col-lg-3 mb-2">
-                      <div className="video">
-                        <video src={video3} autoPlay muted loop onClick={() => handleVideoClick(video3)}></video>
+                    <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
+                      <div className="video h-100">
+                        <video src={video3} autoPlay muted loop onClick={() => handleVideoClick(video3)}  className=''></video>
                        
                       </div>
                     </div>

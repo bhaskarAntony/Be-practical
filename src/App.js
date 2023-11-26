@@ -28,8 +28,6 @@ import BlogsView from './pages/BlogsPage/BlogsView'
 import BottomNavigation from './components/bottom nav/BottomNavigation '
 import CustomCursor from './Extra/cursor/CustomCursor'
 import CourseMainEngine from './pages/CourseMainEngine'
-import Trending from './components/trending/Trending'
-import Navigation from './components/navigation/Navigation'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -74,55 +72,52 @@ const onLoad = () => {
 };
 
   return (
-    // <div className='container-fluid m-auto container-xxl p-0'>
-    //    {
-    //    loading ? (
-    //     // <PageLoader/>
-    //     null
-    //   ) : (
-    //       <>
-    //    <TawkMessengerReact
-    //             propertyId="https://tawk.to/chat/6524d9286fcfe87d54b8416a/1hcbv0iqn"
-    //             widgetId="default"
-    //             onLoad={onLoad}
-    //             />
+    <div className='container-fluid m-auto container-xxl p-0'>
+       {
+       loading ? (
+        // <PageLoader/>
+        null
+      ) : (
+          <>
+       <TawkMessengerReact
+                propertyId="https://tawk.to/chat/6524d9286fcfe87d54b8416a/1hcbv0iqn"
+                widgetId="default"
+                onLoad={onLoad}
+                />
     
-    //     {/* <CustomCursor/> */}
-    //   <ScrollProgressBar/>
-    //   <Progressbar/>
-    //     <BrowserRouter>
-    //     <PageScrollToTop/>
-    //     <Header/>
-    //     {/* <BottomNavigation/> */}
-    //     <Discount/>
-    //     <Routes>
+        {/* <CustomCursor/> */}
+      <ScrollProgressBar/>
+      <Progressbar/>
+        <BrowserRouter>
+        <PageScrollToTop/>
+        <Header/>
+        {/* <BottomNavigation/> */}
+        <Discount/>
+        <Routes>
           
-    //     <Route path='/' element={<Home/>}/>
-    //     <Route path='/gallery' element={<Gallery/>}/>
-    //     <Route path='/events' element={<Events/>}/>
-    //     <Route path='/blogs' element={<BlogsPage/>}/>
-    //     <Route path='/contacts' element={<ContactPage/>}/>
-    //     <Route path='/about' element={<AboutPage/>}/>
-    //     <Route path='/elite' element={<ElitePage/>}/>
-    //     <Route path='/register' element={<RegistrationPage/>}/>
-    //     <Route path='/book-demo' element={<BookDemo/>}/>
-    //     <Route path='/all-testinomials' element={<AllTestimomials/>}/>
-    //     <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
-    //     <Route path='/ourCourses/:ourCourse/:id' element={<CourseMainEngine/>}/>
-    //     <Route path='/all-courses' element={<AllCourses/>}/>
-    //     <Route path='/discount/quiz' element={<QuizModal/>}/>
-    //     <Route path='/Blog/read/:id' element={<BlogsView/>}/>
-    //     </Routes>
-    //   <Footer/>
-    //     </BrowserRouter>
-    //     <ScrollToTopButton/>
-    //       </>
-    //   )}
-    // </div>
-    <>
-    <Navigation/>
-    <Trending/>
-    </>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/gallery' element={<Gallery/>}/>
+        <Route path='/events' element={<Events/>}/>
+        <Route path='/blogs' element={<BlogsPage/>}/>
+        <Route path='/contacts' element={<ContactPage/>}/>
+        <Route path='/about' element={<AboutPage/>}/>
+        <Route path='/elite' element={<ElitePage/>}/>
+        <Route path='/register' element={<RegistrationPage/>}/>
+        <Route path='/book-demo' element={<BookDemo/>}/>
+        <Route path='/all-testinomials' element={<AllTestimomials/>}/>
+        <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
+        <Route path='/ourCourses/:ourCourse/:id' element={<CourseMainEngine/>}/>
+        <Route path='/all-courses' element={<AllCourses/>}/>
+        <Route path='/discount/quiz' element={<QuizModal/>}/>
+        <Route path='/Blog/read/:id' element={<BlogsView/>}/>
+        </Routes>
+      <Footer/>
+        </BrowserRouter>
+        <ScrollToTopButton/>
+          </>
+      )}
+    </div>
+
   )
 }
 

@@ -97,11 +97,11 @@ function HomeHero() {
           {home.map((item, index) => (
             <Carousel.Item key={index}>
                   <div className="hero-text p-lg-2 p-md-2 p-1 py-3 ">
-                    <h1 className="card-heading text-main-2 text-start">100% Placement Programs</h1>
-                    <h1 className="heading text-bold text-start hero-heading">{item.heading}</h1>
-                    <p className="text-black heading-subtitle my-4 text-start">{item.subheading}</p>
+                    {/* <h1 className="fs-3 text-start text-main-danger">100% Placement Programs</h1> */}
+                    <h1 className="display-3 text-bold text-start">{item.heading}</h1>
+                    <p className="fs-4 my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
-                      <button className='btn-main-outline-dark  hero-btn bg-gray2 text-white' onClick={openModal}>Apply Now <i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-main-outline-dark border-0  hero-btn bg-gray2 text-white' onClick={openModal}>Apply Now <i class="bi bi-chevron-double-right"></i></button>
                       <button className='btn-danger  hero-btn'>Download Browcher<i class="bi bi-chevron-double-right"></i></button>
                     </div>
                    
@@ -131,7 +131,7 @@ function HomeHero() {
         </div>
       </div>
       <Highlight data={homeData} />
-      {/* <HeroRegister /> */}
+      <HeroRegister />
       </div>
 
       <DialogModal

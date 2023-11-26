@@ -30,8 +30,8 @@ function Adwantages() {
               Array(6)
                 .fill(null)
                 .map((_, index) => (
-                  <div className="col-12 col-sm-12 col-md-6 col-lg-4 rounded-2 p-3" key={index}>
-                   <div className="adwantage-card mb-3 p-3  border-0">
+                  <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 mb-2" key={index}>
+                   <div className="adwantage-card mb-3 p-3 border-0 h-100">
                     <div className="adwantage-header">
                       <div className=" rounded-5 overflow-hidden">
                        
@@ -50,8 +50,8 @@ function Adwantages() {
                 ))
             ):(
               advantagesData.map((item, index) => (
-                <div className="col-12 col-sm-12 col-md-6 col-lg-4" key={index}>
-                  <div className="adwantage-card mb-3 p-3">
+                <div className="col-xs-6 col-sm-6 col-md-4 mb-3" key={index}>
+                  <div className="adwantage-card mb-3 p-3 h-100">
                     <div className="adwantage-header">
                       <div className="icon">
                         <img src={item.image} alt={item.title} className='w-100' />

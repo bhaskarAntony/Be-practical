@@ -46,8 +46,8 @@ function Highlight({ data }) {
       <div className="container highlight bg-dark-gray overflow-hidden p-0">
         <div className="blur-highlight"></div>
         <div className="row align-items-center justify-content-center">
-          <div className="col-6 col-md-4 col-lg-3">
-            <div className="highlight-card-hero">
+          <div className="col-6 col-md-4 col-lg-3 border m-0">
+            <div className="highlight-card-hero ">
               <small className={`fs-4 d-flex gap-1 d-block justify-content-center align-items-center w-100  text-white ${counting ? 'counting' : ''}`}>
                <small className='fs-6'>
                {counting ? (

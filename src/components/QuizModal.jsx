@@ -92,10 +92,10 @@ function QuizModal() {
                  <img src={brandImage} alt="quiz-brand-image" className="w-100" />
                 </div>
                 <div className="col-12 col-md-6 col-lg-6 p-1 p-lg-5">
-                <h1 className="fs-1">Get 10% <span className="text-main-danger">Discount</span></h1>
+                <h1 className="display-6">Get 10% <span className="text-main-danger">Discount</span></h1>
                   {/* <p className="p-large1 text-main-danger">Get Started</p> */}
-                  <h1 className="card-big-text text-900">Not Sure Where to Begin? <br /> Take Our Quiz.</h1>
-                  <p className="text-secondary p-large1">
+                  <h1 className="display-5 text-bold">Not Sure Where to Begin? <br /> Take Our Quiz.</h1>
+                  <p className="text-secondary fs-5">
                       Get started now with hundreds of courses and thousands of labs — with new additions published every week</p>
                     <button className="btn-danger" onClick={openModal}>Get Started <i class="bi bi-chevron-double-right"></i></button>
                 </div>
