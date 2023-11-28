@@ -1,17 +1,13 @@
 
   .youtube-container{
     background-color: #ffffff;
-    padding: 30px 10px;
+    /* padding: 30px 10px; */
   }
 .youtube-card{
-    background-color: #ffffff;
-    max-width: 100%;
-    word-break: inherit;
     border-radius: 100px 100px 10px 10px ;
     overflow: hidden;
-    min-height: 390px;
-    max-width: 300px;
     border-top: 4px solid var(--red);
+    min-height: 100% !important;
 }
 .youtube-header{
     position: relative !important;

@@ -63,17 +63,16 @@ function StudentsPlaced() {
             slidesToShow: slidesToShow,
             slidesToScroll: 1,
             autoplay: true,
-            centerMode: true,
             centerPadding: '60px',
             autoplaySpeed: 1000, // Change delay as needed
           };
   return (
-    <section className=' p-2 py-5 youtube-container bg-gray2 bg-texture' id="placed">
+    <section className='py-5 youtube-container bg-gray2 bg-texture' id="placed">
         <h3 className="fs-1 text-900 text-center text-white">What our students says about <span className="text-main-danger">Be Practical</span></h3>
         <p className=" text-center p-large1 text-main-danger">We don’t just give <span className="text-white">certification but outcomes!</span></p>
       <div className="students-placed">
       <div className=" container-fluid  rounded-5">
-          <div className="row justify-content-center w-100">
+          <div className="row">
          
           {loading ? (
              <Slider {...settings}>
@@ -109,44 +108,36 @@ function StudentsPlaced() {
             ):(
               <Slider {...settings}>
                 {
-            youtubeVideosData.map((item, index) => (
-                <div className="col-12 col-md-6 col-lg-3 d-flex justify-content-center p-3">
-            <div className="youtube-card bg-gray3 border-b">
-            <div className="youtube-header mb-3">
-                          <a
-                          
-                            target="_blank"
-                            rel="noopener noreferrer"  
-                          >
-                            <img
-                              src={getThumbnailUrl(
-                                extractVideoId(item.url)
-                              )}
-                              alt={`Thumbnail ${index}`}
-                              className="w-100 h-100"/>
-                          </a>
-                          <div className="youtube-play-btn">
-                         <div>
-                         <a className="play-icon">
-                               <div className='d-flex'>
-                              <i class="bi bi-play-fill fs-1"></i>
-                              </div>
-                             </a>
-                         </div>
-                          </div>
-                           
-                              
-                        </div>
-                        <div className="youtube-body">
-                        <a href="" className='text-main-danger fs-5 text-900 mt-2 text-decoration-none'>{item.title}</a>
-                            <p className='fs-6 text-white mt-3'><ReadMore text={item.description} maxLength={15} /></p>
-                          </div>
-                          <div className="youtube-footer">
-
-                          </div>
-            </div>
+           youtubeVideosData.map((item, index) => (
+            <div key={index} className="col-12 col-md-6 col-lg-3 p-1">
+              <div className="youtube-card bg-gray3 border-b w-100 h-100 d-flex flex-column">
+                <div className="youtube-header mb-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`YourVideoLinkHere/${extractVideoId(item.url)}`}
+                  >
+                    <img
+                      src={getThumbnailUrl(extractVideoId(item.url))}
+                      alt={`Thumbnail ${index}`}
+                      className="w-100 h-100"
+                    />
+                  </a>
+                  <div className="youtube-play-btn d-flex align-items-center justify-content-center">
+                    <a className="play-icon">
+                      <div className="d-flex">
+                        <i className="bi bi-play-fill fs-1"></i>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-            ))}
+                <div className="youtube-body flex-grow-1">
+                  <a href={`YourVideoLinkHere/${extractVideoId(item.url)}`} className='text-main-danger fs-6 text-900 mt-2 text-decoration-none'>{item.title}</a>
+                  <small className='text-white mt-3'><ReadMore text={item.description} maxLength={150} /></small>
+                </div>
+              </div>
+            </div>
+          ))}
             </Slider>
             )}
               </div>

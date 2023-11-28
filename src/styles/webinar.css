@@ -16,8 +16,6 @@
     overflow: hidden;
 }
 .webinar-card-header img{
-    width: 100%;
-    height: 200px;
     border-radius: 20px;
 }
 .webinar-heading .webinar-heading-left, .webinar-heading-right{

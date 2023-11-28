@@ -113,9 +113,9 @@ function Webinar() {
       <Slider {...settings}>
       {webinar.map((item) => (
                 <div className="col-12 col-sm-12 col-md-6 col-lg-3 p-3 d-flex justify-content-center">
-              <div className="webinar-card ">
+              <div className="webinar-card h-100">
                 <div className="webinar-card-header p-2">
-                        <img src={item.image} alt="" />
+                        <img src={item.image} alt="" className='img-fluid' />
                 </div>
                 <div className="webinar-card-body p-2">
                   <p className="mt-1 fs-6 text-black">Conducted by</p>
