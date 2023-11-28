@@ -28,6 +28,7 @@ import BlogsView from './pages/BlogsPage/BlogsView'
 import BottomNavigation from './components/bottom nav/BottomNavigation '
 import CustomCursor from './Extra/cursor/CustomCursor'
 import CourseMainEngine from './pages/CourseMainEngine'
+import GoogleSignIn from './js/GoogleSignIn'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -71,6 +72,8 @@ const onLoad = () => {
   console.log('onLoad works!');
 };
 
+
+
   return (
     <div className='container-fluid m-auto container-xxl p-0'>
        {
@@ -89,6 +92,7 @@ const onLoad = () => {
       <ScrollProgressBar/>
       <Progressbar/>
         <BrowserRouter>
+       
         <PageScrollToTop/>
         <Header/>
         {/* <BottomNavigation/> */}

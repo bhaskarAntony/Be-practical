@@ -1,6 +1,16 @@
 import React from 'react'
+import GoogleSignIn from '../js/GoogleSignIn';
 
 function BookDemoCard() {
+    const handleGoogleLoginSuccess = (response) => {
+        // Handle successful login
+        console.log('Google Login Success:', response);
+      };
+      
+      const handleGoogleLoginFailure = (error) => {
+        // Handle failed login
+        console.error('Google Login Failure:', error);
+      };
   return (
     <div>
         <div className="r-card p-4 p-lg-5 bg-white rounded-3">
@@ -35,6 +45,15 @@ function BookDemoCard() {
                     </div>
                     <div className="form-group mt-3">
                        <button className="btn-danger w-100">Register</button>
+                    </div>
+                    <div className="text-center mt-2">
+                        <p className="fs-6 text-secondary">or</p>
+                    </div>
+                    <div className="form-group mt-3">
+                    <GoogleSignIn
+                        onSuccess={handleGoogleLoginSuccess}
+                        onFailure={handleGoogleLoginFailure}
+                    />
                     </div>
                 </form>
             </div>
