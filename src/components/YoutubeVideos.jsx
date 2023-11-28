@@ -132,7 +132,7 @@ function StudentsPlaced() {
                     </a>
                   </div>
                 </div>
-                <div className="youtube-body">
+                <div className="youtube-body text-center">
                   <a href={`YourVideoLinkHere/${extractVideoId(item.url)}`} className='text-main-danger fs-6 text-900 mt-2 text-decoration-none'>{item.title}</a>
                   <small className='text-white mt-3'><ReadMore text={item.description} maxLength={150} /></small>
                 </div>
