@@ -9,6 +9,7 @@ import DialogModal from './DialogModel';
 import { homeHeroApi } from '../Data/DataFetcher';
 import heroImage from '../images/hero-image.svg'
 import home_video from '../images/home-video.mp4'
+import Slider from 'react-slick';
 
 const home = [
   {
@@ -17,7 +18,7 @@ const home = [
     image: "https://images.pexels.com/photos/7606074/pexels-photo-7606074.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
-    heading: "High Paid Salaries & Continuous Career Growth",
+    heading: "Be practical's Job Oriented Training",
     subheading: "Build skills with courses, certificates, and degrees online from world-class universities and companies.",
     image: "https://images.pexels.com/photos/7606074/pexels-photo-7606074.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
@@ -27,7 +28,7 @@ const home = [
     image: "https://images.pexels.com/photos/7606074/pexels-photo-7606074.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
   {
-    heading: "High Paid Salaries & Continuous Career Growth",
+    heading: "Be practical's Job Oriented Training",
     subheading: "Build skills with courses, certificates, and degrees online from world-class universities and companies.",
     image: "https://images.pexels.com/photos/7606074/pexels-photo-7606074.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
@@ -80,6 +81,29 @@ function HomeHero() {
   }, [paused]);
 
   const numberOfSlides = home.length;
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed:1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    cssEase:'linear',
+    fade:true,
+    autoplay: true,
+    autoplaySpeed: 3000, // Change delay as needed
+  };
+
+  const Imagesettings = {
+    dots: false,
+    infinite: true,
+    speed:1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    cssEase:'linear',
+    fade:true,
+    autoplay: true,
+    autoplaySpeed: 3000, // Change delay as needed
+  };
 
   return (
     <section className='hero container-fluid '>
@@ -87,14 +111,8 @@ function HomeHero() {
       <div className="custom-carousel container-fluid">
       <div className="row align-items-center">
       <div className="col-12 col-sm-12 col-md-8">
-        <Carousel
-          activeIndex={index}
-          onSelect={handleSelect}
-          id="vertical-carousel"
-          onMouseEnter={handleCarouselHover}
-          onMouseLeave={handleCarouselLeave}
-        >
-          {home.map((item, index) => (
+     <Slider {...settings}>
+     {home.map((item, index) => (
             <Carousel.Item key={index}>
                   <div className="hero-text p-lg-2 p-md-2 p-1 py-3 ">
                     {/* <h1 className="fs-3 text-start text-main-danger">100% Placement Programs</h1> */}
@@ -108,7 +126,7 @@ function HomeHero() {
                   </div>
             </Carousel.Item>
           ))}
-        </Carousel>
+     </Slider>
         </div>
         <div className="col-12 col-sm-12 col-md-4">
    <div className="hero-image d-flex align-items-center h-100">

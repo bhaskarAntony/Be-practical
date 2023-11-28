@@ -120,6 +120,7 @@ function Companies() {
             slidesToScroll: 1,
             cssEase: 'linear',
             autoplay: true,
+            centerMode: true,
             autoplaySpeed: 1000, // Change delay as needed
           };
     // useEffect(() => {

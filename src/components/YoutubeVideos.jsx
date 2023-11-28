@@ -63,16 +63,15 @@ function StudentsPlaced() {
             slidesToShow: slidesToShow,
             slidesToScroll: 1,
             autoplay: true,
+            centerMode: true,
             autoplaySpeed: 1000, // Change delay as needed
-            prevArrow: <button className="slick-prev">Previous</button>, // Add previous arrow
-            nextArrow: <button className="slick-next">Next</button>, // Add next arrow
           };
   return (
     <section className=' p-2 py-5 youtube-container bg-gray2 bg-texture' id="placed">
         <h3 className="fs-1 text-900 text-center text-white">What our students says about <span className="text-main-danger">Be Practical</span></h3>
         <p className=" text-center p-large1 text-main-danger">We don’t just give <span className="text-white">certification but outcomes!</span></p>
       <div className="students-placed">
-      <div className="p-2 p-lg-5 container-fluid  rounded-5">
+      <div className=" container-fluid  rounded-5">
           <div className="row justify-content-center w-100">
          
           {loading ? (

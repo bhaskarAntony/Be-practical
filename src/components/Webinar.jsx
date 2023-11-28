@@ -61,12 +61,13 @@ function Webinar() {
     };
   }, []);
       const settings = {
-          dots: false,
+          dots: true,
           infinite: true,
           speed: 500,
           slidesToShow: slidesToShow,
           slidesToScroll: 1,
           autoplay: true,
+          centerMode: true,
           autoplaySpeed: 1000, // Change delay as needed
           prevArrow: <button className="slick-prev">Previous</button>, // Add previous arrow
           nextArrow: <button className="slick-next">Next</button>, // Add next arrow
