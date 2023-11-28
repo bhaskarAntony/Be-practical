@@ -53,44 +53,15 @@ function HomeHero() {
     AOS.init();
   }, []);
 
-  const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
 
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
-  const handleCarouselHover = () => {
-    setPaused(true);
-  };
-
-  const handleCarouselLeave = () => {
-    setPaused(false);
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (!paused) {
-        setIndex((prevIndex) => (prevIndex + 1) % numberOfSlides);
-      }
-    }, 3000);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, [paused]);
-
-  const numberOfSlides = home.length;
   const settings = {
     dots: false,
     infinite: true,
     speed:1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    cssEase:'linear',
-    fade:true,
     autoplay: true,
-    autoplaySpeed: 3000, // Change delay as needed
+    autoplaySpeed: 4000,
   };
 
   const Imagesettings = {
@@ -102,12 +73,11 @@ function HomeHero() {
     cssEase:'linear',
     fade:true,
     autoplay: true,
-    autoplaySpeed: 3000, // Change delay as needed
+    autoplaySpeed: 3000,
   };
-
   return (
-    <section className='hero container-fluid '>
-      <div className="hero-1 ">
+    <section className='hero container-fluid'>
+      <div className="hero-1">
       <div className="custom-carousel container-fluid">
       <div className="row align-items-center">
       <div className="col-12 col-sm-12 col-md-8">
@@ -115,14 +85,12 @@ function HomeHero() {
      {home.map((item, index) => (
             <Carousel.Item key={index}>
                   <div className="hero-text p-lg-2 p-md-2 p-1 py-3 ">
-                    {/* <h1 className="fs-3 text-start text-main-danger">100% Placement Programs</h1> */}
                     <h1 className="display-3 text-bold text-start">{item.heading}</h1>
                     <p className="fs-4 my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
                       <button className='btn-main-outline-dark border-0  hero-btn bg-gray2 text-white' onClick={openModal}>Apply Now <i class="bi bi-chevron-double-right"></i></button>
                       <button className='btn-danger  hero-btn'>Download Browcher<i class="bi bi-chevron-double-right"></i></button>
                     </div>
-                   
                   </div>
             </Carousel.Item>
           ))}
@@ -130,23 +98,10 @@ function HomeHero() {
         </div>
         <div className="col-12 col-sm-12 col-md-4">
    <div className="hero-image d-flex align-items-center h-100">
-   {/* <ImageCarousel/> */}
-   {/* <img src="https://png.pngtree.com/png-vector/20220725/ourmid/pngtree-collaboration-of-partners-handshaking-partnership-png-image_6065274.png" alt="" className='w-100' /> */}
-   {/* <img src={heroImage} alt="" className='w-100'/> */}
    <video src={home_video} className='w-100 border-0 bg-transparent' autoPlay muted loop></video>
-   {/* <img src="https://img.freepik.com/free-vector/advanced-computer-skills-abstract-concept-illustration_335657-3877.jpg?w=740&t=st=1700216536~exp=1700217136~hmac=e4d581d6b61a6d5addb03809bffeaf15253f4d28360575c4e4ec3bb46231c589" alt="" className="w-100" /> */}
    </div>
                 </div>
                  </div>
-        <div className="custom-indicators">
-          {Array.from({ length: home.length }).map((_, i) => (
-            <div
-              key={i}
-              className={`indicator ${index === i ? 'active' : ''}`}
-              onClick={() => handleSelect(i)}
-            ></div>
-          ))}
-        </div>
       </div>
       <Highlight data={homeData} />
       <HeroRegister />

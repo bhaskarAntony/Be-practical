@@ -64,6 +64,7 @@ function StudentsPlaced() {
             slidesToScroll: 1,
             autoplay: true,
             centerMode: true,
+            centerPadding: '60px',
             autoplaySpeed: 1000, // Change delay as needed
           };
   return (
