@@ -63,7 +63,7 @@ function Webinar() {
       const settings = {
           dots: true,
           infinite: true,
-          speed: 500,
+          speed: 1000,
           slidesToShow: slidesToShow,
           slidesToScroll: 1,
           autoplay: true,
@@ -112,15 +112,14 @@ function Webinar() {
       <div className="students-placed container-fluid">
       <Slider {...settings}>
       {webinar.map((item) => (
-                <div className="col-12 col-sm-12 col-md-6 col-lg-3 p-3 d-flex justify-content-center">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-3 p-1 d-flex justify-content-center">
               <div className="webinar-card h-100">
                 <div className="webinar-card-header p-2">
                         <img src={item.image} alt="" className='img-fluid' />
                 </div>
                 <div className="webinar-card-body p-2">
-                  <p className="mt-1 fs-6 text-black">Conducted by</p>
-                    <h3 className="heading-small text-black">{item.company}</h3>
-                    <p className='mt-2 fs-6 text-secondary'><ReadMore text={item.description} maxLength={50} /></p>
+                    <h3 className="fs-5 text-black">{item.company}</h3>
+                    <small className='mt-2 fs-6 text-secondary'><ReadMore text={item.description} maxLength={50} /></small>
                 </div>
               </div>
                 </div>

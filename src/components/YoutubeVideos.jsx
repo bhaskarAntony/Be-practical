@@ -63,6 +63,7 @@ function StudentsPlaced() {
             slidesToShow: slidesToShow,
             slidesToScroll: 1,
             autoplay: true,
+            centerMode:true,
             centerPadding: '60px',
             autoplaySpeed: 1000, // Change delay as needed
           };
@@ -109,8 +110,8 @@ function StudentsPlaced() {
               <Slider {...settings}>
                 {
            youtubeVideosData.map((item, index) => (
-            <div key={index} className="col-12 col-md-6 col-lg-3 p-1">
-              <div className="youtube-card bg-gray3 border-b w-100 h-100 d-flex flex-column">
+            <div key={index} className="col-12 col-md-6 col-lg-3 p-1 h-100">
+              <div className="youtube-card bg-gray3 border-b w-100 h-100">
                 <div className="youtube-header mb-3">
                   <a
                     target="_blank"
@@ -131,7 +132,7 @@ function StudentsPlaced() {
                     </a>
                   </div>
                 </div>
-                <div className="youtube-body flex-grow-1">
+                <div className="youtube-body">
                   <a href={`YourVideoLinkHere/${extractVideoId(item.url)}`} className='text-main-danger fs-6 text-900 mt-2 text-decoration-none'>{item.title}</a>
                   <small className='text-white mt-3'><ReadMore text={item.description} maxLength={150} /></small>
                 </div>

@@ -7,7 +7,7 @@
     border-radius: 100px 100px 10px 10px ;
     overflow: hidden;
     border-top: 4px solid var(--red);
-    min-height: 100% !important;
+    min-height: 450px;
 }
 .youtube-header{
     position: relative !important;
