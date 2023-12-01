@@ -7,7 +7,7 @@
     border-radius: 10px;
 }
 .hero-image img{
-    border-radius:100px;
+    border-radius:10px;
 }
 
 @media (max-width:1100){
@@ -28,8 +28,5 @@
         position: relative;
         min-height: fit-content !important;
     }
-    .hero-image img{
-        width: 300px;
-        height: 300px;
-    }
+
 }
