@@ -52,7 +52,7 @@ function HeroRegister() {
       <div className="register align-items-center rounded-1 p-3 ">
         <div className="p-2 rounded-2 py-3 border-0 bg-transparent">
           <div className="card-header-text text-center w-100">
-            <span className="banner-heading fs-3 text-center mb-3">Register For Free Demo Session</span>
+            <span className="banner-heading fs-3 text-center mb-3">Book Your Master Classes</span>
           </div>
           <form action="post" onSubmit={handleSubmit}>
             <div className="row mt-2">

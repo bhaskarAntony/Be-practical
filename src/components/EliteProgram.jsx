@@ -55,7 +55,7 @@ function EliteProgram() {
        <div className="row">
          {
              eliteProgram.map((item, index)=>(
-                 <div className="col-xs-12 col-sm-6 col-md-4 mb-3">
+                 <div className="col-6 col-md-4 mb-3">
                      <div className="elite-program-card h-100">
                         <img src={item.icon} alt="icon" />
                          <h1 className="card-heading text-black  mb-3 text-900">{item.title}</h1>
