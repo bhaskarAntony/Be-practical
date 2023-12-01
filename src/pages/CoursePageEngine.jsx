@@ -88,7 +88,7 @@ function CoursePageEngine() {
             <div className="col-12 col-md-7 col-lg-7">
                 <div className="course-hero-left p-lg-5 p-3">
                     <p className="text-main-danger fs-5 text-900">100% Placement Course</p>
-                    <h1 className="heading text-900 text-white">{courseData.heroTitle}</h1>
+                    <h1 className="display-3 text-900 text-white">{courseData.heroTitle}</h1>
                     <p className="fs-5 text-secondary my-4">{courseData.heroSubtitle}</p>
                     <div className="course-ratings mt-3 d-flex align-items-center gap-2">
                         <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">rating <i class="bi bi-star-half text-yellow"></i><b> 4.5</b></small></p>
@@ -105,7 +105,7 @@ function CoursePageEngine() {
                   </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
                     <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
-                <button className="hero-btn-outline-danger py-3 p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
+                <button className="hero-btn-outline-danger bg-white border-0 text-dark py-3 p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
                
             </div>
             

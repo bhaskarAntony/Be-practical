@@ -96,7 +96,7 @@ const onLoad = () => {
         <PageScrollToTop/>
         <Header/>
         {/* <BottomNavigation/> */}
-        <Discount/>
+        {/* <Discount/> */}
         <Routes>
           
         <Route path='/' element={<Home/>}/>
@@ -121,7 +121,6 @@ const onLoad = () => {
           </>
       )}
     </div>
-
   )
 }
 

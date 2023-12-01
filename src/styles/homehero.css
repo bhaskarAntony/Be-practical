@@ -6,6 +6,9 @@
 .register-container-home{
     border-radius: 10px;
 }
+.hero-image img{
+    border-radius:100px;
+}
 
 @media (max-width:1100){
     .hero-text{

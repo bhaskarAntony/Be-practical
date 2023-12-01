@@ -99,7 +99,7 @@ function Highlight({ data }) {
             </div>
           </div>
 
-          <div className="col-6 col-md-4 col-lg-3 border h-100">
+          <div className="col-6 col-md-4 col-lg-3 h-100">
 
             <div className="highlight-card-hero">
 

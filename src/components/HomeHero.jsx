@@ -33,6 +33,12 @@ const home = [
     image: "https://images.pexels.com/photos/7606074/pexels-photo-7606074.jpeg?auto=compress&cs=tinysrgb&w=600",
   },
 ];
+const imagesData = [
+  "https://images.pexels.com/photos/7606074/pexels-photo-7606074.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600",
+  "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=600",
+  'https://images.pexels.com/photos/1181325/pexels-photo-1181325.jpeg?auto=compress&cs=tinysrgb&w=600'
+]
 
 function HomeHero() {
   const [showModal, setShowModal] = useState(false);
@@ -73,7 +79,7 @@ function HomeHero() {
     cssEase:'linear',
     fade:true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 100,
   };
   return (
     <section className='hero container-fluid'>
@@ -97,9 +103,20 @@ function HomeHero() {
      </Slider>
         </div>
         <div className="col-12 col-sm-12 col-md-4">
-   <div className="hero-image d-flex align-items-center h-100">
-   <video src={home_video} className='w-100 border-0 bg-transparent' autoPlay muted loop></video>
+   {/* <video src={home_video} className='w-100 border-0 bg-transparent' autoPlay muted loop></video> */}
+   <Slider {...Imagesettings}>
+   {
+    imagesData.map((item, index)=>(
+   <div className="hero-image">
+
+    <img src={item} alt="" key={index}  className='w-100'/>
    </div>
+
+    ))
+
+   }
+
+   </Slider>
                 </div>
                  </div>
       </div>
