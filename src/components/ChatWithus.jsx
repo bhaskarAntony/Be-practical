@@ -3,6 +3,7 @@ import '../styles/chatwithus.css'
 import callimage from '../images/chat-with-us.svg'
 import Aos from 'aos';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function ChatWithus() {
   useEffect(() => {
@@ -15,7 +16,7 @@ function ChatWithus() {
     <div className="row align-items-center">
         <div className="col-12 col-md-8 col-lg-8  p-4">
         <h1 className="fs-1 text-white">Still Are you thinking about your career?</h1>
-        <button className='btn-danger mt-5 mb-3'>Chat With Us <i class="bi bi-chevron-double-right"></i></button>
+        <Link to="/chat" className='btn-danger mt-5 mb-3 text-decoration-none'>Chat With Us <i class="bi bi-chevron-double-right"></i></Link>
         </div>
 
         <div className="col-12 col-md-4 col-lg-4">

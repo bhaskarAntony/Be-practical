@@ -34,10 +34,10 @@ const home = [
   },
 ];
 const imagesData = [
-  "https://images.pexels.com/photos/7606074/pexels-photo-7606074.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=600",
-  "https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=600",
-  'https://images.pexels.com/photos/1181325/pexels-photo-1181325.jpeg?auto=compress&cs=tinysrgb&w=600'
+  "https://api.bepracticals.com/uploads/cp4_69ef0b7978.jpg",
+  "https://api.bepracticals.com/uploads/cp14_b7bc56b4ff.jpeg",
+  "https://api.bepracticals.com/uploads/cp10_c86328ff12.png",
+  'https://api.bepracticals.com/uploads/cp13_f0b5d4f67a.jpeg'
 ]
 
 function HomeHero() {
@@ -79,7 +79,7 @@ function HomeHero() {
     cssEase:'linear',
     fade:true,
     autoplay: true,
-    autoplaySpeed: 100,
+    autoplaySpeed: 2000,
   };
   return (
     <section className='hero container-fluid'>
@@ -102,12 +102,12 @@ function HomeHero() {
           ))}
      </Slider>
         </div>
-        <div className="col-12 col-sm-12 col-md-4">
+        <div className="col-12 col-sm-12 col-md-4 ">
    {/* <video src={home_video} className='w-100 border-0 bg-transparent' autoPlay muted loop></video> */}
    <Slider {...Imagesettings}>
    {
     imagesData.map((item, index)=>(
-   <div className="hero-image">
+   <div className="hero-image d-flex align-items-center justify-content-center h-100">
 
     <img src={item} alt="" key={index}  className='w-100'/>
    </div>

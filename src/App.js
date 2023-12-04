@@ -29,6 +29,7 @@ import BottomNavigation from './components/bottom nav/BottomNavigation '
 import CustomCursor from './Extra/cursor/CustomCursor'
 import CourseMainEngine from './pages/CourseMainEngine'
 import GoogleSignIn from './js/GoogleSignIn'
+import TawkToWidget from './chat/TawkToWidget'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -63,14 +64,7 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
-  const tawkMessengerRef = useRef();
 
-const handleMinimize = () => {
-    tawkMessengerRef.current.minimize();
-};
-const onLoad = () => {
-  console.log('onLoad works!');
-};
 
 
 
@@ -82,11 +76,7 @@ const onLoad = () => {
         null
       ) : (
           <>
-       <TawkMessengerReact
-                propertyId="https://tawk.to/chat/6524d9286fcfe87d54b8416a/1hcbv0iqn"
-                widgetId="default"
-                onLoad={onLoad}
-                />
+     <TawkToWidget/>
     
         {/* <CustomCursor/> */}
       <ScrollProgressBar/>
@@ -114,6 +104,7 @@ const onLoad = () => {
         <Route path='/all-courses' element={<AllCourses/>}/>
         <Route path='/discount/quiz' element={<QuizModal/>}/>
         <Route path='/Blog/read/:id' element={<BlogsView/>}/>
+        <Route path='/chat' element={<TawkToWidget/>}/>
         </Routes>
       <Footer/>
         </BrowserRouter>
