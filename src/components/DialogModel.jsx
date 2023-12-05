@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, Button, Form, Col, Row, Image } from 'react-bootstrap';
 import '../styles/dialogmodel.css'
 import BookDemoCard from './BookDemoCard';
+import soundSrc from '../images/modal-music2.wav'
 
 function DialogModel({ show, onHide }) {
   const handleSubmit = (e) => {
@@ -21,6 +22,10 @@ function DialogModel({ show, onHide }) {
       <Modal.Header closeButton>
         <Modal.Title>Register</Modal.Title>
       </Modal.Header>
+      <audio autoPlay>
+        <source src={soundSrc} type="audio/mp3" />
+        Your browser does not support the audio tag.
+      </audio>
     <BookDemoCard/>
     </Modal>
   );

@@ -16,7 +16,7 @@ function ChatWithus() {
     <div className="row align-items-center">
         <div className="col-12 col-md-8 col-lg-8  p-4">
         <h1 className="fs-1 text-white">Still Are you thinking about your career?</h1>
-        <Link to="/chat" className='btn-danger mt-5 mb-3 text-decoration-none'>Chat With Us <i class="bi bi-chevron-double-right"></i></Link>
+        <button  className='btn-danger mt-5 mb-3 text-decoration-none'>Chat With Us <i class="bi bi-chevron-double-right"></i></button>
         </div>
 
         <div className="col-12 col-md-4 col-lg-4">

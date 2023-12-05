@@ -30,6 +30,7 @@ import CustomCursor from './Extra/cursor/CustomCursor'
 import CourseMainEngine from './pages/CourseMainEngine'
 import GoogleSignIn from './js/GoogleSignIn'
 import TawkToWidget from './chat/TawkToWidget'
+import ZohoChat from './chat/ZohoChat'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -76,7 +77,8 @@ function App() {
         null
       ) : (
           <>
-     <TawkToWidget/>
+     {/* <TawkToWidget/> */}
+     <ZohoChat/>
     
         {/* <CustomCursor/> */}
       <ScrollProgressBar/>
