@@ -70,7 +70,7 @@ function App() {
 
 
   return (
-    <div className='container-fluid m-auto container-xxl p-0'>
+    <div>
        {
        loading ? (
         // <PageLoader/>
