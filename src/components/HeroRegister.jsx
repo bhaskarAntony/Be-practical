@@ -27,7 +27,7 @@ function HeroRegister() {
     setLoading(true);
 
     axios
-      .post('https://fancy-mittens-ray.cyclic.app/api/register', formData)
+      .post('https://backend-bp-bpdeveloperscommunity.onrender.com/api/register', formData)
       .then((response) => {
         console.log('Registration success:', response.data);
         setShowSuccessDialog(true);
@@ -73,6 +73,7 @@ function HeroRegister() {
                   </div>
                   <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                     <div className="form-group mb-2">
+
                       <input
                         type="email"
                         name="email"
@@ -82,6 +83,7 @@ function HeroRegister() {
                         onChange={handleChange}
                         required
                       />
+
                     </div>
                   </div>
                 </div>
@@ -103,6 +105,7 @@ function HeroRegister() {
                   </div>
                   <div className="col-12 col-sm-12 col-md-6 col-lg-6">
                     <div className="form-group form-group-last mb-2">
+
                       <select
                         name="course"
                         className="form-control p-3"
@@ -110,25 +113,31 @@ function HeroRegister() {
                         onChange={handleChange}
                         required
                       >
+
                         <option value="MERN">MERN</option>
                         <option value="Python Fullstack">Python Fullstack</option>
                         <option value="Java Fullstack">Java Fullstack</option>
                         <option value="Data Science">Data Science</option>
                         <option value="Cloud Computing">Cloud Computing</option>
+
                       </select>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div className="col-12 col-sm-12 col-md-2 col-lg-2 mb-2">
                 <button type="submit" className="btn-danger w-100">Register <i className="bi bi-chevron-double-right"></i></button>
               </div>
+
             </div>
           </form>
         </div>
       </div>
+
       <SuccessDialog show={showSuccessDialog} onHide={() => setShowSuccessDialog(false)} msg={message} register={error} />
       {loading && <Loading />}
+      
     </div>
    </div>
    </div>

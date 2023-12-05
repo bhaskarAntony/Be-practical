@@ -34,10 +34,10 @@ function BookDemoCard() {
                     </select>
                     </div>
                     <div className="form-group mt-3">
-                       <button className="btn-danger w-100">Register</button>
+                       <button className="btn-danger bg-dark w-100">Book Master Classes</button>
                     </div>
                     <div className="text-center mt-2">
-                        <p className="fs-6 text-secondary">or</p>
+                        {/* <p className="fs-6 text-secondary">or</p> */}
                     </div>
                     <div className="form-group mt-3">
                     </div>

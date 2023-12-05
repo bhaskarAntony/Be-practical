@@ -51,7 +51,6 @@ function Skills() {
                     <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
                       <div className="video h-100">
                         <video src={video1} autoPlay muted loop onClick={() => handleVideoClick(video1)}  className=''></video>
-                        
                       </div>
                     </div>
                     <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">

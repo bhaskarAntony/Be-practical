@@ -3,6 +3,7 @@ import { Modal, Button, Form, Col, Row, Image } from 'react-bootstrap';
 import '../styles/dialogmodel.css'
 import BookDemoCard from './BookDemoCard';
 import soundSrc from '../images/modal-music.mp3'
+import BookDemo from './BookDemo';
 
 function DialogModel({ show, onHide }) {
   const handleSubmit = (e) => {
@@ -18,7 +19,7 @@ function DialogModel({ show, onHide }) {
   return (
     <Modal show={show} onHide={onHide}
     aria-labelledby="contained-modal-title-vcenter"
-    centered className='modal'>
+    centered className='modal' size='md'>
       <Modal.Header closeButton>
         <Modal.Title>Register</Modal.Title>
       </Modal.Header>
@@ -27,6 +28,7 @@ function DialogModel({ show, onHide }) {
         Your browser does not support the audio tag.
       </audio>
     <BookDemoCard/>
+    {/* <BookDemo/> */}
     </Modal>
   );
 }
