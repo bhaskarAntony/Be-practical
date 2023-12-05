@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, Button, Form, Col, Row, Image } from 'react-bootstrap';
 import '../styles/dialogmodel.css'
 import BookDemoCard from './BookDemoCard';
-import soundSrc from '../images/modal-music2.wav'
+import soundSrc from '../images/modal-music.mp3'
 
 function DialogModel({ show, onHide }) {
   const handleSubmit = (e) => {
