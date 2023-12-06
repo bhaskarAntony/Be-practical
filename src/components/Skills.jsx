@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/skills.css';
-import skillVideo from '../images/unlock-video.mp4'
+import skillVideo from '../images/unlock-vedio.mp4'
 import hackethon from '../images/hackethon.mp4'
-import video1 from '../images/vedio1.mp4'
+import video1 from '../images/video1.mp4'
 import video2 from '../images/video2.mp4'
 import video3 from '../images/video3.mp4'
 import VideosModal from '../Modals/VideosModal';

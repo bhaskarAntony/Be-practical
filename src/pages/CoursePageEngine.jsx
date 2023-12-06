@@ -17,6 +17,7 @@ import BookDemoCard from '../components/BookDemoCard'
 import Start from '../components/Start'
 import CourseOffering from '../components/Offering/CourseOffering'
 import Benifits from '../components/Benifits/Benifits'
+import { Helmet } from 'react-helmet'
 
 function CoursePageEngine() {
     const [courseData, setCourseData] = useState(null);
@@ -69,20 +70,28 @@ function CoursePageEngine() {
         
         _Thank You_
       `;
+      
       const ToWhatsapp = () => {
       const encodedMessage = encodeURIComponent(messageContent);
         window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
       }
+
       const sendTelegramMessage = () => {
         const encodedMessage = encodeURIComponent(messageContent);
         window.open(`tg://resolve?text=${encodedMessage}`, '_blank');
       };
+
       const sendTwitterMessage = () => {
         const encodedMessage = encodeURIComponent(messageContent);
         window.open(`https://twitter.com/intent/tweet?text=${encodedMessage}`, '_blank');
       };
+
   return (
     <section className='overflow-hidden'>
+      <Helmet>
+      <title>Your Page Title</title>
+        <meta name={courseData.heroTitle} content={courseData.heroSubtitle} />
+      </Helmet>
     <div className="course-hero container-fluid p-0 py-3 bg-texture bg-gray2 border-b ">
         <div className="row align-items-center">
             <div className="col-12 col-md-7 col-lg-7">
@@ -107,15 +116,12 @@ function CoursePageEngine() {
                     <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
                 <button className="hero-btn-outline-danger bg-white border-0 text-dark py-3 p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
                
-            </div>
-            
-                    
+            </div>  
                 </div>
             </div>
             <div className="col-12 col-md-5 col-lg-5">
                 <div className="course-hero-right p-lg-5 p-3">
                     <BookDemoCard/>
-                    
                 </div>
             </div>
         </div>
