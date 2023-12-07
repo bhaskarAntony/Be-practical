@@ -21,7 +21,7 @@ function Adwantages() {
   return (
     <section id="adwantages" className='overflow-hidden'>
       <div className="adwantages-container container-fluid p-lg-5 text-center rounded-4">
-        <h3 className="fs-1 text-900 text-center">Advantages At <span className="text-main-danger"> Be Practical</span></h3>
+        <h3 className="fs-1 text-900 text-center">Advantages @ <span className="text-main-danger"> Be Practical</span></h3>
         <p className="fs-6 text-secondary">
           Mentoring for our full-stack course starts long before a teacher gives an individual training session and continues long after the training session is over. Assessment, motivation, design, delivery, and evaluation are all connected stages or activities in this job guaranteed courses in Bangalore.
         </p>

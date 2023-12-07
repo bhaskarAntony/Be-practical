@@ -45,9 +45,7 @@ function ElitePage() {
       }, []);
   return (
 <>
-{/* <div className="elite-video">
-    <video src={elitevideo} autoPlay muted></video>
-  </div> */}
+
    <div className="elite-main-page overflow-hidden">
      <div className='elite-page container-fluid p-0'>
      <div className="elite-hero py-5 p-3 bg-texture">

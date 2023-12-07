@@ -17,10 +17,17 @@ import BookDemoCard from '../components/BookDemoCard'
 import Start from '../components/Start'
 import CourseOffering from '../components/Offering/CourseOffering'
 import Benifits from '../components/Benifits/Benifits'
+import Ourcoursecard from '../components/Ourcoursecard'
 
 function CourseMainEngine() {
     const [courseData, setCourseData] = useState(null);
   const { id } = useParams(); // Access the id parameter from the URL
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  // Move the toggleAccordion function outside the component or declare it with useCallback
+  const toggleAccordion = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
         const apiUrl = `https://backend-bp-bpdeveloperscommunity.onrender.com/api/ourCourses/${id}`; // Replace with your actual API endpoint
@@ -81,6 +88,8 @@ function CourseMainEngine() {
         const encodedMessage = encodeURIComponent(messageContent);
         window.open(`https://twitter.com/intent/tweet?text=${encodedMessage}`, '_blank');
       };
+
+     
   return (
     <section className='overflow-hidden'>
     <div className="course-hero container-fluid p-0 py-3 bg-texture bg-gray2 border-b ">
@@ -101,7 +110,7 @@ function CourseMainEngine() {
                         </div>
                     </div>
                   <div className="course-points">
-                  <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.coursePoints}} />
+                  <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.courePoints}} />
                   </div>
                     <div className="btns mt-3 d-flex flex-wrap gap-2">
                     <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
@@ -158,6 +167,41 @@ function CourseMainEngine() {
 
     
       {/* <Module modules={courseData.modules} name={courseData.courseName} description={courseData.courseDescription}/> */}
+      {/* {
+  courseData.courses.map((item, index) => {
+   return (
+    item.courseModules?.map((module, moduleIndex) => {
+      console.log('data', module.title)
+      return (
+        <div
+        className={`faq-item ${activeIndex === moduleIndex ? 'active' : ''} rounded-4 mb-3 `}
+        key={moduleIndex}
+      >
+        <div className="faq-question d-flex align-items-center" onClick={() => toggleAccordion(moduleIndex)}>
+          <span className="count p-2 rounded-1 text-900 fs-4 text-green mx-3">{moduleIndex + 1}</span>
+          <span className="faq-question-text text-black">
+            <span className="fw-bold text-main-danger"> Module{moduleIndex + 1}:</span>
+            <span className="text-white text-900">{module.title}</span>
+          </span>
+          <div className="faq-icon">
+            {activeIndex === moduleIndex ? <i class="bi bi-caret-up-fill"></i> : <i class="bi bi-caret-down-fill"></i>}
+          </div>
+        </div>
+        {activeIndex === moduleIndex && (
+          <div className="faq-answer">
+            <h5 className='mt-4 text-main-danger text-decoration-underline'>About</h5>
+            <p className="fs-4 text-white">{module.title}</p>
+            <h5 className='mt-4 text-main-danger text-decoration-underline'>Topics Covered</h5>
+            <p className='fs-5 text-white'>{module.topics}</p>
+          </div>
+        )}
+      </div>
+      )
+    })
+   )
+})
+} */}
+<Ourcoursecard data={courseData.courses}/>
       <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
                 <div className="row">

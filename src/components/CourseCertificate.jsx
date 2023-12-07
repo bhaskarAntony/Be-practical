@@ -16,7 +16,7 @@ function CourseCertificate({data}) {
                   <div className="">
                       <div className="course-certification mb-3">
                         <h3 className="fs-3 mb-2 text-main-danger text-900">Course Certification</h3>
-                        <div className='fs-6 text-secondary' dangerouslySetInnerHTML={{ __html: data.certification}} />
+                        <div className='fs-6 text-secondary' dangerouslySetInnerHTML={{ __html: data.certificate}} />
                       </div>
                       <div className="course-for mb-3">
                         <h3 className="fs-3 mb-2 text-main-danger text-900">Who This Course For</h3>

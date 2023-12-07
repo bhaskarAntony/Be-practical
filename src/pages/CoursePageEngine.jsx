@@ -40,7 +40,7 @@ function CoursePageEngine() {
       }, [id]);
       useEffect(() => {
         if (courseData) {
-          document.title = courseData.courseName;
+          // document.title = courseData.courseName;
         }
       }, [courseData]);
       if (courseData === null) {
@@ -88,9 +88,9 @@ function CoursePageEngine() {
 
   return (
     <section className='overflow-hidden'>
-      <Helmet>
-      <title>Your Page Title</title>
-        <meta name={courseData.heroTitle} content={courseData.heroSubtitle} />
+     <Helmet>
+        <title>{courseData.SEO?.title}</title>
+        <meta name="description" content={courseData.SEO?.description} />
       </Helmet>
     <div className="course-hero container-fluid p-0 py-3 bg-texture bg-gray2 border-b ">
         <div className="row align-items-center">
