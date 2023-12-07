@@ -10,14 +10,14 @@ import axios from 'axios'
 import FaqSection from '../components/FaqSection'
 import Module from '../components/Module'
 import Languages from '../components/Languages'
-import CourseCard from '../components/CourseCard'
+// import CourseCard from '../components/CourseCard'
 import Loading from '../Modals/Loading'
 import CourseCertificate from '../components/CourseCertificate'
 import BookDemoCard from '../components/BookDemoCard'
 import Start from '../components/Start'
 import CourseOffering from '../components/Offering/CourseOffering'
 import Benifits from '../components/Benifits/Benifits'
-import Ourcoursecard from '../components/Ourcoursecard'
+import CourseCard from '../components/Coursecard/Coursecard'
 
 function CourseMainEngine() {
     const [courseData, setCourseData] = useState(null);
@@ -201,7 +201,7 @@ function CourseMainEngine() {
    )
 })
 } */}
-<Ourcoursecard data={courseData.courses}/>
+<CourseCard data={courseData.courses}/>
       <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
                 <div className="row">
