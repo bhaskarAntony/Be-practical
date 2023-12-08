@@ -12,7 +12,7 @@ function Benifits({data}) {
                 <div className="benifits-heading w-100 bg-danger-2 text-center p-2">
                         <span className="fs-4 text-white">Designation</span>
                     </div>
-              <div className="benifits-card-body p-2">
+              <div className="benifits-card-body p-2 h-100">
               <div className='fs-5' dangerouslySetInnerHTML={{ __html: data.designation}} />
               </div>
                 </div>

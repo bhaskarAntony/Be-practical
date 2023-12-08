@@ -112,11 +112,15 @@ function CoursePageEngine() {
                   <div className="course-points">
                   <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.courseHeroPoints}} />
                   </div>
-                    <div className="btns mt-3 d-flex flex-wrap gap-2">
-                    <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
-                <button className="hero-btn-outline-danger bg-white border-0 text-dark py-3 p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
-               
-            </div>  
+                  <div className="row align-items-center">
+                        <div className="col-12 col-md-7 mb-2">
+                        <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
+                        </div>
+                        <div className="col-12 col-md-5 mb-2">
+                        <button className=" btn-danger bg-white text-dark py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Download Syllubus</span> <br /> <small>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></small></button>
+                     
+                          </div>
+                      </div>
                 </div>
             </div>
             <div className="col-12 col-md-5 col-lg-5">

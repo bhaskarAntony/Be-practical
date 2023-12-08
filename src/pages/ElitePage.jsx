@@ -121,7 +121,7 @@ function ElitePage() {
   <div className="d-flex justify-content-center">
   <div className="elite-devider"></div>
   </div>
-    <div className="elite-course container rounded-5 p-lg-5 p-2 py-5 bg-dark">
+    {/* <div className="elite-course container rounded-5 p-lg-5 p-2 py-5 bg-dark">
       <h1 className="fs-1 text-center text-900 text-white mb-4">Our Elite <span className="text-main-danger">Courses</span></h1>
         <div className="row overflow-hidden justify-conent-center">
             {
@@ -131,24 +131,7 @@ function ElitePage() {
                     <div className="course-card p-4 text-start border-b text-center">
                       <p className="fs-3  text-900  elite-g-text"> <i class="bi bi-star fs-4"></i>  {item.courseName}</p>
                       <p className="fs-6 text-white">{item.heroSubtitle}</p>
-                      {/* <div className="row">
-                        <div className="col-12 col-md-6 col-lg-6 border">
-                        <small className='text-black text-900'>Duration</small>
-                          <p className="fs-6 text-900  text-white">{item.courseDuration}</p>
-                        </div>
-                        <div className="col-12 col-md-6 col-lg-6 border">
-                        <small className='text-black text-900'>Training Mode</small>
-                          <p className="fs-6 text-900  text-white">{item.modeOfTraining}</p>
-                        </div>
-                        <div className="col-12 col-md-6 col-lg-6 border">
-                          <small className='text-black text-900'>Enrolled</small>
-                          <p className="fs-6 text-900  text-white">{item.enrolledStudents}</p>
-                        </div>
-                        <div className="col-12 col-md-6 col-lg-6 border mb-sm-2 mb-md-0 mb-lg-0">
-                        <small className='text-black text-900'>Adwantages</small>
-                          <p className="fs-6 text-900  text-white">HR Sessions</p>
-                        </div>
-                      </div> */}
+                     
                       <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none"> <button className="btn-danger  elite-course-btn rounded-5 mt-3 w-100">Know More</button></Link>
                     </div>
                     </div>
@@ -157,7 +140,32 @@ function ElitePage() {
                 ))
             }
         </div>
-    </div> 
+    </div>  */}
+    <h4 className="fs-3 elite-yellow text-center mt-5">Courses</h4>
+    <h1 className="heading text-900 elite-g-text">ELITE OFFERING COURSES</h1>
+    <div className="java-course container rounded-4 p-4">
+      <div className="row align-items-center">
+            <div className="col-12 col-sm-12 col-md-6 ">
+              <div className="java-left">
+                <h1 className="display-4 text-bold">Java fullstack courses</h1>
+                <p className="fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores qui enim recusandae animi minus excepturi, atque quas pariatur quibusdam nemo voluptate quaerat, quos error officia suscipit? Fugit impedit obcaecati sunt.</p>
+               <div className="row">
+                <div className="col-12 col-sm-12 col-md-6">
+                <button className="btn-danger bg-dark w-100">Learn more</button>
+                </div>
+                <div className="col-12 col-sm-12 col-md-6">
+                <button className="btn-danger w-100 bg-white text-dark">Enquire</button>
+                </div>
+               </div>
+              </div>
+            </div>
+            <div className="col-12 col-sm-12 col-md-6">
+            <div className="java-right">
+              <img src="https://t4.ftcdn.net/jpg/05/90/45/35/360_F_590453560_ugMuPncnGYB6XnJqmC8xiPQx4eg3jmMD.jpg" alt="" className='w-100 rounded-3'/>
+            </div>
+              </div>
+      </div>
+    </div>
     <div className="container elite-devider"></div>
     <div className="elite-highlights container p-3  text-center mt-2">
     <h4 className="fs-3 elite-yellow">Featurs</h4>

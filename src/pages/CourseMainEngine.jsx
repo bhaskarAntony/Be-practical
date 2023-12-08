@@ -112,11 +112,14 @@ function CourseMainEngine() {
                   <div className="course-points">
                   <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.courePoints}} />
                   </div>
-                    <div className="btns mt-3 d-flex flex-wrap gap-2">
-                    <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
-                <button className="hero-btn-outline-danger py-3 p-4 rounded-4 hero-btn d-flex align-items-center gap-2 justify-content-center fs-5">Download Syllubus <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></button>
-               
-            </div>
+                  <div className="row align-items-center">
+                        <div className="col-12 col-md-7 mb-2">
+                        <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
+                        </div>
+                        <div className="col-12 col-md-5 mb-2">
+                        <button className=" btn-danger bg-white text-dark py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Download Syllubus</span> <br /> <small>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></small></button>
+                          </div>
+                      </div>
             
                     
                 </div>
@@ -204,14 +207,15 @@ function CourseMainEngine() {
 <CourseCard data={courseData.courses}/>
       <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
-                <div className="row">
+                {/* <div className="row">
                     <div className="col-12 col-md-6 col-lg-7">
-                        {/* <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/> */}
+                       
                     </div>
                     <div className="col-12 col-md-6 col-lg-5 d-flex align-items-center ">
-                        {/* <CourseCard data={courseData} ></CourseCard> */}
+                       <CourseCard data={courseData} ></CourseCard>
                     </div>
-                </div>
+                </div> */}
+                <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
             </div>
       </section>
       <CourseCertificate data={courseData}/>
