@@ -31,6 +31,7 @@ import CourseMainEngine from './pages/CourseMainEngine'
 import GoogleSignIn from './js/GoogleSignIn'
 import TawkToWidget from './chat/TawkToWidget'
 import ZohoChat from './chat/ZohoChat'
+import { ToastContainer } from 'react-bootstrap'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -79,6 +80,7 @@ function App() {
           <>
      {/* <TawkToWidget/> */}
      <ZohoChat/>
+     <ToastContainer />
     
         {/* <CustomCursor/> */}
       <ScrollProgressBar/>
@@ -87,9 +89,11 @@ function App() {
        
         <PageScrollToTop/>
         <Header/>
+        
         {/* <BottomNavigation/> */}
         {/* <Discount/> */}
         <Routes>
+
           
         <Route path='/' element={<Home/>}/>
         <Route path='/gallery' element={<Gallery/>}/>

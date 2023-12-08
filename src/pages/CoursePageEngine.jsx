@@ -5,7 +5,7 @@ import Adwantages from '../components/advantages/Adwantages'
 import YoutubeVideos from '../components/YoutubeVideos'
 import Feedback from '../components/Feedback'
 import LandDreamJob from '../components/LandDreamJob'
-import { useParams } from 'react-router-dom'
+import {useParams } from 'react-router-dom'
 import axios from 'axios'
 import FaqSection from '../components/FaqSection'
 import Module from '../components/Module'
@@ -18,9 +18,19 @@ import Start from '../components/Start'
 import CourseOffering from '../components/Offering/CourseOffering'
 import Benifits from '../components/Benifits/Benifits'
 import { Helmet } from 'react-helmet'
+import { Modal, Form, Button } from 'react-bootstrap'
+import { toast } from 'react-toastify'
 
 function CoursePageEngine() {
     const [courseData, setCourseData] = useState(null);
+          // Another useState call
+          const [showModal, setShowModal] = useState(false);
+          const [formData, setFormData] = useState({
+            name: '',
+            email: '',
+            phone: '',
+            course: 'MERN', // Default course
+          });
   const { id } = useParams(); // Access the id parameter from the URL
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
@@ -86,6 +96,39 @@ function CoursePageEngine() {
         window.open(`https://twitter.com/intent/tweet?text=${encodedMessage}`, '_blank');
       };
 
+    
+      const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        try {
+          const response = await axios.post('http://localhost:3300/course/register', formData);
+    
+          if (response.status === 200) {
+            // Handle successful form submission
+            alert('Brochure registration successful');
+            toast.success("registration successful, browcher has been sent to registered email.")
+          } else {
+            // Handle error
+            alert('Brochure registration failed');
+            toast.error("registration failed")
+          }
+        } catch (error) {
+          console.error('Error during brochure registration', error);
+        }
+      };
+    
+
+    
+      const downloadBrochure = () => {
+        setShowModal(true);
+      };
+    
+    
+
   return (
     <section className='overflow-hidden'>
      <Helmet>
@@ -117,7 +160,77 @@ function CoursePageEngine() {
                         <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
                         </div>
                         <div className="col-12 col-md-5 mb-2">
-                        <button className=" btn-danger bg-white text-dark py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Download Syllubus</span> <br /> <small>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></small></button>
+                        <button className=" btn-danger bg-white text-dark py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100" onClick={downloadBrochure}><span className='fs-5'>Download Syllubus</span> <br /> <small>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></small></button>
+
+                        <Modal show={showModal} onHide={() => setShowModal(false)}>
+              <Modal.Header closeButton>
+                <Modal.Title>Download free Browcher</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Form>
+                <div className="r-card p-4 p-lg-5 bg-white rounded-3">
+      <form>
+        <div className="form-group mt-3">
+          <div className="form-floating mb-3">
+            <input
+              type="text"
+              className="form-control"
+              id="nameInput"
+              name="name"
+              placeholder="Enter your name"
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="nameInput">Student Name</label>
+          </div>
+        </div>
+        <div className="form-group mt-3">
+          <div className="form-floating mb-3">
+            <input
+              type="email"
+              className="form-control"
+              id="emailInput"
+              name="email"
+              placeholder="name@example.com"
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="emailInput">Email address</label>
+          </div>
+        </div>
+        <div className="form-group mt-3">
+          <div className="form-floating mb-3">
+            <input
+              type="number"
+              className="form-control"
+              id="phoneInput"
+              name="phone"
+              placeholder="+91 000-0000-000"
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="phoneInput">Phone number</label>
+          </div>
+        </div>
+        <div className="form-group form-group-last mt-3">
+          <select className="form-control p-3" name="course" onChange={handleChange}>
+            <option value="MERN">MERN</option>
+            <option value="Python Fullstack">Python Fullstack</option>
+            <option value="Java Fullstack">Java Fullstack</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+          </select>
+        </div>
+        <div className="form-group mt-3">
+          <button type="button" className="btn-danger bg-dark w-100" onClick={handleSubmit}>
+            Register for Brochure
+          </button>
+        </div>
+      </form>
+    </div>
+                </Form>
+              </Modal.Body>
+            </Modal>
                      
                           </div>
                       </div>

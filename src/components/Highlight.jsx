@@ -87,14 +87,14 @@ function Highlight({ data }) {
             <div className="highlight-card-hero">
               <h1 className={`fs-3 text-900 text-white ${counting ? 'counting' : ''}`}>
                 {counting ? (
-                  <CountUp start={0} end={data[0]?.minSalary ? data[0]?.minSalary : 7.8} duration={2} decimals={0} />
+                  <CountUp start={0} end={4.5} duration={2} decimals={0} />
                 ) : (
                   data[0]?.minSalary ? data[0]?.minSalary : 7.8
                 )}{' '}
                 LPA
               </h1>
               <span className="p-dark-small text-white">
-                <small>average dream job CTC</small>
+                <small></small>
               </span>
             </div>
           </div>
