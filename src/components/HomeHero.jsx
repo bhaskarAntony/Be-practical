@@ -91,7 +91,7 @@ function HomeHero() {
      {home.map((item, index) => (
             <Carousel.Item key={index}>
                   <div className="hero-text p-lg-2 p-md-2 p-1 py-3 ">
-                    <h1 className="display-3 text-bold text-start">{item.heading}</h1>
+                    <h1 className="display-3 text-bold text-start color-font">{item.heading}</h1>
                     <p className="fs-4 my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
                       <button className='btn-main-outline-dark border-0  hero-btn bg-gray2 text-white' onClick={openModal}>Apply Now <i class="bi bi-chevron-double-right"></i></button>

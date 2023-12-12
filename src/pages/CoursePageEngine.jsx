@@ -80,23 +80,10 @@ function CoursePageEngine() {
         
         _Thank You_
       `;
-      
       const ToWhatsapp = () => {
       const encodedMessage = encodeURIComponent(messageContent);
         window.open(`https://wa.me/?text=${encodedMessage}`, '_blank');
-      }
-
-      const sendTelegramMessage = () => {
-        const encodedMessage = encodeURIComponent(messageContent);
-        window.open(`tg://resolve?text=${encodedMessage}`, '_blank');
-      };
-
-      const sendTwitterMessage = () => {
-        const encodedMessage = encodeURIComponent(messageContent);
-        window.open(`https://twitter.com/intent/tweet?text=${encodedMessage}`, '_blank');
-      };
-
-    
+      }  
       const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
@@ -109,7 +96,7 @@ function CoursePageEngine() {
     
           if (response.status === 200) {
             // Handle successful form submission
-            alert('Brochure registration successful');
+            alert('Brouchere registration successful'); 
             toast.success("registration successful, browcher has been sent to registered email.")
           } else {
             // Handle error

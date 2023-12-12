@@ -89,12 +89,18 @@ function Highlight({ data }) {
                 {counting ? (
                   <CountUp start={0} end={4.5} duration={2} decimals={0} />
                 ) : (
-                  data[0]?.minSalary ? data[0]?.minSalary : 7.8
+                  4.5
                 )}{' '}
-                LPA
+                 <small>
+                <i className="bi bi-star-fill text-yellow"></i>
+                <i className="bi bi-star-fill text-yellow"></i>
+                <i className="bi bi-star-fill text-yellow"></i>
+                <i className="bi bi-star-fill text-yellow"></i>
+                <i className="bi bi-star-half text-yellow"></i>
+              </small>
               </h1>
               <span className="p-dark-small text-white">
-                <small></small>
+                <small>JustDial</small>
               </span>
             </div>
           </div>

@@ -118,7 +118,7 @@ function OurCourses() {
                             
                               <div className="course-btns row mt-3">
                                 <div className="col-12 col-md-6 col-lg-6">
-                                <Link to={`/${item.PageLink}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                                <Link to={item.courses.length>1 ? `/softwareTrainingCourses/${item.courseName}/${item._id}` : `/course/${item.courseName}/${item.courses[0].CourseId}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-6">
                                 <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>

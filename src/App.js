@@ -106,7 +106,7 @@ function App() {
         <Route path='/book-demo' element={<BookDemo/>}/>
         <Route path='/all-testinomials' element={<AllTestimomials/>}/>
         <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
-        <Route path='/ourCourses/:ourCourse/:id' element={<CourseMainEngine/>}/>
+        <Route path='/softwareTrainingCourses/:ourCourse/:id' element={<CourseMainEngine/>}/>
         <Route path='/all-courses' element={<AllCourses/>}/>
         <Route path='/discount/quiz' element={<QuizModal/>}/>
         <Route path='/Blog/read/:id' element={<BlogsView/>}/>
