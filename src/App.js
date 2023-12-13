@@ -32,6 +32,7 @@ import GoogleSignIn from './js/GoogleSignIn'
 import TawkToWidget from './chat/TawkToWidget'
 import ZohoChat from './chat/ZohoChat'
 import { ToastContainer } from 'react-bootstrap'
+import Whatsapp from './chat/Whatsapp'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -79,7 +80,8 @@ function App() {
       ) : (
           <>
      {/* <TawkToWidget/> */}
-     <ZohoChat/>
+     {/* <ZohoChat/> */}
+     <Whatsapp/>
      <ToastContainer />
     
         {/* <CustomCursor/> */}
