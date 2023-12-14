@@ -20,7 +20,7 @@ function About() {
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-6">
             <div className="about-hero-image">
-                <img src="https://tykit.rometheme.pro/teracloud/wp-content/uploads/sites/134/2023/09/great-suggestion-came-to-girl-mind-studio-portrai.png" alt="" />    
+                <img src="https://tykit.rometheme.pro/teracloud/wp-content/uploads/sites/134/2023/09/great-suggestion-came-to-girl-mind-studio-portrai.png" alt="aboutus" />    
             </div>  
             </div>
         </div>

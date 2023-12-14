@@ -42,7 +42,7 @@ const imagesData = [
 
 function HomeHero() {
   const [showModal, setShowModal] = useState(false);
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const [homeData, sethomeData] = useState([]);
   useEffect(() => {
     homeHeroApi
@@ -109,7 +109,7 @@ function HomeHero() {
     imagesData.map((item, index)=>(
    <div className="hero-image d-flex align-items-center justify-content-center h-100">
 
-    <img src={item} alt="" key={index}  className='w-100'/>
+    <img src={item} alt="hero image" key={index}  className='w-100'/>
    </div>
 
     ))

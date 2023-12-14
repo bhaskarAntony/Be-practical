@@ -52,7 +52,7 @@ function Benifits() {
         {benifits.map((item, index) => (
           <div className="col-12 col-lg-4 col-md-6" key={index}>
             <div className="benifits-component-card bg-white border text-start">
-              <img src={item.image} alt="" className='mb-3 bg-blue-light p-3 rounded-5' />
+              <img src={item.image} alt={item.title} className='mb-3 bg-blue-light p-3 rounded-5' />
               <h4 className="card-heading text-900 text-main-danger">{item.title}</h4>
               <p className='fs-6'>{item.description}</p>
             </div>

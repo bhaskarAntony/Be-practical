@@ -90,7 +90,7 @@ function Companies() {
                 {companiesData.map((item, index) => (
                   <div className="col-6 col-md-3 col-lg-2 p-2" key={index}>
                     <div className="all-company-card">
-                      <img src={item.image} alt="" />
+                      <img src={item.image} alt="company" />
                     </div>
                   </div>
                 ))}

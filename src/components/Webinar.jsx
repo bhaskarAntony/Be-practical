@@ -115,7 +115,7 @@ function Webinar() {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-3 p-1 d-flex justify-content-center">
               <div className="webinar-card h-100">
                 <div className="webinar-card-header p-2">
-                        <img src={item.image} alt="" className='img-fluid' />
+                        <img src={item.image} alt="events" className='img-fluid' />
                 </div>
                 <div className="webinar-card-body p-2">
                     <h3 className="fs-5 text-black">{item.company}</h3>

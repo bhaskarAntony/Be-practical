@@ -35,7 +35,7 @@ function BlogsView() {
         <div className="row">
             <div className="col-md-6 offset-md-3">
               
-                <img src={BlogData.image} alt="" className="w-100" />
+                <img src={BlogData.image} alt="blog" className="w-100" />
             </div>
         </div>
        </div>

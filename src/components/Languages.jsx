@@ -19,7 +19,7 @@ function Languages({languages, course}) {
             <div className="col-6 col-md-4 col-lg-4 m-0 p-1" key={index}>
               <div className="language-card bg-gray3 border-b" data-aos="zoom-in">
                 <div className="language-card-header">
-                  <img src={item.image} alt="" />
+                  <img src={item.image} alt="technology" />
                 </div>
                 <div className="language-card-body">
                   <h4 className='text-white text-900'>{item.name}</h4>

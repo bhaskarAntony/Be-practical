@@ -51,7 +51,7 @@ function Highlight({ data }) {
             <div className="highlight-card-hero ">
               <h1 className={`fs-3 d-flex gap-1 d-block justify-content-center align-items-center w-100  text-white ${counting ? 'counting' : ''}`}>
                <small className='fs-6'>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png" alt="" width={40} height={40} />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png" alt="we are in" width={40} height={40} />
                {counting ? (
                   <CountUp start={0} end={data[0]?.rating ? data[0]?.rating : 4.6} duration={2} decimals={1} />
                 ) : (
@@ -73,7 +73,7 @@ function Highlight({ data }) {
           <div className="col-6 col-md-4 col-lg-3 border h-100">
             <div className="highlight-card-hero ">
               <h1 className={`fs-2 text-900 text-white ${counting ? 'counting' : ''}`}>
-              <img src="https://cdn-icons-png.flaticon.com/128/4300/4300059.png" alt="" width={40} height={40} />
+              <img src="https://cdn-icons-png.flaticon.com/128/4300/4300059.png" alt="we are in" width={40} height={40} />
                 {counting ? (
                   <CountUp start={0} end={data[0]?.partners ? data[0]?.partners : 300} duration={2} decimal={0} />
                 ) : (
@@ -90,7 +90,7 @@ function Highlight({ data }) {
           <div className="col-6 col-md-4 col-lg-3 border">
             <div className="highlight-card-hero h-100">
               <h1 className={`fs-3 text-900 text-white d-flex align-items-center gap-2 justify-content-center ${counting ? 'counting' : ''}`}>
-              <small><img src="https://racesonline.in/static/media/justdiallogo.015966087b64b7a5474c.webp" alt="" width={40} height={40} /></small>
+              <small><img src="https://racesonline.in/static/media/justdiallogo.015966087b64b7a5474c.webp" alt="we are in" width={40} height={40} /></small>
                 {counting ? (
                   <CountUp start={0} end={4.5} duration={2} decimals={0} />
                 ) : (
@@ -112,9 +112,9 @@ function Highlight({ data }) {
           <div className="col-6 col-md-4 col-lg-3 border">
             <div className="highlight-card-hero">
               <h1 className={`fs-3 text-900 text-white d-flex align-items-center gap-2 justify-content-center ${counting ? 'counting' : ''}`}>
-              <Link to="" ><img src={hindustan} alt="" width={50} height={40} className='rounded-5'/></Link>
-              <Link to="https://www.mid-day.com/brand-media/article/transform-your-career-with-the-best-data-science-course-in-bangalore-at-be--23322174" target="_blank"><img src="https://play-lh.googleusercontent.com/UhoPNdnYR4qIqr9DXtwWBjjLVynTaSRzes0XsiPqjZTa24H4ecSXR-OYL_2Q3CgTUPs" alt="" width={40} height={40} className='rounded-5' /></Link>
-              <Link to="" target="_blank"><img src="https://play-lh.googleusercontent.com/Prhy-5MPajJzjrTbvmdlhBTPNTFGtq1J0NTr01Lmzd5OJhfuYdbjmS7mba_uYpU4l0s" alt="" width={40} height={40} className='rounded-5' /></Link>
+              <Link to="" ><img src={hindustan} alt="we are in" width={50} height={40} className='rounded-5'/></Link>
+              <Link to="https://www.mid-day.com/brand-media/article/transform-your-career-with-the-best-data-science-course-in-bangalore-at-be--23322174" target="_blank"><img src="https://play-lh.googleusercontent.com/UhoPNdnYR4qIqr9DXtwWBjjLVynTaSRzes0XsiPqjZTa24H4ecSXR-OYL_2Q3CgTUPs" alt="we are in" width={40} height={40} className='rounded-5' /></Link>
+              <Link to="" target="_blank"><img src="https://play-lh.googleusercontent.com/Prhy-5MPajJzjrTbvmdlhBTPNTFGtq1J0NTr01Lmzd5OJhfuYdbjmS7mba_uYpU4l0s" alt="we are in" width={40} height={40} className='rounded-5' /></Link>
 
               </h1>
               <span className="p-dark-small text-white">

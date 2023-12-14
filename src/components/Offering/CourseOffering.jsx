@@ -73,7 +73,7 @@ function CourseOffering() {
             courseOfferingData.map((item, index)=>(
                 <div className="col-4 col-md-4 col-lg-3 border d-flex flex-column justify-content-center p-2" key={index}>
                     <div className="offering-card text-center mb-5">
-                        <img src={item.image} alt="" className='mt-4 mb-3' />
+                        <img src={item.image} alt="image" className='mt-4 mb-3' />
                         <h5 className="fs-4 text-center text-white">{item.title}</h5>
                     </div>
                 </div>

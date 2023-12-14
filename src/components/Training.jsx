@@ -47,7 +47,7 @@ function Training() {
                      traningData.map((item, index) => (
                         <div className="col-6 col-md-6 col-lg-6" key={index}>
                             <div className="training-card  mb-2 text-center">
-                            <img src={item.image} alt="" />
+                            <img src={item.image} alt="traning" />
                        
                                  <h4 className='card-heading text-900'>{item.title}</h4>
                             </div>

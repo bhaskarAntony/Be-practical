@@ -9,7 +9,7 @@ function CourseCertificate({data}) {
             <div className="row align-items-center">
                 <div className="col-md-12 col-12 col-lg-6">
                     <div className="c-img">
-                    <img src="https://webinar.be-practical.com/static/media/certificate-webinar.b26f3764dc9013762c5c.png" alt="" className="w-100 border-a p-2" />
+                    <img src="https://webinar.be-practical.com/static/media/certificate-webinar.b26f3764dc9013762c5c.png" alt="certificate" className="w-100 border-a p-2" />
                     </div>
                 </div>
                 <div className="col-md-12 col-12 col-lg-6">

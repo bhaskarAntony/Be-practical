@@ -115,7 +115,7 @@ function AllCourses() {
                   </div>
                   <div className="col-12 col-md-6 col-lg d-none d-lg-block">
                     <div className="course-right">
-                        <img src={item.courseImage} alt="" className="w-100" />
+                        <img src={item.courseImage} alt={item.courseName} className="w-100" />
                     </div>
                   </div>
                 </div>

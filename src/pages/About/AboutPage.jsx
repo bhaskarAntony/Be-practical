@@ -30,7 +30,7 @@ function AboutPage() {
             </div>
             <div className="col-12 col-sm-12 col-md-12 col-lg-6">
             <div className="about-hero-image">
-                <img src="https://img.freepik.com/free-vector/remote-meeting-concept-illustration_114360-4704.jpg?w=740&t=st=1698468375~exp=1698468975~hmac=bc33a079a2042604636a33f5845099ce1e20a50165349f335a7bb6a19525655a" alt="" className='w-100'/>    
+                <img src="https://img.freepik.com/free-vector/remote-meeting-concept-illustration_114360-4704.jpg?w=740&t=st=1698468375~exp=1698468975~hmac=bc33a079a2042604636a33f5845099ce1e20a50165349f335a7bb6a19525655a" alt="aboutus" className='w-100'/>    
             </div>  
             </div>
         </div>

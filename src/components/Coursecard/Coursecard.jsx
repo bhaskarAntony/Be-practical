@@ -100,7 +100,7 @@ function Coursecard(props) {
                   </div>
                   <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-sm-none d-lg-block">
                     <div className="course-right">
-                        <img src={item.CourseImage} alt="" className="w-100" />
+                        <img src={item.CourseImage} alt={item.CourseName} className="w-100" />
                     </div>
                   </div>
                 </div>

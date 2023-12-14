@@ -64,7 +64,7 @@ function AllTestimomials() {
                 </div>
                 <hr />
                    <div className="d-flex gap-3">
-                   <img src="https://us.123rf.com/450wm/thesomeday123/thesomeday1231712/thesomeday123171200009/91087331-default-avatar-profile-icon-for-male-grey-photo-placeholder-illustrations-vector.jpg?ver=6" alt="" />
+                   <img src="https://us.123rf.com/450wm/thesomeday123/thesomeday1231712/thesomeday123171200009/91087331-default-avatar-profile-icon-for-male-grey-photo-placeholder-illustrations-vector.jpg?ver=6" alt="profile" />
                         <div>
                         <h4 className='fs-5 fw-bold text-main-danger'>{item.name}</h4>
                         <small className='text-secondary'>{item.role}</small>

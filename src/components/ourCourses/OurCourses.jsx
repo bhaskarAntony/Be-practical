@@ -130,7 +130,7 @@ function OurCourses() {
                       </div>
                       <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-sm-none d-lg-block">
                         <div className="course-right">
-                            <img src={item.image} alt="" className="w-100" />
+                            <img src={item.image} alt={item.courseName} className="w-100" />
                         </div>
                       </div>
                     </div>

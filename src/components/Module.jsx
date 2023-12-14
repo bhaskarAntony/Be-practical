@@ -44,7 +44,7 @@ const Module = (props) => {
       </div>
       </div>
       <div className="col-12 col-md-6 col-lg-6">
-        <img src="https://img.freepik.com/free-vector/yoga-office-concept-illustration_114360-6853.jpg?size=626&ext=jpg" alt="" className="w-100" />
+        <img src="https://img.freepik.com/free-vector/yoga-office-concept-illustration_114360-6853.jpg?size=626&ext=jpg" alt="module-image" className="w-100" />
       </div>
      </div>
         <div className="text-center mt-2">

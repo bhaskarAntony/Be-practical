@@ -12,7 +12,7 @@ function Certificate() {
      <div className='container certificate' data-aos="fade-left">
         <div className="row">
             <div className="col-12 col-md-4 col-lg-4">
-                <img src="https://svg.template.creately.com/BVJzef5PKaw" alt="" className="fluid-img w-100 mb-3" />
+                <img src="https://svg.template.creately.com/BVJzef5PKaw" alt="certificate" className="fluid-img w-100 mb-3" />
             </div>
             <div className="col-12 col-md-8 col-lg-8 certificate-text">
                 <h4 className="fs-2 text-900">Empowering the Next Generation of Tech Talent.</h4>

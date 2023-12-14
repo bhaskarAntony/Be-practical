@@ -44,7 +44,7 @@ function Header() {
       </div> */}
       <nav class="navbar navbar-expand-xl">
   <div class="container-fluid">
-  <a class="navbar-brand" href="/"> <img src="https://bepractical.s3.us-east-2.amazonaws.com/brand-logo.cc6e3cf088a8fd3005b1.jpg" alt="" className='rounded-2' /></a>
+  <a class="navbar-brand" href="/"> <img src="https://bepractical.s3.us-east-2.amazonaws.com/brand-logo.cc6e3cf088a8fd3005b1.jpg" alt="logo" className='rounded-2' /></a>
 
 <div>
 <button variant="primary" onClick={handleShow} className='btn-danger d-xl-none'>
@@ -56,7 +56,7 @@ function Header() {
 </div>
     <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title> <a class="navbar-brand" href="/"> <img src={brand} alt="" /></a></Offcanvas.Title>
+          <Offcanvas.Title> <a class="navbar-brand" href="/"> <img src={brand} alt="logo" /></a></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul className='p-0 m-0 list-group'>

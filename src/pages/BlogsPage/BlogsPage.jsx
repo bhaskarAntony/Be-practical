@@ -72,7 +72,7 @@ function BlogsPage() {
                                     <div className="big-blog-card border rounded-5 p-3 bg-white mb-3">
                                         <div className="row">
                                             <div className="col-12 col-md-4 col-lg-5 d-flex align-items-center">
-                                                <img src={item.image} alt="" className="w-100 rounded-3" />
+                                                <img src={item.image} alt="blog" className="w-100 rounded-3" />
                                             </div>
                                             <div className="col-12 col-md-8 col-lg-7">
                                                 <p className="fs-5 text-main-danger">{item.tag}</p>

@@ -29,7 +29,7 @@ function Footer() {
     <div className="row">
         <div className="col-12 cl-md-12 col-lg-3 ">
            <div className="left">
-           <img src="https://bepractical.s3.us-east-2.amazonaws.com/brand-logo.cc6e3cf088a8fd3005b1.jpg" alt="" data-aos="fade-up"/>
+           <img src="https://bepractical.s3.us-east-2.amazonaws.com/brand-logo.cc6e3cf088a8fd3005b1.jpg" alt="logo" data-aos="fade-up"/>
             <p>
                 Since its establishment in 2012, Be Practical Tech Solutions is training predominantly in IT courses. It has pioneered as a diversified entrepreneurship tapping into the necessities of the internet market in India, with its in-depth understanding of customers and companies
             </p>

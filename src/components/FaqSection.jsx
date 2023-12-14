@@ -20,7 +20,7 @@ const FaqSection = (props) => {
      <div className="row mt-2">
      <div className="col-12 col-md-12 col-lg-6">
      <div className="faq-left">
-     <img src="https://eduquest.itech-theme.com/wp-content/uploads/2023/08/faq.png" alt="" className="w-100" />
+     <img src="https://eduquest.itech-theme.com/wp-content/uploads/2023/08/faq.png" alt="any doubts image" className="w-100" />
      <div className="faq-contact p-3 rounded-3">
       <p className="p-large1 text-white">Contact Us For a <span className="text-main-danger ">Free Learning </span> Consulting Evaluation</p>
       <h1 className="fs-1 text-white">+91 9606729320</h1>

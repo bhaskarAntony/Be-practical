@@ -161,7 +161,7 @@ function ElitePage() {
             </div>
             <div className="col-12 col-sm-12 col-md-6">
             <div className="java-right">
-              <img src="https://t4.ftcdn.net/jpg/05/90/45/35/360_F_590453560_ugMuPncnGYB6XnJqmC8xiPQx4eg3jmMD.jpg" alt="" className='w-100 rounded-3'/>
+              <img src="https://t4.ftcdn.net/jpg/05/90/45/35/360_F_590453560_ugMuPncnGYB6XnJqmC8xiPQx4eg3jmMD.jpg" alt="elite-image" className='w-100 rounded-3'/>
             </div>
               </div>
       </div>
