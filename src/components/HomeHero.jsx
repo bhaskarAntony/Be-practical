@@ -34,10 +34,10 @@ const home = [
   },
 ];
 const imagesData = [
-  "https://api.bepracticals.com/uploads/cp4_69ef0b7978.jpg",
-  "https://api.bepracticals.com/uploads/cp14_b7bc56b4ff.jpeg",
-  "https://api.bepracticals.com/uploads/cp10_c86328ff12.png",
-  'https://api.bepracticals.com/uploads/cp13_f0b5d4f67a.jpeg'
+  "https://img.freepik.com/free-photo/diverse-team-adult-students-working-together_74855-1814.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=ais",
+  "https://img.freepik.com/free-photo/line-coworkers-using-laptops-training-room-class_74855-3568.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=ais",
+  "https://img.freepik.com/free-photo/pretty-girl-group-young-people-casual-clothes-working-modern-office_146671-16507.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=ais",
+  'https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241234.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=ais'
 ]
 
 function HomeHero() {

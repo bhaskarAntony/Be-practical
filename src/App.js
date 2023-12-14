@@ -80,8 +80,8 @@ function App() {
       ) : (
           <>
      {/* <TawkToWidget/> */}
-     {/* <ZohoChat/> */}
-     <Whatsapp/>
+     <ZohoChat/>
+     {/* <Whatsapp/> */}
      <ToastContainer />
     
         {/* <CustomCursor/> */}
