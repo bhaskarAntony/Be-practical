@@ -31,16 +31,16 @@ function Adwantages() {
                 .fill(null)
                 .map((_, index) => (
                   <div className="col-6 col-md-4 col-lg-3 mb-2" key={index}>
-                   <div className="adwantage-card mb-3 p-3 border-0 h-100">
+                   <div className="adwantage-card mb-3 p-3 border-0 h-100 bg-white">
                     <div className="adwantage-header">
                       <div className=" rounded-5 overflow-hidden">
                        
-                        <Shimmer width={80} height={80} className='rounded-5'/>
+                        <Shimmer width={80} height={80}/>
                       </div>
                     </div>
                     <div className="adwantage-card-body">
                       <Shimmer width="80%" height={25} className='mb-2'/>
-                      <Shimmer width="70%" height={15} className='mb-2'/>
+                      <Shimmer width="70%" height={10} className='mb-2'/>
                       <Shimmer width="100%" height={15} className='mb-2'/>
                       <Shimmer width="80%" height={15} className='mb-2'/>
                       <Shimmer width="90%" height={15} className='mb-2'/>
