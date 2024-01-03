@@ -101,8 +101,8 @@ function App() {
         <Route path='/gallery' element={<Gallery/>}/>
         <Route path='/events' element={<Events/>}/>
         <Route path='/blogs' element={<BlogsPage/>}/>
-        <Route path='/contacts' element={<ContactPage/>}/>
-        <Route path='/about' element={<AboutPage/>}/>
+        <Route path='/contact-us' element={<ContactPage/>}/>
+        <Route path='/about-us-2' element={<AboutPage/>}/>
         <Route path='/elite' element={<ElitePage/>}/>
         <Route path='/register' element={<RegistrationPage/>}/>
         <Route path='/book-demo' element={<BookDemo/>}/>

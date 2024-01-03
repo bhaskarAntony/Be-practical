@@ -5,10 +5,15 @@ import ReadMore from '../../Extra/ReadMore'
 import NumberHiglight from '../../components/NumberHighlight/NumberHiglight'
 import BookDemoCard from '../../components/BookDemoCard'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 function AboutPage() {
   return (
     <section>
+         <Helmet>
+        <title>About Us - Software Training Institute in Bangalore</title>
+        <meta name="description" content="Looking for a leading software training institute in Bangalore? Look no further than Be-Practical.com! We offer variety of training programs like full stack development, cloud computing, digital marketing, software testing, hardware & networking and more" />
+      </Helmet>
       <div className="about-hero container-fluid overflow-hidden">
         <div className="row">
             <div className="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center">

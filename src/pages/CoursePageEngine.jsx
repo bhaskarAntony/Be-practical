@@ -31,7 +31,7 @@ function CoursePageEngine() {
             phone: '',
             course: 'MERN', // Default course
           });
-  const { id } = useParams(); // Access the id parameter from the URL
+  const { id } = useParams(); 
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
         const apiUrl = `https://backend-bp-bpdeveloperscommunity.onrender.com/api/course/${id}`; // Replace with your actual API endpoint
@@ -92,10 +92,11 @@ function CoursePageEngine() {
         e.preventDefault();
     
         try {
-          const response = await axios.post('http://localhost:3300/course/register', formData);
+          const response = await axios.post('https://backend-bp-bpdeveloperscommunity.onrender.com/course/register', formData);
     
           if (response.status === 200) {
             // Handle successful form submission
+            return <Loading/>;
             alert('Brouchere registration successful'); 
             toast.success("registration successful, browcher has been sent to registered email.")
           } else {
@@ -104,6 +105,7 @@ function CoursePageEngine() {
             toast.error("registration failed")
           }
         } catch (error) {
+          alert(error)
           console.error('Error during brochure registration', error);
         }
       };

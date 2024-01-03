@@ -94,10 +94,10 @@ function Header() {
               <Link to="/blogs" className='nav-link fs-4'>Blogs</Link>
             </li>
             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
-              <Link to="/about" className='nav-link fs-4'>About Us</Link>
+              <Link to="/about-us-2" className='nav-link fs-4'>About Us</Link>
             </li>
             <li className='mobile-list-item list-group-item p-2' onClick={handleLinkClick}>
-              <Link to="/contacts" className='nav-link fs-4'>Contact Us</Link>
+              <Link to="/contact-us" className='nav-link fs-4'>Contact Us</Link>
             </li>
           </ul>
           <p className="p-large1 text-900 bg-danger-2 text-white p-2 mt-3">For Companies</p>
@@ -168,8 +168,8 @@ function Header() {
             About Us <i class="bi bi-chevron-down"></i>
           </a>
           <ul class="dropdown-menu list-group">
-            <li className='list-group-item'> <Link to='/about' className='nav-link'>About Us</Link></li>
-            <li className='list-group-item'> <Link to='/contacts' className='nav-link'>Contact Us</Link></li>
+            <li className='list-group-item'> <Link to='/about-us-2' className='nav-link'>About Us</Link></li>
+            <li className='list-group-item'> <Link to='/contact-us' className='nav-link'>Contact Us</Link></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
