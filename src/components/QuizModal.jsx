@@ -53,7 +53,7 @@ function QuizModal() {
     setUserAnswers(Array(quizData.length).fill(''));
     setScore(0);
     setIsQuizCompleted(false);
-  };
+  };      
 
   const closeModal = () => setShowModal(false);
 

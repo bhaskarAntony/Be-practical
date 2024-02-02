@@ -16,6 +16,7 @@ import Elite from '../components/Elite';
 import Funfact from '../components/Funfact';
 import OurCourses from '../components/ourCourses/OurCourses';
 import Course from '../components/courses/Course';
+import Prefer from '../components/Prefer/Prefer';
 
 function Home() {
       // Model open logic
@@ -30,10 +31,14 @@ function Home() {
 
     return () => clearInterval(interval);
   }, []);
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
   return (
     <section className='home p-0 overflow-hidden'>
          <DialogModel show={showModal} onHide={handleCloseModal} />
         <HomeHero/>
+        <Prefer/>
        <div className="spacer mt-5">
         <OurCourses/>
        </div>

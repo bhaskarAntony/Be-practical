@@ -112,7 +112,7 @@ function Highlight({ data }) {
           <div className="col-6 col-md-4 col-lg-3 border">
             <div className="highlight-card-hero">
               <h1 className={`fs-3 text-900 text-white d-flex align-items-center gap-2 justify-content-center ${counting ? 'counting' : ''}`}>
-              <Link to="" ><img src={hindustan} alt="we are in" width={50} height={40} className='rounded-5'/></Link>
+              <Link to="https://www.hindustantimes.com/brand-stories/be-practical-offers-full-stack-developer-course-in-bangalore-beginning-of-new-era-in-job-oriented-learning-101700731258445.html" ><img src={hindustan} alt="we are in" width={50} height={40} className='rounded-5'/></Link>
               <Link to="https://www.mid-day.com/brand-media/article/transform-your-career-with-the-best-data-science-course-in-bangalore-at-be--23322174" target="_blank"><img src="https://play-lh.googleusercontent.com/UhoPNdnYR4qIqr9DXtwWBjjLVynTaSRzes0XsiPqjZTa24H4ecSXR-OYL_2Q3CgTUPs" alt="we are in" width={40} height={40} className='rounded-5' /></Link>
               <Link to="" target="_blank"><img src="https://play-lh.googleusercontent.com/Prhy-5MPajJzjrTbvmdlhBTPNTFGtq1J0NTr01Lmzd5OJhfuYdbjmS7mba_uYpU4l0s" alt="we are in" width={40} height={40} className='rounded-5' /></Link>
 

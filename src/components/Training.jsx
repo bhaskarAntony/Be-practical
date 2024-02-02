@@ -37,7 +37,9 @@ function Training() {
                             <p className="p-large1 text-white">Master classes</p>
                             <h1 className="heading text-black f-pt text-900 text-start justify-content-start">Start your Learning <br /> Journey Today!</h1>
                             <p className="text-white p-large1">with a free Master Classes</p>
-                           <button className='btn-danger bg-dark'>START YOUR CAREER</button>
+                          <a href="/book-demo">
+                          <button className='btn-danger bg-dark'>START YOUR CAREER</button>
+                          </a>
                         </div>
                     </div>
                     <div className="col-12 col-md-12 col-lg-6 p-0">

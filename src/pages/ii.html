@@ -30,6 +30,7 @@
             border-radius: 10px;
             background: white;
         }
+
     </style>
 </head>
 <body>
@@ -37,9 +38,13 @@
         <div class="row align-items-center h-100">
             <div class="col-md-6 offset-md-3">
                 <div class="card p-3">
+
                     <h2 class="mb-5">Love Byte</h2>
+
                     <label for="name" class="form-label text-start">Any Sentence</label>
+
                     <input type="text" placeholder="Enter any word" id="name" class="form-control p-3">
+
                     <button onclick="converter()" class="btn bg-danger w-100 text-white p-3 mt-4 fs-5">Convert</button>
                     
                     <div class="border text-center mt-5 bg-light">
@@ -54,15 +59,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
         function converter(){
-
             var name1 = document.getElementById("name").value;
+
             var res = document.getElementById("result");
+
             var name = name1.trim('')
+
             res.innerHTML = "";
             
             const alph = 'abcdefghijklmnopqrstuvwxyz'
             // var name = prompt("enter a name");
+
             var temp = "";
+
             for(var i = 0; i<name.length; i++){
                 for(var j = 0; j<alph.length; j++){
                    if( name[i]===alph[j]){ 
@@ -73,7 +82,6 @@
                     // name1.value =" "
                    }
                 }
-
             }
             // return temp;
         }

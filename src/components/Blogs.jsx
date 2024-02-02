@@ -32,11 +32,13 @@ const blogs = [
     title: 'Our Students work at',
     description: 'lorem is the best text for dummy text in web development',
   },
+  
   {
     image: 'https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Our Students work at',
     description: 'lorem is the best text for dummy text in web development',
   },
+
   {
     image: 'https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=600',
     title: 'Our Students work at',
