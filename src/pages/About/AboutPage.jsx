@@ -14,8 +14,8 @@ function AboutPage() {
         <title>About Us - Software Training Institute in Bangalore</title>
         <meta name="description" content="Looking for a leading software training institute in Bangalore? Look no further than Be-Practical.com! We offer variety of training programs like full stack development, cloud computing, digital marketing, software testing, hardware & networking and more" />
       </Helmet>
-      <div className="about-hero container-fluid overflow-hidden">
-        <div className="row">
+      <div className="about-hero container-fluid overflow-hidden bg-texture bg-gray2">
+        <div className="row align-items-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center">
                 <div className="about-hero-text p-lg-5 p-3">
                     <h4 className='card-heading text-main-danger'>THE BEST TRAINING INSTITUTE</h4>

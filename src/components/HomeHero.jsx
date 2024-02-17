@@ -10,6 +10,7 @@ import { homeHeroApi } from '../Data/DataFetcher';
 import heroImage from '../images/hero-image.svg'
 import home_video from '../images/home-video.mp4'
 import Slider from 'react-slick';
+import Companies from './companies/Companies';
 
 const home = [
   {
@@ -61,7 +62,7 @@ function HomeHero() {
 
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed:1000,
     slidesToShow: 1,
@@ -91,7 +92,7 @@ function HomeHero() {
      {home.map((item, index) => (
             <Carousel.Item key={index}>
                   <div className="hero-text p-lg-2 p-md-2 p-1 py-3 ">
-                    <h1 className="display-3 text-bold text-start color-font">{item.heading}</h1>
+                    <h1 className="display-3 text-bold text-start color-font fw-bold">{item.heading}</h1>
                     <p className="fs-4 my-4 text-start">{item.subheading}</p>
                     <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
                       <button className='btn-main-outline-dark border-0  hero-btn bg-gray2 text-white' onClick={openModal}>Apply Now <i class="bi bi-chevron-double-right"></i></button>
@@ -102,9 +103,9 @@ function HomeHero() {
           ))}
      </Slider>
         </div>
-        <div className="col-12 col-sm-12 col-md-4 ">
+        <div className="col-12 col-sm-12 col-md-4">
    {/* <video src={home_video} className='w-100 border-0 bg-transparent' autoPlay muted loop></video> */}
-   <Slider {...Imagesettings}>
+   {/* <Slider {...Imagesettings}>
    {
     imagesData.map((item, index)=>(
    <div className="hero-image d-flex align-items-center justify-content-center h-100">
@@ -116,11 +117,15 @@ function HomeHero() {
 
    }
 
-   </Slider>
+   </Slider> */}
+<div className="hero-right">
+<img src="https://img.freepik.com/free-vector/webinar-concept-illustration_114360-4764.jpg?t=st=1707483345~exp=1707483945~hmac=c5c40be2d50c5fee58d36c16d992b292b859def7f2d371d28805d5e00a2a637b" alt="" className="w-100" />
+</div>
                 </div>
                  </div>
       </div>
       <Highlight data={homeData} />
+      <Companies/>
       <HeroRegister />
       </div>
 

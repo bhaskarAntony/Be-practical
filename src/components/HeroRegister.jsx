@@ -27,7 +27,7 @@ function HeroRegister() {
     setLoading(true);
 
     axios
-      .post('https://backend-bp-bpdeveloperscommunity.onrender.com/api/register', formData)
+      .post('http://localhost:5300/api/register', formData)
       .then((response) => {
         console.log('Registration success:', response.data);
         setShowSuccessDialog(true);

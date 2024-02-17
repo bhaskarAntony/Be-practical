@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import ReactGA from 'react-ga';
 import './App.css'
 import Home from './pages/Home'
 import Header from './components/Header'
@@ -34,16 +33,16 @@ import TawkToWidget from './chat/TawkToWidget'
 import ZohoChat from './chat/ZohoChat'
 import { ToastContainer } from 'react-bootstrap'
 import Whatsapp from './chat/Whatsapp'
+import C1 from './components/C1'
+import N from './pages/N'
 // https://be-practical.com/?utm_source=facebook&utm_medium=social&utm_campaign=summer_promo
 
 
 
-ReactGA.initialize('G-5Y76GH1KTX');
 
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    // Simulate loading for 2 seconds (adjust the duration as needed)
     setTimeout(() => {
       setLoading(false);
     }, 2000);
@@ -85,8 +84,8 @@ function App() {
         null
       ) : (
           <>
-     {/* <TawkToWidget/> */}
-     <ZohoChat/>
+     <TawkToWidget/>
+     {/* <ZohoChat/> */}
      {/* <Whatsapp/> */}
      <ToastContainer />
     

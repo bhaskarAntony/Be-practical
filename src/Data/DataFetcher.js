@@ -20,5 +20,6 @@ const EventsApi = fetchData('https://api.testbepractical.com/api/events');
 const homeHeroApi = fetchData('https://api.testbepractical.com/api/heroSection');
 const BlogsApi = fetchData('https://api.testbepractical.com/api/blogs');
 const ourCoursesApi = fetchData('https://api.testbepractical.com/api/ourCourses');
+const allCourseApi = fetchData('http://localhost:3300/api/allcourses');
 
-export { advantages, companies, trainingModule, testinomials, youtubeVideos, CoursePage, Quiz, EventsApi, homeHeroApi, BlogsApi, ourCoursesApi };
+export { advantages, companies, trainingModule, testinomials, youtubeVideos, CoursePage, Quiz, EventsApi, homeHeroApi, BlogsApi, ourCoursesApi, allCourseApi };

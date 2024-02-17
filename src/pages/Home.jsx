@@ -31,14 +31,11 @@ function Home() {
 
     return () => clearInterval(interval);
   }, []);
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
   return (
     <section className='home p-0 overflow-hidden'>
          <DialogModel show={showModal} onHide={handleCloseModal} />
         <HomeHero/>
-        <Prefer/>
+        {/* <Prefer/> */}
        <div className="spacer mt-5">
         <OurCourses/>
        </div>
@@ -46,7 +43,7 @@ function Home() {
        <Elite/>
        <EliteProgram/>
         <Training/>
-        <Companies/>
+        {/* <Companies/> */}
         <Webinar/>
         <QuizModal/>
         <Adwantages/>

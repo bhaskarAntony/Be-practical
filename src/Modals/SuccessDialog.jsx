@@ -1,5 +1,7 @@
 import React from 'react';
 import { Modal } from 'react-bootstrap';
+import successImage from '../images/success_gif.gif' 
+import ErrorImage from '../images/fail_gif.gif' 
 
 function SuccessDialog({ show, onHide , msg, register}) {
   return (
@@ -10,7 +12,15 @@ function SuccessDialog({ show, onHide , msg, register}) {
       <Modal.Body>
         <div className="d-flex justify-content-center">
         {
-            register?  <i class="bi bi-x-circle-fill text-danger fs-1"></i> : <i className="bi bi-check-circle text-success fs-1"></i>
+            register?(
+              <>
+              <img src={ErrorImage} alt="" className='w-75' />
+              </>
+            ):(
+              <>
+              <img src={successImage} alt="" className='w-100' />
+              </>
+            )
         }
         </div>
         <p className="text-center mt-3">{msg}</p>

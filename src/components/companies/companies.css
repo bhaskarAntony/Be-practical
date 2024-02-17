@@ -21,6 +21,7 @@
 }
 .companies-brands-container img{
     width: 80px;
+    object-fit: cover;
 
 }
 .all-company-card{

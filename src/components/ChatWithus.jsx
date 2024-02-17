@@ -11,7 +11,7 @@ function ChatWithus() {
   }, []);
   
   return (
-    <section className='container my-5 p-2 p-md-3 p-lg-5' data-aos="fade-right">
+    <section className='container my-5 p-2 p-md-3 p-lg-5'>
     <div className="chat-with-us px-0  bg-texture">
     <div className="row align-items-center">
         <div className="col-12 col-md-8 col-lg-8  p-4">

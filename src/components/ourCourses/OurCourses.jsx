@@ -51,9 +51,9 @@ function OurCourses() {
                              </div>
                              <span className='fs-5 text-900 shake-card'>{item.BatchStarting}</span>
                         </div>
-                              <p className=" text-white rounded-2 p-1 tag">
+                              <span className=" text-white rounded-2 p-1 tag d-inline-block my-3">
                               <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
-                              </p>
+                              </span>
                               {/* <div className="seats rounded-4 p-2 d-flex gap-2 flex-wrap bg-gray2 text-white align-items-center mb-3">
                               <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
                               </div> */}

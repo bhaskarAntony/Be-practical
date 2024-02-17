@@ -7,10 +7,21 @@ import { youtubeVideos } from '../Data/DataFetcher';
 import ShimmerCard from '../shimmer effects/ShimmerCard';
 import Slider from 'react-slick';
 import { Shimmer } from 'react-shimmer';
+import VideosModal from '../Modals/VideosModal';
 
 function StudentsPlaced() {
   const [loading, setLoading] = useState(true)
     const [youtubeVideosData, setYoutubeVideosData] = useState([]);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [url, setUrl] = useState('')
+    const playVideo = (url)=>{
+      setModalOpen(true)
+      setUrl(url)
+    }
+    const closeModal = () => {
+      setUrl('')
+      setModalOpen(false); // Close the modal
+    };
     useEffect(() => {
         youtubeVideos
           .then((data) => {
@@ -112,11 +123,12 @@ function StudentsPlaced() {
            youtubeVideosData.map((item, index) => (
             <div key={index} className="col-12 col-md-6 col-lg-3 p-1 h-100">
               <div className="youtube-card bg-gray3 border-b w-100 h-100">
-                <div className="youtube-header mb-3">
+                <div className="youtube-header mb-3" onClick={()=>{playVideo(extractVideoId(item.url))}}>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href={`YourVideoLinkHere/${extractVideoId(item.url)}`}
+                    
                   >
                     <img
                       src={getThumbnailUrl(extractVideoId(item.url))}
@@ -144,6 +156,7 @@ function StudentsPlaced() {
               </div>
           </div>
       </div>
+      <VideosModal isOpen={modalOpen} youtubeUrl={url} onClose={closeModal} title="Student talk ⭐" />
     </section>
   )
 }

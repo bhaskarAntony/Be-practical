@@ -34,6 +34,52 @@ const webinar = [
     description:"Interacted with Mr. Shrikanth Rao an IT Expert Sharing his Thoughts and Answered students FAQ's"
   }
 ]
+const maincourses = [
+  {
+    id:"A1",
+    courseName:"Fullstack",
+    duration:6,
+    courses:[
+      {
+        id:"AA1",
+        coursename:"Mern",
+        duration:6
+      },
+      {
+        id:"AA2",
+        coursename:"mean",
+        duration:6
+      },
+      {
+        id:"AA3",
+        coursename:"python",
+        duration:6
+      },
+      {
+        id:"AA4",
+        coursename:"java",
+        duration:6
+      }
+    ]
+  },
+  {
+    id:"B1",
+    courseName:"Data Science",
+    duration:4,
+    courses:[
+      {
+        id:"BB1",
+        coursename:"Course1",
+        duration:6
+      },
+      {
+        id:"BB2",
+        coursename:"Course2",
+        duration:6
+      },
+    ]
+  }
+] 
 function Webinar() {
   const [slidesToShow, setSlidesToShow] = useState(4); // Default to showing 3 slides
   useEffect(() => {
@@ -113,12 +159,12 @@ function Webinar() {
       <Slider {...settings}>
       {webinar.map((item) => (
                 <div className="col-12 col-sm-12 col-md-6 col-lg-3 p-1 d-flex justify-content-center">
-              <div className="webinar-card h-100">
+              <div className="webinar-card h-100 p-3">
                 <div className="webinar-card-header p-2">
                         <img src={item.image} alt="events" className='img-fluid' />
                 </div>
                 <div className="webinar-card-body p-2">
-                    <h3 className="fs-5 text-black">{item.company}</h3>
+                    <h3 className="fs-5 text-black fw-bold">{item.company}</h3>
                     <small className='mt-2 fs-6 text-secondary'><ReadMore text={item.description} maxLength={50} /></small>
                 </div>
               </div>
