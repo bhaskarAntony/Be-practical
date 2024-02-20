@@ -3,3 +3,23 @@
     height: 300px;
     object-fit: cover;
 }
+.moreblogs-container{
+    display: flex;
+    overflow: auto;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+}
+.moreblogs-container .card{
+    min-width: 320px;
+    max-width: 320px;
+    scroll-snap-align: center;
+}
+.moreblogs-container::-webkit-scrollbar{
+    display: none;
+}
+@media (max-width:768px){
+    .main-blog img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
