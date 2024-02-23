@@ -85,7 +85,42 @@ function Hero() {
               <h1 className="display-2 fw-bold text-black" data-aos="fade-up">High Paid Salaries & Continuous Career <span className="text-white">Growth</span>
           </h1>
           <p className="fs-4" data-aos="fade-up">With all your courses, workshops, and memberships in one place, you can sell faster, easier, and save up to 80% of your expenses.</p>
-          <button className='btn-prm  hero-btn'>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
+          <button className='btn-prm'>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
+          <div className="social-container mt-5 d-flex gap-2">
+            <div className="google px-3 w-100" data-aos="zoom-in-right">
+           <span className="fw-bold">Google</span>
+              <span className='small mx-1'>rating 4.6</span>
+              <div className='d-flex gap-1 text-warning'>
+                <i className='bi bi-star-fill'></i>
+                <i className='bi bi-star-fill small'></i>
+                <i className='bi bi-star-fill small'></i>
+                <i className='bi bi-star-fill small'></i>
+                <i className='bi bi-star-fill small'></i>
+              </div>
+            </div>
+            <div className="google px-3 w-100" data-aos="zoom-in-left">
+              <span className="fw-bold">SnapDial</span>
+              <span className='small mx-1 text-secondary'>rating 4.6</span>
+              <div className='d-flex gap-1 text-warning'>
+                <i className='bi bi-star-fill'></i>
+                <i className='bi bi-star-fill small'></i>
+                <i className='bi bi-star-fill small'></i>
+                <i className='bi bi-star-fill small'></i>
+                <i className='bi bi-star-fill small'></i>
+              </div>
+            </div>
+          </div>
+          <div className="weareon d-flex gap-3 mt-3 justsify-content-center">
+            <div className="google" data-aos="zoom-in-up">
+              deccanherald
+            </div>
+            <div className="google" data-aos="zoom-in-up">
+              deccanherald
+            </div>
+            <div className="google" data-aos="zoom-in-up">
+              deccanherald
+            </div>
+          </div>
               </div>
             </div>
             <div className="col-12 col-md-6 p-0">

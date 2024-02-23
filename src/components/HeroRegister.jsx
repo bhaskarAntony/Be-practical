@@ -46,7 +46,7 @@ function HeroRegister() {
       });
   };
   return (
-   <div className="p-2 home-register" style={{"transform":"translateY(-100px)"}}>
+   <div className="p-2 home-register" style={{"transform":"translateY(-70px)"}}>
     <div className="px-lg-5">
      <div className="register-container-home bg-white container-fluid light-shadow border-0 shadow1">
       <div className="register align-items-center rounded-1 p-3 ">
