@@ -17,6 +17,7 @@
 }
 .hero-right  img{
     filter: grayscale(100%);
+    transform: translateY(-50px);
 }
 .image-text{
     position: absolute;

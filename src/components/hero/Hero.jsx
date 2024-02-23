@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import  './style.css'
 import Aos from 'aos';
 import HeroRegister from '../HeroRegister';
+import brand from '../../images/brand.png'
 
 function Hero() {
   const [scrollY, setScrollY] = useState(0);
@@ -125,7 +126,7 @@ function Hero() {
             </div>
             <div className="col-12 col-md-6 p-0">
               <div className="hero-right">
-                <img src="https://assets-global.website-files.com/63e9e777ca756dd1bcd0e4d1/63ff0ce87b2c08c5ceddd467_DD%20-%20Banner%20Image-p-800.webp" alt="" className='w-100'/>
+                <img src={brand} alt="" className='w-100'/>
                 <div className="image-text" data-aos="fade-up">
                   <h1 className="fs-5 fw-bold">ADARSH INAMDAR</h1>
                   <p className="small">As a creator myself, I have faced this problem firsthand. Using 5+ platforms for a digital business is complicated. I have personally been using this and making 6 figure monthly revenue for the past year.
