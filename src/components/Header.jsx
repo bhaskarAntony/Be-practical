@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { CoursePage } from '../Data/DataFetcher';
 import { Shimmer } from 'react-shimmer';
+import EliteScroller from './eliteScroll/EliteScroller';
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -38,10 +39,12 @@ function Header() {
   setShow(false);
 };
   return (
-    <header>
+    <div className="header">
+      <header>
       {/* <div className="nav-top">
         <p className="p-dark-small m-0 text-white">Join Our Elite program <b>Explore <i class="bi bi-arrow-right"></i></b></p>
       </div> */}
+      {/* <EliteScroller/> */}
       <nav class="navbar navbar-expand-xl">
   <div class="container-fluid">
   <a class="navbar-brand" href="/"> <img src="https://bepractical.s3.us-east-2.amazonaws.com/brand-logo.cc6e3cf088a8fd3005b1.jpg" alt="logo" className='rounded-2' /></a>
@@ -187,7 +190,7 @@ function Header() {
      <button class="btn-main-outline-dark bg-white text-black mx-1 hero-btn" type="button">Sign Up<i class="bi bi-chevron-double-right"></i></button>
      </a> */}
       <a href="/book-demo" className='text-decoration-none'>
-      <button class="btn-danger shimmer-btn" type="button">Book Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
+      <button class="btn-o" type="button">Book Free Master Classes <i class="bi bi-chevron-double-right"></i></button>
       </a>
       <button variant="primary" onClick={handleShowContact} className='btn bg-gray2 mx-2 p-2 rounded-2'>
       <i class="bi bi-person-lines-fill fs-4 text-white"></i>
@@ -215,6 +218,7 @@ function Header() {
   </div>
 </nav>
     </header>
+    </div>
   )
 }
 

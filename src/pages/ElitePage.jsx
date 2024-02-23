@@ -12,15 +12,32 @@ import EliteCarousel from '../components/EliteCarousel/EliteCarousel'
 import ReadMore from '../Extra/ReadMore'
 import BookDemoCard from '../components/BookDemoCard'
 
-const eliteCourses =[
-    {
-        title:"MERN FullStack",
-        description:""
-    },
-     {
-        title:"MERN FullStack",
-        description:""
-    }
+const Bestdata = [
+  {
+    title:"100% Job Placement",
+    content:"Our Elite Program offers a 100% job Placement, which means that we are committed to getting you placed in a job that matches your skills and expertise."
+  },
+  {
+    title:"Comprehensive Training Programs",
+    content:"ur training programs are comprehensive and cover all the skills and knowledge that you need to succeed in your career. We equip you with the latest industry-relevant skills that are in demand in the market."
+  },
+  {
+    title:"Industry Expert Trainers",
+    content:"Our trainers are industry experts who have several years of experience working in their respective fields. They have hands-on experience in working on real-time projects, and they share their knowledge and expertise to help you excel in your career."
+  },
+  {
+    title:"Personalized Attention",
+    content:"We provide personalized attention to each student and ensure that they receive the necessary guidance and support throughout the program. Our batch sizes are limited, which enables us to focus on individual learning needs."
+  },
+  {
+    title:"Partnering with Leading Companies",
+    content:"We have partnered with leading companies in the industry, which gives us access to the latest trends, tools, and technologies. We ensure that our programs are aligned with the requirements of our partners, which increases your chances of getting placed in a job."
+  },
+  {
+    title:"Competitive Pricing",
+    content:"We offer competitive pricing for our Elite Program, which makes it accessible to students from all backgrounds. We believe that quality education should be affordable and accessible to everyone."
+  }
+
 ]
 function ElitePage() {
   const [loading, setLoading] = useState(true)
@@ -145,23 +162,19 @@ function ElitePage() {
     <h1 className="heading text-900 elite-g-text">ELITE OFFERING COURSES</h1>
     <div className="java-course container rounded-4 p-4">
       <div className="row align-items-center">
-            <div className="col-12 col-sm-12 col-md-6 ">
-              <div className="java-left">
+            <div className="col-12 col-sm-12 col-md-8 ">
+              <div className="java-left text-white">
                 <h1 className="display-4 text-bold">Java fullstack courses</h1>
-                <p className="fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores qui enim recusandae animi minus excepturi, atque quas pariatur quibusdam nemo voluptate quaerat, quos error officia suscipit? Fugit impedit obcaecati sunt.</p>
-               <div className="row">
-                <div className="col-12 col-sm-12 col-md-6">
-                <button className="btn-danger bg-dark w-100">Learn more</button>
-                </div>
-                <div className="col-12 col-sm-12 col-md-6">
-                <button className="btn-danger w-100 bg-white text-dark">Enquire</button>
-                </div>
+                <p className="fs-5">The Core covers the basic concept of Java programming language. Java is a platform-independent and robust programming language. The principle followed by Java is WORA that says Write Once, Run Anywhere.</p>
+               <div className="d-flex gap-2">
+               <button className="btn-danger bg-dark">Learn more</button>
+                <button className="btn-danger bg-white text-dark">Enquire</button>
                </div>
               </div>
             </div>
-            <div className="col-12 col-sm-12 col-md-6">
+            <div className="col-12 col-sm-12 col-md-4">
             <div className="java-right">
-              <img src="https://t4.ftcdn.net/jpg/05/90/45/35/360_F_590453560_ugMuPncnGYB6XnJqmC8xiPQx4eg3jmMD.jpg" alt="elite-image" className='w-100 rounded-3'/>
+              <img src="https://bepractical.s3.us-east-2.amazonaws.com/desktop-wallpaper-java-logo-java.jpg" alt="elite-image" className='w-100 rounded-3'/>
             </div>
               </div>
       </div>
@@ -223,29 +236,19 @@ function ElitePage() {
   
   <div className="row">
     <div className="col-12 col-sm-12 col-md-8">
-      <ul className='elite-best'>
-        <li className='fs-6 text-white mb-4'>
-        <span className="text-main-danger text-900">100% Job Placement:</span> Our Elite Program offers a 100% job Placement, which means that we are committed to getting you placed in a job that matches your skills and expertise.
-        </li>
-        <li className='fs-6 text-white mb-4'>
-        <span className="text-main-danger text-900">100% Job Placement:</span> Our Elite Program offers a 100% job Placement, which means that we are committed to getting you placed in a job that matches your skills and expertise.
-        </li>
-        <li className='fs-6 text-white mb-4'>
-        <span className="text-main-danger text-900"> Comprehensive Training Programs:</span> Our training programs are comprehensive and cover all the skills and knowledge that you need to succeed in your career. We equip you with the latest industry-relevant skills that are in demand in the market.
-        </li>
-        <li className='fs-6 text-white mb-4'>
-        <span className="text-main-danger text-900">Industry Expert Trainers:</span> Our trainers are industry experts who have several years of experience working in their respective fields. They have hands-on experience in working on real-time projects, and they share their knowledge and expertise to help you excel in your career.
-        </li>
-        <li className='fs-6 text-white mb-4'>
-        <span className="text-main-danger text-900">Personalized Attention:</span> We provide personalized attention to each student and ensure that they receive the necessary guidance and support throughout the program. Our batch sizes are limited, which enables us to focus on individual learning needs.
-        </li>
-        <li className='fs-6 text-white mb-4'>
-        <span className="text-main-danger text-900">Partnering with Leading Companies:</span> We have partnered with leading companies in the industry, which gives us access to the latest trends, tools, and technologies. We ensure that our programs are aligned with the requirements of our partners, which increases your chances of getting placed in a job.
-        </li>
-        <li className='fs-6 text-white mb-4'>
-        <span className="text-main-danger text-900">Competitive Pricing:</span> We offer competitive pricing for our Elite Program, which makes it accessible to students from all backgrounds. We believe that quality education should be affordable and accessible to everyone.
-        </li>
-      </ul>
+ <div className="row">
+ {
+      Bestdata.map((item, index)=>(
+       <div className="col-12 col-md-6 mb-3">
+         <div className="best-card text-white h-100 p-3">
+          <i className='bi bi-check'></i>
+          <h1 className="fs-4">{item.title}</h1>
+          <p className='small'>{item.content}</p>
+        </div>
+       </div>
+      ))
+    }
+ </div>
     </div>
     <div className="col-12 col-sm-12 col-md-4">
       <BookDemoCard/>

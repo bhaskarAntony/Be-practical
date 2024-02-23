@@ -13,8 +13,8 @@
     min-height: 300px;
     /* margin-bottom: 40px; */
 }
-.java-course{
-    background: linear-gradient(325deg, #FEDB37, #FDB931, #9f7928);
+.java-course, .best-card{
+    background: linear-gradient(325deg, #303030e4, #06060685, #6d6d6d82);
 }
 .java-right{
     height: 100%;

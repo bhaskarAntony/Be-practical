@@ -69,7 +69,7 @@
     }
 
   }
-  nav{
+  nav,.header{
     background-color: #ffffff5a;
     backdrop-filter: blur(20px);
     gap:30px !important;
@@ -86,11 +86,12 @@
   header a{
     min-width: fit-content;
   }
-  header{
+  .header{
     position: sticky !important;
     top: 0 !important;
     background-color: var(--color-dark-1);
     z-index: 100;
+    background-color: #ffffff;
   }
   .list-group-item{
     padding: 0 !important;

@@ -35,12 +35,14 @@ import { ToastContainer } from 'react-bootstrap'
 import Whatsapp from './chat/Whatsapp'
 import C1 from './components/C1'
 import N from './pages/N'
+import axios from 'axios'
 // https://be-practical.com/?utm_source=facebook&utm_medium=social&utm_campaign=summer_promo
 
 
 
 
 function App() {
+  const [allCourses, setAllCourses] = useState([])
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
@@ -70,7 +72,17 @@ function App() {
     const intervalId = setInterval(openModal, 120000); // 120,000 milliseconds = 2 minutes
 
     return () => clearInterval(intervalId);
+
+  
   }, []);
+  useEffect(()=>{
+    const fetchAllCourses = async()=>{
+      const response = await axios.get('http://localhost:3300/api/allcourses')
+      setAllCourses(response.data.courses)
+      console.log(response.data.courses)
+    }
+    fetchAllCourses()
+  },[])
 
 
 
@@ -108,12 +120,16 @@ function App() {
         <Route path='/blogs' element={<BlogsPage/>}/>
         <Route path='/contact-us' element={<ContactPage/>}/>
         <Route path='/about-us-2' element={<AboutPage/>}/>
-        <Route path='/elite' element={<ElitePage/>}/>
+        <Route path='/landingpage' element={<ElitePage/>}/>
         <Route path='/register' element={<RegistrationPage/>}/>
         <Route path='/book-demo' element={<BookDemo/>}/>
         <Route path='/all-testinomials' element={<AllTestimomials/>}/>
         <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
-        <Route path='/softwareTrainingCourses/:ourCourse/:id' element={<CourseMainEngine/>}/>
+        {
+          allCourses.map((item, index)=>(
+            <Route path={`/${item.seo.canonical_url}/:id`} element={<CourseMainEngine/>}/>
+          ))
+        }
         <Route path='/all-courses' element={<AllCourses/>}/>
         <Route path='/discount/quiz' element={<QuizModal/>}/>
         <Route path='/Blog/read/:id' element={<BlogsView/>}/>

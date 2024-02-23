@@ -56,6 +56,24 @@
     --blue-light:#f3f5fb;
     --gold:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
   radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  --antique-white: #fce7cf;
+    --black-3: #181818;
+    --dark-grey: #b0b0b0;
+    --black: #301b03;
+    --dark-orange: #f0870f;
+    --saddle-brown: #905109;
+    --black-5: black;
+    --sandy-brown: #f6b76f;
+    --black-2: #1d1d1d;
+    --gainsboro: #e7e7e7;
+    --white-smoke: #f1f1f1;
+    --black-4: #101010;
+    --grey: #818181;
+    --white: white;
+    --dim-grey: #4a4a4a;
+}
+.antique-white{
+  background-color: var(--antique-white);
 }
 .color-font{
   font-family: 'Chivo', sans-serif;
@@ -217,6 +235,41 @@
 .shimmer-btn{
     overflow: hidden;
     position: relative;
+}
+.btn-o{
+  border: 2px solid var(--dark-orange);
+  background-color: var(--antique-white);
+  color: var(--dark-orange);
+  text-align: center;
+  border-radius: 12rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-o:hover{
+  background-color: var(--dark-orange);
+  color: #fff;
+}
+.btn-prm{
+  border: 2px solid var(--black-3);
+  background-color: var(--white);
+  color: #151907;
+  text-align: center;
+  border-radius: 12rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 2em;
+  font-size: 1.25em;
+  font-weight: 600;
+  transition: all .2s ease-in-out;
+  box-shadow: rgb(0, 0, 0) 5px 5px, rgb(0, 0, 0) 10px 10px;
+}
+.btn-prm:hover{
+  box-shadow: none;
+  transform: translate(10px);
 }
 
 .shimmer-btn::before, .shimmer-btn::after{

@@ -17,6 +17,7 @@ import Funfact from '../components/Funfact';
 import OurCourses from '../components/ourCourses/OurCourses';
 import Course from '../components/courses/Course';
 import Prefer from '../components/Prefer/Prefer';
+import Hero from '../components/hero/Hero';
 
 function Home() {
       // Model open logic
@@ -34,7 +35,8 @@ function Home() {
   return (
     <section className='home p-0 overflow-hidden'>
          <DialogModel show={showModal} onHide={handleCloseModal} />
-        <HomeHero/>
+        {/* <HomeHero/> */}
+        <Hero/>
         {/* <Prefer/> */}
        <div className="spacer mt-5">
         <OurCourses/>

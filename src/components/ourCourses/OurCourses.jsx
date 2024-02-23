@@ -3,7 +3,7 @@ import './ourCourses.css'
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import CourseShimmer from './CourseShimmer';
-import {ourCoursesApi } from '../../Data/DataFetcher';
+import {allCourseApi, ourCoursesApi } from '../../Data/DataFetcher';
 
 function OurCourses() {
   const [loading, setLoading] = useState(true)
@@ -11,9 +11,10 @@ function OurCourses() {
   useEffect(() => {
    const fetchData = async () => {
      try {
-       const data = await ourCoursesApi;
+       const data = await allCourseApi;
        setLoading(false)
-       setCourseData(data);
+       console.log(data)
+       setCourseData(data.courses);
        console.log("data", data)
      } catch (error) {
       setLoading(true)
@@ -26,7 +27,7 @@ function OurCourses() {
     useEffect(() => {
         Aos.init(); // Initialize AOS
       }, []);
-      const displayedCourses = CourseData.slice(0, 3);
+      // const displayedCourses = CourseData.slice(0, 3);
   return (
     <div className='container-fluid our-courses p-lg-5 p-3'>
         <h1 className="heading"><i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i>Our Courses<i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i></h1>
@@ -39,7 +40,7 @@ function OurCourses() {
                  <CourseShimmer/>
                 ))
             ):(
-              displayedCourses.map((item, index)=>(
+              CourseData.map((item, index)=>(
                 <div className="our-course-card-wrapper" key={index}>
                     <div className="container our-course-card p-lg-5 p-md-3 p-sm-4" data-aos="fade-right">
                     <div className="row">
@@ -49,7 +50,7 @@ function OurCourses() {
                         <div class="dot">
                              <span class="glow"></span>
                              </div>
-                             <span className='fs-5 text-900 shake-card'>{item.BatchStarting}</span>
+                             <span className='fs-5 text-900 shake-card'>{item.details.admisionStart}</span>
                         </div>
                               <span className=" text-white rounded-2 p-1 tag d-inline-block my-3">
                               <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
@@ -58,7 +59,7 @@ function OurCourses() {
                               <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
                               </div> */}
                               <h1 className="fs-3 text-900">{item.courseName}</h1>
-                              <p className="fs-6">{item.description}</p>
+                              <p className="fs-6">{item.heroSubtitle}</p>
                               <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
                               <div className="col-12 col-md-6 col-lg-6">
                               <div className="d-flex align-items-center gap-2 w-100 mb-2">
@@ -68,7 +69,7 @@ function OurCourses() {
                                <div>
                                 <span>
                                 <span className="text-secondary d-block">Duration</span>
-                                <span className='text-900'>{item.courseDuration}</span>
+                                <span className='text-900'>{item.details.Duration}</span>
                                 </span>
                                </div>
                                 </div>
@@ -118,7 +119,7 @@ function OurCourses() {
                             
                               <div className="course-btns row mt-3">
                                 <div className="col-12 col-md-6 col-lg-6">
-                                <Link to={item.courses.length>1 ? `/softwareTrainingCourses/${item.courseName}/${item._id}` : `/course/${item.courseName}/${item.courses[0].CourseId}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                                <Link to={`/${item.seo.canonical_url}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-6">
                                 <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
@@ -130,7 +131,7 @@ function OurCourses() {
                       </div>
                       <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-sm-none d-lg-block">
                         <div className="course-right">
-                            <img src={item.image} alt={item.courseName} className="w-100" />
+                            <img src={item.courseImage} alt={item.courseName} className="w-100" />
                         </div>
                       </div>
                     </div>
@@ -141,7 +142,7 @@ function OurCourses() {
               }
         </div>
         <div className="text-center">
-        <Link to="/all-courses" className=" text-decoration-none"> <button className="btn-danger">Browse All Courses</button></Link>
+        <Link to="/all-courses" className=" text-decoration-none"> <button className="btn-prm">Browse All Courses</button></Link>
         </div>
     </div>
   )

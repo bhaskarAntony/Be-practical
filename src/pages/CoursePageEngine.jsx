@@ -151,75 +151,7 @@ function CoursePageEngine() {
                         <div className="col-12 col-md-5 mb-2">
                         <button className=" btn-danger bg-white text-dark py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100" onClick={downloadBrochure}><span className='fs-5'>Download Syllubus</span> <br /> <small>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></small></button>
 
-                        <Modal show={showModal} onHide={() => setShowModal(false)}>
-              <Modal.Header closeButton>
-                <Modal.Title>Download free Browcher</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <Form>
-                <div className="r-card p-4 p-lg-5 bg-white rounded-3">
-      <form>
-        <div className="form-group mt-3">
-          <div className="form-floating mb-3">
-            <input
-              type="text"
-              className="form-control"
-              id="nameInput"
-              name="name"
-              placeholder="Enter your name"
-              onChange={handleChange}
-              required
-            />
-            <label htmlFor="nameInput">Student Name</label>
-          </div>
-        </div>
-        <div className="form-group mt-3">
-          <div className="form-floating mb-3">
-            <input
-              type="email"
-              className="form-control"
-              id="emailInput"
-              name="email"
-              placeholder="name@example.com"
-              onChange={handleChange}
-              required
-            />
-            <label htmlFor="emailInput">Email address</label>
-          </div>
-        </div>
-        <div className="form-group mt-3">
-          <div className="form-floating mb-3">
-            <input
-              type="number"
-              className="form-control"
-              id="phoneInput"
-              name="phone"
-              placeholder="+91 000-0000-000"
-              onChange={handleChange}
-              required
-            />
-            <label htmlFor="phoneInput">Phone number</label>
-          </div>
-        </div>
-        <div className="form-group form-group-last mt-3">
-          <select className="form-control p-3" name="course" onChange={handleChange}>
-            <option value="MERN">MERN</option>
-            <option value="Python Fullstack">Python Fullstack</option>
-            <option value="Java Fullstack">Java Fullstack</option>
-            <option value="Data Science">Data Science</option>
-            <option value="Cloud Computing">Cloud Computing</option>
-          </select>
-        </div>
-        <div className="form-group mt-3">
-          <button type="button" className="btn-danger bg-dark w-100" onClick={handleSubmit}>
-            Register for Brochure
-          </button>
-        </div>
-      </form>
-    </div>
-                </Form>
-              </Modal.Body>
-            </Modal>
+           
                      
                           </div>
                       </div>

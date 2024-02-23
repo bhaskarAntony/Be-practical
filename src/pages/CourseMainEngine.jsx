@@ -18,9 +18,12 @@ import Start from '../components/Start'
 import CourseOffering from '../components/Offering/CourseOffering'
 import Benifits from '../components/Benifits/Benifits'
 import CourseCard from '../components/Coursecard/Coursecard'
+import { Helmet } from 'react-helmet'
+import DownloadModal from '../components/Brocher/DownloadModal'
 
 function CourseMainEngine() {
     const [courseData, setCourseData] = useState(null);
+    const [showModal, setShowModal] = useState(false)
   const { id } = useParams(); // Access the id parameter from the URL
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -30,25 +33,22 @@ function CourseMainEngine() {
   };
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `https://backend-bp-bpdeveloperscommunity.onrender.com/api/ourCourses/${id}`; // Replace with your actual API endpoint
-    
-        axios
-          .get(apiUrl)
-          .then((response) => {
-            // Handle the response data, which should contain your course information
-            setCourseData(response.data);
-            console.log(response.data)
-          })
-          .catch((error) => {
-            // Handle any errors, such as a 404 if the course with the specified ID doesn't exist
-            console.error(error);
-          });
-      }, [id]);
-      useEffect(() => {
-        if (courseData) {
-          document.title = courseData.courseName;
-        }
-      }, [courseData]);
+        const apiUrl = `http://localhost:3300/api/allcourses/${id}`; // Replace with your actual API endpoint
+        const fetchData = async () => {
+          try {
+              const response = await axios.get(apiUrl);
+              console.log(response.data);
+              setCourseData(response.data)
+              if (response.data) {
+                  document.title = response.data.courseName;
+                  // Set course data state here if needed
+              }
+          } catch (error) {
+              console.error('Error fetching course data:', error);
+          }
+      };
+      fetchData();
+      }, []);
       if (courseData === null) {
         // You can display a loading message here while the data is being fetched
         return <Loading/>;
@@ -88,17 +88,25 @@ function CourseMainEngine() {
         const encodedMessage = encodeURIComponent(messageContent);
         window.open(`https://twitter.com/intent/tweet?text=${encodedMessage}`, '_blank');
       };
+      const openModal = () => setShowModal(true);
+      const handleClose = () => setShowModal(false);
+
+
 
      
   return (
     <section className='overflow-hidden'>
+       <Helmet>
+        <title>{courseData.seo?.title}</title>
+        <meta name="description" content={courseData.seo?.description} />
+      </Helmet>
     <div className="course-hero container-fluid p-0 py-3 bg-texture bg-gray2 border-b ">
         <div className="row align-items-center">
             <div className="col-12 col-md-7 col-lg-7">
                 <div className="course-hero-left p-lg-5 p-3">
-                    <p className="text-main-danger fs-5 text-900">100% Placement Course</p>
+                    <p className="text-main-danger fs-5 text-900">{courseData.tag}</p>
                     <h1 className="heading text-900 text-white">{courseData.courseName}</h1>
-                    <p className="fs-5 text-secondary my-4">{courseData.description}</p>
+                    <p className="fs-5 text-secondary my-4">{courseData.heroSubtitle}</p>
                     <div className="course-ratings mt-3 d-flex align-items-center gap-2">
                         <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">rating <i class="bi bi-star-half text-yellow"></i><b> 4.5</b></small></p>
                         <div className="d-flex gap-2">
@@ -110,14 +118,14 @@ function CourseMainEngine() {
                         </div>
                     </div>
                   <div className="course-points">
-                  <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.courePoints}} />
+                  <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.coursePoints}} />
                   </div>
                   <div className="row align-items-center">
                         <div className="col-12 col-md-7 mb-2">
                         <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
                         </div>
                         <div className="col-12 col-md-5 mb-2">
-                        <button className=" btn-danger bg-white text-dark py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Download Syllubus</span> <br /> <small>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></small></button>
+                        <button className=" btn-danger bg-white text-dark py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100" onClick={openModal}><span className='fs-5' >Download Syllubus</span> <br /> <small>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></small></button>
                           </div>
                       </div>
             
@@ -140,21 +148,21 @@ function CourseMainEngine() {
                         <h1 className="fs-5 text-main-danger">
                              Next Batch Starting </h1>
                                                  
-                        <h1 className="fs-4 text-white d-flex align-items-center  justify-content-center gap-2"><span className="online-dot"></span>{courseData.BatchStarting}</h1>
+                        <h1 className="fs-4 text-white d-flex align-items-center  justify-content-center gap-2"><span className="online-dot"></span>{courseData.details.admisionStart}</h1>
                     </div>
                    </div>
                    <div className="col-12 col-md-4 col-lg-4">
                    <div className="text-center bg-gray3 rounded-3 py-3 border-b mb-3">
                    <i class="bi bi-stopwatch-fill fs-1 text-yellow"></i>
                         <h1 className="fs-5 text-main-danger">Course Duration</h1>
-                        <h1 className="fs-4 text-white">{courseData.courseDuration}</h1>
+                        <h1 className="fs-4 text-white">{courseData.details.Duration}</h1>
                     </div>
                    </div>
                    <div className="col-12 col-md-4 col-lg-4">
                    <div className="text-center bg-gray3 rounded-3 py-3 border-b mb-3">
                    <i class="bi bi-wallet-fill fs-1 text-main-danger"></i>
                         <h1 className="fs-5 text-main-danger">Job Min Salary</h1>
-                        <h1 className="fs-4 text-white">{courseData.HighestCtc}</h1>
+                        <h1 className="fs-4 text-white">7.5LPA</h1>
                     </div>
                    </div>
                 </div>
@@ -170,10 +178,10 @@ function CourseMainEngine() {
 
     
       {/* <Module modules={courseData.modules} name={courseData.courseName} description={courseData.courseDescription}/> */}
-      {/* {
-  courseData.courses.map((item, index) => {
+      {
+  courseData.subCourses?.map((item, index) => {
    return (
-    item.courseModules?.map((module, moduleIndex) => {
+    item.modules?.map((module, moduleIndex) => {
       console.log('data', module.title)
       return (
         <div
@@ -203,8 +211,8 @@ function CourseMainEngine() {
     })
    )
 })
-} */}
-<CourseCard data={courseData.courses}/>
+}
+{/* <CourseCard data={courseData.courses}/> */}
       <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
                 {/* <div className="row">
@@ -228,6 +236,7 @@ function CourseMainEngine() {
     <YoutubeVideos/>
     <FaqSection  faq={courseData.faqs}/>
     <Feedback/>
+    <DownloadModal showModal={showModal} hideModal={handleClose} link={courseData.BrocherLink}/>
     </section>
   )
 }

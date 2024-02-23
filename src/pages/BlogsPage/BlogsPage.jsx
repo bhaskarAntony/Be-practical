@@ -24,7 +24,7 @@ function BlogsPage() {
 
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: true, 
         // speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -98,7 +98,7 @@ function BlogsPage() {
                                                <div className="card-body">
                                                <p className="fs-5 text-main-danger">{item.tag}</p>
                                                  <h1 className="fs-4 fw-bold">{item.title}</h1>
-                                                 <i className="lead text-secondary"><ReadMore text={item.subtitle} maxLength={100}/></i>
+                                                 <p className="fs-6 text-secondary"><ReadMore text={item.subtitle} maxLength={100}/></p>
                                                  <div className="d-flex flex-wrap gap-2">
                                              <p className="fs-6 text-secondary"><i class="bi bi-calendar3 text-yellow mx-2"></i>  {new Date(item.Date).toDateString()}</p>
                                                  <p className="fs-6 text-secondary"><i class="bi bi-alarm text-green mx-2"></i> {new Date(item.Date).toLocaleTimeString()}</p>

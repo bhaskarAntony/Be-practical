@@ -23,28 +23,17 @@ function CourseCertificate({data}) {
     <section className='course-cartificate  py-5 ' id='c-certificate'>
         <h1 className="fs-1 text-900 text-center">Get Industry-Recognised <span className="text-main-danger">Certifications</span></h1>
         <p className="fs-3 text-center">Showcase your expertise with our prestigious certification.</p>
-        <div className="certificate-img container p-lg-5 bg-dark">
+        <div className="certificate-img container p-lg-5">
             <div className="row align-items-center">
                 <div className="col-md-12 col-12 col-lg-6">
-                <Slider {...Imagesettings}>
-   {
-    imagesData.map((item, index)=>(
-   <div className="hero-image d-flex align-items-center justify-content-center h-100">
-
-    <img src={item} alt="hero image" key={index}  className='w-100'/>
-   </div>
-
-    ))
-
-   }
-
-   </Slider>
+                <img src="https://bepractical.s3.us-east-2.amazonaws.com/certificate.svg" alt="hero image"  className='w-100'/>
                 </div>
                 <div className="col-md-12 col-12 col-lg-6">
                   <div className="">
                       <div className="course-certification mb-3">
                         <h3 className="fs-3 mb-2 text-main-danger text-900">Course Certification</h3>
                         <div className='fs-6 text-secondary' dangerouslySetInnerHTML={{ __html: data.certification}} />
+                        <div className='fs-6 text-secondary' dangerouslySetInnerHTML={{ __html: data.courseFor}} />
                       </div>
                       <div className="course-for mb-3">
                         {/* <h3 className="fs-3 mb-2 text-main-danger text-900">Who This Course For</h3>

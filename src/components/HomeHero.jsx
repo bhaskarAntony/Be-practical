@@ -11,6 +11,7 @@ import heroImage from '../images/hero-image.svg'
 import home_video from '../images/home-video.mp4'
 import Slider from 'react-slick';
 import Companies from './companies/Companies';
+import DownloadModal from './Brocher/DownloadModal';
 
 const home = [
   {
@@ -43,6 +44,7 @@ const imagesData = [
 
 function HomeHero() {
   const [showModal, setShowModal] = useState(false);
+  const [showBrocherModal, setShowBrocherModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [homeData, sethomeData] = useState([]);
   useEffect(() => {
@@ -53,8 +55,10 @@ function HomeHero() {
         })
         .catch((error) => console.error('Error fetching advantages:', error));
     }, []);
-  const openModal = () => setShowModal(true);
-  const handleClose = () => setShowModal(false);
+    const openModal = () => setShowModal(true);
+    const handleClose = () => setShowModal(false);
+    const openBrocherModal = () => setShowBrocherModal(true);
+    const handleBrocherClose = () => setShowBrocherModal(false);
 
   useEffect(() => {
     AOS.init();
@@ -94,9 +98,9 @@ function HomeHero() {
                   <div className="hero-text p-lg-2 p-md-2 p-1 py-3 ">
                     <h1 className="display-3 text-bold text-start color-font fw-bold">{item.heading}</h1>
                     <p className="fs-4 my-4 text-start">{item.subheading}</p>
-                    <div className="carousel-footer w-100 d-flex flex-wrap gap-2">
+                    <div className="carousel-footer w-100 d-flex flex-wrap gap-2 py-4">
                       <button className='btn-main-outline-dark border-0  hero-btn bg-gray2 text-white' onClick={openModal}>Apply Now <i class="bi bi-chevron-double-right"></i></button>
-                      <button className='btn-danger  hero-btn'>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
+                      <button className='btn-prm  hero-btn'onClick={openBrocherModal}>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
                     </div>
                   </div>
             </Carousel.Item>
@@ -133,6 +137,7 @@ function HomeHero() {
         show={showModal}
         onHide={handleClose}
       />
+     <DownloadModal showModal={showBrocherModal} hideModal={handleBrocherClose} link={"d"}/>
 
     </section>
   );
