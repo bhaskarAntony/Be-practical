@@ -28,8 +28,10 @@
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
-    --red: #fc6838;
-    --orange: #fd7e14;
+    /* --red: #fc6838; */
+    --red:#f0870f;
+    /* --orange: #fd7e14; */
+    --orange:#f0870f;
     --yellow: #ffc107;
     --green: #28a745;
     --teal: #20c997;
@@ -225,7 +227,7 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 23px;
-  background-color: #fc6838;
+  background-color: var(--red);
   border-style: none;
   border: 1px solid transparent !important;
   border-radius: 5px;
