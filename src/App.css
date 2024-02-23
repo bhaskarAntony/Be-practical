@@ -29,8 +29,8 @@
     --purple: #6f42c1;
     --pink: #e83e8c;
     /* --red: #fc6838; */
-    --red:#f0870f;
-    /* --orange: #fd7e14; */
+    --red:#fc6838;
+    /* --orange: #fc6838; */
     --orange:#f0870f;
     --yellow: #ffc107;
     --green: #28a745;
@@ -62,7 +62,7 @@
     --black-3: #181818;
     --dark-grey: #b0b0b0;
     --black: #301b03;
-    --dark-orange: #f0870f;
+    --dark-orange: #fc6838;
     --saddle-brown: #905109;
     --black-5: black;
     --sandy-brown: #f6b76f;
@@ -270,6 +270,25 @@
   box-shadow: rgb(0, 0, 0) 5px 5px, rgb(0, 0, 0) 10px 10px;
 }
 .btn-prm:hover{
+  box-shadow: none;
+  transform: translate(10px);
+}
+
+.btn--sec-lg {
+  border: 2px solid var(--black-3);
+  background-color: var(--white);
+  color: #151907;
+  text-align: center;
+  border-radius: 12rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 2em;
+  font-size: 1.25em;
+  font-weight: 600;
+  transition: all .2s ease-in-out;
+  box-shadow: var(--dark-orange) 5px 5px, var(--dark-orange) 10px 10px;
+}
+.btn--sec-lg:hover{
   box-shadow: none;
   transform: translate(10px);
 }

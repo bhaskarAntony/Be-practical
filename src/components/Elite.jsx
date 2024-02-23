@@ -54,7 +54,7 @@ function Elite() {
         </div>
         <div className="p-4 d-flex justify-content-center py-2">
           <Link to="/landingpage">
-          <button className="btn-danger">Explore Elite Batch <i class="bi bi-chevron-double-right"></i></button>
+          <button className="btn--sec-lg">Explore Elite Batch <i class="bi bi-chevron-double-right"></i></button>
           </Link>
             </div>
         </div>

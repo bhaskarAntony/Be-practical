@@ -30,8 +30,8 @@ function OurCourses() {
       // const displayedCourses = CourseData.slice(0, 3);
   return (
     <div className='container-fluid our-courses p-lg-5 p-3'>
-        <h1 className="heading"><i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i>Our Courses<i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i></h1>
-        <p className="banner-sub-text text-800 text-center">Acquire real-world skills that guarantee the growth you deserve</p>
+        <h1 className="heading" data-aos="fade-up"><i class="bi bi-star-fill fs-3 text-main-danger mx-2" ></i>Our Courses<i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i></h1>
+        <p className="banner-sub-text text-800 text-center" data-aos="fade-up">Acquire real-world skills that guarantee the growth you deserve</p>
         <div className="all-our-courses mt-5">
         {loading ? (
               Array(3)

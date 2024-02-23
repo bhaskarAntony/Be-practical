@@ -1,15 +1,15 @@
 .main-hero{
     background-color: var(--dark-orange);
     transition: 1s;
-   
+   /* border-radius: 30px; */
 }
 .main-hero-parent{
-    position: absolute;
+    /* position: absolute; */
     top: 0%;
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
     width: 100%;
-    padding: 10px 3%;
+    /* padding: 10px 3%; */
     padding-top: 10px !important;
 }
 .main-scroller-hero{
@@ -32,7 +32,7 @@
     transition: all .2s ease-in-out;
     box-shadow: rgb(0, 0, 0) 5px 5px, rgb(0, 0, 0) 10px 10px;
     width: 400px;
-    bottom: 80px;
+    bottom: 150px;
 }
 .hero-right{
     position: relative;
@@ -61,6 +61,6 @@
        
     }
     .main-hero{
-        border-radius: 0px !important;
+         border-radius: 0px !important;
     }
 }

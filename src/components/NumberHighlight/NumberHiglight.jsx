@@ -22,7 +22,7 @@ const numbers = [
 function NumberHiglight() {
   return (
     <div className="container-fluid about-highlight bg-gray2 p-3">
-        <p className="text-center fs-1 text-900 text-white">Why You <span className="text-main-danger">Choose Us?</span></p>
+        <p className="text-center fs-1 text-900 text-white" data-aos="fade-up">Why You <span className="text-main-danger">Choose Us?</span></p>
     <div className="row">
        {
         numbers.map((item, index)=>(

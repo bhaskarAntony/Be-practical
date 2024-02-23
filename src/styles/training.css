@@ -24,7 +24,7 @@
     color: #5b5959;
 }
 .training-left{
-    background: linear-gradient(135deg,var(--red) 0%,rgb(243, 200, 170) 100%);
+    background: var(--dark-orange);
     min-height: 100%;
     padding: 100px 30px;
 }
