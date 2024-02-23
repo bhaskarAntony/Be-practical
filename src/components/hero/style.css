@@ -55,3 +55,12 @@
     display: flex;
     gap: 20px;
 }
+@media (max-width:768px){
+    .main-hero-parent{
+        padding: 0px !important;
+       
+    }
+    .main-hero{
+        border-radius: 0px !important;
+    }
+}

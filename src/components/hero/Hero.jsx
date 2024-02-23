@@ -77,10 +77,10 @@ function Hero() {
       </div>
         
       <div className="main-hero-parent" style={{ opacity }} >  
-                  <div className="container-fluid main-hero rounded-5 bg-texture">
+                  <div className="container-fluid main-hero rounded-md-5 bg-texture">
            <div className="row">
             <div className="col-12 col-md-6">
-              <div className="hero-left text-white p-1 p-md-5 py-5">
+              <div className="hero-left text-white p-0 p-md-5 py-5">
               <h1 className="display-2 fw-bold text-black">Making <span className="text-white">money</span>  <br />
           as a creator <br />
           just got <span className="text-white">easier</span> <br />
