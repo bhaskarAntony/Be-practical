@@ -5,10 +5,10 @@
 }
 .elite-program-card{
     margin-bottom: 20px;
-    background: #fff;
+    background: transparent;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     position: relative;
     overflow: hidden;
     z-index: 1;

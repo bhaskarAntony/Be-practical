@@ -60,7 +60,7 @@ function OurCourses() {
                               </div> */}
                               <h1 className="fs-3 text-900">{item.courseName}</h1>
                               <p className="fs-6">{item.heroSubtitle}</p>
-                              <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
+                              <div className="course-info rounded-5 row mb-2 p-1 px-3  m-auto">
                               <div className="col-12 col-md-6 col-lg-6">
                               <div className="d-flex align-items-center gap-2 w-100 mb-2">
                                  <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">

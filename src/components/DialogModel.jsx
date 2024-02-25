@@ -3,6 +3,7 @@ import { Modal, Button, Form, Col, Row, Image } from 'react-bootstrap';
 import '../styles/dialogmodel.css'
 import BookDemoCard from './BookDemoCard';
 import BookDemo from './BookDemo';
+import brand from '../images/brand.png'
 
 function DialogModel({ show, onHide }) {
   const handleSubmit = (e) => {
@@ -24,6 +25,10 @@ function DialogModel({ show, onHide }) {
       </Modal.Header>
     <BookDemoCard/>
     {/* <BookDemo/> */}
+    {/* <Modal.Body className='d-flex flex-column align-items-center justify-content-center gap-3'>
+      <img src={brand} alt="" className='w-100' />
+      <button className='btn-danger'>Register Now</button>
+    </Modal.Body> */}
     </Modal>
   );
 }

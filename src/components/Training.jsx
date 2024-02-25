@@ -26,10 +26,10 @@ const traningData = [
 function Training() {
     return (
         <div className='container-fluid p-0 py-1'>
-           <div className="text-center py-4">
+           {/* <div className="text-center py-4">
            <p className="p-large1 text-main-danger">Training</p>
             <h3 className="fs-1 text-900">Mode Of Training</h3>
-           </div>
+           </div> */}
             <div className="training-container overflow-hidden">
                 <div className="row">
                     <div className="col-12 col-md-12 col-lg-6 p-0">

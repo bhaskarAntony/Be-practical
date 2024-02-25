@@ -34,7 +34,6 @@ import ZohoChat from './chat/ZohoChat'
 import { ToastContainer } from 'react-bootstrap'
 import Whatsapp from './chat/Whatsapp'
 import C1 from './components/C1'
-import N from './pages/N'
 import axios from 'axios'
 // https://be-practical.com/?utm_source=facebook&utm_medium=social&utm_campaign=summer_promo
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SuccessDialog from '../Modals/SuccessDialog'
 import axios from 'axios';
 import Loading from '../Modals/Loading';
+import '../styles/registerPage.css'
 
 function HeroRegister() {
   const [formData, setFormData] = useState({

@@ -14,41 +14,41 @@ const eliteProgram = [
     {
         title:"Refund",
         content:"If not placed 50% of course fee will be given back",
-        icon: refund ,
+        icon: "person" ,
     },
     {
         title:"DSA & DSA (Exclusive Problems)",
         content:"Will be providing weekly twice",
-        icon: dsa ,
+        icon: "person" ,
     },
     {
         title:"Softskills",
         content:"Soft skill refer to the personal attributes and qualities that enable effective communication.",
-        icon: skills ,
+        icon: "person" ,
 
     },
     {
         title:"Internship",
         content:"Internship is a short-term work experience that provides practical training and exposure.",
-        icon: internship ,
+        icon: "person" ,
 
     },
     {
         title:"Placement Assistance",
         content:"Unlimited Interview's",
-        icon: assistance ,
+        icon: "person" ,
 
     },
     {
         title:"Add On's",
         content:"AWS Basics, DevOps tools, Jenkins, Git (Starting with Python)",
-        icon: addOnce ,
+        icon: "person" ,
 
     },
 ]
 function EliteProgram() {
   return (
-    <div className='mt-5'>
+    <div className='mt-5 bg-antique py-5'>
          <h1 className="fs-1 text-900 text-center">What is Elite Program?</h1>
          <section className='elite-progarm container py-5'>
        
@@ -57,9 +57,10 @@ function EliteProgram() {
              eliteProgram.map((item, index)=>(
                  <div className="col-6 col-md-4 mb-3">
                      <div className="elite-program-card h-100">
-                        <img src={item.icon} alt="icon" />
-                         <h1 className="fs-5 text-black  mb-3 text-900">{item.title}</h1>
-                         <p className="fs-6 text-secondary">{item.content}</p>
+                        {/* <img src={item.icon} alt="icon" /> */}
+                        <i className={`fs-1 bi bi-${item.icon}`}></i>
+                         <h1 className="fs-4  text-black  mb-3 fw-bold">{item.title}</h1>
+                         <p className="fs-5">{item.content}</p>
                      </div>
                   </div>
              ))

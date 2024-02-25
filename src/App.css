@@ -104,6 +104,9 @@
   background-size: cover;
 
 }
+.bg-antique{
+  background-color: var(--antique-white) !important;
+}
 .bg-round{
   min-width: 50px;
   min-height: 50px;
@@ -230,9 +233,11 @@
   background-color: var(--red);
   border-style: none;
   border: 1px solid transparent !important;
-  border-radius: 5px;
+  border-radius: 10px;
+  letter-spacing: 1.6px;
   color: #fff;
   overflow: hidden;
+  box-shadow: 0px 8px 10px #f0870f80;
 }
 .shimmer-btn{
     overflow: hidden;

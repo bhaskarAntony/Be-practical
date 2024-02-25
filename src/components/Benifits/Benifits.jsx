@@ -4,7 +4,7 @@ import './style.css'
 function Benifits(props) {
   return (
     <section className='py-5 container'>
-        <h1 className="text-center fs-1 mb-2 text-900">Benifits Of <span className="text-main-danger">Technology</span></h1>
+        <h1 className="text-center fs-1 mb-2 text-900" data-aos="fade-up">Benifits Of <span className="text-main-danger">Technology</span></h1>
         <div className='fs-6 mb-4 text-center' dangerouslySetInnerHTML={{ __html: props.data.courseDescription}} />
         <div className="row">
             <div className="col-12 col-sm-12 col-md-4 p-0 m-0 bg-blue-light">

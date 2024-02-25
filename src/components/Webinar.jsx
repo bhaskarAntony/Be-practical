@@ -155,26 +155,23 @@ function Webinar() {
           <h3 className="fs-1 text-900 text-center">Pre Career Guidence program <br /> From  <span className="text-main-danger" >Top MNC's</span></h3>
     <section className='p-2 container-fluid' id="webinar">
 
-      <div className="students-placed container-fluid">
-      <Slider {...settings}>
-      {webinar.map((item) => (
-                <div className="col-12 col-sm-12 col-md-6 col-lg-3 p-1 d-flex justify-content-center">
-              <div className="webinar-card h-100 p-3">
-                <div className="webinar-card-header p-2">
-                        <img src={item.image} alt="events" className='img-fluid' />
-                </div>
-                <div className="webinar-card-body p-2">
-                    <h3 className="fs-5 text-black fw-bold">{item.company}</h3>
-                    <small className='mt-2 fs-6 text-secondary'><ReadMore text={item.description} maxLength={50} /></small>
-                </div>
-              </div>
-                </div>
-            ))}
-              </Slider>
-    <div className="custom-indicators">
+    {
+      webinar.map((item, index)=>(
+        <div className="webinar-card bg-white">
+        <div className="webinar-card-header p-2">
+                <img src={item.image} alt="events" className='w-100 rounded-2' />
+        </div>
+        <div className="webinar-card-body p-2">
+            <h3 className="fs-4 text-black fw-bold">{item.company}</h3>
+            <small className='mt-2 fs-5'><ReadMore text={item.description} maxLength={50} /></small>
         </div>
       </div>
+      ))
+    }
     </section>
+    <div className="text-center mt-5">
+      <a href="/" className="btn--sec-lg text-decoration-none">View Upcoming Events</a>
+    </div>
   </div>
   )
 }

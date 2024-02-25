@@ -151,7 +151,7 @@ function QuizModal() {
                   </FloatingLabel>
                 </Form.Group>
                 <button className='btn-gray w-100 mb-2 mt-3' type="submit">
-                  Download Certificate <i class="bi bi-download"></i>
+                  Submit Quiz <i class="bi bi-download"></i>
                 </button>
                 <button  className="btn-gray-outline mb-2 p-3" variant="secondary" onClick={openModal}>
                 Retake Quiz

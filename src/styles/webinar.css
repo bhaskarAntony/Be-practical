@@ -1,40 +1,15 @@
-
-#webinar{
-  position: relative;
-  border-radius: 20px;
-}
 .webinar-card{
-  border-radius: 30px !important;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  background: #fff;
-    color: #fff;
-    width: 100% !important;
-    max-width: 350px;
-    object-fit: cover;
-    object-position: center;
-    position: relative;
-    overflow: hidden;
+  min-width: 320px;
+  border-radius: 10px;
+  scroll-snap-align: center;
 }
-.webinar-card-header img{
-    border-radius: 20px;
+#webinar{
+  display: flex;
+  overflow: auto;
+  gap: 30px;
+  scroll-snap-type: x mandatory;
 }
-.webinar-heading .webinar-heading-left, .webinar-heading-right{
-    padding: 5px;
-    /* color: var(--white-color); */
-}
-.webinar-company{
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
-  @media (max-width:600px){
-    .webinar-card-body h4, .webinar-card-body h3{
-      font-size: 1.1em;
-    }
+#webinar::-webkit-scrollbar{
+  display: none;
+ 
 }
