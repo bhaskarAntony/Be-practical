@@ -213,17 +213,17 @@ function CourseMainEngine() {
 })
 }
 {/* <CourseCard data={courseData.courses}/> */}
+ 
       <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
-                {/* <div className="row">
+                <div className="row">
                     <div className="col-12 col-md-6 col-lg-7">
-                       
+                        <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
                     </div>
                     <div className="col-12 col-md-6 col-lg-5 d-flex align-items-center ">
-                       <CourseCard data={courseData} ></CourseCard>
+                        {/* <CourseCard data={courseData.details} ></CourseCard> */}
                     </div>
-                </div> */}
-                <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
+                </div>
             </div>
       </section>
       <CourseCertificate data={courseData}/>
