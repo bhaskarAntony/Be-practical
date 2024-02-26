@@ -127,9 +127,16 @@ function App() {
         {
           allCourses.map((item, index)=>(
             <Route path={`/${item.seo.canonical_url}/:id`} element={<CourseMainEngine/>}/>
+           
           ))
         }
+         {
+              allCourses.subCourses?.map((item, index)=>{
+                <Route path={`/${item.seo.canonical_url}/id/:id`} element={<CourseMainEngine/>}/>
+              })
+            }
         <Route path='/all-courses' element={<AllCourses/>}/>
+        <Route path='/elite' element={<ElitePage/>}/>
         <Route path='/discount/quiz' element={<QuizModal/>}/>
         <Route path='/Blog/read/:id' element={<BlogsView/>}/>
         <Route path='/chat' element={<TawkToWidget/>}/>

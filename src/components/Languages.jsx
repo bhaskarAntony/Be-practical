@@ -16,13 +16,13 @@ function Languages({languages, course}) {
       <div className="languages-items">
         <div className="row">
           {languages.map((item, index) => (
-            <div className="col-6 col-md-4 col-lg-4 m-0 p-1" key={index}>
-              <div className="language-card bg-gray3 border-b" data-aos="zoom-in">
+            <div className="col-6 col-md-4 col-lg-4 m-0 p-1 mb-2" key={index}>
+              <div className="language-card bg-gray3 border-b h-100 d-flex flex-column justify-content-between" data-aos="zoom-in">
                 <div className="language-card-header">
-                  <img src={item.image} alt="technology" />
+                  <img src={item.image} alt="technology" className='w-100' />
                 </div>
                 <div className="language-card-body">
-                  <h4 className='text-white text-900'>{item.name}</h4>
+                  <h4 className='text-white text-900 fs-5'>{item.name}</h4>
                 </div>
               </div>
             </div>

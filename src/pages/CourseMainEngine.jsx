@@ -20,6 +20,7 @@ import Benifits from '../components/Benifits/Benifits'
 import CourseCard from '../components/Coursecard/Coursecard'
 import { Helmet } from 'react-helmet'
 import DownloadModal from '../components/Brocher/DownloadModal'
+import { Tab, Tabs } from 'react-bootstrap'
 
 function CourseMainEngine() {
     const [courseData, setCourseData] = useState(null);
@@ -139,7 +140,7 @@ function CourseMainEngine() {
                 </div>
             </div>
         </div>
-        <div className="course-details container  p-lg-5 p-3">
+        {/* <div className="course-details container  p-lg-5 p-3">
             <h1 className="text-center text-white fs-3 mb-4">{courseData.courseName} Course Details</h1>
                 <div className="row">
                    <div className="col-12 col-md-4 col-lg-4">
@@ -166,53 +167,79 @@ function CourseMainEngine() {
                     </div>
                    </div>
                 </div>
-            </div>
-       <div className="text-center">
+            </div> */}
+       {/* <div className="text-center">
        <span className="fs-4 text-main-danger text-center w-100">Share Course On</span>
        </div>
             <div className="share-course d-flex gap-3 py-3 flex-wrap align-items-center justify-content-center">
               <button className="share-btn whatsapp-share" onClick={ToWhatsapp}><i className='bi bi-whatsapp'></i>Whatsapp</button>
              
-            </div>
+            </div> */}
     </div>
 
     
+    
       {/* <Module modules={courseData.modules} name={courseData.courseName} description={courseData.courseDescription}/> */}
-      {
+        {/* <div className="course-modules py-5 bg-antique p-2">
+        <h1 className="fs-1 fw-bold text-center">Course Modules</h1>
+
+     <div className="row">
+     {
   courseData.subCourses?.map((item, index) => {
    return (
-    item.modules?.map((module, moduleIndex) => {
-      console.log('data', module.title)
-      return (
-        <div
-        className={`faq-item ${activeIndex === moduleIndex ? 'active' : ''} rounded-4 mb-3 `}
-        key={moduleIndex}
-      >
-        <div className="faq-question d-flex align-items-center" onClick={() => toggleAccordion(moduleIndex)}>
-          <span className="count p-2 rounded-1 text-900 fs-4 text-green mx-3">{moduleIndex + 1}</span>
-          <span className="faq-question-text text-black">
-            <span className="fw-bold text-main-danger"> Module{moduleIndex + 1}:</span>
-            <span className="text-white text-900">{module.title}</span>
-          </span>
-          <div className="faq-icon">
-            {activeIndex === moduleIndex ? <i class="bi bi-caret-up-fill"></i> : <i class="bi bi-caret-down-fill"></i>}
-          </div>
-        </div>
-        {activeIndex === moduleIndex && (
-          <div className="faq-answer">
-            <h5 className='mt-4 text-main-danger text-decoration-underline'>About</h5>
-            <p className="fs-4 text-white">{module.title}</p>
-            <h5 className='mt-4 text-main-danger text-decoration-underline'>Topics Covered</h5>
-            <p className='fs-5 text-white'>{module.topics}</p>
-          </div>
-        )}
-      </div>
-      )
-    })
+ <div className="col-12 col-md-4">
+      <h1 className="fs-3">{item.courseName} Modules</h1>
+      {
+           item.modules?.map((module, moduleIndex) => {
+            console.log('data', module.title)
+            return (
+              <div
+              className={` bg-white shadow overflow-hidden ${activeIndex === moduleIndex ? 'active' : ''} rounded-5 mb-3 `}
+              key={moduleIndex}
+            >
+              <div className="p-3  bg-white d-flex align-items-center rounded-5" onClick={() => toggleAccordion(moduleIndex)}>
+                {/* <span className="count p-2 rounded-1 text-900 fs-4 text-green mx-3">{moduleIndex + 1}</span> */}
+                {/* <span className="faq-question-text text-black">
+                  <span className="fw-bold text-main-danger"> Module{moduleIndex + 1}:</span>
+                  <span className="text-900">{module.title}</span>
+                </span>
+                <div className="faq-icon">
+                  {activeIndex === moduleIndex ? <i class="bi bi-caret-up-fill"></i> : <i class="bi bi-caret-down-fill"></i>}
+                </div>
+              </div>
+              {activeIndex === moduleIndex && (
+                <div className="p-2 bg-white">
+                  <h5 className='mt-4 text-main-danger text-decoration-underline'>About</h5>
+                  <p className="fs-4">{module.title}</p>
+                  <h5 className='mt-4 text-main-danger text-decoration-underline'>Topics Covered</h5>
+                  <p className='fs-5'>{module.topics}</p>
+                </div>
+              )}
+            </div>
+            )
+          })
+      }
+ </div>
    )
 })
 }
+     </div> */}
+        {/* </div> */} */
 {/* <CourseCard data={courseData.courses}/> */}
+
+     {
+      courseData.subCourses.length>0?(
+        <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 flex-wrap">
+       {
+        courseData.subCourses?.map((item, index)=>(
+          <Tab eventKey={index} title={item.courseName}>
+             <Module modules={item.modules} name={courseData.courseName} description={courseData.courseDescription}/>
+          </Tab>
+        ))
+       }
+      </Tabs>
+      ):(null)
+     }
  
       <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
@@ -221,11 +248,18 @@ function CourseMainEngine() {
                         <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
                     </div>
                     <div className="col-12 col-md-6 col-lg-5 d-flex align-items-center ">
-                        {/* <CourseCard data={courseData.details} ></CourseCard> */}
+                      
                     </div>
                 </div>
             </div>
       </section>
+      {
+          courseData.subCourses.length>0?(
+            <CourseCard data={courseData.subCourses} ></CourseCard>
+          ):(null)
+      }
+      <div class="visme_d" data-title="Custom Form" data-url="mxg7ooxw-custom-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="22432"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
+    
       <CourseCertificate data={courseData}/>
       <LandDreamJob/>
 

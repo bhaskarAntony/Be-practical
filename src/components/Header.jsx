@@ -122,7 +122,7 @@ function Header() {
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="/">Home</a>
         </li>
-        <li class="nav-item dropdown">
+        {/* <li class="nav-item dropdown">
           <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Courses <i class="bi bi-chevron-down mx-1"></i>
           </a>
@@ -145,6 +145,36 @@ function Header() {
             )))
           }
            
+          </ul>
+        </li> */}
+         <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Courses<i class="bi bi-chevron-down"></i>
+          </a>
+          <ul class="dropdown-menu p-0">
+          <li class="nav-item dropend list-group-item">
+              <a class="nav-link dropdown-toggle dropdown-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                FullStack Devolopment
+              </a>
+              <ul class="dropdown-menu list-group">
+                <li className='list-group-item'><a class="dropdown-item" href="/mern-fullstack">MERN Fullstack Devolopment</a></li>
+                <li className='list-group-item'><a class="dropdown-item" href="/python-fullstack">Python Fullstack Devolopment</a></li>
+                <li className='list-group-item'><a class="dropdown-item" href="/java-fullstack">Java Fullstack Devolopment</a></li>
+              </ul>
+            </li>
+            <li className='list-group-item'><a class="dropdown-item" href="/data-science">Data Science</a></li>
+            <li class="dropend list-group-item p-3">
+              <a class="nav-link dropdown-toggle dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cloud Computing
+              </a>
+              <ul class="dropdown-menu list-group">
+                <li className='list-group-item'><a class="dropdown-item" href="/mern-fullstack">Adwance Cloud Computing</a></li>
+                <li className='list-group-item'><a class="dropdown-item" href="/python-fullstack">CloudOops</a></li>
+               
+              </ul>
+            </li>    
+            <li className='list-group-item'><a class="dropdown-item" href="/digital-marketing">Digital Marketing</a></li>   
+            <li className='list-group-item'><a class="dropdown-item" href="#">Job Oriented Courses</a></li>   
           </ul>
         </li>
         <li class="nav-item dropdown">

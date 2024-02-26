@@ -5,38 +5,30 @@ import HeroRegister from '../HeroRegister';
 import brand from '../../images/brand.png'
 
 function Hero() {
-  const [scrollY, setScrollY] = useState(0);
-  const [opacity, setOpacity] = useState(1);
-
   useEffect(() => {
-    function handleScroll() {
-      setScrollY(window.scrollY);
-    }
-
-    window.addEventListener('scroll', handleScroll);
+    const script = document.createElement('script');
+    script.src = 'https://static-bundles.visme.co/forms/vismeforms-embed.js';
+    script.async = true;
+    document.body.appendChild(script);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      document.body.removeChild(script);
     };
   }, []);
-  useEffect(()=>{
-    Aos.init()
-  },[])
 
-  useEffect(() => {
-    if (scrollY > 10) {
-      setOpacity(0.7);
-    } else if (scrollY > 30) {
-      setOpacity(0.4);
-    } else if (scrollY > 60) {
-      setOpacity(0.3);
-    } 
-    else if (scrollY > 90) {
-      setOpacity(0);
-    } else {
-      setOpacity(1); 
-    }
-  }, [scrollY]);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Handle form submission
+    // You can use Axios to make a POST request to your backend server
+    // Example:
+    // axios.post('your-backend-url', formData)
+    //   .then(response => {
+    //     console.log(response);
+    //   })
+    //   .catch(error => {
+    //     console.error(error);
+    //   });
+  }
   return (
     <div className='main-scroller-hero'>
       {/* <div className="marquee-container">
@@ -138,6 +130,24 @@ function Hero() {
                   </div>
                   </div>
                   <HeroRegister/>
+                  {/* <div className="visme_d"
+                  data-title="Client Contact Form"
+                  data-url="76n9wzx7-client-contact-form?fullPage=true"
+                  data-domain="forms"
+                  data-full-page="true"
+                  data-min-height="100vh"
+                  data-form-id="22515">
+
+      
+    </div> */}
+
+    <div className="hero">
+      <h1>Welcome to Our Website</h1>
+      <p>Fill out the form below to get started:</p>
+      <div className="visme-form" data-url="76n9wzx7-client-contact-form?fullPage=true">
+        {/* Display loading or placeholder content while the form is loading */}
+      </div>
+    </div>
     </div>
   )
 }

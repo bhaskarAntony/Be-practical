@@ -36,7 +36,7 @@ const Module = (props) => {
                 <h5 className='mt-4 text-main-danger  text-decoration-underline'>About</h5>
               <p className="fs-4 text-white">{item.title}</p>
                 <h5 className='mt-4 text-main-danger  text-decoration-underline'>Topics Covered</h5>
-                <p className='fs-5 text-white'>{item.topics}</p>
+                <p className='fs-5 text-white'>{item.description}</p>
             </div>
           )}
         </div>
