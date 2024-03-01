@@ -110,7 +110,7 @@ function Hero() {
           </div>
           <div className="weareon d-flex gap-3 mt-3 justsify-content-center">
             <div className="google" data-aos="zoom-in-up">
-             <img src="https://bepractical.s3.us-east-2.amazonaws.com/deccan_logo.png" alt="we are on deccan-herald" />
+             <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Deccan_Herald_logo.svg" alt="we are on deccan-herald" />
             </div>
             <div className="google" data-aos="zoom-in-up">
               <img src="https://bepractical.s3.us-east-2.amazonaws.com/times-logo.png" alt="we are on hindustan times" />
