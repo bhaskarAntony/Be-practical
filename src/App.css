@@ -52,8 +52,10 @@
     --green: #002935;
     --yellow: #F9C02F;
     --pink: #FFEAEE;
-    --gray2:#202937;
+    --gray2:#1a1f27;
     --gray3:#2e3643;
+    /* --gray3:#19333b; */
+
     --gray4:#4b586c;
     --blue-light:#f3f5fb;
     --gold:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
@@ -152,7 +154,7 @@
   color: var(--success) !important;
 }
 .form-control{
-  background: var(--blue-light) !important;
+  /* background: var(--blue-light) !important; */
 }
 .shadow1{
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

@@ -21,7 +21,7 @@ function DialogModel({ show, onHide }) {
     aria-labelledby="contained-modal-title-vcenter"
     centered className='modal' size='md'>
       <Modal.Header closeButton>
-        <Modal.Title>Register</Modal.Title>
+        <Modal.Title>Book your free master classes Now</Modal.Title>
       </Modal.Header>
     <BookDemoCard/>
     {/* <BookDemo/> */}

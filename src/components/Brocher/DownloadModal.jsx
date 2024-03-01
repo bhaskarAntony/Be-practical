@@ -3,9 +3,14 @@ import React, { useState } from 'react'
 import { Form, Modal } from 'react-bootstrap'
 import { toast } from 'react-toastify';
 import Loading from '../../Modals/Loading';
+import SuccessDialog from '../../Modals/SuccessDialog';
 
 function DownloadModal(props) {
     const [isLoading, setIsLoading] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [message, setMessage] = useState("")
+    const [isSend, setIsSend] = useState(false)
+    const handleClose = () => setShowModal(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -22,19 +27,24 @@ function DownloadModal(props) {
         e.preventDefault();
     
         try {
-          const response = await axios.post('http://localhost:3300/course/register', formData);
+          const response = await axios.post('https://comfortable-boot-fly.cyclic.app/course/register', formData);
     
           if (response.status === 200) {
             // Handle successful form submission
             setIsLoading(false)
-            alert('Brouchere registration successful'); 
-            toast.success("registration successful, browcher has been sent to registered email.")
+            setShowModal(true)
+            setIsSend(true)
+            // toast.success("registration successful, browcher has been sent to registered email.")
             props.hideModal()
+            setMessage("registration successful, browcher has been sent to registered email.")
           } else {
             // Handle error
             setIsLoading(false)
+            setShowModal(true)
+            setIsSend(false)
+            setMessage("Brochure registration failed")
             alert('Brochure registration failed');
-            toast.error("registration failed")
+            // toast.error("registration failed")
           }
         } catch (error) {
           alert(error)
@@ -48,13 +58,13 @@ function DownloadModal(props) {
     <div>
          <Modal show={props.showModal} onHide={props.hideModal}>
               <Modal.Header closeButton>
-                <Modal.Title>Download free Browcher</Modal.Title>
+                <Modal.Title className='fs-5 fw-bold'>Download free Browcher</Modal.Title>
               </Modal.Header>
               <Modal.Body>
                 <Form>
-                <div className="r-card p-4 p-lg-5 bg-white rounded-3">
+                <div className="r-card  bg-white rounded-3">
       <form>
-        <div className="form-group mt-3">
+        <div className="form-group">
           <div className="form-floating mb-3">
             <input
               type="text"
@@ -115,6 +125,7 @@ function DownloadModal(props) {
                 </Form>
               </Modal.Body>
             </Modal>
+            <SuccessDialog show={showModal} onHide={() => setShowModal(false)} msg={message} register={isSend} />
     </div>
   )
 }

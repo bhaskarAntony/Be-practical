@@ -31,10 +31,10 @@ import CourseMainEngine from './pages/CourseMainEngine'
 import GoogleSignIn from './js/GoogleSignIn'
 import TawkToWidget from './chat/TawkToWidget'
 import ZohoChat from './chat/ZohoChat'
-import { ToastContainer } from 'react-bootstrap'
 import Whatsapp from './chat/Whatsapp'
 import C1 from './components/C1'
 import axios from 'axios'
+import { ToastContainer } from 'react-toastify'
 // https://be-practical.com/?utm_source=facebook&utm_medium=social&utm_campaign=summer_promo
 
 
@@ -68,7 +68,7 @@ function App() {
     };
 
     // Open the modal every 2 minutes
-    const intervalId = setInterval(openModal, 120000); // 120,000 milliseconds = 2 minutes
+    const intervalId = setInterval(openModal, 220000); // 120,000 milliseconds = 2 minutes
 
     return () => clearInterval(intervalId);
 
@@ -98,14 +98,16 @@ function App() {
      <TawkToWidget/>
      {/* <ZohoChat/> */}
      {/* <Whatsapp/> */}
-     <ToastContainer />
+     
     
         {/* <CustomCursor/> */}
       <ScrollProgressBar/>
       <Progressbar/>
+      <ToastContainer autoClose={4000} position='top-right' />
         <BrowserRouter>
        
         <PageScrollToTop/>
+        
         <Header/>
         
         {/* <BottomNavigation/> */}
@@ -126,15 +128,23 @@ function App() {
         <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
         {
           allCourses.map((item, index)=>(
+           <>
             <Route path={`/${item.seo.canonical_url}/:id`} element={<CourseMainEngine/>}/>
-           
+            {
+              item.subCourses.map((item, index)=>(
+               <>
+                <Route path={`/${item.seo.canonical_url}/:courseId/:id`} element={<CoursePageEngine/>}/>
+                {
+                  console.log(item)
+                }
+               </>
+                
+              ))
+            }
+           </>
           ))
         }
-         {
-              allCourses.subCourses?.map((item, index)=>{
-                <Route path={`/${item.seo.canonical_url}/id/:id`} element={<CourseMainEngine/>}/>
-              })
-            }
+       
         <Route path='/all-courses' element={<AllCourses/>}/>
         <Route path='/elite' element={<ElitePage/>}/>
         <Route path='/discount/quiz' element={<QuizModal/>}/>

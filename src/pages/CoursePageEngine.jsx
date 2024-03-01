@@ -20,6 +20,7 @@ import Benifits from '../components/Benifits/Benifits'
 import { Helmet } from 'react-helmet'
 import { Modal, Form, Button } from 'react-bootstrap'
 import { toast } from 'react-toastify'
+import DownloadModal from '../components/Brocher/DownloadModal'
 
 function CoursePageEngine() {
     const [courseData, setCourseData] = useState(null);
@@ -31,10 +32,10 @@ function CoursePageEngine() {
             phone: '',
             course: 'MERN', // Default course
           });
-  const { id } = useParams(); 
+  const { id, courseId } = useParams(); 
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `https://backend-bp-bpdeveloperscommunity.onrender.com/api/course/${id}`; // Replace with your actual API endpoint
+        const apiUrl = `https://comfortable-boot-fly.cyclic.app/api/allcourses/${courseId}/subcourses/${id}`; // Replace with your actual API endpoint
     
         axios
           .get(apiUrl)
@@ -88,27 +89,9 @@ function CoursePageEngine() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
     
-      const handleSubmit = async (e) => {
-        e.preventDefault();
-    
-        try {
-          const response = await axios.post('https://backend-bp-bpdeveloperscommunity.onrender.com/course/register', formData);
-    
-          if (response.status === 200) {
-            // Handle successful form submission
-            return <Loading/>;
-            alert('Brouchere registration successful'); 
-            toast.success("registration successful, browcher has been sent to registered email.")
-          } else {
-            // Handle error
-            alert('Brochure registration failed');
-            toast.error("registration failed")
-          }
-        } catch (error) {
-          alert(error)
-          console.error('Error during brochure registration', error);
-        }
-      };
+
+      const openModal = () => setShowModal(true);
+      const handleClose = () => setShowModal(false);
     
 
     
@@ -121,35 +104,31 @@ function CoursePageEngine() {
   return (
     <section className='overflow-hidden'>
      <Helmet>
-        <title>{courseData.SEO?.title}</title>
-        <meta name="description" content={courseData.SEO?.description} />
+        <title>{courseData.seo?.title}</title>
+        <meta name="description" content={courseData.seo?.description} />
       </Helmet>
     <div className="course-hero container-fluid p-0 py-3 bg-texture bg-gray2 border-b ">
         <div className="row align-items-center">
             <div className="col-12 col-md-7 col-lg-7">
                 <div className="course-hero-left p-lg-5 p-3">
                     <p className="text-main-danger fs-5 text-900">100% Placement Course</p>
-                    <h1 className="display-3 text-900 text-white">{courseData.heroTitle}</h1>
+                    <h1 className="display-3 text-900 text-white">{courseData.courseName}</h1>
                     <p className="fs-5 text-secondary my-4">{courseData.heroSubtitle}</p>
-                    <div className="course-ratings mt-3 d-flex align-items-center gap-2">
+                    <div className="course-ratings mt-3 d-flex align-items-center gap-2 flex-wrap">
                         <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">rating <i class="bi bi-star-half text-yellow"></i><b> 4.5</b></small></p>
-                        <div className="d-flex gap-2">
-                        <i class="bi bi-star-fill text-yellow fs-4"></i>
-                        <i class="bi bi-star-fill text-yellow fs-4"></i>
-                        <i class="bi bi-star-fill text-yellow fs-4"></i>
-                        <i class="bi bi-star-fill text-yellow fs-4"></i>
-                        <i class="bi bi-star-half text-yellow fs-4"></i>
-                        </div>
+                     
+                        <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">Batch Start: <b>{courseData.details.admisionStart}</b></small></p>
+                        <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">Mode: <b>Online & Offline</b></small></p>
                     </div>
                   <div className="course-points">
-                  <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.courseHeroPoints}} />
+                  <div className='fs-6 text-white' dangerouslySetInnerHTML={{ __html: courseData.coursePoints}} />
                   </div>
-                  <div className="row align-items-center">
+                  <div className="row align-items-center mt-5">
                         <div className="col-12 col-md-7 mb-2">
-                        <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Apply Now</span> <br /> <small>Hurry! 200 People have already applied</small></button>
+                        <button className="btn-prm  py-3  hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5 fw-bold' onClick={openModal}>Apply Now</span> <br /> <small className='btn-text'>Hurry! 200 People have already applied</small></button>
                         </div>
                         <div className="col-12 col-md-5 mb-2">
-                        <button className=" btn-danger bg-white text-dark py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100" onClick={downloadBrochure}><span className='fs-5'>Download Syllubus</span> <br /> <small>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></small></button>
+                        <button className="btn--sec-lg bg-white text-dark py-3 hero-btn  align-items-center gap-2 justify-content-center w-100" onClick={downloadBrochure}><span className='fs-5 fw-bold'>Download Syllubus</span><br /><small className='btn-text'>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill"></i></small></button>
 
            
                      
@@ -163,7 +142,7 @@ function CoursePageEngine() {
                 </div>
             </div>
         </div>
-        <div className="course-details container  p-lg-5 p-3">
+        {/* <div className="course-details container  p-lg-5 p-3">
             <h1 className="text-center text-white fs-3 mb-4">{courseData.courseName} Course Details</h1>
                 <div className="row">
                    <div className="col-12 col-md-4 col-lg-4">
@@ -190,9 +169,9 @@ function CoursePageEngine() {
                     </div>
                    </div>
                 </div>
-            </div>
+            </div> */}
        <div className="text-center">
-       <span className="fs-4 text-main-danger text-center w-100">Share Course On</span>
+       <span className="fs-4 text-white text-center w-100">Share Course On</span>
        </div>
             <div className="share-course d-flex gap-3 py-3 flex-wrap align-items-center justify-content-center">
               <button className="share-btn whatsapp-share" onClick={ToWhatsapp}><i className='bi bi-whatsapp'></i>Whatsapp</button>
@@ -202,18 +181,19 @@ function CoursePageEngine() {
 
     
       <Module modules={courseData.modules} name={courseData.courseName} description={courseData.courseDescription}/>
-      <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
+      {/* <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-7">
                         <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
                     </div>
                     <div className="col-12 col-md-6 col-lg-5 d-flex align-items-center ">
-                        <CourseCard data={courseData} ></CourseCard>
+                       
                     </div>
                 </div>
             </div>
-      </section>
+      </section> */}
+        <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
       <CourseCertificate data={courseData}/>
       <LandDreamJob/>
 
@@ -224,6 +204,7 @@ function CoursePageEngine() {
     <YoutubeVideos/>
     <FaqSection  faq={courseData.faqs}/>
     <Feedback/>
+    <DownloadModal showModal={showModal} hideModal={handleClose} link={courseData.BrocherLink}/>
     </section>
   )
 }

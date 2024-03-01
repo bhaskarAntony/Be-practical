@@ -3,8 +3,7 @@ import React from 'react'
 function BookDemoCard() {
   return (
     <div>
-        <div className="r-card p-4 p-lg-5 bg-white rounded-3">
-                <h1 className="card-heading">Book Your free Master Classes Now</h1>
+        <div className="r-card p-2  bg-white rounded-1">
                 <form>
                     <div className="form-group mt-3">
                     <div class="form-floating mb-3">

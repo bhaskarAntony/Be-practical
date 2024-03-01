@@ -1,24 +1,6 @@
 import React from 'react'
-import Slider from 'react-slick';
 
-const imagesData = [
-  "https://img.freepik.com/free-photo/diverse-team-adult-students-working-together_74855-1814.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=ais",
-  "https://img.freepik.com/free-photo/line-coworkers-using-laptops-training-room-class_74855-3568.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=ais",
-  "https://img.freepik.com/free-photo/pretty-girl-group-young-people-casual-clothes-working-modern-office_146671-16507.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=ais",
-  'https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241234.jpg?size=626&ext=jpg&ga=GA1.1.874872603.1694171926&semt=ais'
-]
 function CourseCertificate({data}) {
-  const Imagesettings = {
-    dots: true,
-    infinite: true,
-    speed:50,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // cssEase:'linear',
-    // fade:true,
-    autoplay: true,
-    autoplaySpeed: 1000,
-  };
   return (
     <section className='course-cartificate  py-5 ' id='c-certificate'>
         <h1 className="fs-1 text-900 text-center">Get Industry-Recognised <span className="text-main-danger">Certifications</span></h1>
@@ -26,7 +8,7 @@ function CourseCertificate({data}) {
         <div className="certificate-img container p-lg-5">
             <div className="row align-items-center">
                 <div className="col-md-12 col-12 col-lg-6">
-                <img src="https://bepractical.s3.us-east-2.amazonaws.com/certificate.svg" alt="hero image"  className='w-100'/>
+                <img src="https://img.freepik.com/free-vector/award-medal-with-red-ribbon_1284-42828.jpg?size=626&ext=jpg&ga=GA1.1.1395880969.1709078400&semt=ais" alt="hero image"  className='w-100'/>
                 </div>
                 <div className="col-md-12 col-12 col-lg-6">
                   <div className="">

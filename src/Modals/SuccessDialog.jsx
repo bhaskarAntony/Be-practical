@@ -7,18 +7,19 @@ function SuccessDialog({ show, onHide , msg, register}) {
   return (
     <Modal show={show} onHide={onHide} centered className="rounded-5">
       <Modal.Header closeButton>
-        <Modal.Title>Registration</Modal.Title>
+        {/* <Modal.Title>Registration</Modal.Title> */}
       </Modal.Header>
       <Modal.Body>
         <div className="d-flex justify-content-center">
         {
             register?(
               <>
-              <img src={ErrorImage} alt="" className='w-75' />
+               <img src={successImage} alt="" className='w-100' />
               </>
             ):(
               <>
-              <img src={successImage} alt="" className='w-100' />
+               <img src={ErrorImage} alt="" className='w-75' />
+            
               </>
             )
         }

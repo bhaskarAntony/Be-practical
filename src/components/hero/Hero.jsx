@@ -3,8 +3,10 @@ import  './style.css'
 import Aos from 'aos';
 import HeroRegister from '../HeroRegister';
 import brand from '../../images/brand.png'
+import DownloadModal from '../Brocher/DownloadModal';
 
 function Hero() {
+  const [showModal, setShowModal] = useState(false)
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://static-bundles.visme.co/forms/vismeforms-embed.js';
@@ -29,6 +31,9 @@ function Hero() {
     //     console.error(error);
     //   });
   }
+
+  const openModal = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
   return (
     <div className='main-scroller-hero'>
       {/* <div className="marquee-container">
@@ -78,9 +83,9 @@ function Hero() {
               <h1 className="display-2 fw-bold text-black" data-aos="fade-up">High Paid Salaries & Continuous Career <span className="text-white">Growth</span>
           </h1>
           <p className="fs-4" data-aos="fade-up">With all your courses, workshops, and memberships in one place, you can sell faster, easier, and save up to 80% of your expenses.</p>
-          <button className='btn-prm'>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
+          <button className='btn-prm' onClick={openModal}>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
           <div className="social-container mt-5 d-flex gap-2">
-            <div className="google px-3 w-100" data-aos="zoom-in-right">
+            <div className="google px-3 w-100 p-2" data-aos="zoom-in-right">
            <span className="fw-bold">Google</span>
               <span className='small mx-1'>rating 4.6</span>
               <div className='d-flex gap-1 text-warning'>
@@ -91,8 +96,8 @@ function Hero() {
                 <i className='bi bi-star-fill small'></i>
               </div>
             </div>
-            <div className="google px-3 w-100" data-aos="zoom-in-left">
-              <span className="fw-bold">SnapDial</span>
+            <div className="google px-3 w-100 p-2" data-aos="zoom-in-left">
+              <span className="fw-bold">Justdial</span>
               <span className='small mx-1 text-secondary'>rating 4.6</span>
               <div className='d-flex gap-1 text-warning'>
                 <i className='bi bi-star-fill'></i>
@@ -105,13 +110,13 @@ function Hero() {
           </div>
           <div className="weareon d-flex gap-3 mt-3 justsify-content-center">
             <div className="google" data-aos="zoom-in-up">
-              deccanherald
+             <img src="https://bepractical.s3.us-east-2.amazonaws.com/deccan_logo.png" alt="we are on deccan-herald" />
             </div>
             <div className="google" data-aos="zoom-in-up">
-              deccanherald
+              <img src="https://bepractical.s3.us-east-2.amazonaws.com/times-logo.png" alt="we are on hindustan times" />
             </div>
             <div className="google" data-aos="zoom-in-up">
-              deccanherald
+             <img src="https://bepractical.s3.us-east-2.amazonaws.com/mid-day-logo.png" alt="we are on mid-day" />
             </div>
           </div>
               </div>
@@ -120,7 +125,7 @@ function Hero() {
               <div className="hero-right">
                 <img src={brand} alt="" className='w-100'/>
                 <div className="image-text" data-aos="fade-up">
-                  <h1 className="fs-5 fw-bold">ADARSH INAMDAR</h1>
+                  <h1 className="fs-5 fw-bold">HARISH</h1>
                   <p className="small">As a creator myself, I have faced this problem firsthand. Using 5+ platforms for a digital business is complicated. I have personally been using this and making 6 figure monthly revenue for the past year.
                   </p>
                 </div>
@@ -130,24 +135,10 @@ function Hero() {
                   </div>
                   </div>
                   <HeroRegister/>
-                  {/* <div className="visme_d"
-                  data-title="Client Contact Form"
-                  data-url="76n9wzx7-client-contact-form?fullPage=true"
-                  data-domain="forms"
-                  data-full-page="true"
-                  data-min-height="100vh"
-                  data-form-id="22515">
+                  <DownloadModal showModal={showModal} hideModal={handleClose} link={"d"}/>
+         
 
-      
-    </div> */}
-
-    <div className="hero">
-      <h1>Welcome to Our Website</h1>
-      <p>Fill out the form below to get started:</p>
-      <div className="visme-form" data-url="76n9wzx7-client-contact-form?fullPage=true">
-        {/* Display loading or placeholder content while the form is loading */}
-      </div>
-    </div>
+  
     </div>
   )
 }

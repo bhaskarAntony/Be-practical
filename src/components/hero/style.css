@@ -16,7 +16,7 @@
     position: relative;
 }
 .hero-right  img{
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     transform: translateY(-50px);
 }
 .image-text{
@@ -64,8 +64,13 @@
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
  
+}
+.weareon img{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 @media (max-width:768px){
     .main-hero-parent{

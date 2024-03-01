@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function Coursecard({data}) {
+function Coursecard({data, id}) {
   return (
     <div>
         <div className='container-fluid our-courses p-lg-5 p-3'>
@@ -88,7 +88,7 @@ function Coursecard({data}) {
                         
                           <div className="course-btns row mt-3">
                             <div className="col-12 col-md-6 col-lg-6">
-                            <Link to={`/${item.seo.canonical_url}/id/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                            <Link to={`/${item.seo.canonical_url}/${id}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                             </div>
                             <div className="col-12 col-md-6 col-lg-6">
                             <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>

@@ -4,10 +4,13 @@ import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import CourseShimmer from './CourseShimmer';
 import {allCourseApi, ourCoursesApi } from '../../Data/DataFetcher';
+import DownloadModal from '../Brocher/DownloadModal';
 
 function OurCourses() {
   const [loading, setLoading] = useState(true)
   const [CourseData, setCourseData] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [brocher, setBrocher] = useState("")
   useEffect(() => {
    const fetchData = async () => {
      try {
@@ -24,9 +27,17 @@ function OurCourses() {
 
    fetchData();
  }, []);
+
     useEffect(() => {
         Aos.init(); // Initialize AOS
       }, []);
+      
+  const openModal = (link) =>{
+     setShowModal(true);
+     setBrocher(link)
+  
+  }
+  const handleClose = () => setShowModal(false);
       // const displayedCourses = CourseData.slice(0, 3);
   return (
     <div className='container-fluid our-courses p-lg-5 p-3'>
@@ -118,11 +129,13 @@ function OurCourses() {
                               </div>
                             
                               <div className="course-btns row mt-3">
+                            
                                 <div className="col-12 col-md-6 col-lg-6">
-                                <Link to={`/${item.seo.canonical_url}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                               
+                                <Link to={`/${item.seo.canonical_url}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">View Program <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-6">
-                                <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
+                                <button className="btn-gray-outline  hero-btn fw-bold" onClick={()=>openModal(item.BrocherLink)}><i class="bi bi-download"></i> Syllubus</button>
                                   </div>
                                
                                
@@ -140,9 +153,11 @@ function OurCourses() {
                 ))
             )
               }
+                 <DownloadModal showModal={showModal} hideModal={handleClose} link={brocher}/>
         </div>
         <div className="text-center">
         <Link to="/all-courses" className=" text-decoration-none"> <button className="btn-prm">Browse All Courses</button></Link>
+    
         </div>
     </div>
   )

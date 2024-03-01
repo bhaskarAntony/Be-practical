@@ -89,7 +89,7 @@ function QuizModal() {
         <div className="quiz-container bg-blue-3 p-3 mt-3 rounded-5">
             <div className="row align-items-center">
                 <div className="col-12 col-md-6 col-lg-6">
-                 <img src={brandImage} alt="quiz-brand-image" className="w-100" />
+                 <img src="https://bepractical.s3.us-east-2.amazonaws.com/brand_quiz.png" alt="quiz-brand-image" className="w-100" />
                 </div>
                 <div className="col-12 col-md-6 col-lg-6 p-1 p-lg-5">
                 <h1 className="display-6">Get 10% <span className="text-main-danger">Discount</span></h1>

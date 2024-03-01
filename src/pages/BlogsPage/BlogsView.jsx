@@ -17,7 +17,7 @@ function BlogsView() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:3300/api/blogs/${id}`);
+        const response = await axios.get(`https://comfortable-boot-fly.cyclic.app/api/blogs/${id}`);
         setBlogData(response.data);
         setLoading(false);
       } catch (error) {

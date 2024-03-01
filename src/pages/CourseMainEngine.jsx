@@ -34,7 +34,7 @@ function CourseMainEngine() {
   };
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `http://localhost:3300/api/allcourses/${id}`; // Replace with your actual API endpoint
+        const apiUrl = `https://comfortable-boot-fly.cyclic.app/api/allcourses/${id}`; // Replace with your actual API endpoint
         const fetchData = async () => {
           try {
               const response = await axios.get(apiUrl);
@@ -224,24 +224,25 @@ function CourseMainEngine() {
 })
 }
      </div> */}
-        {/* </div> */} */
+        {/* </div> */} 
 {/* <CourseCard data={courseData.courses}/> */}
 
      {
       courseData.subCourses.length>0?(
-        <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 flex-wrap">
-       {
-        courseData.subCourses?.map((item, index)=>(
-          <Tab eventKey={index} title={item.courseName}>
-             <Module modules={item.modules} name={courseData.courseName} description={courseData.courseDescription}/>
-          </Tab>
-        ))
-       }
-      </Tabs>
+       <div className='py-3'>
+       <h1 className="fs-1 text-center fw-bold">{courseData.courseName} Modules</h1>
+        <Tabs defaultActiveKey="0" id="uncontrolled-tab-example" className="mb-3 flex-wrap w-100 overflow-auto">
+      {courseData.subCourses?.map((item, index) => (
+        <Tab eventKey={index.toString()} title={item.courseName} key={index}>
+          <Module modules={item.modules} name={item.courseName} description={courseData.courseDescription}/>
+        </Tab>
+      ))}
+    </Tabs>
+       </div>
       ):(null)
      }
  
-      <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
+      {/* <section className='main-lan-container container-fluid bg-gray2 bg-texture rounded-0 py-5' id="languages">
             <div className="lan-inner-container container">
                 <div className="row">
                     <div className="col-12 col-md-6 col-lg-7">
@@ -252,10 +253,12 @@ function CourseMainEngine() {
                     </div>
                 </div>
             </div>
-      </section>
+      </section> */}
+
+<Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
       {
           courseData.subCourses.length>0?(
-            <CourseCard data={courseData.subCourses} ></CourseCard>
+            <CourseCard data={courseData.subCourses} id={id} ></CourseCard>
           ):(null)
       }
       <div class="visme_d" data-title="Custom Form" data-url="mxg7ooxw-custom-form" data-domain="forms" data-full-page="false" data-min-height="500px" data-form-id="22432"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
