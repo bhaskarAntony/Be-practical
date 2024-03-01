@@ -76,15 +76,12 @@ function App() {
   }, []);
   useEffect(()=>{
     const fetchAllCourses = async()=>{
-      const response = await axios.get('http://localhost:3300/api/allcourses')
+      const response = await axios.get('https://comfortable-boot-fly.cyclic.app/api/allcourses')
       setAllCourses(response.data.courses)
       console.log(response.data.courses)
     }
     fetchAllCourses()
   },[])
-
-
-
 
 
   return (
