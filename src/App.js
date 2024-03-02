@@ -109,9 +109,7 @@ function App() {
         
         {/* <BottomNavigation/> */}
         {/* <Discount/> */}
-        <Routes>
-
-          
+        <Routes>   
         <Route path='/' element={<Home/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
         <Route path='/events' element={<Events/>}/>

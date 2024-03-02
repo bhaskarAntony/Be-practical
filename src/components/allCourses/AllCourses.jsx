@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import '../../components/ourCourses/ourCourses.css'
-import { CoursePage } from '../../Data/DataFetcher';
+import { allCourseApi } from '../../Data/DataFetcher';
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
+import Coursecard from '../Coursecard/Coursecard';
 
 function AllCourses() {
   const [loading, setLoading] = useState(false)
@@ -10,9 +11,9 @@ function AllCourses() {
   useEffect(() => {
    const fetchData = async () => {
      try {
-       const data = await CoursePage;
+       const data = await allCourseApi;
        setLoading(false)
-       setCourseData(data);
+       setCourseData(data.courses);
        console.log("data", data)
      } catch (error) {
       setLoading(true)
@@ -32,100 +33,213 @@ function AllCourses() {
         <div className="all-our-courses mt-5">
           {
             CourseData.map((item, index)=>(
-            <div className="our-course-card-wrapper">
-                <div className="container our-course-card p-lg-5 p-md-3 p-3 py-5">
-                <div className="row">
-                  <div className="col-12 col-md-6 col-lg-6">
-                    <div className="course-left">
-                          <p className=" text-white rounded-2 p-1 tag">
-                          <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
-                          </p>
-                          <div className="seats rounded-4 p-2 d-flex gap-2 flex-wrap bg-gray2 text-white align-items-center mb-3">
-                              <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
-                              </div>
-                          <h1 className="fs-3 text-900">{item.courseName}</h1>
-                          <p className="p-large1">{item.heroSubtitle}</p>
-                          <div className="course-info rounded-4 row mb-2 p-2 px-3">
-                          <div className="col-12 col-md-6 col-lg-6">
-                          <div className="d-flex align-items-center gap-2 w-100 mb-2">
-                             <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
-                            <i class="bi bi-calendar3 text-yellow fs-4"></i>
-                           </div>
-                           <div>
-                            <p>
-                            <p className="text-secondary">Duration</p>
-                            <p className='text-900'>{item.courseDuration}</p>
-                            </p>
-                           </div>
-                            </div>
-                          </div>
-                          <div className="col-12 col-md-6 col-lg-6">
-                          <div className="d-flex align-items-center gap-2 mb-2">
-                             <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
-                            <i class="bi bi-calendar3 text-green fs-4"></i>
-                           </div>
-                           <div>
-                            <p>
-                            <p className="text-secondary">Highest Salary</p>
-                            <p className='text-900'>{item.HighestSalary}</p>
-                            </p>
-                           </div>
-                            </div>
-                          </div>
-                          </div>
-                          <div className="course-info rounded-4 row mb-2 p-2 px-3">
-                          <div className="col-12 col-md-6 col-lg-6">
-                          <div className="d-flex align-items-center gap-2 w-100 mb-2">
-                             <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
-                            <i class="bi bi-camera-video-fill text-yellow fs-4"></i>
-                           </div>
-                           <div>
-                            <p>
-                            <p className="text-secondary">Mode Of Training</p>
-                            <p className='text-900'>{item.courseDuration}</p>
-                            </p>
-                           </div>
-                            </div>
-                          </div>
-                          <div className="col-12 col-md-6 col-lg-6">
-                          <div className="d-flex align-items-center gap-2 mb-2">
-                             <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
-                            <i class="bi  bi-person-check-fill text-green fs-4"></i>
-                           </div>
-                           <div>
-                            <p>
-                            <p className="text-secondary">Advantages</p>
-                            <p className='text-900'>HR Activities</p>
-                            </p>
-                           </div>
-                            </div>
-                          </div>
-                          </div>
-                          <div className="course-btns row mt-3">
-                            <div className="col-12 col-md-6 col-lg-6">
-                            <Link to={`/course/${item.courseName}/${item._id}`} className=" text-decoration-none mb-1"> <button className="btn-gray  hero-btn">Know More</button></Link>
-                            </div>
-                            <div className="col-12 col-md-6 col-lg-6">
-                            <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
-                              </div>
-                           
-                           
-                          </div>
-                    </div>
+           <>
+              <div className="our-course-card-wrapper" key={index}>
+              <div className="container our-course-card p-lg-5 p-md-3 p-sm-4" data-aos="fade-right">
+              <div className="row">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-7">
+                  <div className="course-left">
+                  <div className="mb-2 d-flex gap-2 flex-wrap align-items-center">
+                  <div class="dot">
+                       <span class="glow"></span>
+                       </div>
+                       <span className='fs-5 text-900 shake-card'>{item.details.admisionStart}</span>
                   </div>
-                  <div className="col-12 col-md-6 col-lg d-none d-lg-block">
-                    <div className="course-right">
-                        <img src={item.courseImage} alt={item.courseName} className="w-100" />
-                    </div>
+                        <p className=" text-white rounded-2 p-1 tag">
+                        <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
+                        </p>
+                        {/* <div className="seats rounded-4 p-2 d-flex gap-2 flex-wrap bg-gray2 text-white align-items-center mb-3">
+                        <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
+                        </div> */}
+                        <h1 className="fs-3 text-900">{item.courseName}</h1>
+                        <p className="fs-6">{item.heroSubtitle}</p>
+                        <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
+                        <div className="col-12 col-md-6 col-lg-6">
+                        <div className="d-flex align-items-center gap-2 w-100 mb-2">
+                           <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                          <i class="bi bi-calendar3 text-yellow fs-5"></i>
+                         </div>
+                         <div>
+                          <span>
+                          <span className="text-secondary d-block">Duration</span>
+                          <span className='text-900'>{item.details.Duration}</span>
+                          </span>
+                         </div>
+                          </div>
+                        </div>
+                        <div className="col-12 col-md-6 col-lg-6">
+                        <div className="d-flex align-items-center gap-2 mb-2">
+                           <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                          <i class="bi bi-calendar3 text-green fs-5"></i>
+                         </div>
+                         <div>
+                          <span>
+                          <span className="text-secondary d-block">Highest Salary</span>
+                          <span className='text-900'>{item.HighestCtc}</span>
+                          </span>
+                         </div>
+                          </div>
+                        </div>
+                        </div>
+                        <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
+                        <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div className="d-flex align-items-center gap-2 mb-2">
+                           <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                          <i class="bi bi-camera-video-fill text-yellow fs-6"></i>
+                         </div>
+                         <div>
+                          <span>
+                          <span className="text-secondary d-block">Mode Of Training</span>
+                          <span className='text-900 '>Online & Offline</span>
+                          </span>
+                         </div>
+                          </div>
+                        </div>
+                        <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div className="d-flex align-items-center gap-2 mb-2">
+                           <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                          <i class="bi  bi-person-check-fill text-green fs-6"></i>
+                         </div>
+                         <div>
+                          <span>
+                          <span className="text-secondary d-block">Advantages</span>
+                          <span className='text-900'>Placement Activities</span>
+                          </span>
+                         </div>
+                          </div>
+                        </div>
+                        </div>
+                      
+                        <div className="course-btns row mt-3">
+                          <div className="col-12 col-md-6 col-lg-6">
+                          <Link to={`/${item.seo.canonical_url}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                          </div>
+                          <div className="col-12 col-md-6 col-lg-6">
+                          <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
+                            </div>
+                         
+                         
+                        </div>
+                  </div>
+                </div>
+                <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-sm-none d-lg-block">
+                  <div className="course-right">
+                      <img src={item.courseImage} alt={item.courseImage} className="w-100" />
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+         
+          {
+            item.subCourses.map((item, index)=>(
+              <>
+              <div className="our-course-card-wrapper" key={index}>
+              <div className="container our-course-card p-lg-5 p-md-3 p-sm-4" data-aos="fade-right">
+              <div className="row">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-7">
+                  <div className="course-left">
+                  <div className="mb-2 d-flex gap-2 flex-wrap align-items-center">
+                  <div class="dot">
+                       <span class="glow"></span>
+                       </div>
+                       <span className='fs-5 text-900 shake-card'>{item.details.admisionStart}</span>
+                  </div>
+                        <p className=" text-white rounded-2 p-1 tag">
+                        <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
+                        </p>
+                        {/* <div className="seats rounded-4 p-2 d-flex gap-2 flex-wrap bg-gray2 text-white align-items-center mb-3">
+                        <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
+                        </div> */}
+                        <h1 className="fs-3 text-900">{item.courseName}</h1>
+                        <p className="fs-6">{item.heroSubtitle}</p>
+                        <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
+                        <div className="col-12 col-md-6 col-lg-6">
+                        <div className="d-flex align-items-center gap-2 w-100 mb-2">
+                           <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                          <i class="bi bi-calendar3 text-yellow fs-5"></i>
+                         </div>
+                         <div>
+                          <span>
+                          <span className="text-secondary d-block">Duration</span>
+                          <span className='text-900'>{item.details.Duration}</span>
+                          </span>
+                         </div>
+                          </div>
+                        </div>
+                        <div className="col-12 col-md-6 col-lg-6">
+                        <div className="d-flex align-items-center gap-2 mb-2">
+                           <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                          <i class="bi bi-calendar3 text-green fs-5"></i>
+                         </div>
+                         <div>
+                          <span>
+                          <span className="text-secondary d-block">Highest Salary</span>
+                          <span className='text-900'>{item.HighestCtc}</span>
+                          </span>
+                         </div>
+                          </div>
+                        </div>
+                        </div>
+                        <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
+                        <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div className="d-flex align-items-center gap-2 mb-2">
+                           <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                          <i class="bi bi-camera-video-fill text-yellow fs-6"></i>
+                         </div>
+                         <div>
+                          <span>
+                          <span className="text-secondary d-block">Mode Of Training</span>
+                          <span className='text-900 '>Online & Offline</span>
+                          </span>
+                         </div>
+                          </div>
+                        </div>
+                        <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                        <div className="d-flex align-items-center gap-2 mb-2">
+                           <div className="course-icon bg-white d-flex align-items-center rounded-2 justify-content-center p-3">
+                          <i class="bi  bi-person-check-fill text-green fs-6"></i>
+                         </div>
+                         <div>
+                          <span>
+                          <span className="text-secondary d-block">Advantages</span>
+                          <span className='text-900'>Placement Activities</span>
+                          </span>
+                         </div>
+                          </div>
+                        </div>
+                        </div>
+                      
+                        <div className="course-btns row mt-3">
+                          <div className="col-12 col-md-6 col-lg-6">
+                          <Link to={`/${item.seo.canonical_url}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                          </div>
+                          <div className="col-12 col-md-6 col-lg-6">
+                          <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
+                            </div>
+                         
+                         
+                        </div>
+                  </div>
+                </div>
+                <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-sm-none d-lg-block">
+                  <div className="course-right">
+                      <img src={item.courseImage} alt={item.courseImage} className="w-100" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+             
+              </>
+            ))
+          }
+           </>
             ))
           }
         </div>
         <div className="text-center">
-        <Link to="/" className=" text-decoration-none"> <button className="btn-danger  hero-btn">Browse All Courses</button></Link>
+        <Link to="/" className=" text-decoration-none"> <button className="btn-danger  hero-btn">Still  are you thinking</button></Link>
         </div>
     </div>
   )
