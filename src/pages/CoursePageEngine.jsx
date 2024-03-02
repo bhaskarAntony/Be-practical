@@ -21,8 +21,12 @@ import { Helmet } from 'react-helmet'
 import { Modal, Form, Button } from 'react-bootstrap'
 import { toast } from 'react-toastify'
 import DownloadModal from '../components/Brocher/DownloadModal'
+import { useCourseContext } from '../context/CourseContext'
 
 function CoursePageEngine() {
+  const {selectedSubCourseId, selectedCourseId} = useCourseContext()
+  const courseId = localStorage.getItem('selectedCourseId');
+  const SubCourseId = localStorage.getItem('selectedSubCourseId');
     const [courseData, setCourseData] = useState(null);
           // Another useState call
           const [showModal, setShowModal] = useState(false);
@@ -32,10 +36,10 @@ function CoursePageEngine() {
             phone: '',
             course: 'MERN', // Default course
           });
-  const { id, courseId } = useParams(); 
+  // const { id, courseId } = useParams(); 
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `https://comfortable-boot-fly.cyclic.app/api/allcourses/${courseId}/subcourses/${id}`; // Replace with your actual API endpoint
+        const apiUrl = `https://comfortable-boot-fly.cyclic.app/api/allcourses/${courseId}/subcourses/${SubCourseId}`; // Replace with your actual API endpoint
     
         axios
           .get(apiUrl)
@@ -48,7 +52,7 @@ function CoursePageEngine() {
             // Handle any errors, such as a 404 if the course with the specified ID doesn't exist
             console.error(error);
           });
-      }, [id]);
+      }, [SubCourseId]);
       useEffect(() => {
         if (courseData) {
           // document.title = courseData.courseName;

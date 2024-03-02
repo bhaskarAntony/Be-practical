@@ -21,20 +21,26 @@ import CourseCard from '../components/Coursecard/Coursecard'
 import { Helmet } from 'react-helmet'
 import DownloadModal from '../components/Brocher/DownloadModal'
 import { Tab, Tabs } from 'react-bootstrap'
+import { useCourseContext } from '../context/CourseContext'
 
 function CourseMainEngine() {
     const [courseData, setCourseData] = useState(null);
     const [showModal, setShowModal] = useState(false)
+
+    const courseId = localStorage.getItem('selectedCourseId');
   const { id } = useParams(); // Access the id parameter from the URL
+  const {selectedCourseId} = useCourseContext()
+  console.log(selectedCourseId)
   const [activeIndex, setActiveIndex] = useState(null);
 
+ 
   // Move the toggleAccordion function outside the component or declare it with useCallback
   const toggleAccordion = (index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `https://comfortable-boot-fly.cyclic.app/api/allcourses/${id}`; // Replace with your actual API endpoint
+        const apiUrl = `https://comfortable-boot-fly.cyclic.app/api/allcourses/${courseId}`; // Replace with your actual API endpoint
         const fetchData = async () => {
           try {
               const response = await axios.get(apiUrl);

@@ -124,11 +124,11 @@ function App() {
         {
           allCourses.map((item, index)=>(
            <>
-            <Route path={`/${item.seo.canonical_url}/:id`} element={<CourseMainEngine/>}/>
+            <Route path={`/${item.seo.canonical_url}`} element={<CourseMainEngine/>}/>
             {
               item.subCourses.map((item, index)=>(
                <>
-                <Route path={`/${item.seo.canonical_url}/:courseId/:id`} element={<CoursePageEngine/>}/>
+                <Route path={`/${item.seo.canonical_url}`} element={<CoursePageEngine/>}/>
                 {
                   console.log(item)
                 }

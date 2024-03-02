@@ -18,7 +18,7 @@ useEffect(() => {
                 <h4 className='text-main-danger'>{data.courseName}</h4>
             </li>
             <li className="list-group-item border-0 bg-gray2">
-                <p className='text-white'><strong className='card-single-heading text-main-danger'>Instructor: </strong>{data.instructors.name}</p>
+                {/* <p className='text-white'><strong className='card-single-heading text-main-danger'>Instructor: </strong>{data.instructors.name}</p> */}
             </li>
             <li className="list-group-item border-0 bg-gray2">
                 <p className='text-white'><strong className='card-single-heading text-main-danger'>Duration: </strong>{data.courseDuration} </p>

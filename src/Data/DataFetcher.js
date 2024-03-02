@@ -23,3 +23,4 @@ const ourCoursesApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/our
 const allCourseApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/allcourses');
 
 export { advantages, companies, trainingModule, testinomials, youtubeVideos, CoursePage, Quiz, EventsApi, homeHeroApi, BlogsApi, ourCoursesApi, allCourseApi };
+ 

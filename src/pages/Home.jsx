@@ -16,7 +16,7 @@ import Elite from '../components/Elite';
 import Funfact from '../components/Funfact';
 import OurCourses from '../components/ourCourses/OurCourses';
 import Course from '../components/courses/Course';
-import Prefer from '../components/Prefer/Prefer';
+// import Prefer from '../components/ourCourses/Prefer/Prefer';
 import Hero from '../components/hero/Hero';
 
 function Home() {

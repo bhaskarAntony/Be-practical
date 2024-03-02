@@ -5,12 +5,22 @@ import { Link } from 'react-router-dom';
 import CourseShimmer from './CourseShimmer';
 import {allCourseApi, ourCoursesApi } from '../../Data/DataFetcher';
 import DownloadModal from '../Brocher/DownloadModal';
+import { useCourseContext } from '../../context/CourseContext';
 
 function OurCourses() {
   const [loading, setLoading] = useState(true)
   const [CourseData, setCourseData] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [brocher, setBrocher] = useState("")
+
+  const { setSelectedCourseId } = useCourseContext();
+
+  const handleClick = (id) => {
+  
+    setSelectedCourseId(id);
+    localStorage.setItem('selectedCourseId', id);
+    // Navigate to the next component without using URL params
+  };
   useEffect(() => {
    const fetchData = async () => {
      try {
@@ -132,7 +142,9 @@ function OurCourses() {
                             
                                 <div className="col-12 col-md-6 col-lg-6">
                                
-                                <Link to={`/${item.seo.canonical_url}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">View Program <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                                <Link to={`/${item.seo.canonical_url}`} className="text-decoration-none" onClick={() => handleClick(item._id)}>
+                                <button className="btn-gray hero-btn">View Program <i class="bi bi-arrow-up-right mb-2"></i></button>
+                              </Link>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-6">
                                 <button className="btn-gray-outline  hero-btn fw-bold" onClick={()=>openModal(item.BrocherLink)}><i class="bi bi-download"></i> Syllubus</button>
