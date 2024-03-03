@@ -44,8 +44,8 @@ function Skills() {
                 <h1 className='heading fw-bold'>Why Choose Be-Practical?</h1>
                 <p className='mt-3 p-dark-small'>We offer unlimited access to the best courses from top trainers, providing hundreds of practical lessons in multiple fields.</p>
                 <p></p>
-                <div className="status">
-                  <div className="row video-status d-flex g-2">
+                <div className="status bg-transparent">
+                  <div className="row video-status d-flex g-2 bg-transparent">
                     <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
                       <div className="video h-100">
                         <video src={hackethon} autoPlay muted loop  onClick={()=>{player(hackethon)}} className=''></video>
