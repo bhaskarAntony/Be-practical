@@ -64,6 +64,10 @@ function OurCourses() {
               CourseData.map((item, index)=>(
                 <div className="our-course-card-wrapper" key={index}>
                     <div className="container our-course-card p-lg-5 p-md-3 p-sm-4" data-aos="fade-right">
+                    <div className="quiz-badge">
+                        take our quiz <br />
+                        <small>10% off on course</small>
+                    </div>
                     <div className="row">
                       <div className="col-12 col-sm-12 col-md-6 col-lg-7">
                         <div className="course-left">

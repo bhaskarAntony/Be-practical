@@ -48,9 +48,9 @@ const eliteProgram = [
 ]
 function EliteProgram() {
   return (
-    <div className='mt-5 bg-antique py-5'>
+    <div className='elite-progarm  mt-5 py-5'>
          <h1 className="fs-1 text-900 text-center">What is Elite Program?</h1>
-         <section className='elite-progarm container py-5'>
+         <section className='container-fluid py-5'>
        
        <div className="row">
          {
@@ -58,7 +58,7 @@ function EliteProgram() {
                  <div className="col-6 col-md-4 mb-3">
                      <div className="elite-program-card h-100">
                         {/* <img src={item.icon} alt="icon" /> */}
-                        <i className={`fs-1 bi bi-${item.icon}`}></i>
+                        <i className={`display-2 bi bi-${item.icon}`}></i>
                          <h1 className="fs-4  text-black  mb-3 fw-bold">{item.title}</h1>
                          <p className="fs-5">{item.content}</p>
                      </div>

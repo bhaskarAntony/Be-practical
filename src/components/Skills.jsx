@@ -28,7 +28,7 @@ function Skills() {
 
 
   return (
-    <section className=' skillsmain overflow-hidden bg-gray2 mb-4 text-white bg-texture'>
+    <section className='skillsmain overflow-hidden  mb-4 text-dark'>
       <div className=" skillsecond">
       {/* <div className="section-blur"></div>
         <div className="section-blur2"></div> */}
@@ -40,8 +40,8 @@ function Skills() {
           </div>
           <div className="col-12 col-md-12 col-lg-6 p-0">
             <div className="right">
-              <div className="text-right">
-                <h1 className='heading'>Why Choose Be-Practical?</h1>
+              <div className="text-right p-3">
+                <h1 className='heading fw-bold'>Why Choose Be-Practical?</h1>
                 <p className='mt-3 p-dark-small'>We offer unlimited access to the best courses from top trainers, providing hundreds of practical lessons in multiple fields.</p>
                 <p></p>
                 <div className="status">
