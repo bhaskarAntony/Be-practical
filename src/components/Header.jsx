@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { CoursePage } from '../Data/DataFetcher';
 import { Shimmer } from 'react-shimmer';
-import EliteScroller from './eliteScroll/EliteScroller';
 
 function Header() {
   const [show, setShow] = useState(false);
@@ -152,28 +151,28 @@ function Header() {
         </a>
         <ul class="dropdown-menu p-0">
         <li class="nav-item dropend list-group-item">
-            <a class="nav-link dropdown-toggle dropdown-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               FullStack Devolopment
             </a>
             <ul class="dropdown-menu list-group">
-              <li className='list-group-item'><a class="dropdown-item" href="/mern-fullstack">MERN Fullstack Devolopment</a></li>
-              <li className='list-group-item'><a class="dropdown-item" href="/python-fullstack">Python Fullstack Devolopment</a></li>
-              <li className='list-group-item'><a class="dropdown-item" href="/java-fullstack">Java Fullstack Devolopment</a></li>
+              <li className='list-group-item'><a class="nav-link" href="/mern-fullstack">MERN Fullstack Devolopment</a></li>
+              <li className='list-group-item'><a class="nav-link" href="/python-fullstack">Python Fullstack Devolopment</a></li>
+              <li className='list-group-item'><a class="nav-link" href="/java-fullstack">Java Fullstack Devolopment</a></li>
             </ul>
           </li>
-          <li className='list-group-item'><a class="dropdown-item" href="/data-science">Data Science</a></li>
-          <li class="nav-item dropend list-group-item">
-            <a class="nav-link dropdown-toggle dropdown-item p-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li className='list-group-item'><a class="nav-link" href="/data-science">Data Science</a></li>
+          <li class="nav-item dropend list-group-item p-0">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Cloud Computing
             </a>
             <ul class="dropdown-menu list-group">
-              <li className='list-group-item'><a class="dropdown-item" href="/mern-fullstack">Adwance Cloud Computing</a></li>
-              <li className='list-group-item'><a class="dropdown-item" href="/python-fullstack">CloudOops</a></li>
+            <li className='list-group-item'><a class="nav-link" href="/mern-fullstack">Adwanced CloudOops</a></li>
+              <li className='list-group-item'><a class="nav-link" href="/python-fullstack">CloudOops</a></li>
              
             </ul>
           </li>    
-          <li className='list-group-item'><a class="dropdown-item" href="/digital-marketing">Digital Marketing</a></li>   
-          <li className='list-group-item'><a class="dropdown-item" href="#">Job Oriented Courses</a></li>   
+          <li className='list-group-item'><a class="nav-link" href="/digital-marketing">Digital Marketing</a></li>   
+          <li className='list-group-item'><a class="nav-link" href="#">Job Oriented Courses</a></li>   
         </ul>
       </li>
       <li class="nav-item dropdown">

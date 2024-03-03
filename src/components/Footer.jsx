@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/footer.css'  
-import { CoursePage } from '../Data/DataFetcher';
+import { allCourseApi } from '../Data/DataFetcher';
 import { Shimmer } from 'react-shimmer';
 import { Link } from 'react-router-dom';
 function Footer() {
@@ -9,9 +9,9 @@ function Footer() {
     useEffect(() => {
      const fetchData = async () => {
        try {
-         const data = await CoursePage;
+         const data = await allCourseApi;
          setLoading(false)
-         setCourseData(data);
+         setCourseData(data.courses);
          console.log("data", data)
        } catch (error) {
         setLoading(true)
@@ -21,6 +21,9 @@ function Footer() {
   
      fetchData();
    }, []);
+   const handleClick = (id) => {
+    localStorage.setItem('selectedCourseId', id);
+  };
   return (
     <>
     <div className="footer-wave ">
@@ -53,9 +56,8 @@ function Footer() {
                             ):(
                         
                             CourseData.map((item, index)=>(
-                            
                             <li>
-                                <Link to={`/course/${item.courseName}/${item._id}`}  className='nav-link'>{item.courseName}<i class="bi bi-arrow-right"></i></Link>
+                                <Link to={`/${item.seo.canonical_url}`}  className='nav-link' onClick={()=>handleClick(item._id)}>{item.courseName}<i class="bi bi-arrow-right"></i></Link>
                             </li>
                             )))
                         }
