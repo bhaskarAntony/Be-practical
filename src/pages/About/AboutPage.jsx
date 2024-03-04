@@ -18,8 +18,8 @@ function AboutPage() {
         <div className="row align-items-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center">
                 <div className="about-hero-text p-lg-5 p-3">
-                    <h4 className='card-heading text-main-danger'>THE BEST TRAINING INSTITUTE</h4>
-                    <h1 className='heading text-900'>Be Practical Tech Soulutions</h1>
+                    <h1 className='card-heading text-main-danger'>About Us</h1>
+                    <h2 className='heading text-900'>Software Training Institute in Bangalore</h2>
                     <p className='p-large1 text-secondary'><ReadMore text={"At Be Practical Tech Solutions, we understand the importance of staying up to date with the latest technology trends. That’s why we offer comprehensive training in various tech-related fields, including information technology (IT). Our trainers are highly skilled and have a deep understanding of what it takes to succeed in the IT field. Plus, we’re using cutting-edge technology to help our students achieve their career goals."} maxLength={100}/></p>
                     <div className="row">
                         <div className="col-12 col-md-6 col-lg-6">

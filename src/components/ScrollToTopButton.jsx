@@ -2,10 +2,16 @@
 
 import React, { useState, useEffect } from 'react';
 import '../styles/ScrollToTopButton.css'; // Create a CSS file for styling
+import DialogModel from './DialogModel';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [prevScrollY, setPrevScrollY] = useState(0);
+  const [showModal, setShowModal] = useState(false)
+  
+  const openModal = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
 
   // Function to scroll to the top of the page
   const scrollToTop = () => {
@@ -40,11 +46,15 @@ const ScrollToTopButton = () => {
 
 <button
       className={`scroll-to-top ${isVisible ? 'visible' : ''} btn-danger`}
-      onClick={scrollToTop}
+      onClick={openModal}
     >
      Apply Now <i class="bi bi-chevron-double-right"></i>
     </button>
+    <DialogModel
+        show={showModal}
+        onHide={handleClose}/>
    </div>
+   
   );
 };
 
