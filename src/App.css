@@ -106,6 +106,38 @@
   background-size: cover;
 
 }
+.r-card{
+  position: relative;
+  top: 0;
+}
+.master-class-band{
+  position: absolute;
+  left: 0;
+  top: 5px;
+  z-index: 100;
+  width: 100%;
+  transform: scale(1.12);
+}
+.master-class-band::before{
+  content: "";
+  position: absolute;
+  border: 18.6px;
+  border-color: transparent transparent rgb(103, 7, 20) transparent;
+  border-style: solid;
+  left: 8px;
+  top: 14.3px;
+  transform: rotate(45deg);
+}
+.master-class-band::after{
+  content: "";
+  position: absolute;
+  border: 20px;
+  border-color: transparent  rgb(103, 7, 20) transparent transparent;
+  border-style: solid;
+  top: 12px;
+  transform: rotate(44deg);
+  right: 7.4px !important;
+}
 .bg-antique{
   background-color: var(--antique-white) !important;
 }

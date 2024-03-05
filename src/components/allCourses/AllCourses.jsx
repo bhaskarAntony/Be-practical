@@ -26,6 +26,11 @@ function AllCourses() {
     useEffect(() => {
         Aos.init(); // Initialize AOS
       }, []);
+      const handleClick = (id) => {
+  
+        localStorage.setItem('selectedCourseId', id);
+        // Navigate to the next component without using URL params
+      };
   return (
     <div className='container-fluid our-courses p-lg-5 p-3'>
         <h1 className="heading"><i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i>Our Courses<i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i></h1>
@@ -112,7 +117,7 @@ function AllCourses() {
                       
                         <div className="course-btns row mt-3">
                           <div className="col-12 col-md-6 col-lg-6">
-                          <Link to={`/${item.seo.canonical_url}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                          <Link to={`/${item.seo.canonical_url}`} className=" text-decoration-none" onClick={()=>handleClick(item._id)}> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                           </div>
                           <div className="col-12 col-md-6 col-lg-6">
                           <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
@@ -212,7 +217,7 @@ function AllCourses() {
                       
                         <div className="course-btns row mt-3">
                           <div className="col-12 col-md-6 col-lg-6">
-                          <Link to={`/${item.seo.canonical_url}/${item._id}`} className=" text-decoration-none"> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                          <Link to={`/${item.seo.canonical_url}`} className=" text-decoration-none" onClick={()=>handleClick(item._id)}> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                           </div>
                           <div className="col-12 col-md-6 col-lg-6">
                           <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
