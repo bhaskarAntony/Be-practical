@@ -38,7 +38,7 @@ const FaqSection = (props) => {
                   type="button"
                   onClick={() => handleAccordionClick(index)}
                 >
-                  <i className={`bi ${activeIndex === index ? 'bi-dash fs-2' : 'bi-plus fs-2'}`}></i>
+                  <i className={`bi ${activeIndex === index ? 'bi-dash fs-2' : 'bi-plus fs-2'} text-main-danger`}></i>
                   {faq.question}
                 </div>
               </h4>

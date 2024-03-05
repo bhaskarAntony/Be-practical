@@ -5,7 +5,7 @@ import Adwantages from '../components/advantages/Adwantages'
 import YoutubeVideos from '../components/YoutubeVideos'
 import Feedback from '../components/Feedback'
 import LandDreamJob from '../components/LandDreamJob'
-import {useParams } from 'react-router-dom'
+import {Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import FaqSection from '../components/FaqSection'
 import Module from '../components/Module'
@@ -129,7 +129,9 @@ function CoursePageEngine() {
                   </div>
                   <div className="row align-items-center mt-5">
                         <div className="col-12 col-md-7 mb-2">
-                        <button className="btn-prm  py-3  hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5 fw-bold' onClick={openModal}>Apply Now</span> <br /> <small className='btn-text'>Hurry! 200 People have already applied</small></button>
+                        <Link to={'/book-demo'}>
+                        <button className=" btn-danger px-5 py-3 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100"><span className='fs-5'>Attend Quiz</span> <br /> <small>Get 10% Discount On This Course</small></button>
+                        </Link>
                         </div>
                         <div className="col-12 col-md-5 mb-2">
                         <button className="btn--sec-lg bg-white text-dark py-3 hero-btn  align-items-center gap-2 justify-content-center w-100" onClick={downloadBrochure}><span className='fs-5 fw-bold'>Download Syllubus</span><br /><small className='btn-text'>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill"></i></small></button>

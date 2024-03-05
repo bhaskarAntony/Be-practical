@@ -120,7 +120,7 @@ function App() {
         <Route path='/register' element={<RegistrationPage/>}/>
         <Route path='/book-demo' element={<BookDemo/>}/>
         <Route path='/all-testinomials' element={<AllTestimomials/>}/>
-        <Route path='/course/:course/:id' element={<CoursePageEngine/>}/>
+       
         {
           allCourses.map((item, index)=>(
            <>

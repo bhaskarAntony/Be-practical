@@ -192,7 +192,10 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .text-main-danger{
-  color: var(--red) !important;
+  background: linear-gradient(to right, #fe506d, #fac3a3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .bg-danger-2{
   background:var(--red) !important;
@@ -218,6 +221,10 @@
   background-size: cover;
 }
 
+.bg-students{
+  background: url(https://img.freepik.com/free-photo/group-students-posing-with-notepads_23-2147666699.jpg?t=st=1709641132~exp=1709644732~hmac=e4ed2dff3ce8293c450164db9b88f6cc741499144be1cc8044eaf381e2f00dd1&w=740) no-repeat center bottom;
+  background-size: cover;
+}
 .bg-line-banner{
   background: url('./images/canva-banner.png') no-repeat center;
   background-size: cover;
@@ -264,11 +271,10 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 23px;
-  background-color: var(--red);
+  background: linear-gradient(to right, var(--red), #fac3a3);
   border-style: none;
   border: 1px solid transparent !important;
   border-radius: 10px;
-  letter-spacing: 1.6px;
   color: #fff;
   overflow: hidden;
   /* box-shadow: 0px 8px 10px #f0870f80; */

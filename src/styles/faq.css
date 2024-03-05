@@ -8,7 +8,6 @@
 }
 .course-faq-question [class*="bi-"]{
     background-color: var(--blue-light);
-    color: var(--red);
     width: 30px;
     display: flex;
     align-items: center;
