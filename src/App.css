@@ -29,7 +29,7 @@
     --purple: #6f42c1;
     --pink: #e83e8c;
     /* --red: #fc6838; */
-    --red:#fc6838;
+    --red:#ff7a4f;
     /* --orange: #fc6838; */
     --orange:#f0870f;
     --yellow: #ffc107;
@@ -38,7 +38,7 @@
     --cyan: #17a2b8;
     --white: #fff;
     --gray: #6c757d;
-    --gray-dark: #343a40;
+    --gray-dark: #202937;
     --faq-dark: #0f1114;
     --primary: #007bff;
     --secondary: #6c757d;
@@ -52,8 +52,8 @@
     --green: #002935;
     --yellow: #F9C02F;
     --pink: #FFEAEE;
-    --gray2:#1a1f27;
-    --gray3:#2e3643;
+    --gray2:#1a2434;
+    --gray3:#2c3749;
     /* --gray3:#19333b; */
 
     --gray4:#4b586c;
@@ -265,19 +265,20 @@
   transition: 0.8s;
 }
 .btn-danger {
-  position: relative;
-  border: none;
-  padding: 15px 20px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 23px;
-  background: linear-gradient(to right, var(--red), #fd8c4a);
-  border-style: none;
-  border: 1px solid transparent !important;
-  border-radius: 10px;
-  color: #fff;
-  overflow: hidden;
   /* box-shadow: 0px 8px 10px #f0870f80; */
+  color: #fff;
+  background: #ff7a4f;
+  border: none;
+  padding: 1.125rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  border: none;
+}
+.btn-danger:hover{
+background-color: #fb7244;
 }
 .shimmer-btn{
     overflow: hidden;
@@ -359,12 +360,6 @@
   to {
     left: 100%;
   }
-}
-.btn-danger:hover{
-  background: transparent;
-  border: 1px solid var(--red);
-  color: var(--red);
-  transition: all .3s cubic-bezier(.165,.84,.44,1);
 }
 /* all text styles  */
 .heading{
