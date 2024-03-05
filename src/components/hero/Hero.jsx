@@ -108,7 +108,7 @@ function Hero() {
               </div>
             </div>
           </div>
-          <div className="weareon d-flex gap-3 mt-3 justsify-content-center">
+          <div className="weareon d-flex gap-3 mt-3 justsify-content-center align-items-center">
             <div className="google" data-aos="zoom-in-up">
              <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Deccan_Herald_logo.svg" alt="we are on deccan-herald" />
             </div>

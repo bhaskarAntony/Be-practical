@@ -58,6 +58,7 @@
 }
 .google{
     flex: 1;
+  
     border: 2px solid var(--black-3);
     background-color: var(--white);
     color: #151907;
@@ -70,9 +71,10 @@
 }
 
 .weareon img{
-    width: 150px;
-    height: 100px;
-    object-fit: contain;
+   width: 100%;
+   height: 100%;
+    object-fit: cover;
+    
 }
 @media (max-width:768px){
     .main-hero-parent{
