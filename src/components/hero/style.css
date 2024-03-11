@@ -1,5 +1,5 @@
 .main-hero{
-    background-color: var(--dark-orange);
+    /* background-color: var(--dark-orange); */
     transition: 1s;
    /* border-radius: 30px; */
 }
@@ -14,10 +14,6 @@
 }
 .main-scroller-hero{
     position: relative;
-}
-.hero-right  img{
-    /* filter: grayscale(100%); */
-    transform: translateY(-50px);
 }
 .image-text{
     position: absolute;
@@ -78,6 +74,17 @@
     object-fit: cover;
     
 }
+.hero-large-one{
+    height: 300px;
+    object-fit: cover;
+}
+.hero-points li{
+    list-style-image: url('../../images/sparkle.png');
+    list-style-position: inside;
+}
+.hero-info{
+    background-color: #9a9a9a2c;
+}
 @media (max-width:768px){
     .main-hero-parent{
         padding: 0px !important;
@@ -90,5 +97,8 @@
         width: 90%;
         left: 10px;
         bottom: 100px;
+    }
+    .hero-large-one{
+        height: fit-content !important;
     }
 }

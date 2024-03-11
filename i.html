@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #result{
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+        }
+        .container{
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .left{
+            flex: 1;
+            padding: 10px;
+            background-color: black;
+            height: 100vh;
+            overflow: auto;
+           
+        }
+        .left::-webkit-scrollbar, .middle::-webkit-scrollbar{
+            display: none;
+        }
+        .middle{
+            flex: 3;
+            height: 100vh;
+            overflow: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(28, 28, 28);
+            padding: 20px;
+        }
+        input{
+            width: 100%;
+            accent-color: rgb(255, 170, 0);
+            margin-bottom: 10px;
+        }
+        .color{
+            display: flex;
+            gap: 10px;
+        }
+        .heading{
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-decoration: underline;
+            text-underline-offset: 10px;
+        }
+        label{
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 3px;
+        }
+        .box{
+            background-color: #1f1e1e46;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            color: #fff;
+        }
+        header{
+            padding: 20px;
+            color: #fff;
+            background-color: #151515;
+            border-bottom: 1px solid #fff;
+            position: sticky;
+            top: 0;
+        }
+
+        .right{
+            flex: 2;
+            background-color: #151515;
+        }
+        .code{
+            background-color: #000;
+            width: 100%;
+            min-height: 300px;
+            color: rgb(226, 0, 64);
+            font-size: 1rem;
+            line-height: 2;
+            padding: 10px;
+        }
+        .code span{
+            color: #007c48 !important;
+        }
+        .code label{
+            color: rgb(255, 187, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Make Design</h3>
+    </header>
+    <div class="container">
+        <div class="left">
+           <div class="box">
+            <p class="heading">Border radius</p>
+            <label for="">top</label>
+            <input type="range" name="" id="r1" min="0" max="100" oninput="apply()">
+            <label for="">right</label>
+            <input type="range" name="" id="r2" min="0" max="100" oninput="apply()">
+            <label for="">bottom</label>
+            <input type="range" name="" id="r3" min="0" max="100" oninput="apply()">
+            <label for="">Left</label>
+            <input type="range" name="" id="r4" min="0" max="100" oninput="apply()">
+           </div>
+          <div class="box">
+              
+            <p class="heading">Background color</p>
+          <div class="color">
+            <input type="color" name="" id="c1" oninput="apply()">
+            <input type="color" name="" id="c2" oninput="apply()">
+          </div>
+            <label for="">Angle</label>
+            <input type="range" name="" id="deg" min="0" max="360" oninput="apply()">
+          </div>
+        
+          <div class="box">
+            <p class="heading">Width</p>
+            <input type="range" name="" id="width" min="0" max="1000" oninput="apply()">
+          </div>
+          <div class="box">
+            <p class="heading">Height</p>
+
+            <input type="range" name="" id="height" min="0" max="1000" oninput="apply()">
+          </div>
+        
+          <div class="box">
+            <label for="">Border</label>
+        
+         
+            <input type="range" name="" id="bw" min="0" max="100" oninput="apply()">
+          <div class="color">
+            <input type="color" name="" id="bc" oninput="apply()">
+            <select name="" id="btype" oninput="apply()">
+                <option value="solid">solid</option>
+                <option value="groove">groove</option>
+                <option value="ridge">ridge</option>
+                <option value="outset">outset</option>
+                <option value="inset">inset</option>
+                <option value="double">double</option>
+                <option value="dashed">dashed</option>
+                <option value="dotted">dotted</option>
+            </select>
+          </div>
+          </div>
+        </div>
+
+        <div class="middle">
+            <div id="result">
+
+            </div>
+        </div>
+        <div class="right">
+                <div class="code" id="code">
+
+                </div>
+        </div>
+    </div>
+    
+   
+    <script>
+        let result = document.getElementById('result');
+
+        function apply(){
+            let r1 = document.getElementById('r1').value;
+            let r2 = document.getElementById('r2').value;
+            let r3 = document.getElementById('r3').value;
+            let r4 = document.getElementById('r4').value;
+            let c1 = document.getElementById('c1').value;
+            let c2 = document.getElementById('c2').value;
+            let deg = document.getElementById('deg').value;
+            let bc = document.getElementById('bc').value;
+            let bw = document.getElementById('bw').value;
+            let btype = document.getElementById('btype').value;
+
+            let width = document.getElementById('width').value;
+            let height = document.getElementById('height').value;
+            let code = document.getElementById('code');
+            result.style.borderRadius = `${r1}px ${r2}px ${r3}px ${r4}px`;
+            result.style.background = `linear-gradient(${deg}deg, ${c1}, ${c2})`
+            result.style.height = `${height}px`
+            result.style.width = `${width}px`
+            result.style.border = `${bw}px ${btype} ${bc}`
+            code.innerHTML = `
+            <label> .box{ <br></label>
+            <span> background:</span>linear-gradient(${deg}deg, ${c1}, ${c2});<br>
+             <span> width:</span>${width}px; <br>
+             <span> height:</span>:${height}px;<br>
+             <span> border-radius:</span>:${r1}px ${r2}px ${r3}px ${r4}px;<br>
+             <span> border:</span>:${bw}px ${btype} ${bc};<br>
+           <label> }</label>
+            `
+
+        }
+    </script>
+</body>
+</html>
