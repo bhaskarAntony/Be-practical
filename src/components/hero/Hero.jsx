@@ -83,7 +83,7 @@ function Hero() {
               <h1 className="display-3 fw-bold text-black" data-aos="fade-up">High Paid Salaries & Continuous Career <span className="">Growth</span>
           </h1>
           <p className="fs-5" data-aos="fade-up">With all your courses, workshops, and memberships in one place, you can sell faster, easier, and save up to 80% of your expenses.</p>
-          <ul className='hero-points d-flex flex-wrap gap-3 p-0'>
+          <ul className='hero-points d-flex flex-wrap gap-3 p-0 flex-column flex-md-row'>
             <li className='fs-6'>Industry expert trainers</li>
             <li className='fs-6'>Job oriented syllabus</li>
             <li className='fs-6'>Flexible timings</li>
@@ -92,8 +92,8 @@ function Hero() {
             <li className='fs-6'>ndustry recognized certificate</li>
           </ul>
        <div className="d-flex gap-3 mt-4">
-       <button className='btn-danger mb-5' onClick={openModal}>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
-          <button className='mb-5  btn-main-outline-dark' onClick={openModal}>Free Master Classes<i class="bi bi-chevron-double-right"></i></button>
+       <button className='btn-danger mb-5 hero-btn' onClick={openModal}>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
+          <button className='mb-5  btn-main-outline-dark  hero-btn' onClick={openModal}>Free Master Classes<i class="bi bi-chevron-double-right"></i></button>
        </div>
           {/* <div className="social-container mt-5 d-flex gap-2">
             <div className="google px-3 w-100 p-2" data-aos="zoom-in-right">
