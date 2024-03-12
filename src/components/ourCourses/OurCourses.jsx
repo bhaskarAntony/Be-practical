@@ -147,11 +147,11 @@ function OurCourses() {
                                 <div className="col-12 col-md-6 col-lg-6">
                                
                                 <Link to={`/${item.seo.canonical_url}`} className="text-decoration-none" onClick={() => handleClick(item._id)}>
-                                <button className="btn-gray hero-btn">View Program <i class="bi bi-arrow-up-right mb-2"></i></button>
+                                <button className="btn  w-100 p-3 btn-dark hero-btn">View Program <i class="bi bi-arrow-up-right mb-2"></i></button>
                               </Link>
                                 </div>
                                 <div className="col-12 col-md-6 col-lg-6">
-                                <button className="btn-gray-outline  hero-btn fw-bold" onClick={()=>openModal(item.BrocherLink)}><i class="bi bi-download"></i> Syllubus</button>
+                                <button className="btn btn-outline-dark w-100 p-3  hero-btn fw-bold" onClick={()=>openModal(item.BrocherLink)}><i class="bi bi-download"></i> Syllubus</button>
                                   </div>
                                
                                

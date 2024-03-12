@@ -58,8 +58,8 @@ function EliteProgram() {
                  <div className="col-6 col-md-4 mb-3">
                      <div className="elite-program-card h-100 p-2 p-md-3">
                         {/* <img src={item.icon} alt="icon" /> */}
-                        <i className={`display-2 mb-3 d-block text-green bi bi-${item.icon}`}></i>
-                         <h1 className="fs-5  text-green  mb-1 fw-bold">{item.title}</h1>
+                        <i className={`display-2 mb-3 d-block text-dark bi bi-${item.icon}`}></i>
+                         <h1 className="fs-5  text-dark  mb-1 fw-bold">{item.title}</h1>
                          <p className="fs-6">{item.content}</p>
                      </div>
                   </div>

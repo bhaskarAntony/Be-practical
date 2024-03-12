@@ -32,25 +32,7 @@
     --red:#ff7a4f;
     /* --orange: #fc6838; */
     --orange:#f0870f;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #202937;
-    --faq-dark: #0f1114;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --white: #fff;
-    --black: #000;
-    --green: #002935;
-    --yellow: #F9C02F;
+
     --pink: #FFEAEE;
     --gray2:#1a2434;
     --gray3:#2c3749;
@@ -61,17 +43,7 @@
     --gold:radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),
   radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
   --antique-white: #fce7cf;
-    --black-3: #181818;
-    --dark-grey: #b0b0b0;
-    --black: #301b03;
     --dark-orange: #fc6838;
-    --saddle-brown: #905109;
-    --black-5: black;
-    --sandy-brown: #f6b76f;
-    --black-2: #1d1d1d;
-    --gainsboro: #e7e7e7;
-    --white-smoke: #f1f1f1;
-    --black-4: #101010;
     --grey: #818181;
     --white: white;
     --dim-grey: #4a4a4a;

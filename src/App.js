@@ -92,8 +92,8 @@ function App() {
         null
       ) : (
           <>
-     <TawkToWidget/>
-     {/* <ZohoChat/> */}
+     {/* <TawkToWidget/> */}
+     <ZohoChat/>
      {/* <Whatsapp/> */}
      
     

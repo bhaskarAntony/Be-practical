@@ -83,17 +83,29 @@ function Hero() {
               <h1 className="display-3 fw-bold text-black" data-aos="fade-up">High Paid Salaries & Continuous Career <span className="">Growth</span>
           </h1>
           <p className="fs-5" data-aos="fade-up">With all your courses, workshops, and memberships in one place, you can sell faster, easier, and save up to 80% of your expenses.</p>
-          <ul className='hero-points d-flex flex-wrap gap-3 p-0 flex-column flex-md-row'>
+          {/* <ul className='hero-points d-flex flex-wrap gap-3 p-0 flex-column'>
             <li className='fs-6'>Industry expert trainers</li>
             <li className='fs-6'>Job oriented syllabus</li>
             <li className='fs-6'>Flexible timings</li>
             <li className='fs-6'>Corporate style teaching</li>
             <li className='fs-6'>Real-time Project</li>
             <li className='fs-6'>ndustry recognized certificate</li>
-          </ul>
-       <div className="d-flex gap-3 mt-4">
-       <button className='btn-danger mb-5 hero-btn' onClick={openModal}>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
-          <button className='mb-5  btn-main-outline-dark  hero-btn' onClick={openModal}>Free Master Classes<i class="bi bi-chevron-double-right"></i></button>
+          </ul> */}
+      
+         <div className="weareon d-flex gap-3 mt-3 justsify-content-center align-items-center">
+            <div className="google w-img" data-aos="zoom-in-up">
+             <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Deccan_Herald_logo.svg" alt="we are on deccan-herald" />
+            </div>
+            <div className="google w-img" data-aos="zoom-in-up">
+              <img src="https://bepractical.s3.us-east-2.amazonaws.com/times-logo.png" alt="we are on hindustan times" />
+            </div>
+            <div className="google w-img" data-aos="zoom-in-up">
+             <img src="https://bepractical.s3.us-east-2.amazonaws.com/mid-day-logo.png" alt="we are on mid-day" />
+            </div>
+          </div>
+          <div className="d-flex gap-3 mt-4 flex-wrap">
+       <button className='btn-danger hero-btn' onClick={openModal}>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
+          <button className='btn btn-outline-dark p-3 hero-btn' onClick={openModal}>Free Master Classes<i class="bi bi-chevron-double-right"></i></button>
        </div>
           {/* <div className="social-container mt-5 d-flex gap-2">
             <div className="google px-3 w-100 p-2" data-aos="zoom-in-right">
@@ -119,17 +131,7 @@ function Hero() {
               </div>
             </div>
           </div> */}
-          {/* <div className="weareon d-flex gap-3 mt-3 justsify-content-center align-items-center">
-            <div className="google w-img" data-aos="zoom-in-up">
-             <img src="https://upload.wikimedia.org/wikipedia/en/d/d7/Deccan_Herald_logo.svg" alt="we are on deccan-herald" />
-            </div>
-            <div className="google w-img" data-aos="zoom-in-up">
-              <img src="https://bepractical.s3.us-east-2.amazonaws.com/times-logo.png" alt="we are on hindustan times" />
-            </div>
-            <div className="google w-img" data-aos="zoom-in-up">
-             <img src="https://bepractical.s3.us-east-2.amazonaws.com/mid-day-logo.png" alt="we are on mid-day" />
-            </div>
-          </div> */}
+        
               </div>
             </div>
             <div className="col-12 col-md-6 p-0">
@@ -179,10 +181,10 @@ function Hero() {
                     </div>
                     <video src={heroVideo}  autoPlay muted loop className='w-100 hero-large-one rounded-4'></video>
                     <div className="row my-3">
-                      <div className="col-6">
+                      <div className="col-6 d-none d-md-block">
                       <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241221.jpg?t=st=1710158771~exp=1710162371~hmac=492da64f760f0c10f296c90526d733fd0c1b90686e24202cffabe4e962e85f21&w=740" alt=""  className='w-100 rounded-3'/>
                       </div>
-                      <div className="col-6">
+                      <div className="col-6 d-none d-md-block">
                       <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241221.jpg?t=st=1710158771~exp=1710162371~hmac=492da64f760f0c10f296c90526d733fd0c1b90686e24202cffabe4e962e85f21&w=740" alt=""  className='w-100 rounded-3'/>
                       </div>
                       <div className="col-12">
