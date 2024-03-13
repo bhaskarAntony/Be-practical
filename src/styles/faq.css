@@ -23,6 +23,5 @@
     position: absolute;
     bottom: 20px;
     right: 10px;
-    /* background: var(--green); */
-    background-color: #0c0c0c;
+    background: var(--green);
 }
