@@ -3,7 +3,7 @@
     padding: 20px;
     color: #ffffff;
     overflow: hidden;
-    background-color:var(--gray2);
+    background-color:#0c0c0c;
 
 }
 .left{
@@ -17,13 +17,12 @@
     font-size: 1em;
 }
 .m1 ul{
-    padding: 15px;
+    padding: 20px 0px;
     list-style-type: none;
 }
 .m1 ul li a{
     text-decoration: none;
     color: #ffffff;
-    letter-spacing: 1px;
     font-size: 1em;
 
 }
@@ -103,7 +102,6 @@
     color: var(--white-color);
     text-decoration: none;
     font-size: 1em;
-    letter-spacing: 1px;
 }
 .right ul li{
     margin: 10px;

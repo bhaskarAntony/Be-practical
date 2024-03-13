@@ -1,6 +1,6 @@
 
   .youtube-container{
-    background-color: #ffffff;
+    background-color: #0c0c0c;
     /* padding: 30px 10px; */
   }
 .youtube-card{
@@ -8,6 +8,7 @@
     overflow: hidden;
     border-top: 4px solid var(--red);
     min-height: 450px;
+    background-color: #3737376a !important;
 }
 .youtube-header{
     position: relative !important;

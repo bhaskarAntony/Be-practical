@@ -1,7 +1,6 @@
-.training-container{}
+/* .training-container{}
 .training-card{
     padding: 10px;
-    /* box-shadow: var( --green-shadow); */
     min-height: 150px;
     background-color: #6b6b6b90;
     color: #fff;
@@ -42,7 +41,34 @@
 @media (max-width:768px){
     .training-card{
         min-height: fit-content;
-        /* display: flex; */
+        
     }
 
+} */
+.training-container{
+    background:#0c0c0c;
+    min-height: 80vh;
+    color: #fff;
+}
+.accordion-item .icon{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background-color: #49494950;
+    margin-right: 10px;
+    font-size: 2rem;
+}
+.accordion-button, .accordion-item{
+    background-color: transparent !important;
+    color: #fff !important;
+   
+}
+.accordion-button:focus{
+    box-shadow: none !important;
+}
+.accordion-button:after{
+    mix-blend-mode: multiply;
 }

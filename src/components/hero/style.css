@@ -101,6 +101,6 @@
         bottom: 100px;
     }
     .hero-large-one{
-        height: fit-content !important;
+        height: 200px !important;
     }
 }
