@@ -107,7 +107,7 @@ function CourseMainEngine() {
         <title>{courseData.seo?.title}</title>
         <meta name="description" content={courseData.seo?.description} />
       </Helmet>
-    <div className="course-hero container-fluid p-0 py-3 bg-texture bg-gray2 border-b ">
+    <div className="course-hero container-fluid p-0 py-3 bg-texture  border-b ">
         <div className="row align-items-center">
             <div className="col-12 col-md-7 col-lg-7">
                 <div className="course-hero-left p-lg-5 p-3">

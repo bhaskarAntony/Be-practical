@@ -4,7 +4,7 @@ import happy_student from '../images/happy-student.avif'
 
 function LandDreamJob() {
   return (
-   <div className='px-lg-5  p-3 py-5 container-fluid bg-gray2 bg-texture text-center'>
+   <div className='px-lg-5  p-3 py-5 container-fluid  bg-texture text-center' style={{backgroundColor:"#0c0c0c"}}>
     
     <div>
       <h1 className="fs-1 text-main-danger w-100 text-900 mb-4 mt-5">
