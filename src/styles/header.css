@@ -94,7 +94,10 @@
     }
   }
   .company-list-item, .mobile-list-item{
-    background: var(--gray2) !important;
-    color: #fff !important;
+    
+  }
+  .mobile-list-item .nav-link{
+    padding: 10px !important;
+    font-size: 1rem !important;
   }
 

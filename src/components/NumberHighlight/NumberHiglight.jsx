@@ -29,7 +29,7 @@ function NumberHiglight() {
             <div className="col-6 col-md-6 col-lg-3">
             <div className="about-h-card border-b text-center bg-gray4 rounded-5 p-3">
               <div className="d-flex justify-content-center">
-              <p className="fs-1 text-900 bg-round text-main-danger">{item.number}</p>
+              <p className="fs-1 text-900 bg-round bg-danger-2 text-white">{item.number}</p>
               </div>
                 <p className="fs-4 text-900">{item.title}</p>
             </div>

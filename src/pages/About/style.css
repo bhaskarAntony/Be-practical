@@ -1,9 +1,7 @@
 .service-card-body{
     min-height: 300px;
 }
-.about-hero img{
-    mix-blend-mode: difference;
-}
+
 .about-hero{
     min-height: 100vh;
 }
