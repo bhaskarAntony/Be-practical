@@ -27,7 +27,7 @@ function DownloadModal(props) {
         e.preventDefault();
     
         try {
-          const response = await axios.post('https://comfortable-boot-fly.cyclic.app/course/register', formData);
+          const response = await axios.post('http://localhost:3300/course/register', formData);
     
           if (response.status === 200) {
             // Handle successful form submission

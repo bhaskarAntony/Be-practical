@@ -17,6 +17,12 @@
 .moreblogs-container::-webkit-scrollbar{
     display: none;
 }
+.blog-title{
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
+    text-overflow:ellipsis !important;
+}
 @media (max-width:768px){
     .main-blog img{
         width: 100%;

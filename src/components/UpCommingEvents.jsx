@@ -29,12 +29,12 @@ function UpcomingEvents({ events, heading, type }) {
               </div>
               <div className="col-12 col-md-12 col-lg-6">
                 <div className="event-text p-3">
-              <h3 className="fs-3 text-900 text-white">{event.title}</h3>
+              <h3 className="fs-4 text-900 text-white">{event.title}</h3>
               <h5 className='bg-danger-2 text-white p-2'>{event.tag}</h5>
               <h4 className="mt-3 text-main-danger">What you will Learn</h4>
-              <p className='text-white fs-5'>{event.topic}</p>
-              <p className="mt-lg-3 text-white"><i class="bi bi-calendar3 mx-2 text-green"></i>{event.date}</p>
-              <p className="mt-lg-3 text-white"><i class="bi bi-stopwatch mx-2 text-yellow"></i>{event.time}</p>
+              <p className='text-white fs-6'>{event.topic}</p>
+              <p className="mt-lg-3 text-white fs-6"><i class="bi bi-calendar3 mx-2 text-green"></i>{event.date}</p>
+              <p className="mt-lg-3 text-white fs-6"><i class="bi bi-stopwatch mx-2 text-yellow"></i>{event.time}</p>
               <div className="carousel-footer">
                 {
                  event.eventType==="upcomming"? 

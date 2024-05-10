@@ -3,6 +3,8 @@ import  './style.css'
 import Aos from 'aos';
 import HeroRegister from '../HeroRegister';
 import heroVideo from '../../videos/heroVideos.mp4'
+import heroVideo2 from '../../images/video1.mp4'
+import heroVideo3 from '../../images/video3.mp4'
 import DownloadModal from '../Brocher/DownloadModal';
 
 function Hero() {
@@ -147,7 +149,8 @@ function Hero() {
                   <div className="row">
                     <div className="col-6">
                     <div className="grid-left">
-                    <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241221.jpg?t=st=1710158771~exp=1710162371~hmac=492da64f760f0c10f296c90526d733fd0c1b90686e24202cffabe4e962e85f21&w=740" alt=""  className='w-100 rounded-3 hero-large-one'/>
+                    {/* <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241221.jpg?t=st=1710158771~exp=1710162371~hmac=492da64f760f0c10f296c90526d733fd0c1b90686e24202cffabe4e962e85f21&w=740" alt=""  className='w-100 rounded-3 hero-large-one'/> */}
+                    <video src={heroVideo2}  autoPlay muted loop className='w-100 hero-large-one rounded-4'></video>  
                     <div className="hero-info d-flex align-items-center  rounded-4 p-2 py-4 my-3 gap-2">
                       <img src="https://cdn-icons-png.freepik.com/256/281/281764.png?ga=GA1.1.874872603.1694171926&" alt="" width={40} />
                       <div>
@@ -161,7 +164,8 @@ function Hero() {
                         </div>
                       </div>
                     </div>
-                    <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241219.jpg?t=st=1710159510~exp=1710163110~hmac=1737a9d72ca76335d21c1d008915f79690d72ab5b59ed1df4d263d59cbb9c219&w=740" alt=""  className='w-100 rounded-3'/>
+                    {/* <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241219.jpg?t=st=1710159510~exp=1710163110~hmac=1737a9d72ca76335d21c1d008915f79690d72ab5b59ed1df4d263d59cbb9c219&w=740" alt=""  className='w-100 rounded-3'/> */}
+                    <video src={heroVideo3}  autoPlay muted loop className='w-100 hero-large-one rounded-4'></video>
                   </div>
                     </div>
                     <div className="col-6">

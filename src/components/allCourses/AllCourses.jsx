@@ -120,7 +120,7 @@ function AllCourses() {
                           <Link to={`/${item.seo.canonical_url}`} className=" text-decoration-none" onClick={()=>handleClick(item._id)}> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                           </div>
                           <div className="col-12 col-md-6 col-lg-6">
-                          <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
+                          <Link to='/contact-us' className="btn-gray-outline  hero-btn no-deco w-100 d-block text-center">Talk to an Expert</Link>
                             </div>
                          
                          

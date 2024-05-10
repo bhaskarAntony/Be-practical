@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../styles/webinar.css'
 import Slider from 'react-slick';
+import eventsdata from '../Data/events';
 
 const webinar = [
   {
@@ -155,7 +156,7 @@ function Webinar() {
           <h3 className="fs-1 text-900 text-center">Pre Career Guidence program <br /> From  <span className="text-main-danger" >Top MNC's</span></h3>
     <section className='p-2 container-fluid' id="webinar">
 
-    {
+    {/* {
       webinar.map((item, index)=>(
         <div className="webinar-card bg-white">
         <div className="webinar-card-header p-2">
@@ -167,7 +168,22 @@ function Webinar() {
         </div>
       </div>
       ))
+    } */}
+ <div className="row">
+ {
+      eventsdata.map((event, eventIndex)=>(
+        <div className="col-12 col-md-3 mb-4">
+          <div className="bootcamp-card h-100">
+            <img src={event.image} alt="" className="w-100" />
+            <div className="event-info">
+              <h3 className="fs-4 fw-bold">{event.title}</h3>
+              <small className="small">{event.startdate} - {event.enddate}</small>
+            </div>
+          </div>
+        </div>
+      ))
     }
+ </div>
     </section>
     <div className="text-center mt-5">
       <a href="/" className="btn--sec-lg text-decoration-none">View Upcoming Events</a>

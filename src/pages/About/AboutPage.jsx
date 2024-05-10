@@ -6,6 +6,7 @@ import NumberHiglight from '../../components/NumberHighlight/NumberHiglight'
 import BookDemoCard from '../../components/BookDemoCard'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import aboutImage from '../../images/about/about-main.jpg'
 
 function AboutPage() {
   return (
@@ -14,7 +15,7 @@ function AboutPage() {
         <title>About Us - Software Training Institute in Bangalore</title>
         <meta name="description" content="Looking for a leading software training institute in Bangalore? Look no further than Be-Practical.com! We offer variety of training programs like full stack development, cloud computing, digital marketing, software testing, hardware & networking and more" />
       </Helmet>
-      <div className="about-hero container-fluid overflow-hidden">
+      {/* <div className="about-hero container-fluid overflow-hidden">
         <div className="row align-items-center">
             <div className="col-12 col-sm-12 col-md-12 col-lg-6 d-flex align-items-center">
                 <div className="about-hero-text p-lg-5 p-3">
@@ -39,12 +40,26 @@ function AboutPage() {
             </div>  
             </div>
         </div>
-      </div>
-      <div className="home-bottom-wave">
-
-</div>
+      </div> */}
+    <div className="banner flex-column">
+        <h3 className="fs-4">About Us</h3>
+        <h1 className="fs-1 fw-bold">Software Training Institute in Bangalore</h1>
+       
+    </div>
+    <div className="container-fluid p-3 p-md-5">
+        <div className="row">
+            <div className="col-md-6">
+                <span className="display-5 d-block ">Get the latest info about</span>
+                <span className="fs-1 d-block fw-bold">Be Practical</span>
+                <p className="fs-6 fw-light">At Be Practical Tech Solutions, we understand the importance of staying up to date with the latest technology trends. That’s why we offer comprehensive training in various tech-related fields, including information technology (IT). Our trainers are highly skilled and have a deep understanding of what it takes to succeed in the IT field. Plus, we’re using cutting-edge technology to help our students achieve their career goals. So come join us at Be Practical Tech Solutions – and see how we can help you reach your goals in the tech world.</p>
+            </div>
+            <div className="col-md-6">
+                <img src={aboutImage} alt="about-us" className="w-100" />
+            </div>
+        </div>
+    </div>
 <Companies/>
-<div className="services container-fluid bg-blur ">
+{/* <div className="services container-fluid bg-blur ">
     <h1 className="text-center fs-1 text-900">Our <span className="text-main-danger">Services</span></h1>
     <p className="fs-5 text-secondary text-center">We are providing best services <br /> what you want to reach you software goal</p>
    <div className="container p-lg-5 p-3">
@@ -94,9 +109,9 @@ function AboutPage() {
         </div>
     </div>
    </div>
-</div>
-<NumberHiglight/>
-<div className="bg-blue-light">
+</div> */}
+{/* <NumberHiglight/> */}
+{/* <div className="bg-blue-light">
 <div className="row p-3 py-5 container-xxl m-xxl-auto">
     <p className="text-center fs-4 text-900 text-main-danger">Get the latest info about</p>
     <p className="fs-1 text-900 text-center">About Us</p>
@@ -139,7 +154,7 @@ function AboutPage() {
     <BookDemoCard/>
 </div>
 </div>
-</div>
+</div> */}
     </section>
   )
 }

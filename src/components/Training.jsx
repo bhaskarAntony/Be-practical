@@ -67,15 +67,16 @@ function Training() {
             <div className="row">
                 <div className="col-12 col-md-6">
                     <div className="training-left">
-                        <h5 className="fs-5">OVER 150.000+ CLIENTS</h5>
-                        <h1 className="fs-1">Affordable pricing. <br />Easy scaling.</h1>
+                        <h5 className="fs-5">Mode Of Training</h5>
+                        <h1 className="fs-1">Start your Learning <br /> <span className="text-white">Journey Today! </span></h1>
                         <hr />
-                        <p className="fs-6 text-secondary">Things go wrong have questions. We’ve understand. So we have people</p>
+                        <p className="fs-6 text-secondary">with free master classes</p>
                         <ul className="training-points p-0" type="none">
-                            <li className="fs-5 mb-3"><i class="bi bi-arrow-return-right"></i> Amazing communication.</li>
-                            <li className="fs-5 mb-3"><i class="bi bi-arrow-return-right"></i> Best trendinf designing experience.</li>
-                            <li className="fs-5 mb-3"><i class="bi bi-arrow-return-right"></i> Email & Live chat.</li>
-                            <li className="fs-5 mb-3"><i class="bi bi-arrow-return-right"></i> Amazing communication.</li>
+                            <li className="fs-5 mb-3"><i class="bi bi-arrow-return-right"></i> Classroom training.</li>
+                            <li className="fs-5 mb-3"><i class="bi bi-arrow-return-right"></i> Online Training.</li>
+                            <li className="fs-5 mb-3"><i class="bi bi-arrow-return-right"></i> Corporate training.</li>
+                            <li className="fs-5 mb-3"><i class="bi bi-arrow-return-right"></i> Hybrid training.</li>
+                            <li className="fs-5 mb-3"><i class="bi bi-arrow-return-right"></i> Campus training.</li>
                         </ul>
                     </div>
                 </div>
@@ -84,14 +85,14 @@ function Training() {
                     <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne1">
                         <div className="icon">
                         <i class="bi bi-easel"></i>
                             </div>
                         Classroom training
                         </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample1">
                         <div class="accordion-body">
                            <p className="fs-6">
                            In-house training / classroom training is livelier with our excellent infrastructure and modern facilities and face to face interaction with our trainers.
@@ -116,14 +117,14 @@ function Training() {
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree">
                         <div className="icon">
                         <i class="bi bi-check-circle"></i>
                             </div>
                         Corporate Training
                         </button>
                         </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div id="collapseThree1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                            <p className="fs-6">
                            Our trainers provide corporate training, so you can stay up to date with the latest developments in your field.
@@ -133,14 +134,14 @@ function Training() {
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree">
                         <div className="icon">
                         <i class="bi bi-cassette"></i>
                             </div>
                         Hybrid Training
                         </button>
                         </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div id="collapseThree2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             <p className="fs-6">
                             We provide hybrid classes, where students can attend classes online or offline. It is great for students with a busy schedule.
@@ -150,14 +151,14 @@ function Training() {
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree">
                             <div className="icon">
                             <i class="bi bi-building-check"></i>
                             </div>
                         Campus Training
                         </button>
                         </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div id="collapseThree3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                            <p className="fs-6">
                            Be Practical conducts job skill training programs for college students. It helps college students get trained and find their desired job.

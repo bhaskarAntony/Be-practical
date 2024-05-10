@@ -65,11 +65,13 @@ function BlogsPage() {
             <div className="all-blogs p-2">
                 <div className="container">
                 <div className="row">
-                            {
+                            <div className="col-md-8">
+                           <div className="row">
+                           {
                                loading?(
                                 Array(6).fill(null).map((_, index)=>(
-                                    <div className="col-md-6">
-                                    <div className="card shadow border rounded-2 p-2 bg-white mb-3 border-0">
+                                    <div className="col-md-6 mb-3">
+                                    <div className="card shadow border rounded-2 p-2 bg-white mb-3 border-0 h-100">
                                       <Shimmer width="100%" height={300} className='mb-3 rounded-3'/>
                                       <Shimmer width="100px" height={15} className='mb-2'/>
                                       <Shimmer width="70%" height={20} className='mb-2'/>
@@ -90,8 +92,8 @@ function BlogsPage() {
                                ):(
                                 BlogsData.map((item, index)=>(
                                 
-                                    <div className="col-md-6">
-                                      <div className="card border shadow rounded-2 p-0 bg-white mb-3 overflow-hidden border-0">
+                                    <div className="col-md-6 mb-3">
+                                      <div className="card border shadow rounded-2 h-100 p-0 bg-white mb-3 overflow-hidden border-0">
                                       <div className="card-header p-0">
                                       <img src={item.image} alt="" className="w-100" />
                                       </div>
@@ -112,6 +114,28 @@ function BlogsPage() {
                                  ))
                                )
                             }
+                           </div>
+                            </div>
+                            <div className="col-md-4">
+                                {
+                                     BlogsData.map((item, index)=>(
+                                
+                                          <div className="card border shadow rounded-2 p-0 bg-white mb-3  border-0">
+                                       
+                                               <div className="row align-items-center">
+                                                <div className="col-4">
+                                                    <img src={item.image} alt={item.title} className="w-100 h-100 rounded" />
+                                                </div>
+                                                <div className="col-8">
+                                                    <span className="fs-6 blog-title d-inline-block text-truncate fw-bold">{item.title}</span>
+                                                    <small className="small text-secondary"><ReadMore text={item.subtitle} maxLength={20}/></small>
+                                                </div>
+                                               </div>
+                                         </div>
+                               
+                                     ))
+                                }
+                            </div>
                         </div>
                 </div>
             </div>
