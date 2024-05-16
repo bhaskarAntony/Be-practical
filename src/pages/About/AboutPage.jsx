@@ -7,6 +7,26 @@ import BookDemoCard from '../../components/BookDemoCard'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import aboutImage from '../../images/about/about-main.jpg'
+import aboutNumberData from '../../Data/AboutNumber'
+
+
+const servicesData = [
+    {
+        title:'HR Services',
+        desc:'We devliver dream-team outcomes without the hassles of hiring.',
+        services:['Project Team Solutions', 'Permanent Hire', 'Contract Tech Staffing', 'Remote-Ready Offshore/Onshore at Flexible Costs.']
+    },
+    {
+        title:'Corporate Training',
+        desc:'',
+        services:['We offer Corporate training to IT companies to accelerate / upskill employees growth and increase productivity.', 'We offer On-premise Classroom training, Online Training and Hybrid training.', 'Awards "Certification" for the employees after training completion.']
+    },
+    {
+        title:'Retail Training',
+        desc:'"We at Be Practical offer the best Placement and IT training for all our courses which will help you step into MNCs and Top Corporates.',
+        services:['Full Stack Development', 'Dev ops', 'Digital Marketing', 'Data Science']
+    }
+]
 
 function AboutPage() {
   return (
@@ -58,6 +78,82 @@ function AboutPage() {
             </div>
         </div>
     </div>
+    <div className="p-3 about-numbers d-flex flex-column justify-content-center container-fluid">
+      <div className="row">
+        {
+            aboutNumberData.map((item, index)=>(
+                <div className="col-md-3 mb-3">
+                    <div className="text-center text-white">
+                        <h1 className="display-2 fw-bold">{item.number}</h1>
+                        <p className="fs-3">{item.title}</p>
+                    </div>
+                </div>
+            ))
+        }
+      </div>
+    </div>
+<div className="bg-light">
+    
+<div className="vision container p-3">
+        <div className="row">
+            <div className="col-md-6">
+                <div className="vision-card w-100 mt-5 bg-white">
+                    <div className="vision-card-header">
+                        <div className="vision-circle">
+                        <i class="bi bi-award-fill display-2 text-white"></i>
+                        </div>
+                    </div>
+                    <div className="vision-card-body text-center">
+                        <p className="fs-5">BE PRACTICAL</p>
+                        <h1 className="fs-3 fw-bold">VISION</h1>
+                        <span className="fs-6">Our vision is to bring qualified and eligible students from all over the world to gaintechnical knowledge.
+                        Personally, visiting and organizing seminars and workshops in various educationalinstitutions in India & abroad.
+                        Organize educational and social events with cultural activities at various places.
+                        Arrange the opportunities and job placements for qualified students.</span>
+                    </div>
+                </div>
+            </div>
+            <div className="col-md-6">
+                <div className="vision-card w-100 mt-5 bg-white">
+                    <div className="vision-card-header">
+                        <div className="vision-circle">
+                        <i class="bi bi-award-fill display-2 text-white"></i>
+                        </div>
+                    </div>
+                    <div className="vision-card-body text-center">
+                        <p className="fs-5">BE PRACTICAL</p>
+                        <h1 className="fs-3 fw-bold">Mission</h1>
+                        <span className="fs-6">Our mission is to promote a quality education by following professional and ethicalstandards.
+                        In its endeavor to promote education, Be Practical Tech Solutions works towardsbringing practical training in the field of software technologies to the doorstep of the students.
+                        Provide comfortable and affordable fee structure for the students.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div className="services p-3 p-md-5">
+  
+  <div className="row">
+   {
+    servicesData.map((item, index)=>(
+        <div className="col-12 col-md-4 mb-3">
+        <div className="service-card card p-3 h-100">
+            <h1 className="fs-3 fw-bold gradient-text">{item.title}</h1>
+            <p className="fs-5">{item.desc}</p>
+            <ul className="list-group">
+            {
+                item.services.map((subitem, subIndex)=>(
+                    <li className="list-group-item p-2 fs-5">{subitem}</li>
+                ))
+            }
+            </ul>
+        </div>
+    </div>
+    ))
+   }
+  </div>
+</div>
 <Companies/>
 {/* <div className="services container-fluid bg-blur ">
     <h1 className="text-center fs-1 text-900">Our <span className="text-main-danger">Services</span></h1>

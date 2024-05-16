@@ -9,7 +9,7 @@ async function fetchData(endpoint) {
     throw error;
   }
 }
-const advantages = fetchData('https://comfortable-boot-fly.cyclic.app//api/advantages');
+const advantages = fetchData('https://localhoset:3500/api/advantages');
 const companies = fetchData('https://comfortable-boot-fly.cyclic.app//api/companies');
 const trainingModule = fetchData('https://comfortable-boot-fly.cyclic.app//api/trainingmodes');
 const testinomials = fetchData('https://comfortable-boot-fly.cyclic.app/api/testimonials');
@@ -19,8 +19,8 @@ const Quiz = fetchData('https://comfortable-boot-fly.cyclic.app/api/Quiz');
 const EventsApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/events');
 const homeHeroApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/heroSection');
 const BlogsApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/blogs');
-const ourCoursesApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/ourCourses');
-const allCourseApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/allcourses');
+const ourCoursesApi = fetchData('https://localhoset:3500/api/ourCourses');
+const allCourseApi = fetchData('https://localhoset:3500/api/allcourses');
 
 export { advantages, companies, trainingModule, testinomials, youtubeVideos, CoursePage, Quiz, EventsApi, homeHeroApi, BlogsApi, ourCoursesApi, allCourseApi };
  
