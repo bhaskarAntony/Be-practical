@@ -8,31 +8,31 @@ function Benifits(props) {
         <div className='fs-6 mb-4 text-center' dangerouslySetInnerHTML={{ __html: props.data.courseDescription}} />
         <div className="row">
             <div className="col-12 col-sm-12 col-md-4 p-0 m-0 bg-blue-light">
-                <div className="designation w-100 p-0">
+                <div className="designation w-100 p-0 benifits-card">
                 <div className="benifits-heading w-100 bg-dark text-center p-2">
                         <span className="fs-4 text-white">Designation</span>
                     </div>
-              <div className="benifits-card-body p-2 h-100">
+              <div className=" p-2 h-100">
               <div className='fs-5' dangerouslySetInnerHTML={{ __html: props.data.Designation}} />
               </div>
                 </div>
             </div>
             <div className="col-12 col-sm-12 col-md-4 m-0 m-0 bg-blue-light">
-                <div className="salary w-100 p-0">
+                <div className="salary w-100 p-0 benifits-card">
                     <div className="benifits-heading w-100 bg-dark p-2 text-center">
                         <span className="fs-4 text-white">Annual Salary</span>
                     </div>
-               <div className="benifits-card-body p-2">
+               <div className=" p-2">
                <div className='fs-5' dangerouslySetInnerHTML={{ __html: props.data.AnnualSalary}} />
                </div>
                 </div>
             </div>
             <div className="col-12 col-sm-12 col-md-4 p-0 m-0 bg-blue-light">
-                <div className="enifits-companies w-100">
+                <div className="enifits-companies w-100 benifits-card">
                 <div className="benifits-heading w-100 bg-dark p-2 text-center">
                         <span className="fs-4 text-white">Companies</span>
                     </div>
-                 <div className="benifits-card-body p-2">
+                 <div className=" p-2">
                  <img src="https://be-practical.com/images/icon/company2.png" alt="companies" className="w-100" />
                  </div>
                 </div>

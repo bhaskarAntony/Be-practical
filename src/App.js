@@ -76,7 +76,7 @@ function App() {
   }, []);
   useEffect(()=>{
     const fetchAllCourses = async()=>{
-      const response = await axios.get('https://comfortable-boot-fly.cyclic.app/api/allcourses')
+      const response = await axios.get('https://api.be-practical.com/api/allcourses')
       setAllCourses(response.data.courses)
       console.log(response.data.courses)
     }

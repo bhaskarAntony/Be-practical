@@ -8,9 +8,9 @@ function Languages({languages, course}) {
   }, []);
   return (
     <section className='languages container-fluid p-3 p-md-5 m-0'>
-        <h3 className="fs-1 text-white text-900" data-aos="fade-up">Master <span className="text-main-danger">
+        <h3 className="fs-1 text-dark text-900" data-aos="fade-up">Master <span className="text-main-danger">
          Thease Technologies</span></h3>
-          <p className="fs-4 text-white">
+          <p className="fs-4 text-dark">
           We are proud to present the success of our {course} Course.
           </p>
       <div className="languages-items">
@@ -22,7 +22,7 @@ function Languages({languages, course}) {
                   <img src={item.image} alt="technology" className='w-100' />
                 </div>
                 <div className="language-card-body">
-                  <h4 className='text-white text-900 fs-5'>{item.name}</h4>
+                  <h4 className='text-dark text-900 fs-5'>{item.name}</h4>
                 </div>
               </div>
             </div>

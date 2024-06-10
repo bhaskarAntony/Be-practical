@@ -39,7 +39,7 @@ function CoursePageEngine() {
   // const { id, courseId } = useParams(); 
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `https://comfortable-boot-fly.cyclic.app/api/allcourses/${courseId}/subcourses/${SubCourseId}`; // Replace with your actual API endpoint
+        const apiUrl = `https://api.be-practical.com/api/allcourses/${courseId}/subcourses/${SubCourseId}`; // Replace with your actual API endpoint
     
         axios
           .get(apiUrl)

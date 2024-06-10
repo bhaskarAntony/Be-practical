@@ -40,7 +40,7 @@ function CourseMainEngine() {
   };
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `https://comfortable-boot-fly.cyclic.app/api/allcourses/${courseId}`; // Replace with your actual API endpoint
+        const apiUrl = `https://api.be-practical.com/api/allcourses/${courseId}`; // Replace with your actual API endpoint
         const fetchData = async () => {
           try {
               const response = await axios.get(apiUrl);
@@ -55,7 +55,7 @@ function CourseMainEngine() {
           }
       };
       fetchData();
-      }, []);
+      }, [courseId]);
       if (courseData === null) {
         // You can display a loading message here while the data is being fetched
         return <Loading/>;
@@ -99,7 +99,7 @@ function CourseMainEngine() {
       const handleClose = () => setShowModal(false);
 
 
-
+console.log(courseData)
      
   return (
     <section className='overflow-hidden'>
@@ -112,7 +112,7 @@ function CourseMainEngine() {
             <div className="col-12 col-md-7 col-lg-7">
                 <div className="course-hero-left p-lg-5 p-3">
                     <p className="text-main-danger fs-5 text-900">{courseData.tag}</p>
-                    <h1 className="heading text-900 text-white">{courseData.courseName}</h1>
+                    <h1 className="text-900 text-white">{courseData.courseName}</h1>
                     <p className="fs-5 text-secondary my-4">{courseData.heroSubtitle}</p>
                     <div className="course-ratings mt-3 d-flex align-items-center gap-2">
                         <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">rating <i class="bi bi-star-half text-yellow"></i><b> 4.5</b></small></p>
@@ -264,6 +264,7 @@ function CourseMainEngine() {
       </section> */}
 
 <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
+<Module modules={courseData.modules} name={courseData.courseName} description={courseData.courseDescription}/>
       {
           courseData.subCourses.length>0?(
             <CourseCard data={courseData.subCourses} id={id} ></CourseCard>

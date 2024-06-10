@@ -171,39 +171,35 @@ function Header() {
     Courses<i class="bi bi-chevron-down"></i>
   </a>
   <ul class="dropdown-menu p-0">
-    {
-      CourseData.map((item, index) => (
-        <li key={index} class="nav-item dropend list-group-item">
-          <Link className={`nav-link text-dark ${item.subCourses.length !== 0 ? 'dropdown-toggle' : ''}`} href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" to={`/${item.seo.canonical_url}`} onClick={() => handleClick(item._id, '')} >
+  {CourseData.map((item, index) => (
+        <li key={index} className="nav-item dropend list-group-item">
+          <Link
+            className={`nav-link text-dark ${item.subCourses.length !== 0 ? 'dropdown-toggle' : ''}`}
+            role="button"
+            // data-bs-toggle={item.subCourses.length !== 0 ? 'dropdown' : ''}
+            // aria-expanded="false"
+            to={`/${item.seo.canonical_url}`}
+            onClick={() => handleClick(item._id, '')}
+          >
             {item.courseName}
           </Link>
-          {
-            item.subCourses.length !== 0 && (
-              <ul className="dropdown-menu list-group">
-                 <li key={index} className="list-group-item">
-                      <Link className="nav-link" to={`/${item.seo.canonical_url}`} onClick={() => handleClick(item._id, '')} >
-                        {item.courseName}
-                      </Link>
-                    </li>
-                {
-                  item.subCourses.map((subItem, subIndex) => (
-                   <>
-                   
-                    <li key={subIndex} className="list-group-item">
-                      <Link className="nav-link" to={`/${subItem.seo.canonical_url}`} onClick={() => handleClick(item._id, subItem._id)} >
-                        {subItem.courseName}
-                      </Link>
-                    </li>
-                   
-                   </>
-                  ))
-                }
-              </ul>
-            )
-          }
+          {item.subCourses.length !== 0 && (
+            <ul className="dropdown-menu list-group">
+              {item.subCourses.map((subItem, subIndex) => (
+                <li key={subIndex} className="list-group-item">
+                  <Link
+                    className="nav-link"
+                    to={`/${subItem.seo.canonical_url}`}
+                    onClick={() => handleClick(item._id, subItem._id)}
+                  >
+                    {subItem.courseName}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </li>
-      ))
-    }
+      ))}
     {/* <li className='list-group-item'><a class="nav-link" href="/data-science">Data Science</a></li>
     <li class="nav-item dropend list-group-item p-0">
       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

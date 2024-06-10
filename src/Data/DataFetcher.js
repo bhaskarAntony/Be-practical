@@ -9,18 +9,18 @@ async function fetchData(endpoint) {
     throw error;
   }
 }
-const advantages = fetchData('https://localhoset:3500/api/advantages');
-const companies = fetchData('https://comfortable-boot-fly.cyclic.app//api/companies');
-const trainingModule = fetchData('https://comfortable-boot-fly.cyclic.app//api/trainingmodes');
-const testinomials = fetchData('https://comfortable-boot-fly.cyclic.app/api/testimonials');
-const youtubeVideos = fetchData('https://comfortable-boot-fly.cyclic.app/api/youtubeVideos');
-const CoursePage = fetchData('https://comfortable-boot-fly.cyclic.app/api/courses');
-const Quiz = fetchData('https://comfortable-boot-fly.cyclic.app/api/Quiz');
-const EventsApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/events');
-const homeHeroApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/heroSection');
-const BlogsApi = fetchData('https://comfortable-boot-fly.cyclic.app/api/blogs');
-const ourCoursesApi = fetchData('https://localhoset:3500/api/ourCourses');
-const allCourseApi = fetchData('https://localhoset:3500/api/allcourses');
+const advantages = fetchData('https://api.be-practical.com/api/advantages');
+const companies = fetchData('https://api.be-practical.com/api/companies');
+const trainingModule = fetchData('https://api.be-practical.com/api/trainingmodes');
+const testinomials = fetchData('https://api.be-practical.com/api/testimonials');
+const youtubeVideos = fetchData('https://api.be-practical.com/api/youtubeVideos');
+const CoursePage = fetchData('https://api.be-practical.com/api/courses');
+const Quiz = fetchData('https://api.be-practical.com/api/Quiz');
+const EventsApi = fetchData('https://api.be-practical.com/api/events');
+const homeHeroApi = fetchData('https://api.be-practical.com/api/heroSection');
+const BlogsApi = fetchData('https://api.be-practical.com/api/blogs');
+const ourCoursesApi = fetchData('https://api.be-practical.com/api/ourCourses');
+const allCourseApi = fetchData('https://api.be-practical.com/api/allcourses');
 
 export { advantages, companies, trainingModule, testinomials, youtubeVideos, CoursePage, Quiz, EventsApi, homeHeroApi, BlogsApi, ourCoursesApi, allCourseApi };
  

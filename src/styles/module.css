@@ -8,10 +8,11 @@
   }
   
   .faq-item {
-    border: 2px solid #c6c4c4;
+    /* border: 2px solid #f3eede; */
    /* background: var(--gray2); */
-   background-color: #f6f6f6;
+   background-color: #fff6ecca;
     position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   }
 
   

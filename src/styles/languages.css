@@ -1,5 +1,5 @@
 .languages{
-    background-color: #0c0c0c;
+    background-color: #f9efe672;
 }
 .languages-items{
     min-height: 100%;
@@ -17,7 +17,7 @@
     margin-bottom: 20px;
     border-radius: 20px;
     /* background-color: var(--color-light-8); */
-    background-color: #8787872a;
+    background-color: #ffffff;
     
 }
 .language-card img{

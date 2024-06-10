@@ -13,12 +13,13 @@ const Module = (props) => {
   return (
    <div className="container-fluid faq" id="faq">
     <h3 className="fs-1 text-center text-900"> {props.name} Program Curriculum</h3>
-    <p className="fs-md-5 fs-6 text-secondary text-center container ">{props.description}</p>
+    
+    <p className="fs-md-5 fs-6 text-secondary text-center container " dangerouslySetInnerHTML={{ __html: props.description}}></p>
      <div className="container">
       <div className="row">
       <div className="col-12 col-md-6 col-lg-6">
       <div className="container modules  p-lg-5 p-md-3 p-2">
-     {props.modules.map((item, index) => (
+     {props.modules?.map((item, index) => (
          <div
           className={`faq-item ${activeIndex === index ? 'active' : ''} rounded-4 mb-3 `}
           key={index}

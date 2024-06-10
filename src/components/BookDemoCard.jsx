@@ -4,9 +4,6 @@ function BookDemoCard() {
   return (
     <div>
         <div className="r-card p-2  bg-white rounded-1">
-            {/* <div className="master-class-band p-1 text-white text-center bg-danger my-3 ">
-                <small className="fs-6"> free Master class</small>
-            </div> */}
                 <form>
                     <div className="form-group mt-3">
                     <div class="form-floating mb-3">

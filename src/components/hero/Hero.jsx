@@ -6,6 +6,7 @@ import heroVideo from '../../videos/heroVideos.mp4'
 import heroVideo2 from '../../images/video1.mp4'
 import heroVideo3 from '../../images/video3.mp4'
 import DownloadModal from '../Brocher/DownloadModal';
+import justdial from '../../icons/justdial.png'
 
 function Hero() {
   const [showModal, setShowModal] = useState(false)
@@ -171,9 +172,9 @@ function Hero() {
                     <div className="col-6">
                 <div className="grid-right">
                 <div className="hero-info d-flex align-items-center rounded-3 p-2 py-4 my-3 gap-2">
-                      <img src="https://cdn-icons-png.freepik.com/256/281/281764.png?ga=GA1.1.874872603.1694171926&" alt="" width={40} />
+                      <img src={justdial} alt="" width={40} />
                       <div>
-                        <h4 className="fs-4">Google</h4>
+                        <h4 className="fs-4">JustDial</h4>
                         <div className='d-flex gap-1 text-warning'>
                           <i className='bi bi-star-fill small'></i>
                           <i className='bi bi-star-fill small'></i>

@@ -1,6 +1,11 @@
 .benifits-card-body ul{
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: space-around;
+    height: 100%; */
+}
+.benifits-card{
+    background-color: #fff;
     height: 100%;
+    color: #000;
 }
