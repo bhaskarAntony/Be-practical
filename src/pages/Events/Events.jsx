@@ -11,6 +11,7 @@ const Events = () => {
       try {
         const response = await axios.get('http://localhost:3500/api/events');
         setEvents(response.data);
+        console.log(response.data);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching events:', error);
@@ -32,7 +33,8 @@ const Events = () => {
     }
 
     return eventsList.map(event => (
-      <Card key={event._id} className="mb-3">
+    <div className="col-md-6">
+          <Card key={event._id} className="mb-3 bg-light">
         <Card.Img variant="top" src={event.image} />
         <Card.Body>
           <Card.Title>{event.title}</Card.Title>
@@ -47,23 +49,30 @@ const Events = () => {
           )}
         </Card.Body>
       </Card>
+    </div>
     ));
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container-fluid">
       <h2 className="text-center mb-4">Events</h2>
       {loading ? (
         <div className="text-center">Loading...</div>
       ) : (
-        <Tabs defaultActiveKey="upcoming" id="events-tabs" className="mb-3">
+      <div className="container">
+          <Tabs defaultActiveKey="upcoming" id="events-tabs" className="mb-3">
           <Tab eventKey="upcoming" title="Upcoming Events">
+            <div className="row">
             {renderEvents(upcomingEvents)}
+            </div>
           </Tab>
           <Tab eventKey="past" title="Past Events">
-            {renderEvents(pastEvents)}
+           <div className="row">
+           {renderEvents(pastEvents)}
+           </div>
           </Tab>
         </Tabs>
+      </div>
       )}
     </div>
   );
