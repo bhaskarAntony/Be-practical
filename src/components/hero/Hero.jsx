@@ -35,8 +35,12 @@ function Hero() {
     //   });
   }
 
-  const openModal = () => setShowModal(true);
-  const handleClose = () => setShowModal(false);
+  const handleClose = () => {
+    setShowModal(false);
+  }
+  const openModal = () => {
+    setShowModal(true);
+  }
   return (
     <div className='main-scroller-hero'>
       {/* <div className="marquee-container">
@@ -216,7 +220,7 @@ function Hero() {
                   </div>
                   </div>
                   {/* <HeroRegister/> */}
-                  <DownloadModal showModal={showModal} hideModal={handleClose} link={"d"}/>
+                  <DownloadModal showModal={showModal} hideModal={handleClose} link={"https://bepractical.s3.us-east-2.amazonaws.com/BP Brochure V.06_compressed.pdf"}/>
          
 
   

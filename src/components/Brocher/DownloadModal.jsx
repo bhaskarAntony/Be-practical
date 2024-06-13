@@ -27,7 +27,7 @@ function DownloadModal(props) {
         e.preventDefault();
     
         try {
-          const response = await axios.post('http://localhost:3500/course/register', formData);
+          const response = await axios.post('https://api.be-practical.com/course/register', formData);
     
           if (response.status === 200) {
             // Handle successful form submission
@@ -61,7 +61,7 @@ function DownloadModal(props) {
                 <Modal.Title className='fs-5 fw-bold'>Download free Browcher</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                <Form>
+                <Form>  
                 <div className="r-card  bg-white rounded-3">
       <form>
         <div className="form-group">
@@ -117,7 +117,7 @@ function DownloadModal(props) {
         </div>
         <div className="form-group mt-3">
           <button type="button" className="btn-danger bg-dark w-100" onClick={handleSubmit}>
-            Register for Brochure
+            Download Brochure
           </button>
         </div>
       </form>

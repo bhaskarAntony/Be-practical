@@ -100,4 +100,33 @@
     padding: 10px !important;
     font-size: 1rem !important;
   }
+  /* Custom styles for wide dropdown menu */
+.dropdown-menu-wide {
+  width: 300px; /* Adjust the width as needed */
+  max-height: 400px; /* Limit the height */
+  overflow-y: auto; /* Enable scrolling */
+}
+
+/* General mobile list item styling */
+.mobile-list-item .nav-link {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+
+/* Styling for the button in the offcanvas contact */
+.btn.bg-success-2 {
+  background-color: #28a745; /* Customize the color */
+}
+
+.navbar .nav-link {
+  padding: 0.5rem 1rem;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-item .dropdown-menu {
+    max-height: 400px; /* Limit the height */
+    overflow-y: auto; /* Enable scrolling */
+  }
+}
+
 

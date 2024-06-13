@@ -39,7 +39,7 @@ function CoursePageEngine() {
   // const { id, courseId } = useParams(); 
     useEffect(() => {
         // Define the API URL where you want to fetch the course data
-        const apiUrl = `https://api.be-practical.com/api/allcourses/${courseId}/subcourses/${SubCourseId}`; // Replace with your actual API endpoint
+        const apiUrl = `https://api.be-practical.com/api/allcourses/${courseId}/1/${SubCourseId}`; // Replace with your actual API endpoint
     
         axios
           .get(apiUrl)
@@ -134,7 +134,7 @@ function CoursePageEngine() {
                         </Link>
                         </div>
                         <div className="col-12 col-md-5 mb-2">
-                        <button className="btn--sec-lg bg-white text-dark py-3 hero-btn  align-items-center gap-2 justify-content-center w-100" onClick={downloadBrochure}><span className='fs-5 fw-bold'>Download Syllubus</span><br /><small className='btn-text'>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill"></i></small></button>
+                        <button className="btn  bg-white text-dark py-2 rounded-4 hero-btn  align-items-center gap-2 justify-content-center w-100" onClick={openModal}><span className='fs-5' >Download Syllubus</span> <br /> <small>Free Matierial <i class="bi bi-file-earmark-arrow-down-fill fs-4"></i></small></button>
 
            
                      

@@ -4,10 +4,13 @@ import { allCourseApi } from '../../Data/DataFetcher';
 import Aos from 'aos';
 import { Link } from 'react-router-dom';
 import Coursecard from '../Coursecard/Coursecard';
+import DownloadModal from '../Brocher/DownloadModal';
 
 function AllCourses() {
   const [loading, setLoading] = useState(false)
   const [CourseData, setCourseData] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [brocher, setBrocher] = useState("")
   useEffect(() => {
    const fetchData = async () => {
      try {
@@ -26,11 +29,18 @@ function AllCourses() {
     useEffect(() => {
         Aos.init(); // Initialize AOS
       }, []);
-      const handleClick = (id) => {
-  
+      const handleClick = (id, subCourseId) => {
         localStorage.setItem('selectedCourseId', id);
-        // Navigate to the next component without using URL params
+        localStorage.setItem('selectedSubCourseId', subCourseId);
+        // setShow(false);
       };
+
+      const openModal = (link) =>{
+        setShowModal(true);
+        setBrocher(link)
+     
+     }
+     const handleClose = () => setShowModal(false);
   return (
     <div className='container-fluid our-courses p-lg-5 p-3'>
         <h1 className="heading"><i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i>Our Courses<i class="bi bi-star-fill fs-3 text-main-danger mx-2"></i></h1>
@@ -120,7 +130,7 @@ function AllCourses() {
                           <Link to={`/${item.seo.canonical_url}`} className=" text-decoration-none" onClick={()=>handleClick(item._id)}> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                           </div>
                           <div className="col-12 col-md-6 col-lg-6">
-                          <Link to='/contact-us' className="btn-gray-outline  hero-btn no-deco w-100 d-block text-center">Talk to an Expert</Link>
+                          <button className="btn-gray-outline  hero-btn no-deco w-100 d-block text-center" onClick={()=>openModal(item.BrocherLink)}>Talk to an Expert</button>
                             </div>
                          
                          
@@ -137,7 +147,7 @@ function AllCourses() {
           </div>
          
           {
-            item.subCourses.map((item, index)=>(
+            item.subCourses.map((subItem, index)=>(
               <>
               <div className="our-course-card-wrapper" key={index}>
               <div className="container our-course-card p-lg-5 p-md-3 p-sm-4" data-aos="fade-right">
@@ -148,7 +158,7 @@ function AllCourses() {
                   <div class="dot">
                        <span class="glow"></span>
                        </div>
-                       <span className='fs-5 text-900 shake-card'>{item.details.admisionStart}</span>
+                       <span className='fs-5 text-900 shake-card'>{subItem.details.admisionStart}</span>
                   </div>
                         <p className=" text-white rounded-2 p-1 tag">
                         <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
@@ -156,8 +166,8 @@ function AllCourses() {
                         {/* <div className="seats rounded-4 p-2 d-flex gap-2 flex-wrap bg-gray2 text-white align-items-center mb-3">
                         <i class="bi bi-bookmark-check"></i><span className="fs-6 text-900">500 Seats  are available</span>
                         </div> */}
-                        <h1 className="fs-3 text-900">{item.courseName}</h1>
-                        <p className="fs-6">{item.heroSubtitle}</p>
+                        <h1 className="fs-3 text-900">{subItem.courseName}</h1>
+                        <p className="fs-6">{subItem.heroSubtitle}</p>
                         <div className="course-info rounded-4 row mb-2 p-1 px-3  m-auto">
                         <div className="col-12 col-md-6 col-lg-6">
                         <div className="d-flex align-items-center gap-2 w-100 mb-2">
@@ -167,7 +177,7 @@ function AllCourses() {
                          <div>
                           <span>
                           <span className="text-secondary d-block">Duration</span>
-                          <span className='text-900'>{item.details.Duration}</span>
+                          <span className='text-900'>{subItem.details.Duration}</span>
                           </span>
                          </div>
                           </div>
@@ -180,7 +190,7 @@ function AllCourses() {
                          <div>
                           <span>
                           <span className="text-secondary d-block">Highest Salary</span>
-                          <span className='text-900'>{item.HighestCtc}</span>
+                          <span className='text-900'>{subItem.HighestCtc}</span>
                           </span>
                          </div>
                           </div>
@@ -217,10 +227,10 @@ function AllCourses() {
                       
                         <div className="course-btns row mt-3">
                           <div className="col-12 col-md-6 col-lg-6">
-                          <Link to={`/${item.seo.canonical_url}`} className=" text-decoration-none" onClick={()=>handleClick(item._id)}> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
+                          <Link to={`/${subItem.seo.canonical_url}`} className=" text-decoration-none" onClick={()=>handleClick(item._id, subItem._id)}> <button className="btn-gray  hero-btn">Know More <i class="bi bi-arrow-up-right mb-2"></i></button></Link>
                           </div>
                           <div className="col-12 col-md-6 col-lg-6">
-                          <button className="btn-gray-outline  hero-btn">Talk to an Expert</button>
+                          <button className="btn-gray-outline  hero-btn" onClick={()=>openModal(subItem.BrocherLink)}>Talk to an Expert</button>
                             </div>
                          
                          
@@ -229,7 +239,7 @@ function AllCourses() {
                 </div>
                 <div className="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-sm-none d-lg-block">
                   <div className="course-right">
-                      <img src={item.courseImage} alt={item.courseImage} className="w-100" />
+                      <img src={subItem.courseImage} alt={subItem.courseImage} className="w-100" />
                   </div>
                 </div>
               </div>
@@ -242,9 +252,10 @@ function AllCourses() {
            </>
             ))
           }
+           <DownloadModal showModal={showModal} hideModal={handleClose} link={brocher}/>
         </div>
         <div className="text-center">
-        <Link to="/" className=" text-decoration-none"> <button className="btn-danger  hero-btn">Still  are you thinking</button></Link>
+        {/* <Link to="/" className=" text-decoration-none"> <button className="btn-danger  hero-btn">Still  are you thinking</button></Link> */}
         </div>
     </div>
   )

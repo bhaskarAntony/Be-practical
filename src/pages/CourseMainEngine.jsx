@@ -264,7 +264,7 @@ console.log(courseData)
       </section> */}
 
 <Languages languages={courseData.programmingLanguages} course={courseData.courseName}/>
-<Module modules={courseData.modules} name={courseData.courseName} description={courseData.courseDescription}/>
+{/* <Module modules={courseData.modules} name={courseData.courseName} description={courseData.courseDescription}/> */}
       {
           courseData.subCourses.length>0?(
             <CourseCard data={courseData.subCourses} id={id} ></CourseCard>

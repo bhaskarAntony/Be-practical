@@ -5,7 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import { BrowserRouter, Route, Router, Routes} from 'react-router-dom'
 import Gallery from './pages/Gallery'
-import Events from './components/Events'
+// import Events from './components/Events'
 import ContactPage from './components/ContactPage'
 import ElitePage from './pages/ElitePage'
 import RegistrationPage from './components/RegistrationPage'
@@ -35,6 +35,7 @@ import Whatsapp from './chat/Whatsapp'
 import C1 from './components/C1'
 import axios from 'axios'
 import { ToastContainer } from 'react-toastify'
+import Events from './pages/Events/Events'
 // https://be-practical.com/?utm_source=facebook&utm_medium=social&utm_campaign=summer_promo
 
 

@@ -18,6 +18,7 @@ import OurCourses from '../components/ourCourses/OurCourses';
 import Course from '../components/courses/Course';
 // import Prefer from '../components/ourCourses/Prefer/Prefer';
 import Hero from '../components/hero/Hero';
+import AllCourses from '../components/allCourses/AllCourses';
 
 function Home() {
       // Model open logic
@@ -39,7 +40,8 @@ function Home() {
         <Hero/>
         {/* <Prefer/> */}
        <div className="spacer mt-5">
-        <OurCourses/>
+        {/* <COu/> */}
+        <AllCourses/>
        </div>
        <Skills/>
        <Elite/>

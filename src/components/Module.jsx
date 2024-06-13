@@ -25,7 +25,7 @@ const Module = (props) => {
           key={index}
         >
           <div className="faq-question d-flex align-items-center" onClick={() => toggleAccordion(index)}>
-            <span className="count p-2 text-900 fs-4 text-dark mx-3">{index+1}
+            <span className="count p-2 text-900 fs-5 text-dark mx-3">{index+1}
             </span>
             <span className="faq-question-text text-black"><span className="fw-bold text-main-danger"> Module{index + 1}:</span> <span className="text-dark text-900">{item.title}</span></span>
             <div className="faq-icon">
@@ -35,9 +35,9 @@ const Module = (props) => {
           {activeIndex === index && (
             <div className="faq-answer">
                 <h5 className='mt-4 text-main-danger  text-decoration-underline'>About</h5>
-              <p className="fs-4 text-dark">{item.title}</p>
+              <p className="fs-5 text-dark">{item.title}</p>
                 <h5 className='mt-4 text-main-danger  text-decoration-underline'>Topics Covered</h5>
-                <p className='fs-5 text-dark'>{item.description}</p>
+                <p className='fs-6 text-dark'>{item.description}</p>
             </div>
           )}
         </div>
