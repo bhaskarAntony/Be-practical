@@ -36,6 +36,7 @@ import C1 from './components/C1'
 import axios from 'axios'
 import { ToastContainer } from 'react-toastify'
 import Events from './pages/Events/Events'
+import Contact from './pages/contact/Contact'
 // https://be-practical.com/?utm_source=facebook&utm_medium=social&utm_campaign=summer_promo
 
 
@@ -115,7 +116,7 @@ function App() {
         <Route path='/gallery' element={<Gallery/>}/>
         <Route path='/events' element={<Events/>}/>
         <Route path='/blogs' element={<BlogsPage/>}/>
-        <Route path='/contact-us' element={<ContactPage/>}/>
+        <Route path='/contact-us' element={<Contact/>}/>
         <Route path='/about-us-2' element={<AboutPage/>}/>
         <Route path='/landingpage' element={<ElitePage/>}/>
         <Route path='/register' element={<RegistrationPage/>}/>
