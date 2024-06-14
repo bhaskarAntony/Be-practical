@@ -29,7 +29,7 @@
     color: #fff;
 }
 .contact-card{
-    border-bottom: 4px solid var(--dark-orange);
+    border-bottom: 4px solid var(--dark-orange) !important;
     position: relative;
     overflow: hidden;
     z-index: 2;
