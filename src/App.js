@@ -45,37 +45,37 @@ import Contact from './pages/contact/Contact'
 function App() {
   const [allCourses, setAllCourses] = useState([])
   const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []); 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
+  // }, []); 
    
 
 
-  const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+  // const [showRegistrationModal, setShowRegistrationModal] = useState(false);
 
-  const openRegistrationModal = () => {
-    setShowRegistrationModal(true);
-  };
+  // const openRegistrationModal = () => {
+  //   setShowRegistrationModal(true);
+  // };
 
-  const closeRegistrationModal = () => {
-    setShowRegistrationModal(false);
-  };
+  // const closeRegistrationModal = () => {
+  //   setShowRegistrationModal(false);
+  // };
 
-  useEffect(() => {
-    // Function to open the registration modal
-    const openModal = () => {
-      openRegistrationModal();
-    };
+  // useEffect(() => {
+  //   // Function to open the registration modal
+  //   const openModal = () => {
+  //     openRegistrationModal();
+  //   };
 
-    // Open the modal every 2 minutes
-    const intervalId = setInterval(openModal, 220000); // 120,000 milliseconds = 2 minutes
+  //   // Open the modal every 2 minutes
+  //   const intervalId = setInterval(openModal, 220000); // 120,000 milliseconds = 2 minutes
 
-    return () => clearInterval(intervalId);
+  //   return () => clearInterval(intervalId);
 
   
-  }, []);
+  // }, []);
   useEffect(()=>{
     const fetchAllCourses = async()=>{
       const response = await axios.get('https://api.be-practical.com/api/allcourses')
@@ -88,11 +88,7 @@ function App() {
 
   return (
     <div>
-       {
-       loading ? (
-        // <PageLoader/>
-        null
-      ) : (
+
           <>
      {/* <TawkToWidget/> */}
      <ZohoChat/>
@@ -152,9 +148,7 @@ function App() {
         </BrowserRouter>
         <ScrollToTopButton/>
           </>
-      )}
     </div>
-  )
-}
+  )}
 
 export default App

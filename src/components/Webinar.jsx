@@ -152,7 +152,7 @@ function Webinar() {
   }
 
   return (
-  <div className='bg-blue-light py-5'>
+  <div className='bg-blue-light py-5 p-3 p-md-5'>
           <h3 className="fs-1 text-900 text-center">Pre Career Guidence program <br /> From  <span className="text-main-danger" >Top MNC's</span></h3>
     <section className='p-2 container-fluid' id="webinar">
 

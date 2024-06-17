@@ -11,7 +11,7 @@ function LandDreamJob() {
       <span className="text-white">Land your dream job with proven</span>   personalized plan!
       </h1>
     <div className="mb-5">
-    <ApplyNow text={"Register & Download Browcher"}/>
+    <ApplyNow text={"Register & Download Brochure"}/>
     </div>
       </div>
     

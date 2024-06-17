@@ -67,7 +67,7 @@ function Training() {
             <div className="row">
                 <div className="col-12 col-md-6">
                     <div className="training-left">
-                        <h5 className="fs-5">Mode Of Training</h5>
+                        <h5 className="fs-5 text-main-danger">Mode Of Training</h5>
                         <h1 className="fs-1">Start your Learning <br /> <span className="text-white">Journey Today! </span></h1>
                         <hr />
                         <p className="fs-6 text-secondary">with free master classes</p>

@@ -108,11 +108,12 @@ function DownloadModal(props) {
         </div>
         <div className="form-group form-group-last mt-3">
           <select className="form-control p-3" name="course" onChange={handleChange}>
-            <option value="MERN">MERN</option>
-            <option value="Python Fullstack">Python Fullstack</option>
-            <option value="Java Fullstack">Java Fullstack</option>
-            <option value="Data Science">Data Science</option>
-            <option value="Cloud Computing">Cloud Computing</option>
+          <option value="MERN Fullstack">MERN Fullstack</option>
+                        <option value="Python Fullstack">Python Fullstack</option>
+                        <option value="Java Fullstack">Java Fullstack</option>
+                        <option value="Data Science">Data Science</option>
+                        <option value='digital marketing'>Digital Marketing</option>
+                        <option value="Cloud Computing">Cloud Computing</option>
           </select>
         </div>
         <div className="form-group mt-3">

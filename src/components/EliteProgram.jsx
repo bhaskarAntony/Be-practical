@@ -49,7 +49,7 @@ const eliteProgram = [
 function EliteProgram() {
   return (
     <div className='elite-progarm  mt-5 py-5 p-1 p-md-5'>
-         <h1 className="fs-1 text-900 text-center">What is Elite Program?</h1>
+         <h1 className="fs-1 text-900 text-center">What is <span className="text-main-danger">Elite</span> Program?</h1>
          <section className='container-fluid py-5'>
        
        <div className="row">

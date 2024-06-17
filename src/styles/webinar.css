@@ -23,8 +23,10 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(transparent, #070707);
-  color: #fff;
+
+  background: linear-gradient(transparent, #f7fffe2a, #ffffffc7, #ffffff);
+  color: #000;
+ 
   top: 0;
   left: 0;
   display: flex;
@@ -35,9 +37,9 @@
 
  
 }
-.bootcamp-card:hover .event-info{
-  background: linear-gradient(transparent, #f7fffeb5, #ffffff);
-  color: #000;
+.bootcamp-card:hover .event-info{ 
+   background: linear-gradient(transparent, #070707);
+   color: #fff;
 }
 .bootcamp-card h3{
   width: 100%;

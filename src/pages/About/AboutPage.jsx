@@ -61,7 +61,7 @@ function AboutPage() {
             </div>
         </div>
       </div> */}
-    <div className="banner flex-column">
+    <div className="banner2 flex-column d-flex align-items-center justify-content-center">
         <h3 className="fs-4">About Us</h3>
         <h1 className="fs-1 fw-bold">Software Training Institute in Bangalore</h1>
        
@@ -104,7 +104,7 @@ function AboutPage() {
                         </div>
                     </div>
                     <div className="vision-card-body text-center">
-                        <p className="fs-5">BE PRACTICAL</p>
+                        {/* <p className="fs-5">BE PRACTICAL</p> */}
                         <h1 className="fs-3 fw-bold">VISION</h1>
                         <span className="fs-6">Our vision is to bring qualified and eligible students from all over the world to gaintechnical knowledge.
                         Personally, visiting and organizing seminars and workshops in various educationalinstitutions in India & abroad.

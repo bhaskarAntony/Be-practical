@@ -87,9 +87,8 @@ const imagesData = [
 function Gallery() {
   return (
     <div>
-      <div className="gallery-hero bg-blur py-5">
+      <div className="banner2 bg-blur py-5 d-flex flex-column align-items-center justify-content-center">
         <h1 className='heading text-center text-900 '>Gallery</h1>
-        <p className="fs-3 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Minima, exercitationem.</p>
       </div>
       <div className="bg-light p-3 overflow-hidden">
       <ReactImageGallery items={imagesData} />

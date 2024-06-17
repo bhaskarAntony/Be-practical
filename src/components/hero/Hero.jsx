@@ -7,9 +7,11 @@ import heroVideo2 from '../../images/video1.mp4'
 import heroVideo3 from '../../images/video3.mp4'
 import DownloadModal from '../Brocher/DownloadModal';
 import justdial from '../../icons/justdial.png'
+import DialogModel from '../DialogModel';
 
 function Hero() {
   const [showModal, setShowModal] = useState(false)
+  const [showModal2, setShowModal2] = useState(false)
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://static-bundles.visme.co/forms/vismeforms-embed.js';
@@ -40,6 +42,13 @@ function Hero() {
   }
   const openModal = () => {
     setShowModal(true);
+  }
+
+  const handleClose2 = () => {
+    setShowModal2(false);
+  }
+  const openModal2 = () => {
+    setShowModal2(true);
   }
   return (
     <div className='main-scroller-hero'>
@@ -112,7 +121,7 @@ function Hero() {
           </div>
           <div className="d-flex gap-3 mt-4 flex-wrap">
        <button className='btn-danger hero-btn' onClick={openModal}>Download Broucher<i class="bi bi-chevron-double-right"></i></button>
-          <button className='btn btn-outline-dark p-3 hero-btn' onClick={openModal}>Free Master Classes<i class="bi bi-chevron-double-right"></i></button>
+          <button className='btn btn-outline-dark p-3 hero-btn' onClick={openModal2}>Free Master Classes<i class="bi bi-chevron-double-right"></i></button>
        </div>
           {/* <div className="social-container mt-5 d-flex gap-2">
             <div className="google px-3 w-100 p-2" data-aos="zoom-in-right">
@@ -221,6 +230,8 @@ function Hero() {
                   </div>
                   {/* <HeroRegister/> */}
                   <DownloadModal showModal={showModal} hideModal={handleClose} link={"https://bepractical.s3.us-east-2.amazonaws.com/BP Brochure V.06_compressed.pdf"}/>
+                  <DialogModel  show={showModal2}
+        onHide={handleClose2}/>
          
 
   

@@ -26,13 +26,13 @@ function Home() {
 
   const handleCloseModal = () => setShowModal(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setShowModal(true);
-    }, 1 * 60 * 1000); // 5 minutes
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setShowModal(true);
+  //   }, 1 * 60 * 1000); // 5 minutes
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
   return (
     <section className='home p-0 overflow-hidden'>
          <DialogModel show={showModal} onHide={handleCloseModal} />
