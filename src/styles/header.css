@@ -21,9 +21,9 @@
     font-size: 1.4em;
   }
  
-  .dropdown-menu .list-group-item:hover{
+  /* .dropdown-menu .list-group-item:hover{
     background-color: #dedede !important;
-  }
+  } */
   .dropdown-item{
     padding: 0px !important;
   }

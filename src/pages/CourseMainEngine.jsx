@@ -25,6 +25,10 @@ function CoursePageEngine() {
   const [courseData, setCourseData] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const location = useLocation();
+  const [activeSubCourseIndex, setActiveSubCourseIndex] = useState(null);
+  const [activeModuleIndex, setActiveModuleIndex] = useState(null);
+
+
   const { courseId } = useParams(); // Assuming your URL structure includes a courseId parameter
 
   useEffect(() => {
@@ -68,7 +72,7 @@ function CoursePageEngine() {
     return <Loading />;
   }
 
-  const { seo, courseName, heroSubtitle, coursePoints, modules, programmingLanguages, BrocherLink, faqs } = courseData;
+  const { seo, courseName, heroSubtitle, coursePoints, programmingLanguages, BrocherLink, faqs } = courseData;
 
   // WhatsApp message content
   const messageContent = `
@@ -105,6 +109,14 @@ function CoursePageEngine() {
 
   // Function to handle modal closing
   const closeModal = () => setShowModal(false);
+
+  const toggleSubCourseAccordion = (index) => {
+    setActiveSubCourseIndex(index === activeSubCourseIndex ? null : index);
+  };
+
+  const toggleModuleAccordion = (index) => {
+    setActiveModuleIndex(index === activeModuleIndex ? null : index);
+  };
 
   return (
     <section className='overflow-hidden'>
@@ -148,7 +160,7 @@ function CoursePageEngine() {
           </div>
         </div>
         <div className="text-center">
-          <span className="fs-4 text-white text-center w-100">Share Course On</span>
+          <span className="fs-4 text-white text-center w-100">Share Course On.</span>
         </div>
         <div className="share-course d-flex gap-3 py-3 flex-wrap align-items-center justify-content-center">
           <button className="share-btn whatsapp-share" onClick={handleWhatsappShare}><i className='bi bi-whatsapp'></i>Whatsapp</button>
@@ -156,7 +168,87 @@ function CoursePageEngine() {
       </div>
 
       {/* Additional sections */}
-      <Module modules={modules} name={courseName} description={seo.description} />
+      <div className=" modules p-lg-5 p-md-3 p-2">
+      <h3 className="fs-1 text-900">{courseData.courseName} <span className="text-main-danger">  Program Curriculum</span></h3>
+    
+    <p className="fs-md-5 fs-6 text-secondary " dangerouslySetInnerHTML={{ __html: courseData.courseDescription}}></p>
+    <div className="container mt-4">
+    {courseData.subCourses.length > 0 ? (
+        courseData.subCourses.map((subCourse, subCourseIndex) => (
+          <div className="card p-3 mt-3" key={subCourseIndex}>
+            <div
+              className="faq-question d-flex align-items-center"
+              onClick={() => toggleSubCourseAccordion(subCourseIndex)}
+            >
+              <span className="faq-question-text text-black">
+                <span className="fw-bold text-main-danger">
+                  {subCourse.courseName}
+                </span>
+              </span>
+              <div className="faq-icon ms-auto">
+                {activeSubCourseIndex === subCourseIndex ? (
+                  <i className="bi bi-caret-up-fill"></i>
+                ) : (
+                  <i className="bi bi-caret-down-fill"></i>
+                )}
+              </div>
+            </div>
+            {activeSubCourseIndex === subCourseIndex && (
+              <div className="mt-3">
+                {subCourse.modules?.map((item, index) => (
+                  <div
+                    className={`faq-item ${
+                      activeModuleIndex === index ? 'active' : ''
+                    } rounded-4 mb-3`}
+                    key={index}
+                  >
+                    <div
+                      className="faq-question d-flex align-items-center"
+                      onClick={() => toggleModuleAccordion(index)}
+                    >
+                      <span className="count p-2 text-900 fs-5 text-dark mx-3">
+                        {index + 1}
+                      </span>
+                      <span className="faq-question-text text-black">
+                        <span className="fw-bold text-main-danger">
+                          Module {index + 1}:
+                        </span>{' '}
+                        <span className="text-dark text-900">
+                          {item.title}
+                        </span>
+                      </span>
+                      <div className="faq-icon">
+                        {activeModuleIndex === index ? (
+                          <i className="bi bi-caret-up-fill"></i>
+                        ) : (
+                          <i className="bi bi-caret-down-fill"></i>
+                        )}
+                      </div>
+                    </div>
+                    {activeModuleIndex === index && (
+                      <div className="faq-answer">
+                        <h5 className="mt-4 text-main-danger text-decoration-underline">
+                          About
+                        </h5>
+                        <p className="fs-5 text-dark">{item.title}</p>
+                        <h5 className="mt-4 text-main-danger text-decoration-underline">
+                          Topics Covered
+                        </h5>
+                        <p className="fs-6 text-dark">{item.description}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        ))
+      ) : (
+        <p>No subcourses available</p>
+      )}
+    </div>
+    </div>
+
       <Languages languages={programmingLanguages} course={courseName} />
       <CourseCertificate data={courseData} />
       <LandDreamJob />

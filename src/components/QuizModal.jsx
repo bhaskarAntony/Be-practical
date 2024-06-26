@@ -13,6 +13,7 @@ function QuizModal() {
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
   const [loading, setLoading] = useState(false)
   const [QuizData, setQuizData] = useState([]);
+  const [isDone, setIsDone] = useState(false)
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -104,11 +105,12 @@ function QuizModal() {
 
       <Modal show={showModal} onHide={closeModal}>
         <Modal.Header closeButton>
-          <Modal.Title>Get 10% discount in your course fees</Modal.Title>
+          <Modal.Title className='fs-4'>Take Quiz and Get 10% discount in your course fees</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {!isQuizCompleted ? (
-            <div>
+            isDone?(
+              <div>
               <p className='fs-4 text-main-danger'> {currentQuestion + 1}) {quizData[currentQuestion]?.question}</p>
               <Form>
                 {quizData[currentQuestion]?.answers.map((option, index) => (
@@ -131,6 +133,29 @@ function QuizModal() {
               </button>
               </div>
             </div>
+            ):(
+              <Form>
+              <Form.Group className='mt-2'>
+                <FloatingLabel controlId="floatingInputGrid" label="Student name">
+                    <Form.Control type="text" placeholder="name@example.com" required />
+                  </FloatingLabel>
+                </Form.Group>
+                <Form.Group className='mt-2'>
+                <FloatingLabel controlId="floatingInputGrid" label="Mobile number">
+                    <Form.Control type="text" placeholder="+91-000-0000-000"  required/>
+                  </FloatingLabel>
+                </Form.Group>
+                <Form.Group className='mt-2'>
+                <FloatingLabel controlId="floatingInputGrid" label="Email address">
+                    <Form.Control type="email" placeholder="name@example.com"  required/>
+                  </FloatingLabel>
+                </Form.Group>
+                
+                <button  className="btn btn-dark mt-2 p-2 w-100" variant="secondary" onClick={()=>setIsDone(true)}>
+                Take Quiz
+              </button>
+              </Form>
+            )
           ) : (
             <div>
               <p className='text-main-danger fs-3 text-center'>Your Score: {score} out of {quizData.length}</p>

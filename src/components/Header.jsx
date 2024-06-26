@@ -71,7 +71,7 @@ function Header() {
                 <li className="mobile-list-item list-group-item" onClick={handleLinkClick}>
                   <Link to="/" className="nav-link fs-4">Home</Link>
                 </li>
-                <p className="p-large1 text-900 bg-danger-2 text-white p-2">Our Courses</p>
+                <p className="p-large1 text-900  text-white p-2">Our Courses</p>
                 {loading ? (
                   Array(5).fill(null).map((_, index) => (
                     <div key={index} className="list-group-item p-2">

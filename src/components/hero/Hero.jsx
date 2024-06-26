@@ -228,7 +228,7 @@ function Hero() {
            </div>
                   </div>
                   </div>
-                  {/* <HeroRegister/> */}
+                  <HeroRegister/>
                   <DownloadModal showModal={showModal} hideModal={handleClose} link={"https://bepractical.s3.us-east-2.amazonaws.com/BP Brochure V.06_compressed.pdf"}/>
                   <DialogModel  show={showModal2}
         onHide={handleClose2}/>

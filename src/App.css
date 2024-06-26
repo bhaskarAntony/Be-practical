@@ -28,10 +28,10 @@
     --indigo: #6610f2;
     --purple: #6f42c1;
     --pink: #e83e8c;
-    /* --red: #fc6838; */
-    --red:#ff7a4f;
-    /* --orange: #fc6838; */
-    --orange:#f0870f;
+    --red: #fc6838;
+    /* --red:#65B741; */
+    --orange: #fc6838;
+    /* --orange:#65B741; */
     --yellow: #ffc107;
     --green: #28a745;
     --teal: #20c997;
@@ -65,6 +65,7 @@
     --dark-grey: #b0b0b0;
     --black: #301b03;
     --dark-orange: #fc6838;
+    /* --dark-orange: #65B741; */
     --saddle-brown: #905109;
     --black-5: black;
     --sandy-brown: #f6b76f;
@@ -268,7 +269,7 @@
 .btn-danger{
   /* box-shadow: 0px 8px 10px #f0870f80; */
   color: #fff;
-  background: #ff7a4f;
+  background: var(--orange);
   border: none;
   padding: 1.125rem 2rem;
   border-radius: 8px;
@@ -800,6 +801,17 @@ font-size: 1.5rem;
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* //form */
+.form .form-control{
+  border: 0px!important;
+  border-radius: 10px;
+  background-color: #dddddd !important;
+  padding: 15px;
+}
+.form .form-control:focus{
+  box-shadow: none!important;
 }
 
 

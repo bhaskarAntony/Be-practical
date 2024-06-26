@@ -2,10 +2,11 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { Form, Modal } from 'react-bootstrap'
 import { toast } from 'react-toastify';
-import Loading from '../../Modals/Loading';
-import SuccessDialog from '../../Modals/SuccessDialog';
+import SuccessDialog from './SuccessDialog';
+import Loading from './Loading';
+import { event } from 'react-ga';
 
-function DownloadModal(props) {
+function TalkToExpert(props) {
     const [isLoading, setIsLoading] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [message, setMessage] = useState("")
@@ -61,11 +62,12 @@ function DownloadModal(props) {
                 {/* <Modal.Title className='fs-5 fw-bold'>Download free Browcher</Modal.Title> */}
               </Modal.Header>
               <Modal.Body>
-                <h1 className="fs-2">Please enter your Details to get the Program Brochure</h1>
-                <h6 className="fs-5">This Brochure contains all the details from Program Curriculum to Placement Assistance.</h6>
+              <h1 className="fs-2">Need help? Our Counselors are <span className="text-danger">LIVE</span> right now!</h1>
+            <h6 className="fs-5">Connect with our expert counselors for guidance on program curriculum, application process, and placement assistance.</h6>
+
                 <Form>  
                 <div className="r-card  bg-white rounded-3">
-      <form className='form mt-3'>
+      <form className='form mt-3' onSubmit={()=>handleSubmit(event)}>
         <div className="form-group">
         <label htmlFor="nameInput">Student Name <span className="text-danger">*</span></label>
             <input
@@ -106,20 +108,20 @@ function DownloadModal(props) {
            
         </div>
         <div className="form-group form-group-last mt-3">
-        <label htmlFor="phoneInput">Courses<span className="text-danger">*</span></label>
+        <label htmlFor="phoneInput">What are you currently doing?<span className="text-danger">*</span></label>
           <select className="form-control p-3" name="course" onChange={handleChange}>
             <option value="" selected disabled></option>
-          <option value="MERN Fullstack">MERN Fullstack</option>
-                        <option value="Python Fullstack">Python Fullstack</option>
-                        <option value="Java Fullstack">Java Fullstack</option>
-                        <option value="Data Science">Data Science</option>
-                        <option value='digital marketing'>Digital Marketing</option>
-                        <option value="Cloud Computing">Cloud Computing</option>
+          <option value="MERN Fullstack">Working IT Domine</option>
+                        <option value="Python Fullstack">Working in Other Domine</option>
+                        <option value="Java Fullstack">Post Graduate Student</option>
+                        <option value="Data Science">UderGrad Student (Still Studying)</option>
+                        <option value='digital marketing'>Fresher with Zero Experience</option>
+                        <option value="Cloud Computing">Looking for Jobs</option>
           </select>
         </div>
         <div className="form-group mt-3">
-          <button type="button" className="btn-danger w-100" onClick={handleSubmit}>
-            Download Brochure
+          <button type="submit" className="btn-danger w-100">
+           Apply Now
           </button>
         </div>
       </form>
@@ -132,4 +134,4 @@ function DownloadModal(props) {
   )
 }
 
-export default DownloadModal
+export default TalkToExpert

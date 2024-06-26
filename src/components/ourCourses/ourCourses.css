@@ -11,6 +11,8 @@
     /* border-left: 5px solid var(--red); */
     margin-bottom: 50px !important;
     min-width: 100% !important;
+    position: relative;
+    padding-bottom: 40px;
 }
 .course-right{
     min-height: 100%;
@@ -61,4 +63,16 @@
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 20px;
+    padding-bottom: 30px;
+}
+.btn-show-more{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border: none;
+    background: var(--red);
+    border-radius: 100px;
+    color: #fff;
+    padding: 5px 20px;
 }

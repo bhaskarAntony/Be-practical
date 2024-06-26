@@ -39,6 +39,7 @@ function Home() {
         {/* <HomeHero/> */}
         <Hero/>
         {/* <Prefer/> */}
+        <Companies/>
        <div className="spacer mt-5">
         {/* <COu/> */}
         <AllCourses/>
