@@ -19,6 +19,7 @@ import CourseOffering from '../components/Offering/CourseOffering';
 import Benifits from '../components/Benifits/Benifits';
 import DownloadModal from '../components/Brocher/DownloadModal';
 import { useCourseContext } from '../context/CourseContext';
+import { formatDate } from '../js/utils';
 
 function CoursePageEngine() {
   const { selectedSubCourseId, selectedCourseId } = useCourseContext();
@@ -117,6 +118,13 @@ function CoursePageEngine() {
   const toggleModuleAccordion = (index) => {
     setActiveModuleIndex(index === activeModuleIndex ? null : index);
   };
+  // const formatDate = (dateString) => {
+  //   const date = new Date(dateString);
+  //   const day = date.getDate();
+  //   const month = date.toLocaleString('default', { month: 'long' });
+  //   const year = date.getFullYear();
+  //   return `${day} ${month} ${year}`;
+  // };
 
   return (
     <section className='overflow-hidden'>
@@ -135,7 +143,11 @@ function CoursePageEngine() {
               <p className="fs-5 text-secondary my-4">{heroSubtitle}</p>
               <div className="course-ratings mt-3 d-flex align-items-center gap-2 flex-wrap">
                 <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">rating <i className="bi bi-star-half text-yellow"></i><b> 4.5</b></small></p>
-                <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">Batch Start: <b>{courseData.details.admisionStart}</b></small></p>
+                <p className="fs-6 text-white">
+                <small className="p-2 bg-white rounded-1 text-black">
+                  Batch Start: <b>{formatDate(courseData.details.admisionStart)}</b>
+                </small>
+              </p>
                 <p className="fs-6 text-white"><small className="p-2 bg-white rounded-1 text-black">Mode: <b>Online & Offline</b></small></p>
               </div>
               <div className="course-points">

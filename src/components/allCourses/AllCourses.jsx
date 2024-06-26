@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Coursecard from '../Coursecard/Coursecard';
 import DownloadModal from '../Brocher/DownloadModal';
 import TalkToExpert from '../../Modals/TalkToExpert';
+import { formatDate } from '../../js/utils';
 
 function AllCourses() {
   const [loading, setLoading] = useState(false);
@@ -67,7 +68,7 @@ function AllCourses() {
                           <div class="dot">
                             <span class="glow"></span>
                           </div>
-                          <span className='fs-5 text-900 shake-card'>{item.details.admisionStart}</span>
+                          <span className='fs-5 text-900 shake-card'>{formatDate(item.details.admisionStart)}</span>
                         </div>
                         <p className="text-white rounded-2 p-1 tag">
                           <i class="bi bi-star-fill text-white mx-2"></i> Job Ready Program <i class="bi bi-star-fill text-white mx-2"></i>
