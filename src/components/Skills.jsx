@@ -35,7 +35,7 @@ function Skills() {
         <div className="row align-items-center">
           <div className="col-12 col-md-12 col-lg-6 p-0">
             <div className="left h-100 p-0">
-              <video src={skillVideo} autoPlay muted loop className='w-100 ' onClick={()=>{player(skillVideo)}}></video>
+              <video src='https://bepractical.s3.us-east-2.amazonaws.com/images/unlock-vedio.mp4' autoPlay muted loop className='w-100 ' onClick={()=>{player('https://bepractical.s3.us-east-2.amazonaws.com/images/unlock-vedio.mp4')}}></video>
             </div>
           </div>
           <div className="col-12 col-md-12 col-lg-6 p-0">
@@ -48,24 +48,24 @@ function Skills() {
                   <div className="row video-status d-flex g-2 bg-transparent">
                     <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
                       <div className="video h-100">
-                        <video src={hackethon} autoPlay muted loop  onClick={()=>{player(hackethon)}} className=''></video>
+                        <video src='https://bepractical.s3.us-east-2.amazonaws.com/images/hackethon.mp4' autoPlay muted loop  onClick={()=>{player('https://bepractical.s3.us-east-2.amazonaws.com/images/hackethon.mp4')}} className=''></video>
                         
                       </div>
                     </div>
                     <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
                       <div className="video h-100">
-                        <video src={video1} autoPlay muted loop  onClick={()=>{player(video1)}}  className=''></video>
+                        <video src='https://bepractical.s3.us-east-2.amazonaws.com/images/video1.mp4' autoPlay muted loop  onClick={()=>{player('https://bepractical.s3.us-east-2.amazonaws.com/images/video1.mp4')}}  className=''></video>
                       </div>
                     </div>
                     <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
                       <div className="video h-100">
-                        <video src={video2} autoPlay muted loop  onClick={()=>{player(video2)}}  className=''></video>
+                        <video src='https://bepractical.s3.us-east-2.amazonaws.com/images/video2.mp4' autoPlay muted loop  onClick={()=>{player('https://bepractical.s3.us-east-2.amazonaws.com/images/video2.mp4')}}  className=''></video>
                         
                       </div>
                     </div>
                     <div className="col-3 col-sm-3 col-md-3 col-lg-3 mb-2">
                       <div className="video h-100">
-                        <video src={video3} autoPlay muted loop onClick={()=>{player(video3)}}  className=''></video>
+                        <video src='https://bepractical.s3.us-east-2.amazonaws.com/images/video3.mp4' autoPlay muted loop onClick={()=>{player('https://bepractical.s3.us-east-2.amazonaws.com/images/video3.mp4')}}  className=''></video>
                        
                       </div>
                     </div>

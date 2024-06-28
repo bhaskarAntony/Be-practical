@@ -72,28 +72,30 @@ function Header() {
                   <Link to="/" className="nav-link fs-4">Home</Link>
                 </li>
                 <p className="p-large1 text-900  text-white p-2">Our Courses</p>
-                {loading ? (
-                  Array(5).fill(null).map((_, index) => (
-                    <div key={index} className="list-group-item p-2">
-                      <Shimmer width="100%" height={20} />
-                    </div>
-                  ))
-                ) : (
-                  CourseData.map((item) => (
-                    <React.Fragment key={item._id}>
-                      <li className="mobile-list-item list-group-item p-2">
-                        <Link to={`/${item.seo.canonical_url}`} onClick={() => handleClick(item._id, '')} className="nav-link fs-4">{item.courseName}</Link>
+                <li className="list-group-item">
+                        <Link to='/advanced-full-stack-developers-course-in-bangalore'  className="nav-link text-dark" onClick={handleLinkClick}>Fullstack Development Courses</Link>
                       </li>
-                      {item.subCourses.length !== 0 && (
-                        item.subCourses.map((subItem) => (
-                          <li key={subItem._id} className="mobile-list-item list-group-item p-2">
-                            <Link to={`/${subItem.seo.canonical_url}`} onClick={() => handleClick(item._id, subItem._id)} className="nav-link fs-4">{subItem.courseName}</Link>
-                          </li>
-                        ))
-                      )}
-                    </React.Fragment>
-                  ))
-                )}
+                      <li className="list-group-item">
+                        <Link to='/mern-stack-development-training'  className="nav-link text-dark" onClick={handleLinkClick}>Mern Fullstack Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/java-fullstack-developer-course'  className="nav-link text-dark" onClick={handleLinkClick}>Java Fullstack Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/python-fullstack'  className="nav-link text-dark" onClick={handleLinkClick}>Python Fullstack Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/data-science-course-in-bangalore'  className="nav-link text-dark" onClick={handleLinkClick}>Date science Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/advanced-cloud-computing-aws'  className="nav-link text-dark" onClick={handleLinkClick}>Cloud computing Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/cloudops-devops-course-in-bangalore'  className="nav-link text-dark" onClick={handleLinkClick}>Cloud Oops Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/advanced-digital-marketing-program'  className="nav-link text-dark" onClick={handleLinkClick}>Digital Marketing Courses</Link>
+                      </li>
                 <li className="mobile-list-item list-group-item p-2" onClick={handleLinkClick}>
                   <Link to="/gallery" className="nav-link fs-4">Gallery</Link>
                 </li>
@@ -139,7 +141,7 @@ function Header() {
                   Courses <i className="bi bi-chevron-down mx-1"></i>
                 </a>
                 <ul className="dropdown-menu dropdown-menu-wide p-0">
-                  {CourseData.map((item) => (
+                  {/* {CourseData.map((item) => (
                     <React.Fragment key={item._id}>
                       <li className="list-group-item">
                         <Link to={`/${item.seo.canonical_url}`} onClick={() => handleClick(item._id, '')} className="nav-link text-dark">{item.courseName}</Link>
@@ -152,7 +154,32 @@ function Header() {
                         ))
                       )}
                     </React.Fragment>
-                  ))}
+                  ))} */}
+
+                      <li className="list-group-item">
+                        <Link to='/advanced-full-stack-developers-course-in-bangalore'  className="nav-link text-dark">Fullstack Development Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/mern-stack-development-training'  className="nav-link text-dark">Mern Fullstack Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/java-fullstack-developer-course'  className="nav-link text-dark">Java Fullstack Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/python-fullstack'  className="nav-link text-dark">Python Fullstack Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/data-science-course-in-bangalore'  className="nav-link text-dark">Date science Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/advanced-cloud-computing-aws'  className="nav-link text-dark">Cloud computing Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/cloudops-devops-course-in-bangalore'  className="nav-link text-dark">Cloud Oops Courses</Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to='/advanced-digital-marketing-program'  className="nav-link text-dark">Digital Marketing Courses</Link>
+                      </li>
                 </ul>
               </li>
               <li className="nav-item dropdown">

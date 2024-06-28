@@ -3,6 +3,8 @@ import SuccessDialog from '../Modals/SuccessDialog';
 import axios from 'axios';
 import Loading from '../Modals/Loading';
 import '../styles/registerPage.css';
+import { result, values } from 'lodash';
+import leadsquared from '../js/api';
 
 function HeroRegister() {
   const [formData, setFormData] = useState({
@@ -21,43 +23,27 @@ function HeroRegister() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
 
     // Show loading while making the request
     setLoading(true);
 
-    // Map formData to API schema
-    const leadData = {
-      FirstName: formData.name.split(' ')[0],
-      LastName: formData.name.split(' ').slice(1).join(' ') || '',
-      Source: 'Master Classes', // Assuming a static source for leads
-      Phone: formData.phone,
-      EmailAddress: formData.email,
-    };
+    const result = await leadsquared(formData.name,formData.email,formData.phone);
 
-    const apiURL = 'https://{host}/v2/LeadManagement.svc/Lead.CreateOrUpdate';
-    const accessKey = 'u$re8714e750936465494dff9e2ea253edf';
-    const secretKey = '24762cf21d6765a514730fa187bc5ffa11afeeca';
-
-    axios
-      .post(`${apiURL}?postUpdatedLead=false&accessKey=${accessKey}&secretKey=${secretKey}`, leadData)
-      .then((response) => {
-        console.log('Registration success:', response.data);
-        setShowSuccessDialog(true);
-        setError(false);
-        setMessage('Registration is successful');
-      })
-      .catch((error) => {
-        console.error('Registration error:', error);
-        setMessage(`Registration error: ${error}`);
-        setError(true);
-        setShowSuccessDialog(true);
-      })
-      .finally(() => {
-        // Hide loading when the request is complete
-        setLoading(false);
-      });
+    if(result.success){
+      console.log(result.data);
+      setShowSuccessDialog(true);
+      setError(true);
+      setLoading(false)
+      setMessage('Registration is successful');
+    }else{
+      console.log(result.data);
+      setMessage(`Registration error: ${result.data}`);
+      setError(false);
+      setLoading(false)
+      setShowSuccessDialog(true);
+    }
   };
 
   return (

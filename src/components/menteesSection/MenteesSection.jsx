@@ -1,9 +1,10 @@
 import React from 'react'
+import'./style.css'
 
 function MenteesSection() {
   return (
-    <div>
-        
+    <div className='container mantees'>
+        hello
     </div>
   )
 }

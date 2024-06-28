@@ -4,7 +4,7 @@ import { Form, Modal } from 'react-bootstrap'
 import { toast } from 'react-toastify';
 import SuccessDialog from './SuccessDialog';
 import Loading from './Loading';
-import { event } from 'react-ga';
+// import { event } from 'react-ga';
 
 function TalkToExpert(props) {
     const [isLoading, setIsLoading] = useState(false);

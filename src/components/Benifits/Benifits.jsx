@@ -24,6 +24,7 @@ function Benifits(props) {
                         <span className="fs-4 text-white">Annual Salary</span>
                     </div>
                     <img src="d-flex flex-column justify-content-between overflow-hidden" alt="" className="w-100 rounded" />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY-1oR8UnXW8CYzhP-kh33KUoCJQHvzdl4GQ&s" alt="" className="w-100" />
                <div className=" p-2">
                <div className='fs-5' dangerouslySetInnerHTML={{ __html: props.data.AnnualSalary}} />
                </div>

@@ -4,6 +4,7 @@ import { Form, Modal } from 'react-bootstrap'
 import { toast } from 'react-toastify';
 import Loading from '../../Modals/Loading';
 import SuccessDialog from '../../Modals/SuccessDialog';
+import leadsquared from '../../js/api';
 
 function DownloadModal(props) {
     const [isLoading, setIsLoading] = useState(false);
@@ -18,6 +19,7 @@ function DownloadModal(props) {
         downloadLink:props.link,
         course: 'MERN', // Default course
       });
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
       };
@@ -25,34 +27,47 @@ function DownloadModal(props) {
       const handleSubmit = async (e) => {
         setIsLoading(true)
         e.preventDefault();
+        
+
+        const result = await leadsquared(formData.name,formData.email,formData.phone);
     
-        try {
-          const response = await axios.post('https://api.be-practical.com/course/register', formData);
-    
-          if (response.status === 200) {
-            // Handle successful form submission
-            setIsLoading(false)
-            setShowModal(true)
-            setIsSend(true)
-            // toast.success("registration successful, browcher has been sent to registered email.")
-            props.hideModal()
-            setMessage("registration successful, browcher has been sent to registered email.")
-          } else {
-            // Handle error
-            setIsLoading(false)
-            setShowModal(true)
-            setIsSend(false)
-            setMessage("Brochure registration failed")
-            alert('Brochure registration failed');
-            // toast.error("registration failed")
+        if(result.success){
+          console.log(result);
+          try {
+            const response = await axios.post('https://api.be-practical.com/course/register', formData);
+            
+            if (response.status === 200) {
+              // Handle successful form submission
+              setIsLoading(false)
+              setShowModal(true)
+              setIsSend(true)
+              // toast.success("registration successful, browcher has been sent to registered email.")
+              props.hideModal()
+              setMessage("registration successful, browcher has been sent to registered email.")
+            } else {
+              // Handle error
+              setIsLoading(false)
+              setShowModal(true)
+              setIsSend(false)
+              setMessage("Brochure registration failed")
+              alert('Brochure registration failed');
+              toast.error("registration failed")
+            }
+          } catch (error) {
+            alert(error)
+            console.error('Error during brochure registration', error);
           }
-        } catch (error) {
-          alert(error)
-          console.error('Error during brochure registration', error);
+        }else{
+          setIsLoading(false)
+          setShowModal(true)
+          setIsSend(false)
+          setMessage("Brochure registration failed")
+          // alert('Brochure registration failed...');
+          console.log(result.data);
         }
       };
       if(isLoading){
-        return <Loading/>
+        return <Loading image="https://i.pinimg.com/originals/e4/07/8e/e4078ee793884101e4620078f979d2dc.gif"/>
       }
   return (
     <div>
@@ -98,6 +113,8 @@ function DownloadModal(props) {
               type="number"
               className="form-control"
               id="phoneInput"
+              minLength={10}
+              maxLength={13}
               name="phone"
               // placeholder="+91 000-0000-000"
               onChange={handleChange}

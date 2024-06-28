@@ -1,23 +1,23 @@
 .webinar-card{
   min-width: 320px;
   border-radius: 10px;
-  scroll-snap-align: center;
+
 }
 #webinar{
   display: flex;
   overflow: auto;
   gap: 30px;
-  scroll-snap-type: x mandatory;
-}
-#webinar::-webkit-scrollbar{
-  display: none;
  
 }
+
 .bootcamp-card{
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  min-width: 300px;
+  max-width: 400px;
+  scroll-snap-align: center !important;
 }
 .bootcamp-card .event-info{
   position: absolute;
@@ -47,4 +47,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.webinars{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow: auto !important;
+  scroll-snap-type: x mandatory !important;
+}
+.bootcamp-card img{
+  object-fit: cover;
+  height: 100%;
 }

@@ -19,6 +19,7 @@ import Course from '../components/courses/Course';
 // import Prefer from '../components/ourCourses/Prefer/Prefer';
 import Hero from '../components/hero/Hero';
 import AllCourses from '../components/allCourses/AllCourses';
+import MenteesSection from '../components/menteesSection/MenteesSection';
 
 function Home() {
       // Model open logic
@@ -52,6 +53,7 @@ function Home() {
         <Webinar/>
         <QuizModal/>
         <Adwantages/>
+        <MenteesSection/>
         <YoutubeVideos/>
         <ChatWithus/>
         <Funfact/>

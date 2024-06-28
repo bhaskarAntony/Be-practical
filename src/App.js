@@ -37,6 +37,14 @@ import axios from 'axios'
 import { ToastContainer } from 'react-toastify'
 import Events from './pages/Events/Events'
 import Contact from './pages/contact/Contact'
+import FullstackCourse from './pages/Courses/FullstackCourse'
+import JavaCourse from './pages/Courses/JavaCourse'
+import PythonCourse from './pages/Courses/PythonCourse'
+import MernCourse from './pages/Courses/MernCourse'
+import DataScienceCourse from './pages/Courses/DataScienceCourse'
+import CloudOops from './pages/Courses/CloudOops'
+import CloudComputing from './pages/Courses/CloudComputing'
+import DigitalMarketing from './pages/Courses/DigitalMarketing'
 // https://be-practical.com/?utm_source=facebook&utm_medium=social&utm_campaign=summer_promo
 
 
@@ -45,11 +53,11 @@ import Contact from './pages/contact/Contact'
 function App() {
   const [allCourses, setAllCourses] = useState([])
   const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLoading(false);
-  //   }, 2000);
-  // }, []); 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []); 
    
 
 
@@ -88,6 +96,9 @@ function App() {
 
   return (
     <div>
+      {
+        loading?(<PageLoader/>):(null)
+      }
 
           <>
      {/* <TawkToWidget/> */}
@@ -119,7 +130,7 @@ function App() {
         <Route path='/book-demo' element={<BookDemo/>}/>
         <Route path='/all-testinomials' element={<AllTestimomials/>}/>
        
-        {
+        {/* {
           allCourses.map((item, index)=>(
            <>
             <Route path={`/${item.seo.canonical_url}`} element={<CourseMainEngine/>}/>
@@ -136,13 +147,21 @@ function App() {
             }
            </>
           ))
-        }
+        } */}
        
         <Route path='/all-courses' element={<AllCourses/>}/>
         <Route path='/elite' element={<ElitePage/>}/>
         <Route path='/discount/quiz' element={<QuizModal/>}/>
         <Route path='/Blog/read/:id' element={<BlogsView/>}/>
         <Route path='/chat' element={<TawkToWidget/>}/>
+        <Route path='/advanced-full-stack-developers-course-in-bangalore' element={<FullstackCourse/>}/>mern-stack-development-training
+        <Route path='/mern-stack-development-training' element={<MernCourse/>}/>
+        <Route path='/java-fullstack-developer-course' element={<JavaCourse/>}/>
+        <Route path='/python-fullstack' element={<PythonCourse/>}/>
+        <Route path='/data-science-course-in-bangalore' element={<DataScienceCourse/>}/>
+        <Route path='/cloudops-devops-course-in-bangalore' element={<CloudOops/>}/>
+        <Route path='/advanced-cloud-computing-aws' element={<CloudComputing/>}/>
+        <Route path='/advanced-digital-marketing-program' element={<DigitalMarketing/>}/>
         </Routes>
       <Footer/>
         </BrowserRouter>
