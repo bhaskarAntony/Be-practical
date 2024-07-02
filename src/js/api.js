@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const leadsquared = async (name,email,phone) => {
+const leadsquared = async (name,email,phone, course) => {
 
 
    
@@ -24,7 +24,12 @@ const leadsquared = async (name,email,phone) => {
       {
         Attribute:'Phone',
         Value:phone
+      },
+      {
+        Attribute:'mx_Course_Interested',
+        Value:course
       }
+
      
   
       

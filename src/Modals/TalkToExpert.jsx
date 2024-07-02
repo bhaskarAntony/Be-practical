@@ -30,7 +30,7 @@ function TalkToExpert(props) {
     e.preventDefault();
     setIsLoading(true);
 
-    const result = await leadsquared(formData.name, formData.email, formData.phone);
+    const result = await leadsquared(formData.name, formData.email, formData.phone, formData.course);
     setIsLoading(false);
 
     if (result.success) {

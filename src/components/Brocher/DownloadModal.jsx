@@ -29,7 +29,7 @@ function DownloadModal(props) {
         e.preventDefault();
         
 
-        const result = await leadsquared(formData.name,formData.email,formData.phone);
+        const result = await leadsquared(formData.name,formData.email,formData.phone, formData.course);
     
         if(result.success){
           console.log(result);

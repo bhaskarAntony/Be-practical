@@ -26,7 +26,7 @@ function BookDemoCard() {
 
     setLoading(true);
 
-    const result = await leadsquared(formData.name, formData.email, formData.phone);
+    const result = await leadsquared(formData.name, formData.email, formData.phone, formData.course);
 
     setLoading(false);
     if (result.success) {
