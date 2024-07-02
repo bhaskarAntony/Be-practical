@@ -40,18 +40,10 @@ const leadsquared = async (name,email,phone, course) => {
     const accessKey = 'u$re8714e750936465494dff9e2ea253edf';
     const secretKey = '24762cf21d6765a514730fa187bc5ffa11afeeca';
 
-//    const responce = await axios.post(${apiURL}?postUpdatedLead=false&accessKey=${accessKey}&secretKey=${secretKey}, leadData)
-//       .then((response) => {
-//         console.log('Registration success:', response.data);
-       
-       
-//       })
-//       .catch((error) => {
-//         console.error('Registration error:', error);
-       
-//       })
+
       try {
          const response = await axios.post(`${apiURL}?postUpdatedLead=false&accessKey=${accessKey}&secretKey=${secretKey}`, leadData);
+        //  console.log(response);
          return {success:true, data:response.data};
 
       } catch (error) {

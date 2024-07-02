@@ -29,7 +29,7 @@ function HeroRegister() {
     // Show loading while making the request
     setLoading(true);
 
-    const result = await leadsquared(formData.name,formData.email,formData.phone);
+    const result = await leadsquared(formData.name,formData.email,formData.phone, formData.course);
 
     if(result.success){
       console.log(result.data);
