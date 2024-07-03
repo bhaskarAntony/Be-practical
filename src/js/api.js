@@ -36,9 +36,7 @@ const leadsquared = async (name,email,phone, course) => {
     ]
     console.log(leadData);
 
-    const apiURL = 'https://api-in21.leadsquared.com/v2/LeadManagement.svc/Lead.CreateOrUpdate';
-    const accessKey = 'u$re8714e750936465494dff9e2ea253edf';
-    const secretKey = '24762cf21d6765a514730fa187bc5ffa11afeeca';
+   
 
 
       try {

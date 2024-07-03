@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import Loading from '../../Modals/Loading';
 import SuccessDialog from '../../Modals/SuccessDialog';
 import leadsquared from '../../js/api';
+import { Register } from '../../js/register';
 
 function DownloadModal(props) {
     const [isLoading, setIsLoading] = useState(false);
@@ -32,19 +33,17 @@ function DownloadModal(props) {
         const result = await leadsquared(formData.name,formData.email,formData.phone, formData.course);
     
         if(result.success){
-          console.log(result);
-          try {
-            const response = await axios.post('https://api.be-practical.com/course/register', formData);
-            
-            if (response.status === 200) {
-              // Handle successful form submission
-              setIsLoading(false)
-              setShowModal(true)
-              setIsSend(true)
-              // toast.success("registration successful, browcher has been sent to registered email.")
-              props.hideModal()
-              setMessage("registration successful, browcher has been sent to registered email.")
-            } else {
+
+          const registerResult = await Register(formData);
+
+          if(registerResult.status){
+            setIsLoading(false)
+            setShowModal(true)
+            setIsSend(true)
+            // toast.success("registration successful, browcher has been sent to registered email.")
+            props.hideModal()
+            setMessage("registration successful, browcher has been sent to registered email.")
+          }else{
               // Handle error
               setIsLoading(false)
               setShowModal(true)
@@ -52,11 +51,27 @@ function DownloadModal(props) {
               setMessage("Brochure registration failed")
               alert('Brochure registration failed');
               toast.error("registration failed")
-            }
-          } catch (error) {
-            alert(error)
-            console.error('Error during brochure registration', error);
           }
+          // console.log(result);
+          // try {
+          //   const response = await axios.post('https://api.be-practical.com/course/register', formData);
+            
+          //   if (response.status === 200) {
+          //     // Handle successful form submission
+            
+          //   } else {
+          //     // Handle error
+          //     setIsLoading(false)
+          //     setShowModal(true)
+          //     setIsSend(false)
+          //     setMessage("Brochure registration failed")
+          //     alert('Brochure registration failed');
+          //     toast.error("registration failed")
+          //   }
+          // } catch (error) {
+          //   alert(error)
+          //   console.error('Error during brochure registration', error);
+          // }
         }else{
           setIsLoading(false)
           setShowModal(true)
